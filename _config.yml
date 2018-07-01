@@ -84,13 +84,13 @@ author:
   location         : #"Location"
   employer         :
   googlescholar    : #"http://yourfullgooglescholarurl.com"
-  email            :
-  uri              :
-  bitbucket        :
+  email            : thiago.verissimo@usp.br
+  uri              : 
+  bitbucket        : https://bitbucket.org/thiagogomesverissimo/
   codepen          :
   dribbble         :
   flickr           :
-  facebook         :
+  facebook         : http://facebook.com/thiagogomesverissimo
   foursquare       :
   github           : "thiagogomesverissimo"
   google_plus      :
@@ -108,8 +108,9 @@ author:
   vine             :
   weibo            :
   xing             :
-  youtube          :
+  youtube          : https://www.youtube.com/channel/UCP9rjXYfnGxnmRopsgUbisw
   wikipedia        :
+  drupal           : https://www.drupal.org/u/thiagogomesverissimo
 
 
 # Reading Files
