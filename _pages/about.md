@@ -8,14 +8,16 @@ redirect_from:
   - /about.html
 ---
 
-Palestras:
+{% include base_path %}
 
-#### [Senha Única USP (OAuth) no Drupal]({filename}/files/cirp_usp_senhaunica.pdf)
+{% capture written_year %}'None'{% endcapture %}
 
- - 11/11/2013: Geinfo - Encontro de Gestão de Informática da USP
- - 27/06/2014: Softwares que Produzimos - DTI/STI USP de Ribeirão Preto
-
-#### [Deploy e versionamento de projetos em Drupal](https://thiagogomesverissimo.github.io/slides/deploy_e_versionamento_de_projetos_em_drupal){:target="_blank"}
- 
- - 26/10/2016: IV Semana de Tecnologia - Fatec São Roque
+{% for post in site.posts %}
+  {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %}
+  {% if year != written_year %}
+    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
+    {% capture written_year %}{{ year }}{% endcapture %}
+  {% endif %}
+  {% include archive-single.html %}
+{% endfor %}
 
