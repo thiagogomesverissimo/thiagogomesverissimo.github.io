@@ -1,0 +1,405 @@
+# Sistema de login no guard/symfony com usuários locais
+
+Criar entidade LocalUser (com os campos username: string, password: string e roles: json_array): 
+
+    php bin/console doctrine:generate:entity --entity=AppBundle:LocalUser
+    php bin/console generate:doctrine:crud --entity=AppBundle:LocalUser --route-prefix=localuser --with-write -n
+
+Na entidade LocalUser adicionar o campo plainPassword que não será persistido no banco:
+
+    private $plainPassword;
+    public function getPlainPassword()
+    {
+        return $this->plainPassword;
+    }
+    public function setPlainPassword($plainPassword)
+    {
+        $this->plainPassword = $plainPassword;
+        $this->password = null;
+    }
+    
+Ainda na entidade LocalUser adicionar os métodos e implementar UserInterface:
+
+    use Symfony\Component\Security\Core\Role\Role;
+    use Symfony\Component\Security\Core\User\UserInterface;
+    class LocalUser implements UserInterface
+    {
+        public function getSalt()
+        {
+        }
+        public function eraseCredentials()
+        {
+            $this->plainPassword = null;
+        }
+    }
+
+Em newAction, antes de persistir localUser inserir:
+
+    if(empty($localUser->getRoles())) $localUser->setRoles([]);
+
+Ainda na entidade LocalUser não permitir usernames duplicados:
+
+    use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
+E no notation antes da classe LocalUser:
+
+    @UniqueEntity(fields={"username"}, message="It looks like your already have an account!")
+
+Criar formulário para login AppBundle/Form/LoginForm.php:
+
+    namespace AppBundle\Form;
+    use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\Form\FormBuilderInterface;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
+    use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+
+    class LoginForm extends AbstractType
+    {
+        /**
+        * {@inheritdoc}
+        */
+        public function buildForm(FormBuilderInterface $builder, array $options)
+        {
+            $builder->add('_username')->add('_password',PasswordType::class);
+        }
+    }
+
+
+Criar controler SecurityController.php:
+
+    namespace AppBundle\Controller;
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
+    use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\HttpFoundation\JsonResponse;
+    use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+    use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
+    use AppBundle\Entity\LocalUser;
+    use AppBundle\Form\LoginForm;
+
+    class SecurityController extends Controller
+    {
+	    /**
+        * @Route("/login", name="security_login")
+        */
+        //public function loginAction(Request $request, AuthenticationUtils $authUtils)
+        public function loginAction()
+        {
+    	    $authenticationUtils = $this->get('security.authentication_utils');
+        	$error = $authenticationUtils->getLastAuthenticationError();
+
+	        // last username entered by the user
+	        $lastUsername = $authenticationUtils->getLastUsername();
+
+    	    $form = $this->createForm(LoginForm::class,[
+	    	    '_username' => $lastUsername
+	        ]);
+
+	        return $this->render('localuser/login.html.twig', array(
+	            'form'  => $form->createView(),
+	            'error' => $error,
+	        ));
+        }
+  
+        /**
+        * @Route("/logout", name="security_logout")
+        */
+        public function logoutAction()
+        {
+            throw new \Exception('everything');
+        }
+ 
+    }
+
+
+Crira template para tela de login em localuser/login.html.twig
+
+    {% extends 'base.html.twig' %}
+    {% block body %}
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <h1>Login</h1>
+            {% if error %}
+                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+            {% endif %}
+            {{ form_start(form) }}
+                {{ form_row(form._username) }}
+                {{ form_row(form._password) }}
+                <button type="submit" class="btn btn-success">Login <span class="fa fa-lock"> </span></button>   
+            {{ form_end(form) }}  
+        </div>
+      </div>
+    </div>
+    {% endblock %}
+           
+Cria aquirvo src/AppBundle/Security/LoginFormAuthenticator.php
+
+    namespace AppBundle\Security;
+    use AppBundle\Form\LoginForm;
+    use Symfony\Component\Form\FormFactoryInterface;
+    use Doctrine\ORM\EntityManagerInterface;
+    use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+    use Symfony\Component\Routing\RouterInterface;
+    use Symfony\Component\HttpFoundation\Request;
+    use Symfony\Component\HttpFoundation\JsonResponse;
+    use Symfony\Component\HttpFoundation\Response;
+    use Symfony\Component\Security\Core\User\UserInterface;
+    use Symfony\Component\Security\Guard\AbstractGuardAuthenticator;
+    use Symfony\Component\Security\Core\Authentication\Token\TokenInterface;
+    use Symfony\Component\Security\Core\Exception\AuthenticationException;
+    use Symfony\Component\Security\Core\User\UserProviderInterface;
+    use Symfony\Component\Security\Core\Security;
+    use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+    use Symfony\Component\HttpFoundation\RedirectResponse;
+
+    class LoginFormAuthenticator extends AbstractGuardAuthenticator
+    {
+        private $formFactory;
+        private $em;
+        private $router;
+        private $passwordEncoder;
+
+        public function __construct(FormFactoryInterface $formFactory, EntityManagerInterface $em, RouterInterface $router, UserPasswordEncoderInterface $passwordEncoder)
+        {
+            $this->formFactory = $formFactory;
+            $this->em = $em;
+            $this->router = $router;
+            $this->passwordEncoder = $passwordEncoder;
+        }
+
+        public function getCredentials(Request $request)
+        {
+            $isLoginSubmit = $request->getPathInfo() == '/login' && $request->isMethod('POST');
+            if (!$isLoginSubmit) {
+                // skip authentication
+                return;
+            }
+            $form = $this->formFactory->create(LoginForm::class);
+            $form->handleRequest($request);
+            $data = $form->getData();
+
+            $request->getSession()->set(
+                Security::LAST_USERNAME,
+                $data['_username']
+            );
+            return $data;
+        }
+
+        public function getUser($credentials, UserProviderInterface $userProvider)
+        {
+            $username = $credentials['_username'];
+            return $this->em->getRepository('AppBundle:LocalUser')->findOneBy(['username' => $username]);
+        }
+
+        public function checkCredentials($credentials, UserInterface $user)
+        {
+            $password = $credentials['_password'];
+            if ($this->passwordEncoder->isPasswordValid($user, $password)) {
+                return true;
+            }
+            return false;
+        }
+
+        public function onAuthenticationSuccess(Request $request, TokenInterface $token, $providerKey)
+        {
+            return new RedirectResponse($this->router->generate('homepage'));
+        }
+
+        public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
+        {
+            $data = array(
+                'message' => strtr($exception->getMessageKey(), $exception->getMessageData())
+                // or to translate this message
+                // $this->translator->trans($exception->getMessageKey(), $exception->getMessageData())
+            );
+            return new JsonResponse($data, Response::HTTP_FORBIDDEN);
+        }
+
+        /**
+        * Called when authentication is needed, but it's not sent
+        */
+        public function start(Request $request, AuthenticationException $authException = null)
+        {
+            $data = array(
+                // you might translate this message
+                'message' => 'Autenticação necessária'
+            );
+            return new JsonResponse($data, Response::HTTP_UNAUTHORIZED);
+        }
+
+        public function supportsRememberMe()
+        {
+            return false;
+        }
+    }
+
+Criação do arquivo src/AppBundle/Doctrine/HashPasswordListener.php com o conteúdo:
+
+    namespace AppBundle\Doctrine;
+    use AppBundle\Entity\LocalUser;
+    use Doctrine\Common\EventSubscriber;
+    use Doctrine\ORM\Event\LifecycleEventArgs;
+    use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+    
+    class HashPasswordListener implements EventSubscriber
+    {
+        private $passwordEncoder;
+
+        public function __construct(UserPasswordEncoderInterface $passwordEncoder)
+        {
+            $this->passwordEncoder = $passwordEncoder;
+        }
+
+        public function prePersist(LifecycleEventArgs $args)
+        {
+            $entity = $args->getEntity();
+            if (!$entity instanceof LocalUser) {
+                return;
+            }
+            $this->encodePassword($entity);
+        }
+
+        public function preUpdate(LifecycleEventArgs $args)
+        {
+            $entity = $args->getEntity();
+            if (!$entity instanceof LocalUser) {
+                return;
+            }
+            $this->encodePassword($entity);
+
+            $em = $args->getEntityManager();
+            $meta = $em->getClassMetadata(get_class($entity));
+            $em->getUnitOfWork()->recomputeSingleEntityChangeSet($meta, $entity);
+        }
+
+        public function getSubscribedEvents()
+        {
+            return ['prePersist', 'preUpdate'];
+        }
+
+        private function encodePassword(LocalUser $entity)
+        {
+            if (!$entity->getPlainPassword()) {
+                return;
+            }
+            $encoded = $this->passwordEncoder->encodePassword(
+                $entity,
+                $entity->getPlainPassword()
+            );
+            $entity->setPassword($encoded);
+        }
+    }
+
+Criação do formulário de registro Form/LocalUserRegistrationForm.php:
+
+    namespace AppBundle\Form;
+    use AppBundle\Entity\LocalUser;
+    use Symfony\Component\Form\AbstractType;
+    use Symfony\Component\Form\Extension\Core\Type\EmailType;
+    use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+    use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+    use Symfony\Component\Form\FormBuilderInterface;
+    use Symfony\Component\OptionsResolver\OptionsResolver;
+
+    class LocalUserRegistrationForm extends AbstractType
+    {
+        public function buildForm(FormBuilderInterface $builder, array $options)
+        {
+            $builder
+                ->add('username')
+                ->add('plainPassword', RepeatedType::class, [
+                    'type' => PasswordType::class
+                ]);
+        }
+        public function configureOptions(OptionsResolver $resolver)
+        {
+            $resolver->setDefaults([
+                'data_class' => LocalUser::class
+            ]);
+        }
+    }
+
+Criação de template para registro localuser/register.html.twig
+
+    {% extends 'base.html.twig' %}
+    {% block body %}
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1>Registro</h1>
+                    {{ form_start(form) }}
+                        {{ form_row(form.username) }}
+                        {{ form_row(form.plainPassword.first, {
+                            'label': 'Password'
+                        }) }}
+                        {{ form_row(form.plainPassword.second, {
+                            'label': 'Repeat Password'
+                        }) }}
+                        <button type="submit" class="btn btn-primary" formnovalidate>Register</button>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+
+Adicionar o método registerAction em LocalUserController.php (colocar como primeiro método da classe):
+
+<?php
+
+    use AppBundle\Form\LocalUserRegistrationForm;
+    ...
+    /**
+     * @Route("/register", name="localuser_register")
+     */
+    public function registerAction(Request $request)
+    {
+        $form = $this->createForm(LocalUserRegistrationForm::class);
+        $form->handleRequest($request);
+        if ($form->isValid()) {
+            /** @var User $user */
+            $user = $form->getData();
+            $user->setRoles([]);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($user);
+            $em->flush();
+            $this->addFlash('success', 'Welcome '.$user->getUsername());
+            return $this->redirectToRoute('homepage');
+        }
+        return $this->render('localuser/register.html.twig', [
+            'form' => $form->createView()
+        ]);
+    }
+
+Configurações adicionais em security.yml (tudo dentro de security:):
+
+    encoders:
+        AppBundle\Entity\LocalUser: bcrypt
+    providers:
+        our_users:
+            entity: { class: AppBundle\Entity\LocalUser, property: username }
+    firewalls:
+        main:
+            guard:
+                authenticators:
+                   - AppBundle\Security\LoginFormAuthenticator
+            logout:
+                path: /logout         
+
+Configurações adicionais em services.yml (tudo dentro de services:):
+
+    AppBundle\Security\LoginFormAuthenticator:
+        public: public
+        
+    AppBundle\Doctrine\HashPasswordListener:
+        public: true
+        tags:
+            - { name: doctrine.event_subscriber }
+
+No form gerado automaticamente LocalUserType.php inserir trocar no build o campo
+password por plainPassword e deixá-lo do tipo password. 
+
+TODO: 
+
+ - Tela de editar login do usuário, em especial, trocar senha
