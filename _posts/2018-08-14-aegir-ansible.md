@@ -11,8 +11,6 @@ tags:
   - aegir
 ---
 
-## Introdução
-
 Na última década explodiram as opções de ferramentas para publicação de conteúdos na web,
 em especial, os que permitiam a criação e manutenção rápida de sites e portais institucionais.
 Os Sistema de Gerenciamento de Conteúdo (ou Content Management System – CMS) foram protagonistas
@@ -33,7 +31,6 @@ compartilhada começa a se tornar uma dor de cabeça, pois imaginem aplicar atua
 Neste texto, vamos abordar um pouco sobre o Drupal sob a perspectiva de quem gerencia a 
 infraestrutura. O Drupal implmenteta nativamente uma estrutura chamada multisite, que permite mantermos
 de cara todas nossas instâncias na mesma versão. 
-
 
 ## Instalação do aegir
 
