@@ -73,7 +73,7 @@ social:
 analytics:
   provider               :  "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          :
+    tracking_id          : "UA-129137680-1"
 
 
 # Site Author
@@ -93,7 +93,7 @@ author:
   facebook         : thiagogomesverissimo
   foursquare       :
   github           : "thiagogomesverissimo"
-  google_plus      : https://plus.google.com/u/0/114029721948189710052
+  google_plus      : "/u/0/114029721948189710052"
   keybase          :
   instagram        :
   lastfm           :
