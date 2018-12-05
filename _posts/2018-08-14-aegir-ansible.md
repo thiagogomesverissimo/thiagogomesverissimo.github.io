@@ -83,13 +83,14 @@ apt-get update
 apt-get install aegir3 aegir-archive-keyring 
 {% endhighlight %}
 
-No pprocesso de instalação quando for perguntado qual a *URL of the hostmaster
+No processo de instalação quando for perguntado qual a *URL of the hostmaster
 frontend* coloque a mesma url que registramos em */etc/hosts*, 
 ou seja: *aegir.xurepinha.net*.
 
 O aegir trabalha com o conceito de plataforma, que nada mais é
-que a versão do drupal que usará em seus sites e o mais legal é a 
-possibilidade de ter no mesmo ambiente versões de drupal diferentes.
+que o core do drupal em conjunto com os módulos, temas e bibliotecas.  
+Os sites rodam em cima das plataformas, possibilitando ter no 
+mesmo ambiente versões de drupal diferentes.
 Para tal, baixe as versões do drupal que irá trabalhar na pasta
 */var/aegir/platforms/* manualmente, com drush ou com composer.
 Por exemplo, vamos instalar as versões 8.6.0 e 8.6.1.
@@ -117,5 +118,53 @@ admin/admin.
 
 ## Instalação do aegir usando ansible
 
+Podemos automatizar esse processo de instalação usando
+o ansible, vamos então remover a VM criada anteriormente
+e criá-la novamente.
+
+{% highlight bash %}
+vagrant destroy -f
+vagrant up
+{% endhighlight %}
+
+Agora vamos criar um diretório e os arquivos mínimos que permitirão
+provisionar o aegir com o ansible
+
+{% highlight bash %}
+mkdir deploy-aegir-with-ansible
+cd deploy-aegir-with-ansible
+touch hosts ansible.cfg playbook.yml
+{% endhighlight %}
+
+Configuração do 
+
+{% highlight bash %}
+[defaults]
+allow_world_readable_tmpfiles = True
+inventory = ./hosts
+roles_path = ./roles
+{% endhighlight %}
+
+{% highlight bash %}
+[aegir]
+192.168.8.8 ansible_connection=ssh ansible_user=vagrant ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key"
+{% endhighlight %}
+
+
+{% highlight bash %}
+ansible-galaxy install geerlingguy.php-versions geerlingguy.php geerlingguy.composer geerlingguy.mysql ergonlogic.aegir
+{% endhighlight %}
+
+
+{% highlight yml %}
+{% include snippets/playbook_aegir.yml %}
+{% endhighlight %}
+
+{% highlight bash %}
+ansible-playbook playbook.yml
+{% endhighlight %}
+
+{% highlight bash %}
+{% endhighlight %}
 ## Gerenciando seus sites requisições API
 
