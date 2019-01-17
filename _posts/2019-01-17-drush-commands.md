@@ -15,8 +15,10 @@ Compilados em conjunto com [Augusto César Freire Santiago](https://github.com/a
 
 Trocar senha do usuário admin para sua senha-secreta:
 
-    site='exemplo.com'
-    drush @$site user-password admin --password='senha-secreta'
+{% highlight bash %}
+site='exemplo.com'
+drush @$site user-password admin --password='senha-secreta'
+{% endhighlight %}
 
 Listar temas desabilitados de um site:
 
@@ -78,8 +80,10 @@ done
 
 Configurar usuário 1 com username admin:
 
-    site='exemplo.com'
-    drush @$site sql-query "update users set name='admin' where uid=1"
+{% highlight bash %}
+site='exemplo.com'
+drush @$site sql-query "update users set name='admin' where uid=1"
+{% endhighlight %}
 
 ## Específicos para Drupal 8
 
