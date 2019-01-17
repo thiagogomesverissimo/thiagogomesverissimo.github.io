@@ -1,5 +1,5 @@
 ---
-title: 'Compilação de alguns comandos drush em ambiente multisite'
+title: 'Compilação de alguns comandos drush em aegir multisite'
 date: 2019-01-17
 permalink: /posts/drush-commands
 categories: 
@@ -9,23 +9,58 @@ tags:
   - drush
 ---
 
-Listar nomes dos módulos desabilitados de um site:
+Seleção de comandos drush usados para gerenciamento de centenas de sites
+em Drupal com core compartilhado, em especial no ambiente aegir. 
+Compilados em conjunto com [Augusto César Freire Santiago](https://github.com/acesarfs) e [Ricardo Fontoura](https://github.com/ricardfo).
+
+Trocar senha do usuário admin para sua senha-secreta:
+
+    site='exemplo.com'
+    drush @$site user-password admin --password='senha-secreta'
+
+Listar temas desabilitados de um site:
+
+{% highlight bash %}
+drush @[site] pml --status=disabled --type=theme --pipe
+{% endhighlight %}
+
+Listar módulos desabilitados de um site:
 
 {% highlight bash %}
 site=exemplo.usp.br
 drush @$site pml --status=disabled --type=module --pipe
 {% endhighlight %}
 
-Listar na mesma linha nomes dos módulos desabilitados de um site:
+Mesma listagem acima, mas com o resultado em uma única linha:
 
 {% highlight bash %}
 site=exemplo.usp.br
 drush @$site pml --status=disabled --type=module --pipe | tr -s '\n' ' '
 {% endhighlight %}
 
-Listar temas desabilitados de um site:
+Verificar quais temas estão habilitados em todos sites *.exemplo.com:
+
 {% highlight bash %}
-drush @[site] pml --status=disabled --type=theme --pipe
+for site in $(ls sites/ | grep exemplo.com); 
+do 
+  echo $site; 
+  drush @$site pml --status='enabled' --type='theme' --format=list; 
+done
+{% endhighlight %}
+
+Desinstalar o tema em todos os sites:
+
+{% highlight bash %}
+for site in $(ls sites/ | grep exemplo.com); 
+do
+  drush @$i pm-uninstall $tema -y; 
+done
+{% endhighlight %}
+
+Módulos que estão na plataforma p1 e não estão na p2:
+
+{% highlight bash %}
+diff  p1/sites/all/modules/ p2/sites/all/modules/ | grep "Only in p1" | cut -d':' -f2
 {% endhighlight %}
 
 ## Específicos para Drupal 7
@@ -41,6 +76,13 @@ do
 done
 {% endhighlight %}
 
+Configurar usuário 1 com username admin:
+
+    site='exemplo.com'
+    drush @$site sql-query "update users set name='admin' where uid=1"
+
+## Específicos para Drupal 8
+
 Verificar se um tema específico está como default em algum site *.exemplo.com:
 
 {% highlight bash %}
@@ -52,33 +94,15 @@ do
 done
 {% endhighlight %}
 
-Verificar quais temas estão habilitados em todos sites *.exemplo.com:
+Apagar qualquer configuração referente a um módulo específico.
+Muito útil para quando a pasta do módulo foi removida e a ausência da mesma
+está quebrando o site. Por exemplo, vamos usar o webform:
 
 {% highlight bash %}
-for site in $(ls sites/ | grep exemplo.com); 
-do 
-  echo $site; 
-  drush @$site pml --status='enabled' --type='theme' --format=list; 
+site='exemplo'
+for i in $(drush @$site cli | grep webform);do 
+  drush @$site config-delete $i;
 done
+drush @$site cache-rebuild
 {% endhighlight %}
-
-Desinstalar o tema em todos os sites:
-{% highlight bash %}
-for site in $(ls sites/ | grep exemplo.com); 
-do
-  drush @$i pm-uninstall $tema -y; 
-done
-{% endhighlight %}
-
-Módulos que estão na plataforma p1 e não estão na p2:
-
-{% highlight bash %}
-diff  p1/sites/all/modules/ p2/sites/all/modules/ | grep "Only in p1" | cut -d':' -f2
-{% endhighlight %}
-
-Configurar usuário 1 com username admin e senha adminpass:
-
-    site='exemplo.com'
-    drush @$site sql-query "update users set name='admin' where uid=1"
-    drush @$site user-password fflch --password='adminpass'
 
