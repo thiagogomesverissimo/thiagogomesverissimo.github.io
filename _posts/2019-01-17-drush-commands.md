@@ -1,5 +1,5 @@
 ---
-title: 'Compilação de alguns comandos drush em ambiente multisite'
+title: 'Compilação de comandos drush em ambiente multisite'
 date: 2019-01-17
 permalink: /posts/drush-commands
 categories: 
