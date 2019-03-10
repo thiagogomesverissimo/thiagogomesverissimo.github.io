@@ -14,7 +14,7 @@ tags:
 {% highlight bash %}
 token='blabla'
 org='uspdev'
-repos=$(curl -s -H "Authorization: token $token" 'https://api.github.com/orgs/$org/repos?per_page=100' | grep full_name | cut -f2 -d: | sed -r 's/"| |,//g')
+repos=$(curl -s -H "Authorization: token $token" "https://api.github.com/orgs/$org/repos?per_page=100" | grep full_name | cut -f2 -d: | sed -r 's/"| |,//g')
 {% endhighlight %}
 
 2. clonar todos repositórios
