@@ -7,4 +7,10 @@
  - Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
  - Run `JEKYLL_ENV=development bundle exec jekyll serve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
-gem i bundler -v 1.17.3
+Debian:
+
+    gem i bundler -v 1.17.3
+
+Drafts:
+
+    JEKYLL_ENV=development bundle exec jekyll serve --drafts
