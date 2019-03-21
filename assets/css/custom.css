@@ -1,18 +1,21 @@
-.text-justify {
-  text-align: justify;
-}
-
 .highlight code, .highlight pre {
     padding: 10px;
     font-size: 0.8em;
     width: 100%;
 }
 
-.lineno { 
-  color: #ccc; 
-  display: inline-block; 
-  padding: 0 5px; 
-  border-right:1px solid #ccc;
+div.highlighter-rouge, figure.highlight {
+  background-color: #3f3f3f;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
 }
 
+div.highlighter-rouge:before, figure.highlight:before {
+  display: none;
+}
 
+article p, p, article ul, section.page__content p, div.archive ul {
+  font-size: 0.9em;
+  text-align: justify;
+}
