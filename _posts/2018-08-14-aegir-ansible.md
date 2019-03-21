@@ -46,13 +46,13 @@ Esse tutorial foi feito usando como ambiente de desenvolvimento a dupla
 virualbox e vagrant. Não é obrigatório usá-los, mas disponibilizo o
 Vagrantfile para quem o quiser:
 
-{% highlight ruby %}
+{% highlight ruby  %}
 {% include snippets/vagrant/Vagrantfiles/debian %}
 {% endhighlight %}
 
 Salve esse código em um arquivo chamado Vagrantfile e na mesma pasta rode:
 
-{% highlight console %}
+{% highlight console  %}
 vagrant up
 vagrant ssh
 {% endhighlight %}

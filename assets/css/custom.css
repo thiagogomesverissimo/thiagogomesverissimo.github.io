@@ -1,6 +1,18 @@
-code {
-}
-
 .text-justify {
   text-align: justify;
 }
+
+.highlight code, .highlight pre {
+    padding: 10px;
+    font-size: 0.8em;
+    width: 100%;
+}
+
+.lineno { 
+  color: #ccc; 
+  display: inline-block; 
+  padding: 0 5px; 
+  border-right:1px solid #ccc;
+}
+
+
