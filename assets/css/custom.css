@@ -1,7 +1,12 @@
 .highlight code, .highlight pre {
-    padding: 10px;
+    padding: 5px;
+    margin: 5px;
+    padding-left: 2px;
+    margin-left: 0px;
     font-size: 0.8em;
     width: 100%;
+    border-radius: 8px;
+
 }
 
 div.highlighter-rouge, figure.highlight {
@@ -18,4 +23,21 @@ div.highlighter-rouge:before, figure.highlight:before {
 article p, p, article ul, section.page__content p, div.archive ul {
   font-size: 0.9em;
   text-align: justify;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
+
+p.page__date {
+  padding: 0;
+  margin: 0;
+}
+
+.archive__item-excerpt {
+  display: none;
+}
+
+h2.archive__item-title {
+  margin-top: 30px;
+}
+
+

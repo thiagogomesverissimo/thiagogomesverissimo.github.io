@@ -52,9 +52,10 @@ Vagrantfile para quem o quiser:
 
 Salve esse código em um arquivo chamado Vagrantfile e na mesma pasta rode:
 
-{% highlight console  %}
-vagrant up
-vagrant ssh
+{% highlight shell %}
+$ vagrant up
+$ vagrant ssh
+
 {% endhighlight %}
 
 No caso, vamos instalar nosso aegir em um máquina de IP 192.168.8.8.
