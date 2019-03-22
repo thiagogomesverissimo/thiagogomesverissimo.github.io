@@ -1,6 +1,6 @@
 ---
 title: 'Deploy do aegir com ansible: entregue instâncias Drupal na sua instituição'
-date: 2018-11-03
+date: 2019-03-21
 permalink: /posts/deploy-aegir-com-ansible
 header:
   teaser: "images/aegir.jpg"
@@ -122,19 +122,18 @@ instalar e configurar o aegir automaticamente.
 
 ## Instalação do aegir usando ansible
 
-Vamos primeiramente remover a VM criada anteriormente
-e criá-la novamente.
+Remova a VM criada anteriormente e crie-a novamente.
 
 {% highlight bash %}
 vagrant destroy -f
 vagrant up
 {% endhighlight %}
 
-Agora vamos criar os arquivos mínimos que nos permitirão 
-provisionar o aegir com o ansible:
+Vamos criar os arquivos mínimos que nos permitirão provisionar 
+o aegir com o ansible:
 
 {% highlight bash %}
-touch hosts ansible.cfg playbook.yml
+$ touch hosts ansible.cfg playbook.yml
 {% endhighlight %}
 
 Conteúdo do arquivo *ansible.cfg*:
@@ -158,11 +157,13 @@ ansible_ssh_private_key_file="~/.vagrant.d/insecure_private_key"
 {% endhighlight %}
 
 No ansible, colocamos a receita para construção do nosso servidor em um playbook. 
-Podemos especificar tarefa por tarefa no playbook o que deve ser feito ou podemos
-agrupar - semanticamente - essa tarefas em uma role e chamar a role a partir do 
-playbook. A role é então simplesmente um agrupamento de tarefas, no intuito
-de encapsular o procedimento de instalação e configuração de algum software, 
-como o aegir. Existem muitas roles espalhadas pela web que fazem N coisas.
+Podemos especificar tarefa por tarefa no playbook do que deve ser feito ou podemos
+agrupar - semanticamente - essa tarefas em uma role e chamar essa role a partir do 
+playbook. Assim, uma passa a ser simplesmente um agrupamento de tarefas, no intuito
+de encapsular um procedimento de instalação e/ou configuração de algum software, 
+como o aegir. Existem muitas roles espalhadas pela web que fazem N coisas e 
+antes de desenvolver a sua própria é sempre bom procurar para verificar
+se não tem alguma que faça exatamente o que você quer.
 Vamos usar algumas para delegar a instalação de dependências do aegir,
 começando pelo apache. Assim, vamos baixar a role geerlingguy.apache 
 usando o ansible-galaxy:
@@ -172,10 +173,11 @@ $ mkdir roles
 $ ansible-galaxy install geerlingguy.apache
 {% endhighlight %}
 
-Agora já podemos começar nosso playbook e fazer a instalação do apache
+Agora podemos criar nosso playbook e fazer a instalação do apache
 no nosso servidor. Crie um arquivo playbook.yml e coloque o seguinte conteúdo:
 
 {% highlight yml %}
+---
 - name: playbook que instala um servidor aegir
   become: yes
   hosts: aegir
@@ -200,6 +202,7 @@ Mas para essa role vamos configurar uma variável que específica
 a versão default do php que vamos usar:
 
 {% highlight yml %}
+---
 - name: playbook que instala um servidor aegir
   become: yes
   hosts: aegir
@@ -211,13 +214,15 @@ a versão default do php que vamos usar:
     - geerlingguy.php-versions
 {% endhighlight %}
 
-A role geerlingguy.php insgta
+A role *geerlingguy.php* instala de fato o php e novamente controlamos
+o que a role deve ou não fazer usando variáveis.
 
 {% highlight bash %}
 $ ansible-galaxy install geerlingguy.php
 {% endhighlight %}
 
 {% highlight yml %}
+---
 - name: playbook que instala um servidor aegir
   become: yes
   hosts: aegir
@@ -233,6 +238,12 @@ $ ansible-galaxy install geerlingguy.php
     - geerlingguy.apache
     - geerlingguy.php-versions
     - geerlingguy.php
+{% endhighlight %}
+
+https://github.com/ergonlogic/ansible-role-aegir
+
+{% highlight bash %}
+$ ansible-galaxy install thiagogomesverissimo.aegir
 {% endhighlight %}
 
 
