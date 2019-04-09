@@ -9,13 +9,41 @@ tags:
   - git 
 ---
 
-1. Gerar lista com repositórios:
+Instalação das depências necessárias para o gource:
+
+    libsdl2-dev libsdl2-image-dev libpcre3-dev
+    libfreetype6-dev libglew-dev libglm-dev
+    libboost-filesystem-dev libpng12-dev libtinyxml-dev
+
+Compile e instale do gource:
+
+{% highlight bash %}
+
+    # https://github.com/acaudwell/Gource/blob/master/INSTALL
+    git clone https://github.com/acaudwell/Gource.git
+    cd Gource
+    ./configure
+    make
+    make install
+    
+{% endhighlight %}
+
+Gerar token no github e salvar numa variável: 
 
 {% highlight bash %}
 token='blabla'
 org='uspdev'
-repos=$(curl -s -H "Authorization: token $token" "https://api.github.com/orgs/$org/repos?per_page=100" | grep full_name | cut -f2 -d: | sed -r 's/"| |,//g')
 {% endhighlight %}
+Montar lista com os repositório de uma organização:
+
+{% highlight bash %}
+repos=$(curl -s -H "Authorization: token $token" "https://api.github.com/orgs/$org/repos?per_page=100")
+{% endhighlight %}
+
+repos=$(echo $repos | grep full_name | cut -f2 -d:)
+
+repos=$(echo $repos | sed -r 's/"| |,//g')
+repos=$(echo $repos | tr '\n' ' ')
 
 2. clonar todos repositórios
 
