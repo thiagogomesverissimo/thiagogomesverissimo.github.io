@@ -22,7 +22,6 @@ div.highlighter-rouge:before, figure.highlight:before {
 
 article p, p, article ul, section.page__content p, div.archive ul {
   font-size: 0.9em;
-  text-align: justify;
   margin-top: 5px;
   margin-bottom: 5px;
 }
