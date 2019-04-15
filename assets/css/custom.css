@@ -24,6 +24,7 @@ article p, p, article ul, section.page__content p, div.archive ul {
   font-size: 0.9em;
   margin-top: 5px;
   margin-bottom: 5px;
+  line-height: 2em;
 }
 
 p.page__date {
