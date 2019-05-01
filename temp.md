@@ -17,6 +17,7 @@ Livros Home
 |------------|-----------------|-----------------|-----------------|--------------------|
 |sedgwick CS |sedgwick alg Java|   sedgwick ALg C| livro Global War|datastructure python|
 
+***
 ## --- já contribui ---
 
 ### nexus theme drupal
@@ -33,8 +34,9 @@ Livros Home
  - https://www.ime.usp.br/~marcelom/template/
  - aplicar em https://github.com/uspdev/laravel-usp-theme
  - fazer o mesmo para o symfony
- 
-# --- pretendo contribuir ---
+
+***
+## --- pretendo contribuir ---
 
 ### openbiblio
  - https://bitbucket.org/mstetson/obiblio-1.0-wip/
@@ -74,7 +76,8 @@ Livros Home
  - https://www.drupal.org/project/theme_permission/issues/3047507
  - Os temas não aparecem na administração de temas, mas nos blocos sim.
 
-# --- ideias de projetos ---
+***
+## --- ideias de projetos ---
 
 ### template do laravel com bootstrap dashboard
  - https://github.com/uspdev/laravel-bootstrap-dashboard
