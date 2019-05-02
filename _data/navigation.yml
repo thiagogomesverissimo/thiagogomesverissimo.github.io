@@ -10,14 +10,14 @@ main:
   - title: "Ensino"
     url: /teaching/    
     
-  - title: "Portfólio"
-    url: /portfolio/
+#  - title: "Portfólio"
+#    url: /portfolio/
 
   - title: "Publicações"
     url: /publications/
     
-  - title: "CV"
-    url: /cv/
+  - title: "Currículo"
+    url: /curriculo/
     
 #  - title: "Guide"
 #    url: /markdown/

@@ -1,52 +1,65 @@
 ---
 layout: archive
-title: "CV"
-permalink: /cv/
+title: "Currículo"
+permalink: /curriculo/
 author_profile: true
 redirect_from:
   - /resume
+  - /cv
 ---
 
 {% include base_path %}
 
-Educação
-======
+***
+
+Formação
+========
 * Mestre em Física, Universidade de São Paulo, 2016
 * Graduação em Licenciatura em Física, Universidade de São Paulo, 2009
 
-Experiência
-======
-* Analista de Sistema na Universidade de São Paulo
-  * Desenvolvimento 
-  * Infraestrutura
-  * Gerente de redes
+Apresentações
+=============
 
-Habilidades
-======
-* Análises multivariadas
-* Desenvolvimento
-  * PHP
-  * Python
-  * Java
+  <ul>
+    {% for item in site.talks %}
+        <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a></li>
+    {% endfor %}
+  </ul>
 
 Publicações
-======
-  <ul>{% for post in site.publications %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Palestras
-======
-  <ul>{% for post in site.talks %}
-    {% include archive-single-talk-cv.html %}
-  {% endfor %}</ul>
+===========
+  <ul>
+   {% for item in site.publications %}
+      <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a></li>
+   {% endfor %}
+  </ul>
   
 Ensino
 ======
-  <ul>{% for post in site.teaching %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+  <ul>
+    {% for item in site.teaching %}
+      <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a></li>
+    {% endfor %}
+  </ul>
   
 Grupos
 ======
-* Atualmente membro do USPdev
+<ul>
+  <li> USPdev </li>
+  <li> Flusp </li>
+</ul>
+
+Cursos realizados
+=================
+<b>2018</b>
+<ul>
+  <li>DevOps - 4linux</li>
+  <li>Bla -Xuxu</li>
+</ul>
+
+<b>2017</b>
+<ul>
+  <li>DevdwedOps - 555</li>
+  <li>Bla -ssXuxu</li>
+</ul>
+  

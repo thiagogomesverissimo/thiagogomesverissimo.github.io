@@ -44,3 +44,10 @@ h2.archive__item-title {
     border-radius: 0%;
     max-width: 120px;
 }
+
+div.archive ul {
+    font-size: 1.0em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    line-height: 1em;
+}
