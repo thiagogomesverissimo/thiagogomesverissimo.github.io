@@ -2,7 +2,7 @@
 Organização das ideias e pendências para contribuição em projetos free/open. 
 Divisão: *já contribui*, *pretendo contribuir* e *ideias de projeto*
 
- - [issues e PRs no github](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+archived%3Afalse+involves%3Athiagogomesverissimo+)
+ - [issues e PRs no github](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+archived%3Afalse+involves%3Athiagogomesverissimo+) - [issues gitlab]()
 
 |         ter         |         qua         |         qui         |         sex         |
 |---------------------|---------------------|---------------------|---------------------|
@@ -18,6 +18,7 @@ Livros Home
 |sedgwick CS |sedgwick alg Java|   sedgwick ALg C| livro Global War|datastructure python|
 
 ***
+
 ## --- já contribui ---
 
 ### nexus theme drupal
@@ -36,7 +37,14 @@ Livros Home
  - fazer o mesmo para o symfony
 
 ***
+
 ## --- pretendo contribuir ---
+
+### tradução do drupal console
+ - github
+
+### tradução do codeclub
+ - responder email da raspberry fondation
 
 ### openbiblio
  - https://bitbucket.org/mstetson/obiblio-1.0-wip/
@@ -45,6 +53,9 @@ Livros Home
 ### tutoriais flusp
  - https://gitlab.com/flusp/site/merge_requests
  - fazer revisão dos tutorais
+
+### empacotamento no debian
+ - no site debianet.com.br tem vídeos mostrando como empacotar
 
 ### iio kernel 
  - https://git.kernel.org/pub/scm/linux/kernel/git/jic23/iio.git
@@ -77,6 +88,7 @@ Livros Home
  - Os temas não aparecem na administração de temas, mas nos blocos sim.
 
 ***
+
 ## --- ideias de projetos ---
 
 ### template do laravel com bootstrap dashboard
