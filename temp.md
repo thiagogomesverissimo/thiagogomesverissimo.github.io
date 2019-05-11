@@ -26,11 +26,6 @@ Livros Home
  - possibilidade de subir N imagens no slideshow (Esse patch https://www.drupal.org/project/nexus/issues/2963495 não foi incorporado ainda)
  - Aplicá-lo no nosso subtema?
 
-### nexus theme drupal
- - https://www.drupal.org/project/nexus
- - possibilidade de subir N imagens no slideshow (Esse patch https://www.drupal.org/project/nexus/issues/2963495 não foi incorporado ainda)
- - Aplicá-lo no nosso subtema?
-
 ### template usp no marcelo IME
  - https://www.ime.usp.br/~marcelom/template/
  - aplicar em https://github.com/uspdev/laravel-usp-theme
@@ -83,6 +78,7 @@ Livros Home
 ### aegan theme drupal
  - https://www.drupal.org/project/aegan/
  - slideshow não está funcionando: https://www.drupal.org/project/aegan/issues/2915721
+ - implementação color module
 
 ### ckeditor_font no drupal 8
  - https://www.drupal.org/project/ckeditor_font/issues/2900789
