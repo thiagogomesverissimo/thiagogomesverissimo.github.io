@@ -40,6 +40,16 @@ Livros Home
 
 ## --- pretendo contribuir ---
 
+### update oauth connector to Drupal 8
+ - https://github.com/thiagogomesverissimo/oauthconnector
+ - https://www.drupal.org/project/oauthconnector
+
+### codeclub + code.org at USP
+ - Escrever projeto
+
+### implementação de relay Tor
+ - ler documentação
+
 ### tradução do drupal console
  - github
 
