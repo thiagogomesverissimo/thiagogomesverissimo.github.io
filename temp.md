@@ -78,7 +78,8 @@ Livros Home
 ### aegan theme drupal
  - https://www.drupal.org/project/aegan/
  - slideshow não está funcionando: https://www.drupal.org/project/aegan/issues/2915721
- - implementação color module
+ - implementação color module: https://www.drupal.org/project/aegan/issues/2771535
+ - https://www.drupal.org/project/aegan/issues/2771535
 
 ### ckeditor_font no drupal 8
  - https://www.drupal.org/project/ckeditor_font/issues/2900789
