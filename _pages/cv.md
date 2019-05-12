@@ -53,16 +53,18 @@ Cursos realizados
 =================
 <b>2019</b>
 <ul>
-  <li> Algoritmos em Java.
-    <a href="{{base_path}}/files/certificados/2019/ime-usp-algoritimos-java.pdf"><i class="fa fa-file-pdf-o"></i></a>
+  <li> <a href="{{base_path}}/files/certificados/2019/ime-usp-algoritimos-java.pdf">
+    Algoritmos em Java.
+    <i class="fa fa-file-pdf-o"></i></a>
     <br> Instituto de Matemática e Estatística  da Universidade de São Paulo. 20h.
   </li>
 </ul>
 
 <b>2015</b>
 <ul>
-  <li> I Workshop sobre Ciência de Dados do IAG/USP 
-    <a href="{{base_path}}/files/certificados/2015/iag-bigdata.pdf"><i class="fa fa-file-pdf-o"></i></a>
+  <li> <a href="{{base_path}}/files/certificados/2015/iag-bigdata.pdf">
+    I Workshop sobre Ciência de Dados do IAG/USP 
+    <i class="fa fa-file-pdf-o"></i></a>
     <br> Instituto de Astronomia, Geofísica e Ciências Atmosféricas da Universidade de São Paulo. 4h40.
   </li>
 </ul>
