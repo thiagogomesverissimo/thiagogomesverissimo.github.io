@@ -36,28 +36,8 @@ Apresentações realizadas
 </ul>
 
 <hr />
-Cursos ministrados
-==================
-
-<ul>
-    {% for item in site.teaching %}
-      <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a></li>
-    {% endfor %}
-</ul>
-
-<hr />
-Publicações
-===========
-
-<ul>
-   {% for item in site.publications %}
-       <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a> </li>
-   {% endfor %}
-</ul>
-
-<hr />
-Participações em eventos (como ouvinte)
-=======================================
+Participações em eventos
+========================
 
 <b>2015</b>
 <ul>
@@ -66,6 +46,16 @@ Participações em eventos (como ouvinte)
     <i class="fa fa-file-pdf-o"></i></a>
     <br> Instituto de Astronomia, Geofísica e Ciências Atmosféricas da Universidade de São Paulo. 4h40.
   </li>
+</ul>
+
+<hr />
+Cursos ministrados
+==================
+
+<ul>
+    {% for item in site.teaching %}
+      <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a></li>
+    {% endfor %}
 </ul>
 
 <hr />
@@ -89,6 +79,17 @@ Cursos realizados
     <br> 4Linux. 40h.
   </li>
 </ul>
+
+<hr />
+Publicações
+===========
+
+<ul>
+   {% for item in site.publications %}
+       <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a> </li>
+   {% endfor %}
+</ul>
+
 
 <hr />
 Participações em grupos (estudos, pesquisa etc)
