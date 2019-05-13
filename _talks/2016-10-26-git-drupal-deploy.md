@@ -5,6 +5,14 @@ type: "Tutorial"
 permalink: /talks/drupal-deploy-git
 date: 2016-10-26
 location: "fatec são roque"
+slides: https://thiagogomesverissimo.github.io/presentations/deploy_e_versionamento_de_projetos_em_drupal
 ---
- 
- - 26/10/2016: IV Semana de Tecnologia - Fatec São Roque
+
+<ul>
+
+  <li> <a href="#">
+    26/10/2016: IV Semana de Tecnologia - Fatec São Roque
+    <i class="fa fa-file-pdf-o"></i></a>
+  </li>
+
+</ul>

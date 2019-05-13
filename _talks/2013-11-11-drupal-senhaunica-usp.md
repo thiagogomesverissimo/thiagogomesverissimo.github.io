@@ -3,6 +3,7 @@ title: "Senha Única USP (OAuth) no Drupal"
 collection: talks
 type: "Talk"
 permalink: /talks/senhaunicausp-drupal
+slides: #
 ---
 
 <ul>

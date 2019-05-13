@@ -31,7 +31,7 @@ Apresentações realizadas
 
 <ul>
     {% for item in site.talks %}
-        <li> <b> <a href="{{base_path}}/{{ item.url }}">{{ item.title }}</a> </b><br> {{ item.content}}</li>
+        <li> <b> <a href="{{ item.slides }}">{{ item.title }}</a> </b><br> {{ item.content}}</li>
     {% endfor %}
 </ul>
 
@@ -46,16 +46,6 @@ Participações em eventos
     <i class="fa fa-file-pdf-o"></i></a>
     <br> Instituto de Astronomia, Geofísica e Ciências Atmosféricas da Universidade de São Paulo. 4h40.
   </li>
-</ul>
-
-<hr />
-Cursos ministrados
-==================
-
-<ul>
-    {% for item in site.teaching %}
-      <li> <a href="{{base_path}}/{{ item.url }}">{{ item.title }} </a></li>
-    {% endfor %}
 </ul>
 
 <hr />
