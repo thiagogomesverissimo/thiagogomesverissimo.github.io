@@ -13,8 +13,8 @@ main:
 #  - title: "Portfólio"
 #    url: /portfolio/
 
-  - title: "Publicações"
-    url: /publications/
+#  - title: "Publicações"
+#    url: /publications/
     
   - title: "Currículo"
     url: /curriculo/
