@@ -61,7 +61,7 @@ o(s) e-mails do destinatário.
 
 Por fim, o script.sh abaixo configura o delimitador da nossa lista
 para *pipe*, lê nosso template email.txt, faz as substituições
-necessárias e dispara os e-mails para cada pessoa da sua lista.
+necessárias e dispara os e-mails para cada pessoa da lista.txt.
 
 {% highlight bash %}
 #!/bin/bash
