@@ -19,7 +19,7 @@ aqui optei por uma bem simplista, usando apenas o *mutt* e um pequeno script em
 shell. Começamos instalando o mutt:
 
 {% highlight bash %}
-    sudo apt-get install mutt
+sudo apt-get install mutt
 {% endhighlight %}
 
 Se você ainda não usa o mutt (deveria), segue uma configuração mínima,
@@ -68,8 +68,8 @@ necessárias e dispara os e-mails para cada pessoa da lista.txt.
 IFS="|"; 
 while read f1 f2 f3; 
 do 
-    body=$(cat email.txt| sed "s/__nome__/$f2/g" | sed "s/__tamanho__/$f1/g")
-    echo $body | mutt -s "URGENTE - Seus Arquivos Pessoais" $f3
+  body=$(cat email.txt| sed "s/__nome__/$f2/g" | sed "s/__tamanho__/$f1/g")
+  echo $body | mutt -s "URGENTE - Seus Arquivos Pessoais" $f3
 done < lista.txt
 
 {% endhighlight %}
