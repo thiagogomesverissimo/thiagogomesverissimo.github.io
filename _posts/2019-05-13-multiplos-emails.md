@@ -6,7 +6,6 @@ categories:
   - tutorial
 tags:
   - mutt
-  - msmtp
 ---
 
 Quando realizamos procedimentos repetitivos no computador sempre
