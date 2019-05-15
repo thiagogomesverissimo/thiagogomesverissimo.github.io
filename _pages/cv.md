@@ -41,6 +41,12 @@ Participações em eventos
 
 <b>2015</b>
 <ul>
+  <li> <a href="{{base_path}}/files/certificados/eventos/2015/wrf.pdf">
+    Workshop on Air Quality and Introduction to WRF-Chem Training
+    <i class="fa fa-file-pdf-o"></i></a>
+    <br> Instituto de Astronomia, Geofísica e Ciências Atmosféricas da Universidade de São Paulo. 40h.
+  </li>
+
   <li> <a href="{{base_path}}/files/certificados/eventos/2015/iag-bigdata.pdf">
     I Workshop sobre Ciência de Dados do IAG/USP 
     <i class="fa fa-file-pdf-o"></i></a>
@@ -163,7 +169,13 @@ Cursos realizados
   <li> <a href="{{base_path}}/files/certificados/cursos/2014/cirp.pdf">
     PHP com PostgreSQL Básico
     <i class="fa fa-file-pdf-o"></i></a>
-    <br> Centro de Informática de Ribeirão Preto - USP
+    <br> Centro de Informática de Ribeirão Preto-USP. 20h
+  </li>
+
+  <li> <a href="{{base_path}}/files/certificados/cursos/2014/drupal.pdf">
+    Drupal Avançado
+    <i class="fa fa-file-pdf-o"></i></a>
+    <br> Drupal de Elite - taller. 60h.
   </li>
 
 </ul>
@@ -200,6 +212,15 @@ Cursos realizados
     <br> Centro de Difusão de Tecnologia e Conhecimento - CDTC. 4h.
   </li>
 
+</ul>
+
+<b>2012</b>
+<ul>
+  <li> <a href="{{base_path}}/files/certificados/cursos/2012/postgresql.pdf">
+    Formação PostgreSQL
+    <i class="fa fa-file-pdf-o"></i></a>
+    <br> 4Linux. 80h.
+  </li>
 </ul>
 
 <b>2010</b>
