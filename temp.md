@@ -1,4 +1,4 @@
-# temp stuff
+# temporary stuff
 Organização das ideias e pendências para contribuição em projetos free/open. 
 Divisão: *já contribui*, *pretendo contribuir* e *ideias de projeto*
 
@@ -6,10 +6,10 @@ Divisão: *já contribui*, *pretendo contribuir* e *ideias de projeto*
 
 |         ter         |         qua         |         qui         |         sex         |
 |---------------------|---------------------|---------------------|---------------------|
-|coursera sedgwick CS |       STI INFRA     |      STI DRUPAL     |    STI SISTEMAS     |
+|coursera sedgwick CS |       symfonycast   |   red hat courses   |    laracast         |
 |coursera sedgwick alg|       C Univesp     |Coursera Spatial DC  |    EDX jquery       |
 |coursera HPSC        | Lynda React         |Coursera  Arqgis     |    EDX cs50         |
-| Suporte Drupal      | EDX curso R         |EDX global Warming   |  lynda D3           |
+| Pandas IME curso      | EDX curso R         |EDX global Warming   |  lynda D3           |
 
 Livros Home
 
