@@ -4,12 +4,11 @@ Divisão: *já contribui*, *pretendo contribuir* e *ideias de projeto*
 
  - [issues e PRs no github](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+archived%3Afalse+involves%3Athiagogomesverissimo+) - [issues gitlab]()
 
-|         ter         |         qua         |         qui         |         sex         |
-|---------------------|---------------------|---------------------|---------------------|
-|coursera sedgwick CS |       symfonycast   |   red hat courses   |    laracast         |
-|coursera sedgwick alg|       C Univesp     |Coursera Spatial DC  |    EDX jquery       |
-|coursera HPSC        | Lynda React         |Coursera  Arqgis     |    EDX cs50         |
-| Pandas IME curso      | EDX curso R         |EDX global Warming   |  lynda D3           |
+|                seg  |         ter         |         qua         |         qui         |         sex         |
+|---------------------|---------------------|---------------------|---------------------|---------------------|
+|       Lynda React  |EDX cs50 |       symfonycast   |   red hat courses   |    laracast         |
+|      EDX curso R  |coursera sedgwick alg|       C Univesp     |Coursera Spatial DC  |    EDX jquery       |
+|      Pandas IME curso    |coursera HPSC |   EDX global Warming      |Coursera  Arqgis     |   SymfonyCast           |
 
 Livros Home
 
