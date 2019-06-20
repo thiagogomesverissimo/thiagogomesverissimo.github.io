@@ -85,6 +85,11 @@ Livros Home
  - Fiz um fork para contornar: https://github.com/thiagogomesverissimo/ckeditor_font_temp
  - Corrigir caminho da biblioteca ckeditor
 
+### csv importer
+ - Importar arquivo no csv
+ - https://www.drupal.org/project/csv_importer/issues/2954403
+ - https://www.drupal.org/project/csv_importer
+ 
 ### webform_validation_brazilian_ids
  - Documentar módulo para ter permissão de deixar projeto seguro no drupal.org
  - https://www.drupal.org/project/projectapplications/issues/2939011
