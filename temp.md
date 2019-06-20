@@ -13,9 +13,9 @@ Divisão: *já contribui*, *pretendo contribuir* e *ideias de projeto*
 
 Livros Home
 
-|     seg    |       ter       |       qua       |       qui       |         sex        |
-|------------|-----------------|-----------------|-----------------|--------------------|
-|sedgwick CS |sedgwick alg Java|   sedgwick ALg C| livro Global War|datastructure python|
+|     seg    |       ter       |       qua       |       qui       |         sex        | sab     | dom |
+|------------|-----------------|-----------------|-----------------|--------------------|---------| ------|
+|sedgwick C  |algoritmos python| global warnming |  estatísitca    |symfony             | Calculo | Algebra Linear|
 
 ***
 
