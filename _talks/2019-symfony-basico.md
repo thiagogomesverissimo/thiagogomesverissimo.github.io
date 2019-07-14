@@ -9,6 +9,6 @@ slides: https://thiagogomesverissimo.github.io/slides/symfony_basico
 <ul>
   <li> <a href="#">
     2019 - Talk em preparação...
-    <i class="fa fa-file-pdf-o"></i></a>
+    <i class="fab fa-file-pdf-o"></i></a>
   </li>
 </ul>
