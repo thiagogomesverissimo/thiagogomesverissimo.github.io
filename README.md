@@ -14,3 +14,6 @@ Debian:
 Drafts:
 
     JEKYLL_ENV=development bundle exec jekyll serve --drafts
+
+
+Forked from: https://github.com/academicpages/academicpages.github.io
