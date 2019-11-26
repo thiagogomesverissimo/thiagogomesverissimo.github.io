@@ -92,6 +92,12 @@ Cursos realizados
 
 <b>2019</b>
 <ul>
+<li> <a href="{{base_path}}/files/certificados/cursos/2019/Cybercartograhy.pdf">
+    Cybercartograhy: Potentials and Applications
+    </a>
+    <br> Departamento de Geografia da FFLCH - USP. 8h.
+  </li>
+
   <li> <a href="#">
     Algoritmos em Java.
     </a>
