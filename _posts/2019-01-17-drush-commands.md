@@ -110,17 +110,21 @@ done
 drush @$site cache-rebuild
 {% endhighlight %}
 
-
 Atualizar banco de dados depois de atualização: 
- -ls /sites/all/modules > /tmp/lista.txt 
- -for i in $(cat /tmp/lista | grep fflch.usp.br); do drush updb -l http://$i -y; done
+{% highlight bash %}
+ls /sites/all/modules > /tmp/lista.txt 
+for i in $(cat /tmp/lista | grep fflch.usp.br); do drush updb -l http://$i -y; done
+{% endhighlight %}
 
 Criar lista de módulos que não são do core
- -drush pml --no-core --type=module --status="enabled" --pipe > /tmp/modules.txt
+ {% highlight bash %}
+-drush pml --no-core --type=module --status="enabled" --pipe > /tmp/modules.txt
 
 #Listar módulos e themas desabilidados:
- drush pm-list --no-core --status="disabled,not installed" --pipe -l http://modelod7.fflch.usp.br
+ {% highlight bash %}
+drush pm-list --no-core --status="disabled,not installed" --pipe -l http://modelod7.fflch.usp.br
 
 #Habilitar módulos e themas desabilitados
- drush en `drush pm-list --status="disabled,not installed" --pipe -l http://grafica.fflch.usp.br` -l http://grafica.fflch.usp.br 
+ {% highlight bash %}
+drush en `drush pm-list --status="disabled,not installed" --pipe -l http://grafica.fflch.usp.br` -l http://grafica.fflch.usp.br 
 
