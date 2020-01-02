@@ -2,6 +2,7 @@
 
 ## To run locally 
 
+ - gem install bundler -v 1.17.3
  - Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
  - Run `bundle clean` to clean up the directory (no need to run `--force`)
  - Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
