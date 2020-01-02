@@ -158,8 +158,7 @@ gource --title "Contribuições USPdev 2018-2019" \
     --font-size 30                               \
     --user-font-size 45                          \
     --highlight-users                            \
-    --highlight-colour 026AA7                    \
-     uspdev.txt
+    --highlight-colour 026AA7 uspdev.txt
 {% endhighlight %}
 
 Para exportar o arquivo como *mp4*, instale o *ffmpeg*:
