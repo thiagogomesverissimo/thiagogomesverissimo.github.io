@@ -117,14 +117,17 @@ for i in $(cat /tmp/lista | grep fflch.usp.br); do drush updb -l http://$i -y; d
 {% endhighlight %}
 
 Criar lista de módulos que não são do core
- {% highlight bash %}
--drush pml --no-core --type=module --status="enabled" --pipe > /tmp/modules.txt
+{% highlight bash %}
+drush pml --no-core --type=module --status="enabled" --pipe > /tmp/modules.txt
+{% endhighlight %}
 
-#Listar módulos e themas desabilidados:
- {% highlight bash %}
+Listar módulos e temas desabilidados:
+{% highlight bash %}
 drush pm-list --no-core --status="disabled,not installed" --pipe -l http://modelod7.fflch.usp.br
+{% endhighlight %}
 
-#Habilitar módulos e themas desabilitados
- {% highlight bash %}
-drush en `drush pm-list --status="disabled,not installed" --pipe -l http://grafica.fflch.usp.br` -l http://grafica.fflch.usp.br 
+Habilitar módulos e temas desabilitados
+{% highlight bash %}
+drush en `drush pm-list --status="disabled,not installed" --pipe -l http://grafica.fflch.usp.br` -l http://grafica.fflch.usp.br
+{% endhighlight %}
 
