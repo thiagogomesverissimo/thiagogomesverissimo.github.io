@@ -1,5 +1,5 @@
 ---
-title: 'Minha colinha de comandos'
+title: 'Minha colinha de comandos gnu/linux'
 date: 2020-02-02
 permalink: /posts/colinha-de-comandos
 tags:
