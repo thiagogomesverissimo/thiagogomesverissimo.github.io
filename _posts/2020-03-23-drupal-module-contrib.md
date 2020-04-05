@@ -43,6 +43,19 @@ Caso precise zerar o banco e começar tudo novamente:
 rm web/sites/default/files/.ht.sqlite*
 {% endhighlight %}
 
+Desligando o cache durante o desenvolvimento:
+{% highlight bash %}
+./vendor/bin/drupal site:mode dev
+{% endhighlight %}
+
+Religando o cache:
+{% highlight bash %}
+./vendor/bin/drupal site:mode prod
+{% endhighlight %}
+
+
+./vendor/bin/drupal site:mode dev
+
 ## Dicas para configurar seu ambiente
 
 Alias para colocar no seu bashrc:
