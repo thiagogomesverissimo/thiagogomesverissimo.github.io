@@ -131,3 +131,44 @@ Habilitar módulos e temas desabilitados
 drush en `drush pm-list --status="disabled,not installed" --pipe -l http://grafica.fflch.usp.br` -l http://grafica.fflch.usp.br
 {% endhighlight %}
 
+## Específicos para Aegir
+
+Subir um site no aegir, dado um backup gerado pelo mesmo,
+compactador em tag.gz:
+
+{% highlight bash %}
+drush provision-save @backup.exemplo.org \ 
+    --context_type=site                  \
+    --platform=@platform_d8              \
+    --uri=backup.exemplo.org             \
+    --aliases=www.backup.exemplo.org     \
+    --db_server=@server_mysql            \
+    --redirection=0                      \
+    --profile=standard
+
+drush @backup.exemplo.org provision-deploy backup.tar.gz
+{% endhighlight %}
+
+Migração de todos sites da platform_d8a para platform_d8b:
+
+{% highlight bash %}
+cd platforms
+sites=$(ls d8a/sites | grep fflch.usp.br)
+for site in $sites;
+do
+  drush @$site provision-migrate @platform_d8b
+done
+{% endhighlight %}
+
+Verificando um site:
+{% highlight bash %}
+drush @hostmaster hosting-task @sti.fflch.usp.br verify
+{% endhighlight %}
+
+Verificando uma plataforma:
+{% highlight bash %}
+drush @hostmaster hosting-task @platform_drupal884a verify
+{% endhighlight %}
+
+
+
