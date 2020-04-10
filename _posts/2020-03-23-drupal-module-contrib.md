@@ -1,5 +1,5 @@
 ---
-title: 'Desenvolvendo modulos para Drupal'
+title: 'Desenvolvendo módulos para Drupal'
 date: 2020-03-23
 permalink: /posts/drupal-modules
 categories:
