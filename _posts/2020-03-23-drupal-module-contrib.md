@@ -256,12 +256,28 @@ class ConfiguracoesForm extends ConfigFormBase {
 {% endhighlight %}
 
 Não precisamos necessariamente apontar uma rota para o nosso
-formulário. Podemos redenderizar o formulário do controller assim:
+formulário. Podemos redenderizar o formulário do controller assim, 
+injetando o serviço *form_builder*:
+
+
 {% highlight bash %}
-/* Seria melhor injetar $builder do que usar estaticamente */
-$builder = \Drupal::FormBuilder(); 
-$form = $builder->getForm('Drupal\tofu\Form\ConfiguracoesForm')
-return $form;
+...
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Form\FormBuilder;
+...
+  protected $builder;
+  public function __construct(Uteis $uteis, FormBuilder $builder){
+    $this->uteis = $uteis;
+    $this->builder = $builder;
+  }
+  public static function create(ContainerInterface $container){
+    return new static(
+      $container->get('form_builder')
+    );
+
+  /*No seu método pode carrgar o form: */
+  $form = $this->builder->getForm('Drupal\tofu\Form\ConfiguracoesForm');
+  return $form;
 {% endhighlight %}
 A vantagem nesse caso é que a variável *$form* é um render array
 que pode ser manipulado.
