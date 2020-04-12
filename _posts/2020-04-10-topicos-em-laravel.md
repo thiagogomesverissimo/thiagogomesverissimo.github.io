@@ -54,3 +54,40 @@ if($request->hasFile('certificado')){
   if($request->)
 }
 {% endhighlight %}
+
+// abrindo pdf no browser
+{% highlight bash %}
+Route::get('pdf',function(){
+    return response()->file('/tmp/teste.pdf');
+});
+{% endhighlight %}
+
+# Rotas
+Protejento 
+// exemplo de REGEX no parâmetro int
+{% highlight bash %}
+Route::get('users/{id}',function($id){
+    return $id;
+})->where('id','[0-9]+');
+
+{% endhighlight %}
+
+
+// exemplo de REGEX no parâmetro string
+{% highlight bash %}
+Route::get('users/{username}',function($username){
+    return $username;
+})->where('username','[A-Za-z]+');
+{% endhighlight %}
+
+{% highlight bash %}
+Route::get('posts/{id}/{slug}',function($id,$slug){
+    return $slug . ' ' .  $id;
+})
+->where([
+    'id' => '[0-9]+',
+    'slug' => '[A-Za-z]+'
+]);
+{% endhighlight %}
+
+
