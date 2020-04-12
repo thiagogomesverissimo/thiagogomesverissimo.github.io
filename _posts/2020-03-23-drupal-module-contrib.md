@@ -11,7 +11,7 @@ tags:
 Coleção de dicas e Drupal para desenvover módulos para Drupal, nada que
 substitua a documentação oficial
 
-# Instalação de uma instância para desenvolvimento
+# Instalação básica de uma instância para desenvolvimento (Debian 10)
 
 Pacotes básicos para instalar o Drupal no seu debian usando sqlite3:
 
@@ -60,7 +60,7 @@ Religando o cache:
 
 ./vendor/bin/drupal site:mode dev
 
-## Dicas para configurar seu ambiente
+# Dicas para configurar seu ambiente
 
 Alias para colocar no seu bashrc:
 
@@ -121,7 +121,22 @@ exemplo.bla:
         type: entity:node
 {% endhighlight %}
 
-# Carregar configurações dentro de um service
+## controller
+Controller básico:
+{% highlight bash %}
+...
+use Drupal\Core\Controller\ControllerBase;
+
+class ExemploController extends ControllerBase{
+  public function hello(){
+    return [
+      '#markup' => $this->t('Hello People')
+    ];
+  }
+}
+{% endhighlight %}
+
+## Carregando configurações dentro de um service
 
 Suponha que sua classe src/Service/Uteis.php precise
 carregar configurações do site.
@@ -153,7 +168,7 @@ de Uteis.php assim:
 $this->config_factory->get('NOME_DA_CONFIG');
 {% endhighlight %}
 
-# Receita para injetar um serviço no controller
+## Receita para injetar um serviço no controller
 
 Primeiro sua classe deve existir, por exemplo src/Service/Uteis,
 e ser declarada em *exemplo.services.yml*:
@@ -193,7 +208,7 @@ Sempre olhar o __contruct() e create() da classe pai da qual
 esteja injetando o service, pois neste caso, você deve injetar os
 services que a classe pai também injeta.
 
-# Formulário de configuração
+## Formulário de configuração do módulo
 
 Criar rota que aponta par ao Form
 {% highlight bash %}
@@ -282,7 +297,7 @@ use Drupal\Core\Form\FormBuilder;
 A vantagem nesse caso é que a variável *$form* é um render array
 que pode ser manipulado.
 
-# alter form - exemplo: modificando a página de informações do site
+## alter form - exemplo: modificando a página de informações do site
 
 Primeiramente, vamos descobrir a rota do formulário:
 
