@@ -129,7 +129,7 @@ carregar configurações do site.
 Na declaração de *exemplo.services.yml*:
 {% highlight bash %}
 services:
-  exemplo.inverte:
+  exemplo.uteis:
     class: Drupal\exemplo\Service\Uteis
     arguments: ['@config.factory']
 {% endhighlight %}
