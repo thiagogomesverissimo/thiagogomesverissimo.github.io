@@ -23,6 +23,22 @@ drupal shell
 
 ## Coleções de códigos
 
+Carregando um node com nid 3 e dando um dump:
+{% highlight bash %}
+$node = \Drupal::entityTypeManager()->getStorage('node')->load(3);
+dump($node)
+{% endhighlight %}
+
+Trocando o campo alias:
+{% highlight bash %}
+$node->path->alias = '/novo-caminho-do-node'
+$node->path->pathauto = Drupal\pathauto\PathautoState::SKIP;
+$node->save();
+{% endhighlight %}
+
+
+
+
 Carregando todos nodes do tipo *ficha* e alterando o campo *body->format* para
 *full_html*:
 
