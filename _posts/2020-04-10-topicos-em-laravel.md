@@ -11,24 +11,45 @@ tags:
 Pequenos trechos de códigos em laravel usados com frequência, nada que substitua
 a documentação oficial.
 
-# Validação
+## Exemplos com rotas
+
+Exemplo de REGEX que só aceita número inteiro no parâmetro id:
+{% highlight php %}
+Route::get('users/{id}',function($id){
+    return $id;
+})->where('id','[0-9]+');
+{% endhighlight %}
+
+Exemplo de REGEX que só aceita letras no parâmetro username:
+{% highlight php %}
+Route::get('users/{username}',function($username){
+    return $username;
+})->where('username','[A-Za-z]+');
+{% endhighlight %}
+
+Rota que aceita uma parâmetro somente com inteiro e outro somente com
+letra:
+{% highlight php %}
+Route::get('posts/{id}/{slug}',function($id,$slug){
+    return $slug . ' ' .  $id;
+})->where([
+    'id' => '[0-9]+',
+    'slug' => '[A-Za-z]+'
+]);
+{% endhighlight %}
+
+## Três formas de fazer validações
 
 Quando estamos dentro de um método do controller podemos usar *$this->validate*,
-que validará os campos com a condições que passaremos e caso falhe a validação: 
-1. automaticamente retornará o usuário para página de origem. 
-2. Devolverá para página de origem os inputs enviados na requisição 
-3. Enviará para página de origem as mensagens de erro da validação
-
-{% highlight bash %}
+que validará os campos com a condições que passaremos e caso falhe a validação: 1 - Automaticamente retornará o usuário para página de origem. 2 - Devolverá para página de origem os inputs enviados na requisição. 3 - Enviará para página de origem as mensagens de erro da validação. Para tudo isso ocorrer, basta fazermos:
+{% highlight php %}
 $this->validade([$request,[
   'nome' => 'required'
 ]]);
 {% endhighlight %}
 
-Podemos também usar o classe Validator, neste caso temos que fazer o redirect
-para a origem da requisição por nossa conta com os inputs e erros.
-
-{% highlight bash %}
+Uma segunda maneira de validar é usar diretamente a classe Validator, neste caso temos que fazer o redirect para a origem da requisição por nossa conta com os inputs e erros relacioandos:
+{% highlight php %}
 $validator = Validator::make($request->all(),[
   'nome' => 'required'
 ]);
@@ -39,55 +60,91 @@ if($validator->fails()){
 }
 {% endhighlight %}
 
+O terceiro método, mais elegante, é criar uma classe do tipo FormRequest, em
+app/Http/Requests e delegar a validação dos campos para o método rules() dessa classe. Pode-se criar um FormRequest com o artisan:
+{% highlight bash %}
+php artisan make:request EmpresaRequest
+{% endhighlight %}
+
+Coloque no retorno de rules() suas validações:
+{% highlight php %}
+namespace App\Http\Requests;
+use Illuminate\Foundation\Http\FormRequest;
+class EmpresaRequest extends FormRequest
+{
+    public function rules(){
+        return [
+          'nome' => 'required',
+          'cnpj' => 'required',
+        ];
+    };
+}
+{% endhighlight %}
+
+Por fim, no método do controller que receberá os dados, 
+injete o FormRequest. No formRequest existe um método chamado
+validated() que devolve um array com os dados validados, que pode
+ser então usado para salvar no banco com seu model, com o método create.
+{% highlight php %}
+public function store(EmpresaRequest $request){
+    $validated = $request->validated();
+    Empresa::create($validated);
+}
+{% endhighlight %}
+
+## Mensagens de flash
+O laravel mantém em qualquer request uma variável *$error*
+que pode ser usada para mostrar um alert com classes do bootstrap. 
+Usando Session::has também pegamos outros tipos de mensagens:
+{% highlight php %}
+@if ($errors->any())
+  <div class="alert alert-danger">
+    <ul>
+      @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+      @endforeach
+    </ul>
+  </div>
+@endif
+
+<div class="flash-message">
+  @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+    @if(Session::has('alert-' . $msg))
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}
+        <a href="#" class="close" data-dismiss="alert" aria-label="fechar">&times;</a>
+      </p>
+    @endif
+  @endforeach
+</div>
+{% endhighlight %}
+
 # Arquivos
 
-No formulário html:
-{% highlight bash %}
+Campo para upload do arquivo no formulário html:
+{% highlight html %}
 <form method="POST" enctype="multipart/form-data">
   <input type="file" name="certificado">
 </form>
 {% endhighlight %}
 
-No controller:
-{% highlight bash %}
+A validação de arquivos deve ser feita assim:
+{% highlight php %}
 if($request->hasFile('certificado')){
-  if($request->)
+
 }
 {% endhighlight %}
 
-// abrindo pdf no browser
-{% highlight bash %}
+Devolvendo um response com um arquivo para o browser:
+{% highlight php %}
 Route::get('pdf',function(){
     return response()->file('/tmp/teste.pdf');
 });
 {% endhighlight %}
 
-# Rotas
-Protejento 
-// exemplo de REGEX no parâmetro int
-{% highlight bash %}
-Route::get('users/{id}',function($id){
-    return $id;
-})->where('id','[0-9]+');
+## Dicas de bibliotecas que integram com o Laravel
 
-{% endhighlight %}
-
-
-// exemplo de REGEX no parâmetro string
-{% highlight bash %}
-Route::get('users/{username}',function($username){
-    return $username;
-})->where('username','[A-Za-z]+');
-{% endhighlight %}
-
-{% highlight bash %}
-Route::get('posts/{id}/{slug}',function($id,$slug){
-    return $slug . ' ' .  $id;
-})
-->where([
-    'id' => '[0-9]+',
-    'slug' => '[A-Za-z]+'
-]);
-{% endhighlight %}
+ - https://github.com/barryvdh/laravel-dompdf
+ - https://github.com/LaravelLegends/pt-br-validator
+ - https://github.com/jansenfelipe/faker-br
 
 
