@@ -60,6 +60,7 @@ Religando o cache:
 
 # Dicas para configurar seu ambiente
 
+TODO: passos da instalação do phpcs
 Alias para colocar no seu bashrc:
 
 {% highlight bash %}
@@ -86,7 +87,7 @@ Todos exemplos serão baseados em um módulo fictício chamado *tofu*.
 Exemplo de entrada da rota */bla* no arquivo *tofu.routing.yml*
 que aponta para o método *bla* da classe ExemploController:
 
-{% highlight bash %}
+{% highlight yaml %}
 tofu.bla:
   path: '/bla'
   defaults:
@@ -97,7 +98,7 @@ tofu.bla:
 
 Para recebermos no médoto *bla* um parâmetro, *bla($parametro)*, 
 recebido como segundo argumento na rota:
-{% highlight bash %}
+{% highlight yaml %}
 tofu.bla:
   path: '/bla/{parametro}'
   defaults:
@@ -109,7 +110,7 @@ tofu.bla:
 Rota que injeta a variável $parametro agora como o um objeto node,
 isto é, {parametro} agora será o id no node. E teremos de "graça"
 o objeto node relacionado ao id passado no nosso método *bla*:
-{% highlight bash %}
+{% highlight yaml %}
 tofu.bla:
   path: '/bla/{parametro}'
   defaults:
@@ -125,7 +126,7 @@ tofu.bla:
 ## Exemplos com Controllers
 
 Controller básico estende ControllerBase:
-{% highlight bash %}
+{% highlight php %}
 ...
 use Drupal\Core\Controller\ControllerBase;
 
@@ -144,7 +145,7 @@ Suponha que sua classe src/Service/Uteis.php precise
 carregar configurações do site.
 
 Na declaração de *tofu.services.yml*:
-{% highlight bash %}
+{% highlight php %}
 services:
   tofu.uteis:
     class: Drupal\tofu\Service\Uteis
@@ -152,12 +153,12 @@ services:
 {% endhighlight %}
 
 Em src/Service/Uteis.php declare ConfigFactoryInterface:
-{% highlight bash %}
+{% highlight php %}
 use Drupal\Core\Config\ConfigFactoryInterface;
 {% endhighlight %}
 
 E por fim, injete *$config_factory* no __construct:
-{% highlight bash %}
+{% highlight php %}
 protected $config_factory;
 public function __construct(ConfigFactoryInterface $config_factory){
   $this->config_factory = $config_factory;
@@ -166,7 +167,7 @@ public function __construct(ConfigFactoryInterface $config_factory){
 
 Agora é possível carregar configurações em qualquer métodos
 de Uteis.php assim:
-{% highlight bash %}
+{% highlight php %}
 $this->config_factory->get('NOME_DA_CONFIG');
 {% endhighlight %}
 
@@ -174,7 +175,7 @@ $this->config_factory->get('NOME_DA_CONFIG');
 
 Primeiro sua classe deve existir, por exemplo src/Service/Uteis.
 Vamos definir essa classe como um Service em *tofu.services.yml*:
-{% highlight bash %}
+{% highlight php %}
 services:
   tofu.inverte:
     class: Drupal\tofu\Service\Uteis
@@ -185,7 +186,7 @@ fazemos os seguintes passos:
 
 1 - No seu controller declarar *ContainerInterface* e sua classe (aquela
 que transformamos em service):
-{% highlight bash %}
+{% highlight php %}
 <?
 ...
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -194,7 +195,7 @@ use Drupal\tofu\Service\Uteis;
 
 2 - No __construct do controller receber a classe como paramêtro em 
 uma variável local:
-{% highlight bash %}
+{% highlight php %}
 protected $uteis;
 public function __construct(Uteis $uteis){
   $this->uteis = $uteis;
@@ -203,7 +204,7 @@ public function __construct(Uteis $uteis){
 
 3 - Por fim, no método create(), que é chamado antes do controller,
 carregar o $container com os serviço *uteis*:
-{% highlight bash %}
+{% highlight php %}
 public static function create(ContainerInterface $container){
   return new static (
     $container->get('tofu.uteis')
@@ -219,7 +220,7 @@ esteja injetando o service, pois neste caso, você deve injetar os
 services que a classe mãe também injeta. Assim, supondo que
 sua classe mãe injete mais dois serviços, $a e $b, para injetar
 o nosso *tofu.uteis* faríamos no controller:
-{% highlight bash %}
+{% highlight php %}
 protected $uteis;
 public function __construct(A $a, B $b, Uteis $uteis,){
   parent::__construct($a, $b);
@@ -229,7 +230,7 @@ public function __construct(A $a, B $b, Uteis $uteis,){
 
 E no método create retornamos todos serviços que já eram carregados
 mais o nosso:
-{% highlight bash %}
+{% highlight php %}
 public static function create(ContainerInterface $container){
   return new static (
     $container->get('modulo1.a'),
@@ -246,7 +247,7 @@ configuração de um módulo, delegando para o sistema de configuração,
 o armazenamento dos dados.
 
 1 - Criando rota que aponta para ao classe do tipo Form:
-{% highlight bash %}
+{% highlight php %}
 tofu.configuracoes:
   path: '/admin/config/tofu'
   defaults:
@@ -258,7 +259,7 @@ tofu.configuracoes:
 2 - Se quiser uma entrada na área de configurações
 do site para esse módulo, em tofu.links.menu.yml
 inserir seguinte conteúdo:
-{% highlight bash %}
+{% highlight php %}
 tofu.configuracoes:
   title: 'Módulo Tofu'
   route_name: tofu.configuracoes
@@ -274,7 +275,7 @@ olhe cada método, eles são bem intuitivos. O formulário é construído no
 Em validateForm, adivinhe, validamos o formulário. 
 Em submitForm salvamos, mas podemos processar os valores antes de salvar.
 E em getEditableConfigNames carregamos o serviço de configuração.
-{% highligh bash %}
+{% highlight php %}
 <?php
 
 namespace Drupal\tofu\Form;
@@ -326,7 +327,7 @@ formulário. Podemos redenderizar o formulário de dentro do controller
 injetando o serviço *form_builder*:
 
 
-{% highlight bash %}
+{% highlight php %}
 ...
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\Core\Form\FormBuilder;
@@ -355,12 +356,12 @@ que pode ser manipulado antes de ser retornado.
 
 Temos que saber o ID do formulário, aquele definido em getFormId(). 
 Um caminho é identificar a rota do formulário:
-{% highlight bash %}
+{% highlight php %}
 ./vendor/bin/drupal debug:router| grep site-information
 {% endhighlight %}
 
 E sabendo-se a rota, podemos ver qual é a classe do formulário:
-{% highlight bash %}
+{% highlight php %}
 /vendor/bin/drupal debug:router system.site_information_settings
 {% endhighlight %}
 
@@ -371,7 +372,7 @@ identificamos o id retornado no método getFormId(): *system_site_information_se
 Em *tofu.module* podemos implementar o hook_form_ID_alter.
 No nosso exemplo, vamos:
 colocar um campo de texto a mais na página de configuração, validar e salvar:
-{% highlight bash %}
+{% highlight php %}
 function tofu_form_system_site_information_settings_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
     $config = \Drupal::service('config.factory')->getEditable('system.site');
     $form['um_texto_qualquer'] = [
@@ -408,7 +409,7 @@ BlockBase. Basta criarmos uma annotation com o id e título do bloclo.
 O único método que precisamos é o build() que deve retornar um render 
 array com o markup do texto que será mostrado no bloco.
 
-{% highlight bash %}
+{% highlight php %}
 namespace Drupal\tofu\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 
@@ -435,7 +436,7 @@ BlockPluginInterface, e usar a configuração relacionada ao bloco com
 blockForm para mostrar um formulário na configuração do bloco, com apenas um campo,
 e blockSubmit para salvar a configuração e blockValidate para validar os campos.
 
-{% highlight bash %}
+{% highlight php %}
 namespace Drupal\tofu\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
@@ -494,7 +495,7 @@ do mesmo. O interessante é que ganhamos de graça o array de configuração $co
 então eu particularmente prefiro implementar ContainerFactoryPluginInterface 
 do que BlockPluginInterface. 
 
-{% highlight bash %}
+{% highlight php %}
 namespace Drupal\tofu\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
