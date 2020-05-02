@@ -491,8 +491,12 @@ configuração? Por exemplo, o *tofu.uteis*?
 Neste caso o melhor é implementar ContainerFactoryPluginInterface, o que nos
 obriga a declarar __construct e create(), levemente diferente dos que que já vimos
 até agora, pois estamos no contexto do plugin, e temos que passar o id e definition 
-do mesmo. O interessante é que ganhamos de graça o array de configuração $config,
-então eu particularmente prefiro implementar ContainerFactoryPluginInterface 
+do mesmo. O interessante é que ganhamos de graça a configuração, bastando implementar
+defaultConfiguration() retornando o array com as chaves que manipularíamos nesse form.
+
+TODO: testar a diferença entre $this->getConfiguration() e $this->configurarion['nome']
+
+Eu particularmente prefiro implementar ContainerFactoryPluginInterface 
 do que BlockPluginInterface. 
 
 {% highlight php %}
@@ -526,6 +530,12 @@ class TofuBlock extends BlockBase implements ContainerFactoryPluginInterface {
       $plugin_definition,
       $container->get('tofu.uteis')
     );
+  }
+
+  public function defaultConfiguration() {
+    return [
+      'nome' => 'Qualquer coisa',
+    ];
   }
 
   public function build() { 
