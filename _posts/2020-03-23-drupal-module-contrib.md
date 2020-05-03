@@ -11,7 +11,8 @@ tags:
 Coleção de dicas e Drupal para desenvover módulos para Drupal, nada que
 substitua a documentação oficial.
 
-# Instalação básica de uma instância para desenvolvimento (Debian 10)
+<div id="toc"></div>
+## Instalação básica de uma instância para desenvolvimento em Debian 10
 
 Pacotes básicos para instalar o Drupal no seu debian usando sqlite3:
 
@@ -58,7 +59,7 @@ Religando o cache:
 ./vendor/bin/drupal site:mode prod
 {% endhighlight %}
 
-# Dicas para configurar seu ambiente
+## Dicas para configurar seu ambiente
 
 TODO: passos da instalação do phpcs
 Alias para colocar no seu bashrc:
@@ -80,10 +81,10 @@ cd pareviewsh
 composer install
 {% endhighlight %}
 
-# Estrutura de um módulo
+## Estrutura de um módulo
 Todos exemplos serão baseados em um módulo fictício chamado *tofu*.
 
-## Exemplos com declarações de rotas
+### Exemplos com declarações de rotas
 Exemplo de entrada da rota */bla* no arquivo *tofu.routing.yml*
 que aponta para o método *bla* da classe ExemploController:
 
@@ -139,7 +140,7 @@ class ExemploController extends ControllerBase{
 }
 {% endhighlight %}
 
-## Injetando service *config.factory* em classes do seu sistema
+### Injetando service *config.factory* em classes do seu sistema
 
 Suponha que sua classe src/Service/Uteis.php precise
 carregar configurações do site.
@@ -171,7 +172,7 @@ de Uteis.php assim:
 $this->config_factory->get('NOME_DA_CONFIG');
 {% endhighlight %}
 
-## Receita para injetar um serviço no controller
+### Receita para injetar um serviço no controller
 
 Primeiro sua classe deve existir, por exemplo src/Service/Uteis.
 Vamos definir essa classe como um Service em *tofu.services.yml*:
@@ -187,8 +188,6 @@ fazemos os seguintes passos:
 1 - No seu controller declarar *ContainerInterface* e sua classe (aquela
 que transformamos em service):
 {% highlight php %}
-<?
-...
 use Symfony\Component\DependencyInjection\ContainerInterface;
 use Drupal\tofu\Service\Uteis;
 {% endhighlight %}
@@ -276,8 +275,6 @@ Em validateForm, adivinhe, validamos o formulário.
 Em submitForm salvamos, mas podemos processar os valores antes de salvar.
 E em getEditableConfigNames carregamos o serviço de configuração.
 {% highlight php %}
-<?php
-
 namespace Drupal\tofu\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
@@ -352,7 +349,7 @@ use Drupal\Core\Form\FormBuilder;
 A vantagem nesse caso é que a variável *$form* é um render array
 que pode ser manipulado antes de ser retornado.
 
-## alter ID form: exemplo modificando a página de informações do site
+### alter ID form: exemplo modificando a página de informações do site
 
 Temos que saber o ID do formulário, aquele definido em getFormId(). 
 Um caminho é identificar a rota do formulário:
@@ -399,7 +396,7 @@ function _um_texto_qualquer_form_validate(&$form, \Drupal\Core\Form\FormStateInt
 }
 {% endhighlight %}
 
-## Plugin: Bloco customizado
+### Plugin: Bloco customizado
 
 Vamos criar um plugin e esse plugin será um bloco customizado dentro
 de src/Plugin/Block.
@@ -486,7 +483,7 @@ class TofuBlock extends BlockBase implements BlockPluginInterface {
 }
 {% endhighlight %}
 
-## Injetando services em Plugins
+### Injetando services em Plugins
 
 Tudo muito bonito. E se precisarmos injetar outro serviço que não a 
 configuração? Por exemplo, o *tofu.uteis*?
@@ -538,7 +535,7 @@ class TofuBlock extends BlockBase implements ContainerFactoryPluginInterface {
     $nome = isset($config['nome']) ? $config['nome'] : 'sem nome...';
     return [
       '#markup' => $this->t($this->uteis->inverte($nome)),
-    ];  
+    ];
   }
 
   public function blockForm($form, FormStateInterface $form_state) {

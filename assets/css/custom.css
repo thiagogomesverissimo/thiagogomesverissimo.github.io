@@ -1,3 +1,4 @@
+/* Meu CSS */
 .highlight code, .highlight pre {
     padding: 2px;
     margin: 2px;
@@ -50,4 +51,66 @@ div.archive ul {
     margin-top: 2px;
     margin-bottom: 2px;
     line-height: 1em;
+}
+
+#toc ul li {
+    line-height: 1.1em;
+}
+
+/* links dos posts */
+
+h1.page__title a:link {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* visited link */
+h1.page__title a:visited {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* mouse over link */
+h1.page__title a:hover {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* selected link */
+ah1.page__title :active {
+  color: #494e52s;
+  text-decoration: none;
+}
+
+/* Links da home */
+
+h2.archive__item-title a:link {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* visited link */
+h2.archive__item-title a:visited {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* mouse over link */
+h2.archive__item-title a:hover {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* selected link */
+ah2.archive__item-title :active {
+  color: #494e52s;
+  text-decoration: none;
+}
+
+.page__content h2 {
+    padding-bottom: 0.2em;
+}
+
+h2,h3 {
+    margin: 0.7em 0 0.5em
 }
