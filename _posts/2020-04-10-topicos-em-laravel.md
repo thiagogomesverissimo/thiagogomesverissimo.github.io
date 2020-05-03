@@ -97,6 +97,7 @@ O laravel mantém em qualquer request uma variável *$error*
 que pode ser usada para mostrar um alert com classes do bootstrap. 
 Usando Session::has também pegamos outros tipos de mensagens:
 {% highlight php %}
+{% raw %}
 @if ($errors->any())
   <div class="alert alert-danger">
     <ul>
@@ -116,6 +117,7 @@ Usando Session::has também pegamos outros tipos de mensagens:
     @endif
   @endforeach
 </div>
+{% endraw %}
 {% endhighlight %}
 
 # Arquivos

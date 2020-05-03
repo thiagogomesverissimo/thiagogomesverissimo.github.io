@@ -9,7 +9,7 @@ tags:
 ---
 
 Coleção de dicas e Drupal para desenvover módulos para Drupal, nada que
-substitua a documentação oficial. 
+substitua a documentação oficial.
 
 # Instalação básica de uma instância para desenvolvimento (Debian 10)
 
@@ -486,18 +486,19 @@ class TofuBlock extends BlockBase implements BlockPluginInterface {
 }
 {% endhighlight %}
 
-Tudo muito bonito. Mas e se precisarmos injetar outro serviço que não a 
+## Injetando services em Plugins
+
+Tudo muito bonito. E se precisarmos injetar outro serviço que não a 
 configuração? Por exemplo, o *tofu.uteis*?
-Neste caso o melhor é implementar ContainerFactoryPluginInterface, o que nos
+Neste caso devemos implementar ContainerFactoryPluginInterface, o que nos
 obriga a declarar __construct e create(), levemente diferente dos que que já vimos
-até agora, pois estamos no contexto do plugin, e temos que passar o id e definition 
-do mesmo. O interessante é que ganhamos de graça a configuração, bastando implementar
-defaultConfiguration() retornando o array com as chaves que manipularíamos nesse form.
+até agora, pois estamos no contexto de plugins, onde temos que passar o id e plugin definition no create e no __construct.
+O interessante é que ganhamos de graça a configuração,
+pois ainda temos acesso *$this->setConfigurationValue('nome','valor')* e
+*$this->getConfiguration()*
 
-TODO: testar a diferença entre $this->getConfiguration() e $this->configurarion['nome']
-
-Eu particularmente prefiro implementar ContainerFactoryPluginInterface 
-do que BlockPluginInterface. 
+Assim, particularmente, eu prefiro implementar ContainerFactoryPluginInterface 
+do que BlockPluginInterface, pois fica genérico para qualquer plugin.
 
 {% highlight php %}
 namespace Drupal\tofu\Plugin\Block;
@@ -505,8 +506,8 @@ namespace Drupal\tofu\Plugin\Block;
 use Drupal\Core\Block\BlockBase;
 use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
 use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\Core\Form\FormStateInterface;
 use Drupal\tofu\Service\Uteis;
-
 /**
  * @Block(
  *   id = "tofu_block",
@@ -516,32 +517,52 @@ use Drupal\tofu\Service\Uteis;
 class TofuBlock extends BlockBase implements ContainerFactoryPluginInterface {
 
   protected $uteis;
-  public function __construct(array $config, 
+  public function __construct(array $configuration, 
     $plugin_id, $plugin_definition, Uteis $uteis){
-    parent::__construct($config, $plugin_id, $plugin_definition);
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
     $this->uteis = $uteis;
   }
 
   public static function create(ContainerInterface $container, 
-    array $config, $plugin_id, $plugin_definition){
+    array $configuration, $plugin_id, $plugin_definition){
     return new static (
-      $config,
+      $configuration,
       $plugin_id, 
       $plugin_definition,
       $container->get('tofu.uteis')
     );
   }
 
-  public function defaultConfiguration() {
+  public function build() { 
+    $config = $this->getConfiguration();
+    $nome = isset($config['nome']) ? $config['nome'] : 'sem nome...';
     return [
-      'nome' => 'Qualquer coisa',
-    ];
+      '#markup' => $this->t($this->uteis->inverte($nome)),
+    ];  
   }
 
-  public function build() { 
-    return [
-      '#markup' => $this->t($this->uteis->inverte(" M A R I A ")),
-    ];
+  public function blockForm($form, FormStateInterface $form_state) {
+    $form = parent::blockForm($form, $form_state);
+    $config = $this->getConfiguration();
+
+    $form['nome'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Nome'),
+      '#default_value' => isset($config['nome']) ? $config['nome'] : 'Sem nome...',
+    );
+    return $form;
+  }
+
+  public function blockSubmit($form, FormStateInterface $form_state) {
+    $this->setConfigurationValue('nome', $form_state->getValue('nome'));
+  }
+
+  public function blockValidate($form, FormStateInterface $form_state) {
+    $nome = $form_state->getValue('nome');
+
+    if ($nome != 'Tofu1') {
+      $form_state->setErrorByName('nome', t('Esse nome não é bonito!'));
+    }
   }
 }
 {% endhighlight %}

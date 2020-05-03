@@ -10,14 +10,13 @@ locale                   : "pt-BR"
 title                    : "Thiago Gomes Veríssimo"
 title_separator          : "-"
 name                     : &name "Thiago Gomes Verissimo"
-description              : &description "rascunhos e lembretes"
+description              : &description "meus rascunhos"
 url                      : https://thiagogomesverissimo.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "thiagogomesverissimo.github.io"
 teaser                   : #"500x300.png" 
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 160
-read_more                : "enabled" # if enabled, adds "Read more" links to excerpts
 future                   : false
 read_more                : "disabled" # if enabled, adds "Read more" links to excerpts
 talkmap_link             : false #change to true to add link to talkmap on talks page
