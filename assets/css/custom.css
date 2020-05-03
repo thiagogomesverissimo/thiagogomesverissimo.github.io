@@ -59,25 +59,25 @@ div.archive ul {
 
 /* links dos posts */
 
-h1.page__title a:link {
+h1.page__title a:link, a:link h2, a:link h3 {
   color: #494e52;
   text-decoration: none;
 }
 
 /* visited link */
-h1.page__title a:visited {
+h1.page__title a:visited, a:visited h2, a:visited h3 {
   color: #494e52;
   text-decoration: none;
 }
 
 /* mouse over link */
-h1.page__title a:hover {
+h1.page__title a:hover, h2 a:hover, h3 a:hover {
   color: #494e52;
   text-decoration: none;
 }
 
 /* selected link */
-ah1.page__title :active {
+h1.page__title a:active, h2 a:active, h3 a:active {
   color: #494e52s;
   text-decoration: none;
 }
@@ -102,7 +102,7 @@ h2.archive__item-title a:hover {
 }
 
 /* selected link */
-ah2.archive__item-title :active {
+h2.archive__item-title a:active {
   color: #494e52s;
   text-decoration: none;
 }
@@ -113,4 +113,31 @@ ah2.archive__item-title :active {
 
 h2,h3 {
     margin: 0.7em 0 0.5em
+}
+
+#toc ul {
+  list-style-type: "→";
+}
+
+h2 a:link {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* visited link */
+h2 a:visited {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* mouse over link */
+h2 a:hover {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* selected link */
+h2 a:active {
+  color: #494e52s;
+  text-decoration: none;
 }

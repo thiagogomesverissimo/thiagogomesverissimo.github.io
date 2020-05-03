@@ -16,7 +16,11 @@ Drafts:
 
     JEKYLL_ENV=development bundle exec jekyll serve --drafts
 
-
 Forked from: https://github.com/academicpages/academicpages.github.io
 
+My Pages/folders:
 
+ - _drafts/
+ - _posts/
+ - _talks/
+ - _pages/cv.md
