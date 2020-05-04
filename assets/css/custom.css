@@ -4,10 +4,11 @@
     margin: 2px;
     padding-left: 1px;
     margin-left: 0px;
-    font-size: 0.8em;
     width: 100%;
     border-radius: 8px;
-
+    font-size: 1em;
+    line-height: 1.2em;
+    overflow-y: hidden;
 }
 
 div.highlighter-rouge, figure.highlight {
@@ -22,7 +23,7 @@ div.highlighter-rouge:before, figure.highlight:before {
 }
 
 article p, p, article ul, section.page__content p, div.archive ul {
-  font-size: 0.9em;
+  font-size: 1em;
   margin-top: 5px;
   margin-bottom: 5px;
   line-height: 1.3em;

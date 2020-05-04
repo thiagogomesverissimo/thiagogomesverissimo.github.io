@@ -429,7 +429,7 @@ Mas e se queremos manipular configurações dentro do nosso bloco?
 Neste caso, ao invés de injetar o config.factory, vamos implementar uma interface. 
 Se for apenas configuração que precisamos injetar o mais fácil é implementar 
 BlockPluginInterface, e usar a configuração relacionada ao bloco com
-*$this->getConfiguration()*. Vamos aproveitar e implementar o método
+`$this->getConfiguration()`. Vamos aproveitar e implementar o método
 blockForm para mostrar um formulário na configuração do bloco, com apenas um campo,
 e blockSubmit para salvar a configuração e blockValidate para validar os campos.
 
@@ -488,11 +488,11 @@ class TofuBlock extends BlockBase implements BlockPluginInterface {
 Tudo muito bonito. E se precisarmos injetar outro serviço que não a 
 configuração? Por exemplo, o *tofu.uteis*?
 Neste caso devemos implementar ContainerFactoryPluginInterface, o que nos
-obriga a declarar __construct e create(), levemente diferente dos que que já vimos
+obriga a declarar `__construct` e `create()`, levemente diferente dos que que já vimos
 até agora, pois estamos no contexto de plugins, onde temos que passar o id e plugin definition no create e no __construct.
 O interessante é que ganhamos de graça a configuração,
-pois ainda temos acesso *$this->setConfigurationValue('nome','valor')* e
-*$this->getConfiguration()*
+pois ainda temos acesso `$this->setConfigurationValue('nome','valor')` e
+`$this->getConfiguration()`.
 
 Assim, particularmente, eu prefiro implementar ContainerFactoryPluginInterface 
 do que BlockPluginInterface, pois fica genérico para qualquer plugin.
