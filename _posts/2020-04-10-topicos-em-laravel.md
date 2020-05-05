@@ -147,6 +147,5 @@ Route::get('pdf',function(){
 
  - https://github.com/barryvdh/laravel-dompdf
  - https://github.com/LaravelLegends/pt-br-validator
- - https://github.com/jansenfelipe/faker-br
 
 
