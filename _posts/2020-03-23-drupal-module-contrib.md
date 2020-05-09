@@ -11,7 +11,8 @@ tags:
 Coleção de dicas e Drupal para desenvover módulos para Drupal, nada que
 substitua a documentação oficial.
 
-<div id="toc"></div>
+<ul id="toc"></ul>
+
 ## Instalação básica de uma instância para desenvolvimento em Debian 10
 
 Pacotes básicos para instalar o Drupal no seu debian usando sqlite3:

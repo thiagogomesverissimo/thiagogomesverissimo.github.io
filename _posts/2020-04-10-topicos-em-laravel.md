@@ -8,8 +8,72 @@ tags:
   - laravel
 ---
 
-Pequenos trechos de códigos em laravel usados com frequência, nada que substitua
-a documentação oficial.
+Pequenos trechos de códigos em laravel usados por mim com frequência, nada que substitua a documentação oficial. Incluo algumas bibliotecas que aceleram o processo de desenvolvimento.
+
+<ul id="toc"></ul>
+
+## Geradores de códigos
+
+Suponham que precisamos gerar todo fluxo para um sistema de cadastro de livros, o famoso CRUD. Geradores de códigos são polêmicos, muitas vezes genéricos demais, mas eu prefiro usá-los. O importante é ter em mente que eles não farão seu sistema, mas sim te darão um ponto de partida. 
+
+Usando a biblioteca *crud-generator* você pode criar um arquivo json com a definição dos seus campos, desta maneira:
+{% highlight yml %}
+{
+    "fields": [
+        {
+            "name": "titulo",
+            "type": "string"
+        },
+        {
+            "name": "resumo",
+            "type": "text"
+        },
+        {
+            "name": "publicado_em",
+            "type": "date"
+        },
+        {
+            "name": "acesso_aberto",
+            "type": "radio"
+        },
+        {
+            "name": "capa",
+            "type": "file"
+        },
+        {
+            "name": "area",
+            "type": "select",
+            "options": {
+                "filosofia_medieval": "Filosofia Medieval",
+                "historia_ocidental": "História Ocidental",
+                "geografia_fisica": "Geografia Física"
+            }
+        }
+    ]
+}
+{% endhighlight %}
+
+O que eu normalmente mudo no código gerado:
+
+ - O template pai (ou mãe), assim troco a lista extends
+ - A opção de seleção em lista, mando para ao model
+ - uso typehint no controller para carregar os models
+ - Eu não uso a opção de validação dentro do controller, pois faço com FormRequest
+
+https://github.com/InfyOmLabs/laravel-generator
+
+???
+
+## Gerador de fakers
+
+https://github.com/mpociot/laravel-test-factory-helper
+
+Insedir como o seed chama o faker.
+
+gerador de tabebas pivot:
+https://github.com/laracasts/Laravel-5-Generators-Extended/
+
+
 
 ## Exemplos com rotas
 
@@ -143,9 +207,21 @@ Route::get('pdf',function(){
 });
 {% endhighlight %}
 
-## Dicas de bibliotecas que integram com o Laravel
+## Relação das bibliotecas aqui usadas
 
- - https://github.com/barryvdh/laravel-dompdf
- - https://github.com/LaravelLegends/pt-br-validator
+    composer require appzcoder/crud-generator --dev
+    composer require mpociot/laravel-test-factory-helper --dev
+    composer require laracasts/generators --dev
+    composer require barryvdh/laravel-dompdf
+    composer require laravellegends/pt-br-validator
 
+ ## Bibliotecas USP
 
+ Essa relação é exclusiva para quem trabalha na Universidade de São Paulo.
+
+    composer require uspdev/senhaunica-socialite
+    composer require uspdev/laravel-usp-validators
+    composer require uspdev/replicado
+    composer require uspdev/laravel-usp-theme
+    composer require uspdev/laravel-usp-faker --dev
+    

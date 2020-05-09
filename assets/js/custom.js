@@ -1,7 +1,7 @@
 /* Minhas customizações */
 $(document).ready(function(){
   var toc = document.getElementById('toc');
-  toc.innerHTML = '<ul>';
+  toc.innerHTML = '';
 
   $('article .page__inner-wrap h2, article .page__inner-wrap h3').each(function() {
 
@@ -25,7 +25,7 @@ $(document).ready(function(){
     $(this).append(` <a href="#${id}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>`);
   });
 
-  toc.innerHTML += '</ul>';
+  toc.innerHTML += '';
 
 
 });
