@@ -114,6 +114,8 @@ $this->validade([$request,[
 
 Uma segunda maneira de validar é usar diretamente a classe Validator, neste caso temos que fazer o redirect para a origem da requisição por nossa conta com os inputs e erros relacioandos:
 {% highlight php %}
+use Illuminate\Support\Facades\Validator;
+...
 $validator = Validator::make($request->all(),[
   'nome' => 'required'
 ]);
