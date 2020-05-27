@@ -107,9 +107,9 @@ Route::get('posts/{id}/{slug}',function($id,$slug){
 Quando estamos dentro de um método do controller podemos usar *$this->validate*,
 que validará os campos com a condições que passaremos e caso falhe a validação: 1 - Automaticamente retornará o usuário para página de origem. 2 - Devolverá para página de origem os inputs enviados na requisição. 3 - Enviará para página de origem as mensagens de erro da validação. Para tudo isso ocorrer, basta fazermos:
 {% highlight php %}
-$this->validade([$request,[
+$request->validade([
   'nome' => 'required'
-]]);
+]);
 {% endhighlight %}
 
 Uma segunda maneira de validar é usar diretamente a classe Validator, neste caso temos que fazer o redirect para a origem da requisição por nossa conta com os inputs e erros relacioandos:
