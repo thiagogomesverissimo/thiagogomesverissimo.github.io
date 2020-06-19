@@ -209,12 +209,100 @@ Route::get('pdf',function(){
 });
 {% endhighlight %}
 
+## Biblioteca para PDF
+
+{% highlight bash %}
+composer require barryvdh/laravel-dompdf
+php artisan vendor:publish --provider="Barryvdh\DomPDF\ServiceProvider"
+mkdir resources/views/pdfs/
+touch resources/views/pdfs/exemplo.blade.php
+{% endhighlight %}
+
+No controller:
+
+{% highlight bash %}
+use PDF;
+public function convenio(Convenio $convenio){
+    $exemplo = 'Um pdf banaca';
+    $pdf = PDF::loadView('pdfs.exemplo', compact('exemplo'));
+    return $pdf->download('exemplo.pdf');
+}
+{% endhighlight %}
+
+Por fim, agora pode escrever sua estrutura do pdf, mas usando blade
+exemplo.blade.php:
+
+{% highlight php %}
+{{ $exemplo }}
+{% endhighlight %}
+
+## Biblioteca para Excel
+
+Instalação
+{% highlight bash %}
+composer require maatwebsite/excel
+mkdir app/Exports
+touch app/Exports/ExcelExport.php
+{% endhighlight %}
+
+Implementar uma classe que recebe um array multidimensional com os dados.
+Sendo os índices os títulos das colunas e os arrays associados a cada índice
+os dados em si.
+{% highlight php %}
+<?php
+
+namespace App\Exports;
+
+use Maatwebsite\Excel\Concerns\FromArray;
+use Maatwebsite\Excel\Concerns\WithHeadings;
+
+class ExcelExport implements FromArray, WithHeadings
+{
+    protected $data;
+    public function __construct($data){
+        $this->data_in = $data;
+    }
+
+    public function array(): array
+    {
+        return $this->data;
+    }
+
+    public function headings() : array
+    {
+        return array_keys($this->data);
+    }
+}
+{% endhighlight %}
+
+Usando no controller:
+{% highlight php %}
+use Maatwebsite\Excel\Excel;
+use App\Exports\ExcelExport;
+
+public function exemplo(Excel $excel){
+  
+  $data = [
+    'Ano' => [2001,2002,2003],
+    'Pós-Graduação' => [205,300,222], 
+    'Docentes'  => [89,13,66],
+    'Funcionários(as)' => [11,20,19]
+  ];
+  $export = new ExcelExport($data);
+  return $excel->download($export, 'exemplo.xlsx');
+}
+
+public function export($format){
+}
+{% endhighlight %}
+
+
 ## Relação das bibliotecas aqui usadas
 
     composer require appzcoder/crud-generator --dev
     composer require mpociot/laravel-test-factory-helper --dev
     composer require laracasts/generators --dev
-    composer require barryvdh/laravel-dompdf
+    
     composer require laravellegends/pt-br-validator
 
  ## Bibliotecas USP
@@ -227,3 +315,4 @@ Route::get('pdf',function(){
     composer require uspdev/laravel-usp-theme
     composer require uspdev/laravel-usp-faker --dev
     
+
