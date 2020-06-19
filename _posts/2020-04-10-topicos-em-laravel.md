@@ -245,12 +245,9 @@ mkdir app/Exports
 touch app/Exports/ExcelExport.php
 {% endhighlight %}
 
-Implementar uma classe que recebe um array multidimensional com os dados.
-Sendo os índices os títulos das colunas e os arrays associados a cada índice
-os dados em si.
+Implementar uma classe que recebe um array multidimensional com os dados, linha a linha.
+E outro array com os títulos;
 {% highlight php %}
-<?php
-
 namespace App\Exports;
 
 use Maatwebsite\Excel\Concerns\FromArray;
@@ -259,8 +256,10 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 class ExcelExport implements FromArray, WithHeadings
 {
     protected $data;
-    public function __construct($data){
+    protected $headings;
+    public function __construct($data, $headings){
         $this->data = $data;
+        $this->headings = $headings;
     }
 
     public function array(): array
@@ -270,7 +269,7 @@ class ExcelExport implements FromArray, WithHeadings
 
     public function headings() : array
     {
-        return array_keys($this->data);
+        return $this->headings;
     }
 }
 {% endhighlight %}
@@ -282,14 +281,14 @@ use App\Exports\ExcelExport;
 
 public function exemplo(Excel $excel){
   
+  $headings = ['ano','aprovados','reprovados'];
   $data = [
-    'Ano' => [2001,2002,2003],
-    'Pós-Graduação' => [205,300,222], 
-    'Docentes'  => [89,13,66],
-    'Funcionários(as)' => [11,20,19]
-  ];
-  $export = new ExcelExport($data);
-  return $excel->download($export, 'exemplo.xlsx');
+      [2000,12,15],
+      [2001,10,11],
+      [2002,11,21]
+    ];
+    $export = new ExcelExport($data,$headings);
+    return $excel->download($export, 'exemplo.xlsx');
 }
 
 public function export($format){
