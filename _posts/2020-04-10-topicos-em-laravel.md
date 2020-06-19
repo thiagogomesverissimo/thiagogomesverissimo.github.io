@@ -260,7 +260,7 @@ class ExcelExport implements FromArray, WithHeadings
 {
     protected $data;
     public function __construct($data){
-        $this->data_in = $data;
+        $this->data = $data;
     }
 
     public function array(): array
