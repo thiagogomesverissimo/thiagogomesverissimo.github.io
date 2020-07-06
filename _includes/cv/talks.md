@@ -41,10 +41,4 @@
 </ul>
 
 
-**Analysis of Atmospheric Aerosol (PM2,5) in Rio de Janeiro City**
-<ul>
-  <li>26/10/2010: American Association for Aerosol Research 29th Annual Conference, 2010, Portland, Oregon, USA.
-  <a href="{{base_path}}/files/talks/aaar_2010.pdf"><i class="fa fa-file-pdf"></i></a>
-  </li>
-</ul>
 

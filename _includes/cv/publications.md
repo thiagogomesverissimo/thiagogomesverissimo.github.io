@@ -34,3 +34,13 @@
     <br>Revista: <i>Environmental Research Letters</i>
  </li>
 </ul>
+
+
+**2011**
+<ul>
+  <li>Source identification and apportionment of particulate matter in Accra, Ghana
+     <a href="{{base_path}}/files/talks/isee.pdf"><i class="fa fa-file-pdf"></i></a>
+     <br><a href="https://doi.org/10.1289/isee.2011.00789"> https://doi.org/10.1289/isee.2011.00789</a>
+     <br>Revista: <i> Environmental Health Perspectives - International Society for Environmental Epidemiology (ISEE) Annual Conference 2011 </i>
+  </li>
+</ul>

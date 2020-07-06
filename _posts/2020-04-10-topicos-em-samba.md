@@ -1,7 +1,7 @@
 ---
-title: 'Tópicos em Samba/Ldap'
+title: 'Tópicos em Samba'
 date: 2020-04-10
-permalink: /posts/topicos-em-samba-ldap
+permalink: /posts/topicos-em-samba
 categories:
   - tutorial
 tags:

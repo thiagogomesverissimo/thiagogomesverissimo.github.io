@@ -1,5 +1,7 @@
 /* Minhas customizações */
 $(document).ready(function(){
+  $("a").attr("target", "_blank");
+  
   var toc = document.getElementById('toc');
   toc.innerHTML = '';
 

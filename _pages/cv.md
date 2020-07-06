@@ -31,7 +31,11 @@ redirect_from:
 
 {% include cv/publications.md %}
 
-## Apresentações
+## Conferências
+
+{% include cv/conferencias.md %}
+
+## Apresentações Técnicas 
 
 {% include cv/talks.md %}
 
