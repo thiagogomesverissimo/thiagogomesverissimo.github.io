@@ -15,25 +15,19 @@ redirect_from:
 ## Formação Acadêmica
 
 <ul>
-  <li> Mestre em Física, Universidade de São Paulo, 2016
-    <a href="http://www.teses.usp.br/teses/disponiveis/43/43134/tde-20072016-161023/publico/mestradoThiagoGomesVerissimo2016IFUSP.pdf">a <i class="far fa-file-pdf"></i></a>
+  <li> 2016: Mestre em Física, Universidade de São Paulo.
+    <a href="http://www.teses.usp.br/teses/disponiveis/43/43134/tde-20072016-161023/publico/mestradoThiagoGomesVerissimo2016IFUSP.pdf"><i class="fa fa-file-pdf"></i></a>
   </li>
   <li>
-    Graduação em Licenciatura em Física, Universidade de São Paulo, 2009
-    <i class="far fa-file-pdf"></i>
+    2009: Graduação em Licenciatura em Física, Universidade de São Paulo.
   </li>
 </ul>
-
  
-## Apresentações em eventos,  cursos ministrados
+## Apresentações
 
-<ul>
-    {% for item in site.talks %}
-        <li> <b> <a href="{{ item.slides }}">{{ item.title }} <i class="fa fa-link"></i> </a> </b><br> {{ item.content}}</li>
-    {% endfor %}
-</ul>
+{% include cv/talks.md %}
 
-## cursos e eventos (ouvinte)
+## Cursos e Eventos (como ouvinte)
  
 {% include cv/ouvinte.md %}
  

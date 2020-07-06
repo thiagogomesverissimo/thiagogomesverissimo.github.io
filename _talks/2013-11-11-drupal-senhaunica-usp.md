@@ -21,5 +21,4 @@ slides: #
     11/11/2013: Geinfo - Encontro de Gestão de Informática da USP
     <i class="fab fa-file-pdf-o"></i></a>
   </li>
-
 </ul>
