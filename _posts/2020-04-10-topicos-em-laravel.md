@@ -233,8 +233,11 @@ Por fim, agora pode escrever sua estrutura do pdf, mas usando blade
 exemplo.blade.php:
 
 {% highlight php %}
+{% raw %}
 {{ $exemplo }}
+{% endraw %}
 {% endhighlight %}
+
 
 ## Biblioteca para Excel
 

@@ -10,9 +10,11 @@ redirect_from:
 
 {% include base_path %}
 
+<ul id="toc"></ul>
+
 <hr />
-Formação Acadêmica
-==================
+## Formação Acadêmica
+
 
 <ul>
   <li> <a href="http://www.teses.usp.br/teses/disponiveis/43/43134/tde-20072016-161023/publico/mestradoThiagoGomesVerissimo2016IFUSP.pdf">
@@ -26,8 +28,7 @@ Formação Acadêmica
 </ul>
 
 <hr />
-Apresentações realizadas
-========================
+## Apresentações realizadas
 
 <ul>
     {% for item in site.talks %}
@@ -36,8 +37,7 @@ Apresentações realizadas
 </ul>
 
 <hr />
-Participações em eventos
-========================
+## Participações em eventos
 
 <b>2015</b>
 <ul>
@@ -87,8 +87,7 @@ Participações em eventos
 </ul>
 
 <hr />
-Cursos realizados
-=================
+## Cursos realizados
 
 <b>2019</b>
 <ul>
@@ -239,7 +238,7 @@ Cursos realizados
 </ul>
 
 <hr />
-Participações em coletivos
+## Participações em coletivos
 ==========================
 
 <ul>
