@@ -4,8 +4,8 @@ main:
   - title: "Posts"
     url: /
 
-  - title: "Apresentações"
-    url: /talks/    
+#  - title: "Apresentações"
+#    url: /talks/    
 
 #  - title: "Ensino"
 #    url: /teaching/    

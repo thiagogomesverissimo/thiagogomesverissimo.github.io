@@ -19,10 +19,10 @@ $(document).ready(function(){
     }
 
     $(this).wrap(function() {
-      return `<a href='#${id}'></a>`;
+      return `<hr /><a href='#${id}'></a>`;
     });
 
-    $(this).append(` <a href="#${id}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a>`);
+    $(this).append(` <a href="#${id}" rel="permalink"><i class="fa fa-link" aria-hidden="true" title="permalink"></i><span class="sr-only">Permalink</span></a> `);
   });
 
   toc.innerHTML += '';
