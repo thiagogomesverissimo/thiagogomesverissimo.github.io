@@ -34,7 +34,9 @@
 
 <ul>
   <li>
-    2018 - Curso de Cultura e Extensão na USP
+    20/08/2018 - Curso de Cultura e Extensão na USP
+    <a href="https://uspdigital.usp.br/apolo/apoObterAtividade?cod_oferecimentoatv=85660"><i class="fa fa-file-pdf"></i></a>
+    
   </li>
 </ul>
 

@@ -1,3 +1,11 @@
+**2020**
+<ul>
+  <li>
+    Vehicular Emissions Inventory (VEIN)
+    <br> Instituto de Astronomia, Geofísica e Ciências Atmosféricas da Universidade de São Paulo. 16h.
+  </li>
+</ul>
+
 **2019**
 <ul>
 <li> Cybercartograhy: Potentials and Applications. 
