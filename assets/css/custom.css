@@ -155,3 +155,8 @@ h2 a:active {
   color: #494e52s;
   text-decoration: none;
 }
+
+
+.fa-file-pdf, .fa-youtube {
+    color: #3d414a;
+}

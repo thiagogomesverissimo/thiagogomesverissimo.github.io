@@ -22,26 +22,21 @@ redirect_from:
     2009: Graduação em Licenciatura em Física, Universidade de São Paulo.
   </li>
 </ul>
- 
+
+## Cursos e Eventos (ouvinte)
+
+{% include cv/ouvinte.md %}
+
+## Publicações
+
+{% include cv/publications.md %}
+
 ## Apresentações
 
 {% include cv/talks.md %}
 
-## Cursos e Eventos (como ouvinte)
- 
-{% include cv/ouvinte.md %}
- 
 ## Participações em coletivos
 
 <ul>
   <li> <a href="https://uspdev.github.io">USPdev - devs da Universidade de São Paulo</a> </li>
-</ul>
-
-
-## Publicações
-
-<ul>
-   {% for item in site.publications %}
-       <li> <a href="{{ item.paperurl }}">{{ item.date |  date: '%Y' }} - {{ item.title }} </a> </li>
-   {% endfor %}
 </ul>
