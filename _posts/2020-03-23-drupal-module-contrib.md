@@ -1,5 +1,5 @@
 ---
-title: 'Desenvolvendo módulos para Drupal'
+title: 'Tópicos em desenvovimento de módulos para Drupal'
 date: 2020-03-23
 permalink: /posts/drupal-modules
 categories:
@@ -8,14 +8,14 @@ tags:
   - drupal
 ---
 
-Coleção de dicas e Drupal para desenvover módulos para Drupal, nada que
+Coleção de dicas para desenvover módulos para Drupal, nada que
 substitua a documentação oficial.
 
 <ul id="toc"></ul>
 
-## Instalação básica de uma instância para desenvolvimento em Debian 10
+## Criando uma instância Drupal para desenvolvimento com Debian 10
 
-Pacotes básicos para instalar o Drupal no seu debian usando sqlite3:
+Pacotes básicos para subirmos uma instância de drupal com sqlite3 no debian 10:
 
 {% highlight bash %}
 apt-get install php php-common php-cli php-gd php-curl php-xml php-mbstring php-sqlite3 sqlite3
@@ -31,13 +31,17 @@ Criando uma instalação limpa para começar a desenvolver. Será criado um
 diretório chamado projetodev, sendo usuário/senha igual a admin/admin:
 
 {% highlight bash %}
-composer create-project drupal-composer/drupal-project:8.x-dev projetodev --no-interaction
+composer create-project drupal/recommended-project:8.x projetodev
 cd projetodev
+composer require drupal/console
+composer require drush/drush
 ./vendor/bin/drupal site:install standard --db-type="sqlite" \
        --site-name="Ambiente Dev" --site-mail="dev@locahost" \
        --account-name="admin" --account-pass="admin" --account-mail="dev@localhost" \
        --no-interaction
 {% endhighlight %}
+
+Normalmente, eu ignoro as pastas *vendor*, *web* e *drush* no gitignore.
 
 Subindo um server local para desenvolvimento:
 
@@ -50,73 +54,75 @@ Caso precise zerar o banco e começar tudo novamente:
 rm web/sites/default/files/.ht.sqlite*
 {% endhighlight %}
 
-Desligando o cache durante o desenvolvimento:
-{% highlight bash %}
-./vendor/bin/drupal site:mode dev
-{% endhighlight %}
+## Criando um módulo 
 
-Religando o cache:
-{% highlight bash %}
-./vendor/bin/drupal site:mode prod
-{% endhighlight %}
-
-## Dicas para configurar seu ambiente
-
-TODO: passos da instalação do phpcs
-Alias para colocar no seu bashrc:
-
-{% highlight bash %}
-alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'" 
-alias drupalcsp="phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'" 
-alias drupalcbf="phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'"
-{% endhighlight %}
-
-Usando pareviewsh localmente (mesmo efeito de usar
-pelo site https://pareview.sh/):
-
-{% highlight bash %}
-mkdir ~/temp
-cd temp
-git clone https://git.drupalcode.org/project/pareviewsh
-cd pareviewsh
-composer install
-{% endhighlight %}
-
-## Estrutura de um módulo
 Todos exemplos serão baseados em um módulo fictício chamado *tofu*.
+Para o drupal reconhecer nosso módulo, isto é, o mesmo aparecer na 
+lista de módulos para serem habilitados, necessitamos criar uma pasta chamada
+*tofu* com o arquivo *tofu.info.yml*, o qual contém informações básicas do módulo.
+O comando abaixo se encarrega de criar o módulo *tofu*:
 
-### Exemplos com declarações de rotas
-Exemplo de entrada da rota */bla* no arquivo *tofu.routing.yml*
-que aponta para o método *bla* da classe ExemploController:
+{% highlight bash %}
+./vendor/bin/drupal generate:module  \
+  --module="tofu"  \
+  --machine-name="tofu"  \
+  --module-path="modules"  \
+  --description="Módulo Tofu"  \
+  --core="8.x"  \
+  --no-interaction
+{% endhighlight %}
 
+## Rotas
+
+### Criando rota e controller 
+As entradas de rotas são definidas em *tofu.routing.yml*.
+O comando a seguir vai gerar o controller TofuController com um método
+chamado *index()*, assim como uma rota */tofu* apontando para esse método:
+
+{% highlight bash %}
+./vendor/bin/drupal generate:controller  \
+  --module="tofu"  \
+  --class="TofuController"  \
+  --routes='"title":"index", "name":"tofu.index", "method":"index", "path":"/tofu"'  \
+  --no-interaction
+{% endhighlight %}
+
+A entrada criada em *tofu.routing.yml* tem a forma:
 {% highlight yaml %}
-tofu.bla:
-  path: '/bla'
+tofu.index:
+  path: '/index'
   defaults:
-    _controller: '\Drupal\tofu\Controller\ExemploController::bla'
+    _controller: '\Drupal\tofu\Controller\TofuController::index'
   requirements:
     _permission: 'access content'
 {% endhighlight %}
 
-Para recebermos no médoto *bla* um parâmetro, *bla($parametro)*, 
-recebido como segundo argumento na rota:
+### Rota com parâmetros
+
+Se no método *index()* do controller quisermos receber um parâmetro,
+por exemplo, *index($parametro)*, modificaríamos nosso arquivo de rota assim:
+
 {% highlight yaml %}
-tofu.bla:
-  path: '/bla/{parametro}'
+tofu.index:
+  path: '/index/{parametro}'
   defaults:
-    _controller: '\Drupal\tofu\Controller\ExemploController::bla'
+    _controller: '\Drupal\tofu\Controller\TofuController::index'
   requirements:
     _permission: 'access content'
 {% endhighlight %}
 
-Rota que injeta a variável $parametro agora como o um objeto node,
-isto é, {parametro} agora será o id no node. E teremos de "graça"
-o objeto node relacionado ao id passado no nosso método *bla*:
+### Carregando node automaticamente a partir do nid na rota
+
+O Drupal vai muito além. Suponha que esse $parametro,
+por algum motivo, seja o *nid* de nodes do seu site. 
+Poderíamos, dentro do controller, carregar o node baseado nos id recebido,
+mas podemos fazer essa injeção diretamente no arquivo de rotas, assim,
+a variável $parametro será diretamente um objeto do tipo node:
 {% highlight yaml %}
-tofu.bla:
+tofu.index:
   path: '/bla/{parametro}'
   defaults:
-    _controller: '\Drupal\tofu\Controller\ExemploController::bla'
+    _controller: '\Drupal\tofu\Controller\TofuController::index'
   requirements:
     _permission: 'access content'
   options:
@@ -125,15 +131,14 @@ tofu.bla:
         type: entity:node
 {% endhighlight %}
 
-## Exemplos com Controllers
+## Controllers
 
-Controller básico estende ControllerBase:
+Exemplo básico de um controller:
 {% highlight php %}
-...
 use Drupal\Core\Controller\ControllerBase;
 
 class ExemploController extends ControllerBase{
-  public function hello(){
+  public function index(){
     return [
       '#markup' => $this->t('Hello People')
     ];
@@ -141,10 +146,134 @@ class ExemploController extends ControllerBase{
 }
 {% endhighlight %}
 
+## Services
+
+### Criando e utilizando services
+
+Vamos criar a classe *UteisService.php* e veremos como utilizá-la no controller.
+ 
+{% highlight bash %}
+./vendor/bin/drupal generate:service  \
+  --module="tofu"  \
+  --name="tofu.uteis"  \
+  --class="UteisService"  \
+  --path-service="src" \
+  --no-interaction
+{% endhighlight %}
+
+Note que foi criada uma entrada em *tofu.services.yml* que define nossa classe como
+um serviço para o drupal.
+
+Na classe *UteisService.php*, como exemplo, vamos criar um método que dada uma string,
+a devolve invertida e com todas letras em maisculá:
+
+{% highlight php %}
+public function inverte($string){
+  return strtoupper(strrev($string));
+}
+{% endhighlight %}
+
+### Injetando um serviço no controller
+
+Queremos usar no nosso controller o método *inverte($string)* que está em *UteisService.php*, mas carregado como serviço. Isso significa que ao chamarmos
+*$this->tofuUteis->inverte('Maria')* recebemos como resposta *AIRAM*.
+
+Usando o mesmo comando do drupal console para criar a rota */tofu* e o controller *TofuControler* podemos passar a flag services e especificar o serviço *tofu.uteis*:
+{% highlight php %}
+./vendor/bin/drupal generate:controller  \
+  --module="tofu"  \
+  --class="TofuController"  \
+  --routes='"title":"index", "name":"tofu.index", "method":"index", "path":"/tofu"'  \
+  --services="tofu.uteis" \
+  --no-interaction
+{% endhighlight %}
+
+A saída será como abaixo, criando uma váriável *$tofuUteis*, objeto instanciado
+do nosso serviço.
+{% highlight php %}
+  use Symfony\Component\DependencyInjection\ContainerInterface;
+  ...
+  protected $tofuUteis;
+  public static function create(ContainerInterface $container) {
+    $instance = parent::create($container);
+    $instance->tofuUteis = $container->get('tofu.uteis');
+    return $instance;
+  }
+{% endhighlight %}
+
+Eu costumo também fazer de outra maneira, não sei qual é a melhor forma de injetar
+o serviço no controller, mas ambas funcionam. Forma manual:
+
+1 - No controller, declarar *ContainerInterface* e a classe do serviço:
+{% highlight php %}
+use Symfony\Component\DependencyInjection\ContainerInterface;
+use Drupal\tofu\UteisService;
+{% endhighlight %}
+
+2 - No __construct do controller receber a classe do serviço 
+como paramêtro em atribuir numa variável local:
+{% highlight php %}
+protected $tofuUteis;
+public function __construct(UteisService $tofuUteis){
+  $this->tofuUteis = $tofuUteis;
+}
+{% endhighlight %}
+
+3 - Por fim, no método create(), que é chamado antes do controller,
+carregar o $container com o serviço:
+{% highlight php %}
+public static function create(ContainerInterface $container){
+  return new static (
+    $container->get('tofu.uteis')
+  );
+}
+{% endhighlight %}
+
+Sempre olhar o __contruct() e create() da classe mãe da qual 
+esteja injetando o service, pois neste caso, você deve injetar os
+services que a classe mãe também injeta. Assim, supondo que
+sua classe mãe injete mais dois serviços, $a e $b, para injetar
+o nosso *tofu.uteis* faríamos assimo no controller:
+
+{% highlight php %}
+protected $tofuUteis;
+public function __construct(A $a, B $b, UteisService $tofuUteis){
+  parent::__construct($a, $b);
+  $this->tofuUteis = $tofuUteis;
+}
+{% endhighlight %}
+
+E no método create retornamos todos serviços que já eram carregados,
+acrescentando o nosso:
+{% highlight php %}
+public static function create(ContainerInterface $container){
+  return new static (
+    $container->get('modulo1.a'),
+    $container->get('modulo2.b'),
+    $container->get('tofu.uteis')
+  );
+}
+{% endhighlight %}
+
+DAQUI PARA BAIXO FALTA REVISAR
+-----------------------------------------------------------------------------
+
 ### Injetando service *config.factory* em classes do seu sistema
 
 Suponha que sua classe src/Service/Uteis.php precise
 carregar configurações do site.
+
+
+{% highlight bash %}
+./vendor/bin/drupal generate:service  \
+--module="tofu"  \
+--name="tofu.uteis"  \
+--class="UteisService"  \
+--path-service="src/Service" \
+--services="config.factory" \
+  --no-interaction
+{% endhighlight %}
+
 
 Na declaração de *tofu.services.yml*:
 {% highlight php %}
@@ -173,72 +302,6 @@ de Uteis.php assim:
 $this->config_factory->get('NOME_DA_CONFIG');
 {% endhighlight %}
 
-### Receita para injetar um serviço no controller
-
-Primeiro sua classe deve existir, por exemplo src/Service/Uteis.
-Vamos definir essa classe como um Service em *tofu.services.yml*:
-{% highlight php %}
-services:
-  tofu.inverte:
-    class: Drupal\tofu\Service\Uteis
-{% endhighlight %}
-
-Para usar essa classe no controller, mas carregada como serviço, 
-fazemos os seguintes passos:
-
-1 - No seu controller declarar *ContainerInterface* e sua classe (aquela
-que transformamos em service):
-{% highlight php %}
-use Symfony\Component\DependencyInjection\ContainerInterface;
-use Drupal\tofu\Service\Uteis;
-{% endhighlight %}
-
-2 - No __construct do controller receber a classe como paramêtro em 
-uma variável local:
-{% highlight php %}
-protected $uteis;
-public function __construct(Uteis $uteis){
-  $this->uteis = $uteis;
-}
-{% endhighlight %}
-
-3 - Por fim, no método create(), que é chamado antes do controller,
-carregar o $container com os serviço *uteis*:
-{% highlight php %}
-public static function create(ContainerInterface $container){
-  return new static (
-    $container->get('tofu.uteis')
-  );
-}
-{% endhighlight %}
-
-Agora, sua variável *$this->uteis* está pronta para uso em
-qualquer lugar do controller.
-
-Sempre olhar o __contruct() e create() da classe mãe da qual 
-esteja injetando o service, pois neste caso, você deve injetar os
-services que a classe mãe também injeta. Assim, supondo que
-sua classe mãe injete mais dois serviços, $a e $b, para injetar
-o nosso *tofu.uteis* faríamos no controller:
-{% highlight php %}
-protected $uteis;
-public function __construct(A $a, B $b, Uteis $uteis,){
-  parent::__construct($a, $b);
-  $this->uteis = $uteis;
-}
-{% endhighlight %}
-
-E no método create retornamos todos serviços que já eram carregados
-mais o nosso:
-{% highlight php %}
-public static function create(ContainerInterface $container){
-  return new static (
-    $container->get('modulo1.a'),
-    $container->get('modulo2.b'),
-    $container->get('tofu.uteis')
-  );
-}
-{% endhighlight %}
 
 ## Formulário de configuração do módulo
 
@@ -564,3 +627,26 @@ class TofuBlock extends BlockBase implements ContainerFactoryPluginInterface {
   }
 }
 {% endhighlight %}
+
+## Dicas para configurar seu ambiente
+
+TODO: passos da instalação do phpcs
+Alias para colocar no seu bashrc:
+
+{% highlight bash %}
+alias drupalcs="phpcs --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'" 
+alias drupalcsp="phpcs --standard=DrupalPractice --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'" 
+alias drupalcbf="phpcbf --standard=Drupal --extensions='php,module,inc,install,test,profile,theme,css,info,txt,md'"
+{% endhighlight %}
+
+Usando pareviewsh localmente (mesmo efeito de usar
+pelo site https://pareview.sh/):
+
+{% highlight bash %}
+mkdir ~/temp
+cd temp
+git clone https://git.drupalcode.org/project/pareviewsh
+cd pareviewsh
+composer install
+{% endhighlight %}
+

@@ -8,74 +8,129 @@ tags:
   - laravel
 ---
 
-Pequenos trechos de códigos em laravel usados por mim com frequência, nada que substitua a documentação oficial. Incluo algumas bibliotecas que aceleram o processo de desenvolvimento.
+Pequenos trechos de códigos em laravel usados por mim com frequência, nada que substitua a documentação oficial. Incluo algumas bibliotecas que costumo usar.
 
 <ul id="toc"></ul>
 
-## Geradores de códigos
+## Rotas
+Route::get('/pareceristas/create','PareceristaController@create');
 
-Suponham que precisamos gerar todo fluxo para um sistema de cadastro de livros, o famoso CRUD. Geradores de códigos são polêmicos, muitas vezes genéricos demais, mas eu prefiro usá-los. O importante é ter em mente que eles não farão seu sistema, mas sim te darão um ponto de partida. 
+## Controller
+php artisan make:Controller PareceristaController
 
-Usando a biblioteca *crud-generator* você pode criar um arquivo json com a definição dos seus campos, desta maneira:
-{% highlight yml %}
-{
-    "fields": [
-        {
-            "name": "titulo",
-            "type": "string"
-        },
-        {
-            "name": "resumo",
-            "type": "text"
-        },
-        {
-            "name": "publicado_em",
-            "type": "date"
-        },
-        {
-            "name": "acesso_aberto",
-            "type": "radio"
-        },
-        {
-            "name": "capa",
-            "type": "file"
-        },
-        {
-            "name": "area",
-            "type": "select",
-            "options": {
-                "filosofia_medieval": "Filosofia Medieval",
-                "historia_ocidental": "História Ocidental",
-                "geografia_fisica": "Geografia Física"
-            }
-        }
-    ]
+
+## Arquivos
+## Emails
+## Opçãoes de lista - 
+falta código para travar campo na validação in:array no form
+
+
+<option value="" selected="">- Selecione -</option>
+@foreach ($estagio->especifiquevtOptions() as $option)
+
+    {{-- 1. Situação em que não houve tentativa de submissão e é uma edição --}}
+    @if (old('especifiquevt') == '' and isset($estagio->especifiquevt))
+    <option value="{{$option}}" {{ ( $estagio->especifiquevt == $option) ? 'selected' : ''}}>
+        {{$option}}
+    </option>
+    {{-- 2. Situação em que houve tentativa de submissão, o valor de old prevalece --}}
+    @else
+    <option value="{{$option}}" {{ ( old('especifiquevt') == $option) ? 'selected' : ''}}>
+        {{$option}}
+    </option>
+    @endif
+    
+@endforeach
+
+## workflow
+## seed e faker 
+
+    $entrada = [
+        'numero_usp' => 123,
+        'nome' => 'Thiago Gomes Veríssimo',
+    ];
+    App\Parecerista::create($entrada);
+
+
+return [
+    'numero_usp' => $faker->unique()->numberBetween(10000, 999999),
+    'nome' => $faker->name,
+];
+
+factory(App\Parecerista::class, 100)->create();
+
+## index com busca e paginação
+<form method="get" action="/pareceristas">
+<div class="row">
+    <div class=" col-sm input-group">
+    <input type="text" class="form-control" name="busca" value="{{ Request()->busca }}">
+
+    <span class="input-group-btn">
+        <button type="submit" class="btn btn-success"> Buscar </button>
+    </span>
+
+    </div>
+</div>
+</form>
+
+{{ $pareceristas->appends(request()->query())->links() }}
+
+public function index(Request $request){
+if(isset($request->busca)) {
+    $pareceristas = Parecerista::where('numero_usp','LIKE',"%{$request->busca}%")->paginate(10);
+} else {
+    $pareceristas = Parecerista::paginate(10);
 }
-{% endhighlight %}
+return view('pareceristas.index')->with('pareceristas',$pareceristas);
 
-O que eu normalmente mudo no código gerado:
+## Teste unitário
+## mutators - get e set
 
- - O template pai (ou mãe), assim troco a lista extends
- - A opção de seleção em lista, mando para ao model
- - uso typehint no controller para carregar os models
- - Eu não uso a opção de validação dentro do controller, pois faço com FormRequest
+public function getDivulgarAteAttribute($value) {
+    /* No banco está YYYY-MM-DD, mas vamos retornar DD/MM/YYYY */
+    return implode('/',array_reverse(explode('-',$value)));
+}
 
-https://github.com/InfyOmLabs/laravel-generator
+public function setDivulgarAteAttribute($value) {
+    /* Chega no formato DD/MM/YYYY e vamos salvar como YYYY-MM-DD */
+    $this->attributes['divulgar_ate'] = implode('-',array_reverse(explode('/',$value)));
+}
 
-???
+## assets
+ <link rel="stylesheet" type="text/css" href="{{asset('/css/pareceristas.css')}}">
 
-## Gerador de fakers
+jQuery(function ($) {
+    $(".cpf").mask('000.000.000-00');
+});
+# 
+## Fila
+## Foreign Key - model - relacionamento
+## Validações
+php artisan make:request PareceristaRequest
+$validated = $request->validated();
 
-https://github.com/mpociot/laravel-test-factory-helper
+# CRUD completo 
+php artisan make:model Parecerista -a
+public function edit(Parecerista $parecerista){
+    return view('pareceristas.edit')->with('parecerista',$parecerista);
+}
 
-Insedir como o seed chama o faker.
+## Login - como
+## Mensagens de flash
+old('numero_usp',$parecerista->numero_usp)
 
-gerador de tabebas pivot:
-https://github.com/laracasts/Laravel-5-Generators-Extended/
+## Rota assinada
+## GATE - permissões
 
 
 
-## Exemplos com rotas
+## Bibliotecas gerais
+### Gerador de fakers
+### Biblioteca para PDF
+### Biblioteca para Excel
+
+
+ Exemplos com rotas
 
 Exemplo de REGEX que só aceita número inteiro no parâmetro id:
 {% highlight php %}
@@ -317,4 +372,13 @@ public function export($format){
     composer require uspdev/laravel-usp-theme
     composer require uspdev/laravel-usp-faker --dev
     
+## Gerador de fakers
+
+https://github.com/mpociot/laravel-test-factory-helper
+
+Insedir como o seed chama o faker.
+
+gerador de tabebas pivot:
+https://github.com/laracasts/Laravel-5-Generators-Extended/
+
 
