@@ -288,11 +288,13 @@ public function setDivulgarAteAttribute($value) {
 
 ## assets
 {% highlight css %}
+{% raw %}
  <link rel="stylesheet" type="text/css" href="{{asset('/css/pareceristas.css')}}">
 
 jQuery(function ($) {
     $(".cpf").mask('000.000.000-00');
 });
+{% endraw %}
 {% endhighlight %}
 # 
 ## Fila
