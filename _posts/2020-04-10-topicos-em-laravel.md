@@ -125,6 +125,8 @@ $user->codigo_usuario = '999222'
 $user->save()
 {% endhighlight %}
 
+For fim, um formulário para login:
+
 {% highlight html %}
 {% raw %}
 <form method="POST" action="/login">
@@ -169,7 +171,7 @@ Segue um rascunho do formulário com o botão para logout:
         class="font-weight-bold text-white nounderline pr-2 pl-2" href>Sair</a>
 </form>
 {% endraw %}
-{% highlight php %}
+{% endhighlight %}
 
 O método no controller é bem simples:
 {% highlight php %}
@@ -216,6 +218,8 @@ falta código para travar campo na validação in:array no form
 ## workflow
 ## seed e faker 
 
+{% highlight php %}
+{% raw %}
     $entrada = [
         'numero_usp' => 123,
         'nome' => 'Thiago Gomes Veríssimo',
@@ -227,10 +231,14 @@ return [
     'numero_usp' => $faker->unique()->numberBetween(10000, 999999),
     'nome' => $faker->name,
 ];
+{% endraw %}
+{% endhighlight %}
 
 factory(App\Parecerista::class, 100)->create();
 
 ## index com busca e paginação
+{% highlight html %}
+{% raw %}
 <form method="get" action="/pareceristas">
 <div class="row">
     <div class=" col-sm input-group">
@@ -245,7 +253,11 @@ factory(App\Parecerista::class, 100)->create();
 </form>
 
 {{ $pareceristas->appends(request()->query())->links() }}
+{% endraw %}
+{% endhighlight %}
 
+
+{% highlight php %}
 public function index(Request $request){
 if(isset($request->busca)) {
     $pareceristas = Parecerista::where('numero_usp','LIKE',"%{$request->busca}%")->paginate(10);
@@ -254,8 +266,13 @@ if(isset($request->busca)) {
 }
 return view('pareceristas.index')->with('pareceristas',$pareceristas);
 
+{% endhighlight %}
+
 ## Teste unitário
 ## mutators - get e set
+
+{% highlight php %}
+
 
 public function getDivulgarAteAttribute($value) {
     /* No banco está YYYY-MM-DD, mas vamos retornar DD/MM/YYYY */
@@ -267,12 +284,16 @@ public function setDivulgarAteAttribute($value) {
     $this->attributes['divulgar_ate'] = implode('-',array_reverse(explode('/',$value)));
 }
 
+{% endhighlight %}
+
 ## assets
+{% highlight css %}
  <link rel="stylesheet" type="text/css" href="{{asset('/css/pareceristas.css')}}">
 
 jQuery(function ($) {
     $(".cpf").mask('000.000.000-00');
 });
+{% endhighlight %}
 # 
 ## Fila
 ## Foreign Key - model - relacionamento
@@ -281,15 +302,19 @@ php artisan make:request PareceristaRequest
 $validated = $request->validated();
 
 # CRUD completo 
+{% highlight php %}
 php artisan make:model Parecerista -a
 public function edit(Parecerista $parecerista){
     return view('pareceristas.edit')->with('parecerista',$parecerista);
 }
+{% endhighlight %}
 
 
 ## Mensagens de flash
 old('numero_usp',$parecerista->numero_usp)
 
+{% highlight html %}
+{% raw %}
 @if ($errors->any())
 <div class="alert alert-danger">
     <ul>
@@ -310,6 +335,10 @@ old('numero_usp',$parecerista->numero_usp)
     @endif
     @endforeach
 </div>
+
+{% endraw %}
+{% endhighlight %}
+
 
 ## Rota assinada
 ## GATE - permissões
