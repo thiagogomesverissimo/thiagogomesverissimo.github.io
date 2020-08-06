@@ -8,39 +8,210 @@ tags:
   - laravel
 ---
 
-Pequenos trechos de códigos em laravel usados por mim com frequência, nada que substitua a documentação oficial. Incluo algumas bibliotecas que costumo usar.
+Pequenos trechos de códigos em laravel usados por mim com frequência, nada que substitua a documentação oficial.
 
 <ul id="toc"></ul>
 
 ## Rotas
-Route::get('/pareceristas/create','PareceristaController@create');
 
-## Controller
-php artisan make:Controller PareceristaController
+Exemplo geral de uma rota do tipo GET:
+{% highlight php %}
+Route::get('/livros/create','LivroController@create');
+{% endhighlight %}
+
+Exemplo com REGEX que só aceita número inteiro no parâmetro id:
+{% highlight php %}
+Route::get('users/{id}',function($id){
+    return $id;
+})->where('id','[0-9]+');
+{% endhighlight %}
+
+Exemplo com REGEX que só aceita letras no parâmetro username:
+{% highlight php %}
+Route::get('users/{username}',function($username){
+    return $username;
+})->where('username','[A-Za-z]+');
+{% endhighlight %}
+
+Exemplo que aceita uma parâmetro somente com inteiro e outro somente com letra:
+{% highlight php %}
+Route::get('posts/{id}/{slug}',function($id,$slug){
+    return $slug . ' ' .  $id;
+})->where([
+    'id' => '[0-9]+',
+    'slug' => '[A-Za-z]+'
+]);
+{% endhighlight %}
+
+## Migrations
+
+Adicionando coluna `editora` em uma tabela existente chamada `livros`:
+{% highlight bash %}
+php artisan make:migration add_editora_to_livros_table  --table=livros
+{% endhighlight %}
+
+## Autenticação
+
+O laravel tem um mecanismo de criar todo o esquema de autenticação
+automaticamente. Como eu sempre precisei customizá-lo, 
+acabo criando eu mesmo o controller, views, migrations etc.
+
+Primeiramente, o método de login `auth()->login($user)` 
+ou `Auth::login($user)`, que pode ser usado no controler espera 
+um objeto da classe `Illuminate\Foundation\Auth\User`.
+Por padrão, o model `User` criado automaticamente na instalação
+já estende essa classe. A migration corresnpondente também já estão ok padrão.
+Vou mostrar apenas o procedimento de login, pois, estou supondo
+que a tabela de `users` é populada por alguma outra fonte qualquer.
+
+Supondo que a única coisa que você precisa fazer no seu controller é logar
+o usuário e que você já fez a conferência que o usuário é o próprio 
+(talvez seja um retorno de OAuth), você faria algo do tipo:
+{% highlight php %}
+$user = User::where('email',$email)->first()
+if (is_null($user)) $user = new User;
+$user->name  = $name;
+$user->email = $email;
+$user->save();
+auth()->login($user);
+return redirect('/');
+{% endhighlight %}
+
+Para login local, apesar de são ser obrigatório, pode ser útil usar 
+a trait `Illuminate\Foundation\Auth\AuthenticatesUsers` que está no
+pacote:
+
+{% highlight bash %}
+composer require laravel/ui
+{% endhighlight %}
+
+Usando a trait `AuthenticatesUsers` no seu controller você ganha os métodos:
+
+- showLoginForm(): requisição GET apontando para auth/login.blade.php 
+- login(): requisição POST que recebe `email` e `password` e chama `auth()->login($user)`
+
+Assim, basta criarmos as rotas correspondentes:
+{% highlight php %}
+Route::get('login', 'LoginController@showLoginForm')->name('login');
+Route::post('login', 'LoginController@login');
+{% endhighlight %}
+
+Seu LoginController ficaria assim nesse caso:
+{% highlight php %}
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+class LoginController extends Controller
+{
+    use AuthenticatesUsers;
+    protected $redirectTo = '/';
+}
+{% endhighlight %}
+
+Ainda no LoginController, se o campo que você for receber em `login()`, 
+não for o `email`, mas sim `codigo_usuario`, pode fazer a mudança em:
+{% highlight php %}
+public function username()
+{
+    return 'codigo_usuario';
+}
+{% endhighlight %}
+
+A forma mais rápida de criar um usuário para teste é pelo `php artisan tinker`:
+{% highlight php %}
+$user = new App\User;
+$user->email = 'teste2@teste.com'
+$user->name = 'Maria'
+$user->password = bcrypt('123')
+$user->codigo_usuario = '999222'
+$user->save()
+{% endhighlight %}
+
+{% highlight html %}
+{% raw %}
+<form method="POST" action="/login">
+    @csrf
+    
+    <div class="form-group row">
+        <label for="codigo_usuario" class="col-sm-4 col-form-label text-md-right">codigo_usuario</label>
+
+        <div class="col-md-6">
+            <input type="text" name="codigo_usuario" value="{{ old('codigo_usuario') }}" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="password" class="col-md-4 col-form-label text-md-right">Senha</label>
+
+        <div class="col-md-6">
+            <input type="password" name="password" required>
+        </div>
+    </div>
+
+    <div class="form-group row mb-0">
+        <div class="col-md-8 offset-md-4">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+    </div>
+</form>
+{% endraw %}
+{% endhighlight %}
+
+### Implementação do logout
+
+Uma boa prática é implementar o logout usando uma requisição POST.
+Segue um rascunho do formulário com o botão para logout:
+{% highlight html %}
+{% raw %}
+<form action="/logout" method="POST" class="form-inline" 
+    style="display:inline-block" id="logout_form">
+    @csrf
+    <!-- O uso do link ao invés do botao é para poder formatar corretamente -->
+    <a onclick="document.getElementById('logout_form').submit(); return false;"
+        class="font-weight-bold text-white nounderline pr-2 pl-2" href>Sair</a>
+</form>
+{% endraw %}
+{% highlight php %}
+
+O método no controller é bem simples:
+{% highlight php %}
+public function logout()
+{
+    auth()->logout();
+    return redirect('/');
+}
+{% endhighlight %}
+
+## Autorização
+
+
 
 
 ## Arquivos
 ## Emails
-## Opçãoes de lista - 
+
+## Opções de lista
 falta código para travar campo na validação in:array no form
 
-
-<option value="" selected="">- Selecione -</option>
-@foreach ($estagio->especifiquevtOptions() as $option)
+{% highlight html %}
+{% raw %}
+<option value="" selected=""> - Selecione  -</option>
+@foreach ($livro->categorias() as $categoria)
 
     {{-- 1. Situação em que não houve tentativa de submissão e é uma edição --}}
-    @if (old('especifiquevt') == '' and isset($estagio->especifiquevt))
-    <option value="{{$option}}" {{ ( $estagio->especifiquevt == $option) ? 'selected' : ''}}>
-        {{$option}}
+    @if (old('categoria') == '' and isset($livro->categoria))
+    <option value="{{$categoria}}" {{ ( $livro->categoria == $categoria) ? 'selected' : ''}}>
+        {{$categoria}}
     </option>
     {{-- 2. Situação em que houve tentativa de submissão, o valor de old prevalece --}}
     @else
-    <option value="{{$option}}" {{ ( old('especifiquevt') == $option) ? 'selected' : ''}}>
+    <option value="{{$categoria}}" {{ ( old('categoria') == $option) ? 'selected' : ''}}>
         {{$option}}
     </option>
     @endif
     
 @endforeach
+{% endraw %}
+{% endhighlight %}
+
 
 ## workflow
 ## seed e faker 
@@ -115,9 +286,30 @@ public function edit(Parecerista $parecerista){
     return view('pareceristas.edit')->with('parecerista',$parecerista);
 }
 
-## Login - como
+
 ## Mensagens de flash
 old('numero_usp',$parecerista->numero_usp)
+
+@if ($errors->any())
+<div class="alert alert-danger">
+    <ul>
+        @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+        @endforeach
+    </ul>
+</div>
+@endif
+
+<div class="flash-message">
+    @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+    @if(Session::has('alert-' . $msg))
+
+    <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}
+        <a href="#" class="close" data-dismiss="alert" aria-label="fechar">&times;</a>
+    </p>
+    @endif
+    @endforeach
+</div>
 
 ## Rota assinada
 ## GATE - permissões
@@ -130,32 +322,7 @@ old('numero_usp',$parecerista->numero_usp)
 ### Biblioteca para Excel
 
 
- Exemplos com rotas
 
-Exemplo de REGEX que só aceita número inteiro no parâmetro id:
-{% highlight php %}
-Route::get('users/{id}',function($id){
-    return $id;
-})->where('id','[0-9]+');
-{% endhighlight %}
-
-Exemplo de REGEX que só aceita letras no parâmetro username:
-{% highlight php %}
-Route::get('users/{username}',function($username){
-    return $username;
-})->where('username','[A-Za-z]+');
-{% endhighlight %}
-
-Rota que aceita uma parâmetro somente com inteiro e outro somente com
-letra:
-{% highlight php %}
-Route::get('posts/{id}/{slug}',function($id,$slug){
-    return $slug . ' ' .  $id;
-})->where([
-    'id' => '[0-9]+',
-    'slug' => '[A-Za-z]+'
-]);
-{% endhighlight %}
 
 ## Três formas de fazer validações
 
@@ -245,9 +412,11 @@ Usando Session::has também pegamos outros tipos de mensagens:
 
 Campo para upload do arquivo no formulário html:
 {% highlight html %}
+{% raw %}
 <form method="POST" enctype="multipart/form-data">
   <input type="file" name="certificado">
 </form>
+{% endraw %}
 {% endhighlight %}
 
 A validação de arquivos deve ser feita assim:
@@ -306,6 +475,7 @@ touch app/Exports/ExcelExport.php
 Implementar uma classe que recebe um array multidimensional com os dados, linha a linha.
 E outro array com os títulos;
 {% highlight php %}
+{% raw %}
 namespace App\Exports;
 
 use Maatwebsite\Excel\Concerns\FromArray;
@@ -330,10 +500,12 @@ class ExcelExport implements FromArray, WithHeadings
         return $this->headings;
     }
 }
+{% endraw %}
 {% endhighlight %}
 
 Usando no controller:
 {% highlight php %}
+{% raw %}
 use Maatwebsite\Excel\Excel;
 use App\Exports\ExcelExport;
 
@@ -351,8 +523,8 @@ public function exemplo(Excel $excel){
 
 public function export($format){
 }
+{% endraw %}
 {% endhighlight %}
-
 
 ## Relação das bibliotecas aqui usadas
 

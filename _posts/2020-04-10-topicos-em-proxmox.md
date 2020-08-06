@@ -10,7 +10,7 @@ tags:
 
 <ul id="toc"></ul>
 
-## Nested Virtualization com Debian
+## Nested Virtualization com Debian e virt-manager
 
 É muito útil ter um proxmox local para aplicar configurações
 de testes antes de enviá-las para produção. 
@@ -42,8 +42,10 @@ virt-manager:
 
  - https://www.proxmox.com/en/downloads/category/iso-images-pve
 
-/var/lib/libvirt/images/
+O diretório padrão do libvirt para salvar as VMs é
+`/var/lib/libvirt/images/`, se quiser mudar, faça o procedimento abaixo:
 
+{% highlight bash %}
 sudo su
 mkdir /home/storage_libvirt
 chown libvirt-qemu: /home/storage_libvirt/
@@ -53,22 +55,12 @@ virsh pool-undefine default
 virsh pool-define-as --name default --type dir --target /home/storage_libvirt
 virsh pool-autostart default
 virsh pool-start default
+{% endhighlight %}
 
+Dicas gerais do proxmox:
 
-systemctl status pve-firewall
-
-Datacenter -> Firewall -> Option -> Habilitar Firewall
-Será criado: cat /etc/pve/firewall/cluster.fw
-
-VMs:
-
-cat /etc/pve/firewall/101.fw
-Habilitar o fw na VM e depois na interface
-
-as regras mais acima valem mais que as de baixo
-
-Baixando templates para containers: Datacenter->node->local(storage)->Content->Templates
-Subindo imagens ISO: Datacenter->node->local(storage)->Content->Upload
+- Baixando templates para containers: Datacenter->node->local(storage)->Content->Templates
+- Subindo imagens ISO: Datacenter->node->local(storage)->Content->Upload
 
 ## NAT com Debain para as VMs
 
