@@ -1,7 +1,7 @@
 **2020**
 <ul>
   <li> Web Application Technologies and Django
-    <a href="{{base_path}}/files/certificados/cursos/2020/Coursera-Web Application-Technologies-and-Django-7GZE6C8LK9RB.pdf"><i class="fa fa-file-pdf"></i></a>
+    <a href="{{base_path}}/files/certificados/cursos/2020/Coursera-Web-Application-Technologies-and-Django-7GZE6C8LK9RB.pdf"><i class="fa fa-file-pdf"></i></a>
     <br> University of Michigan/Coursera
   </li>
 
