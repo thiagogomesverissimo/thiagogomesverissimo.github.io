@@ -1,16 +1,22 @@
 **2020**
 <ul>
+  <li> Web Application Technologies and Django
+    <a href="{{base_path}}/files/certificados/cursos/2020/Coursera-Web Application-Technologies-and-Django-7GZE6C8LK9RB.pdf"><i class="fa fa-file-pdf"></i></a>
+    <br> University of Michigan/Coursera
+  </li>
+
   <li>
     Vehicular Emissions Inventory (VEIN)
     <br> Instituto de Astronomia, Geofísica e Ciências Atmosféricas da Universidade de São Paulo. 16h.
   </li>
+
 </ul>
 
 **2019**
 <ul>
-<li> Cybercartograhy: Potentials and Applications. 
+  <li> Cybercartograhy: Potentials and Applications. 
     <a href="{{base_path}}/files/certificados/cursos/2019/Cybercartograhy.pdf"><i class="fa fa-file-pdf"></i></a>
-  <br> Departamento de Geografia da FFLCH - USP. 8h.
+    <br> Departamento de Geografia da FFLCH - USP. 8h.
   </li>
 
   <li> Algoritmos em Java.
