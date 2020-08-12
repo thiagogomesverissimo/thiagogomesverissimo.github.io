@@ -1,5 +1,10 @@
 **2020**
 <ul>
+  <li> Building Web Applications in Django
+    <a href="{{base_path}}/files/certificados/cursos/2020/Building-Web-Applications-in-Django-MMH82VDDN66A.pdf"><i class="fa fa-file-pdf"></i></a>
+    <br> University of Michigan/Coursera
+  </li>
+
   <li> Web Application Technologies and Django
     <a href="{{base_path}}/files/certificados/cursos/2020/Coursera-Web-Application-Technologies-and-Django-7GZE6C8LK9RB.pdf"><i class="fa fa-file-pdf"></i></a>
     <br> University of Michigan/Coursera
