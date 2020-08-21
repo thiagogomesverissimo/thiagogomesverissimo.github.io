@@ -28,17 +28,20 @@ sudo mv composer.phar /usr/local/bin/composer
 {% endhighlight %}
 
 Criando uma instalação limpa para começar a desenvolver. Será criado um
-diretório chamado projetodev, sendo usuário/senha igual a admin/admin:
+diretório chamado drupal-dev, sendo usuário/senha igual a admin/admin:
 
 {% highlight bash %}
-composer create-project drupal/recommended-project:8.x projetodev
-cd projetodev
+composer create-project drupal/recommended-project:8.x drupal-dev
+cd drupal-dev
 composer require drupal/console
-composer require drush/drush
-./vendor/bin/drupal site:install standard --db-type="sqlite" \
-       --site-name="Ambiente Dev" --site-mail="dev@locahost" \
-       --account-name="admin" --account-pass="admin" --account-mail="dev@localhost" \
-       --no-interaction
+composer require drush/drush:8.x
+./vendor/bin/drush site-install standard \
+  --db-url=sqlite://sites/default/files/.ht.sqlite \
+  --site-name="Ambiente Dev" \
+  --site-mail="dev@locahost" \
+  --account-name="admin" \
+  --account-pass="admin" \
+  --account-mail="dev@localhost" --yes
 {% endhighlight %}
 
 Normalmente, eu ignoro as pastas *vendor*, *web* e *drush* no gitignore.
@@ -626,6 +629,46 @@ class TofuBlock extends BlockBase implements ContainerFactoryPluginInterface {
     }
   }
 }
+{% endhighlight %}
+
+## phpunit
+
+Para usar o phpunit no contexto do módulo eu tive que inserir na minha instalação
+do drupal de desenvolvimento as seguintes linhas no composer.json (pode ser na seção dev):
+
+{% highlight json %}
+"phpunit/phpunit": "^7",
+"symfony/phpunit-bridge": "^5.1",
+"behat/mink-goutte-driver": "^1.0",
+"drupal/group": "^1.0"
+{% endhighlight %}
+
+Depois, copie o arquivo phpunit.xml de modelo:
+
+{% highlight bash %}
+cp web/core/phpunit.xml.dist web/core/phpunit.xml
+mkdir -p /home/thiago/drupal-dev/web/sites/simpletest/browser_output
+{% endhighlight %}
+
+E configure as variáveis dentro de phpunit.xml:
+
+- SIMPLETEST_BASE_URL: http://127.0.0.1:8088/
+- SIMPLETEST_DB: sqlite://localhost//home/thiago/repos/drupal-dev/web/sites/default/files/.ht.sqlite
+- BROWSERTEST_OUTPUT_DIRECTORY: /home/thiago/drupal-dev/web/sites/simpletest/browser_output
+
+Exemplo de rodada dos testes funcionais em um módulo contrib, no caso, webform:
+{% highlight bash %}
+./vendor/bin/phpunit -c web/core --testsuite=functional web/modules/contrib/webform
+{% endhighlight %}
+
+Ligando flags de debug:
+{% highlight bash %}
+./vendor/bin/phpunit -c web/core --debug --verbose --testsuite=functional web/modules/contrib/webform
+{% endhighlight %}
+
+Também é possível apontar para um arquivo em específico:
+{% highlight bash %}
+./vendor/bin/phpunit -c web/core --testsuite=functional web/modules/contrib/webform/tests/src/Functional/WebformResultsExportDownloadTest.php
 {% endhighlight %}
 
 ## Dicas para configurar seu ambiente

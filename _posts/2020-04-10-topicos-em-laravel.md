@@ -343,9 +343,6 @@ old('numero_usp',$parecerista->numero_usp)
 
 
 ## Rota assinada
-## GATE - permissões
-
-
 
 ## Bibliotecas gerais
 ### Gerador de fakers
