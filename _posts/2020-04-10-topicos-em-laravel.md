@@ -14,41 +14,85 @@ Pequenos trechos de códigos em laravel usados por mim com frequência, nada que
 
 ## Rotas
 
-Exemplo geral de uma rota do tipo GET:
+Exemplos de rotas do tipo GET:
 {% highlight php %}
 Route::get('/livros/create','LivroController@create');
+Route::get('/livros/{isbn}','LivroController@show');
 {% endhighlight %}
 
-Exemplo com REGEX que só aceita número inteiro no parâmetro id:
+Exemplos com REGEX. O primeiro só aceita número inteiro no parâmetro id,
+o segundo somente letras em title e o terceiro combina os dois anteriores:
 {% highlight php %}
-Route::get('users/{id}',function($id){
-    return $id;
-})->where('id','[0-9]+');
+Route::get('/livros/{id}','LivroController@show')->where('id','[0-9]+');
+Route::get('/livros/{title}','LivroController@show')->->where('title','[A-Za-z]+');
+Route::get('/livros/{id}/{title}','LivroController@show')->->where(['id' => '[0-9]+','title' => '[A-Za-z]+']);
 {% endhighlight %}
 
-Exemplo com REGEX que só aceita letras no parâmetro username:
-{% highlight php %}
-Route::get('users/{username}',function($username){
-    return $username;
-})->where('username','[A-Za-z]+');
+## Controller
+
+Criando um controller:
+{% highlight bash %}
+php artisan make:controller LivroController
 {% endhighlight %}
 
-Exemplo que aceita uma parâmetro somente com inteiro e outro somente com letra:
+Métodos dentro do controller:
 {% highlight php %}
-Route::get('posts/{id}/{slug}',function($id,$slug){
-    return $slug . ' ' .  $id;
-})->where([
-    'id' => '[0-9]+',
-    'slug' => '[A-Za-z]+'
-]);
+public function create(){
+    dd('Estou vivo!'); // return view('livros.create');
+}
+public function show($isbn){
+    dd($isbn); // return view('livros.show')->with('isbn',$isbn);
+}
 {% endhighlight %}
+
+## Blade
+
+A principal caracteristica do sistema de template é a herança, assim vamos
+começar criando um template principal (resources/view/main.blade.php) 
+com seções genéricas:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@section('title') Example @show</title>
+    </head>
+    <body>
+        @yield('content')
+    </body>
+</html>
+
+em resources/views/livros/show.blade.php:
+
+@extends('main')
+@section('content')
+  Esse livro em ISNB: {{ $isbn }}
+@endsection
 
 ## Migrations
 
-Adicionando coluna `editora` em uma tabela existente chamada `livros`:
+Duas formas de criar migrations, uma criando um modle paralelo e outra somente
+a tabela no banco de dados:
 {% highlight bash %}
-php artisan make:migration add_editora_to_livros_table  --table=livros
+php artisan make:model Livro --migration
+php artisan make:migration create_livros_table --create=livros
 {% endhighlight %}
+
+Criando uma migration que alterará uma tabela existente:
+{% highlight bash %}
+php artisan make:migration change_editora_colunm_in_livros  --table=livros
+{% endhighlight %}
+
+Alterando a coluna `editora` de string para text na migration acima:
+{% highlight php %}
+$table->text('editora')->change();
+{% endhighlight %}
+
+## Model
+
+## Seed e Factory
+
+
+## CRUD completo
 
 ## Autenticação
 
@@ -388,14 +432,43 @@ namespace App\Http\Requests;
 use Illuminate\Foundation\Http\FormRequest;
 class EmpresaRequest extends FormRequest
 {
+    public function authorize()
+    {
+        return true;
+    }
     public function rules(){
-        return [
+        $rules = [
           'nome' => 'required',
-          'cnpj' => 'required',
+          'cnpj' => ['required'],
         ];
-    };
+        if ($this->method() == 'PATCH' || $this->method() == 'PUT'){
+            array_push($rules['cnpj'], 'unique:empresas,cnpj,' .$this->empresa->id);
+        }
+        else{
+            array_push($rules['cnpj'], 'unique:empresas');
+        }
+    }
+    protected function prepareForValidation()
+    {
+        $this->merge([
+            'cnpj' => preg_replace('/[^0-9]/', '', $this->cnpj),
+        ]);
+    }
+    public function messages()
+    {
+        return [
+            'cnpj.unique' => 'Este CNPJ já está cadastrado para outra empresa',
+        ];
+    }
 }
 {% endhighlight %}
+
+Vaçidações importantes:
+use Illuminate\Validation\Rule;
+['required', Rule::in($item::tipo_aquisicao)],
+
+
+## validações customizadas - c0mo fazer?
 
 Por fim, no método do controller que receberá os dados, 
 injete o FormRequest. No formRequest existe um método chamado
@@ -554,15 +627,7 @@ public function export($format){
 {% endraw %}
 {% endhighlight %}
 
-## Relação das bibliotecas aqui usadas
-
-    composer require appzcoder/crud-generator --dev
-    composer require mpociot/laravel-test-factory-helper --dev
-    composer require laracasts/generators --dev
-    
-    composer require laravellegends/pt-br-validator
-
- ## Bibliotecas USP
+ ## Bibliotecas USP - faltam alghumas
 
  Essa relação é exclusiva para quem trabalha na Universidade de São Paulo.
 
@@ -576,7 +641,39 @@ public function export($format){
 
 https://github.com/mpociot/laravel-test-factory-helper
 
-Insedir como o seed chama o faker.
+Inserir como o seed chama o faker.
+
+class DatabaseSeeder extends Seeder
+{
+    public function run()
+    {
+        $this->call([
+            ItemSeeder::class,
+            AreaSeeder::class,
+        ]);
+    }
+}
+
+class ItemSeeder extends Seeder
+    public function run()
+    {  
+        $item = [
+        ];
+    
+        Item::create($item);
+        factory(Item::class, 200)->create();
+    }
+
+
+use App\Area;
+use Faker\Generator as Faker;
+
+$factory->define(Area::class, function (Faker $faker) {
+    return [
+        'codigo' => $faker->numberBetween($min = 0, $max = 2000),
+        'nome' => $faker->sentence,
+    ];
+});
 
 gerador de tabebas pivot:
 https://github.com/laracasts/Laravel-5-Generators-Extended/
