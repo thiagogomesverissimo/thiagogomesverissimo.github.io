@@ -240,7 +240,7 @@ php artisan make:factory LivroFactory --model='Livro'
 
 {% highlight php %}
 return [
-    'titulo' => $this->faker->title,
+    'titulo' => $this->faker->sentence(5),
     'isbn'   => $this->faker->ean13(),
     'autor'  => $this->faker->name
 ];
@@ -257,6 +257,11 @@ $livro = [
 ];
 \App\Models\Livro::create($livro);
 \App\Models\Livro::factory(150)->create();
+{% endhighlight %}
+
+Agora, vamos zerar o banco e subir nossos dados fake:
+{% highlight bash %}
+php artisan migrate:fresh --seed
 {% endhighlight %}
 
 
