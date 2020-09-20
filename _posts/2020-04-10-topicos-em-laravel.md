@@ -18,9 +18,9 @@ na comunidade, que são tratadas no contexto das oficinas.
 <ul id="toc"></ul>
 
 
-## 1. MVC - model view controller
+## 1: MVC - Model View Controller
 
-### 1.1 Request e Response ou Pergunta e Resposta
+### 1.1: Request e Response ou Pergunta e Resposta
 
 Criando um projeto chamado `biblioteca` para nossos exemplos:
 {% highlight bash %}
@@ -36,7 +36,7 @@ Route::get('/livros', function () {
 });
 {% endhighlight %}
 
-### 1.2 Controller
+### 1.2: Controller
 
 Vamos começar a espalhar mais o tratamento das requições em uma arquitetura
 convencional?
@@ -84,13 +84,15 @@ Por fim, adicionemos a rota prevendo o recebimento do isbn:
 Route::get('/livros/{isbn}', 'LivroController@show');
 {% endhighlight %}
 
-### 1.3 View: Blade
+### 1.3. View: Blade
 
 Vamos melhorar os retornos do controller?
-A principal caracteristica do sistema de template é a herança. Então, vamos
+A principal característica do sistema de template é a herança. Então, vamos
 começar criando um template principal `resources/view/main.blade.php` 
 com seções genéricas:
 
+{% highlight html %}
+{% raw %}
 <!DOCTYPE html>
 <html>
     <head>
@@ -100,14 +102,20 @@ com seções genéricas:
         @yield('content')
     </body>
 </html>
+{% endraw %}
+{% endhighlight %}
 
 Primeiramente, vamos criar o template para o index `resources/views/livros/index.blade.php`:
 obedecendo a estrutura:
 
+{% highlight html %}
+{% raw %}
 @extends('main')
 @section('content')
   Não há livros cadastrados nesse sistema ainda!
 @endsection
+{% endraw %}
+{% endhighlight %}
 
 E mudamos o controller para chamar essa view:
 {% highlight php %}
@@ -133,10 +141,124 @@ public function show($isbn){
 
 O template `resources/views/livros/show.blade.php` ficará assim:
 
+{% highlight html %}
+{% raw %}
 @extends('main')
 @section('content')
   {{ $livro }}
 @endsection
+{% endraw %}
+{% endhighlight %}
+
+### 1.4: Model
+
+Vamos inserir nossos livros no banco de dados?
+Para tal, vamos criar uma tabela chamada `livros` no banco dados 
+por intermédio de uma migration e um model `Livro` para operarmos nessa tabela.
+
+{% highlight bash %}
+php artisan make:migration create_livros_table --create='livros'
+php artisan make:model Livro
+{% endhighlight %}
+
+Na migration criada vamos inserir os campos: titulo, autor e isbn,
+deixando o autor como opicional.
+
+{% highlight php %}
+$table->string('titulo');
+$table->string('autor')->nullable();
+$table->string('isbn');
+{% endhighlight %}
+
+Usando uma espécie de `shell` do laravel, o tinker, vamos inserir
+o registro do livro do Quincas Borba:
+
+{% highlight bash %}
+php artisan tinker
+$livro = new App\Models\Livro;
+$livro->titulo = "Quincas Borba";
+$livro->autor = "Machado de Assis";
+$livro->isbn = "9780195106817";
+$livro->save();
+quit
+{% endhighlight %}
+
+Insira mais livros!
+Veja que o model `Livro` salvou os dados na tabela `livros`. Estranho não?
+Essa é uma da inúmeras convêncões que vamos nos deparar ao usar um framework.
+
+Vamos modificar o controller para operar com os livros do banco de dados?
+No método index vamos buscar todos livros no banco de dados e enviar para
+o template:
+{% highlight php %}
+public function index(){
+    $livros = App\Models\Livro:all();
+    return view('livros.index')->with('livros',$livros);
+}
+{% endhighlight %}
+
+No template podemos iterar sobre todos livros recebidos do controller:
+{% highlight php %}
+{% raw %}
+@forelse ($livros as $livro)
+    <li>{{ $livro->titulo }}</li>
+    <li>{{ $livro->autor }}</li>
+    <li>{{ $livro->isbn }}</li>
+@empty
+    Não há livros cadastrados
+@endforelse
+{% endraw%}
+{% endhighlight %}
+
+No método `show` vamos buscar o livro com o isbn recebido e entregá-lo
+para o template:
+
+{% highlight php %}
+public function show($isbn){
+    $livro = App\Moldes\Livro::where('isbn',$isbn)->first();
+    return view('livros.show')->with('livro',$livro);
+}
+{% endhighlight %}
+
+No template vamos somente printar o livro:
+{% highlight php %}
+<li>{{ $livro->titulo }}</li>
+<li>{{ $livro->autor }}</li>
+<li>{{ $livro->isbn }}</li>
+{% endraw%}
+{% endhighlight %}
+
+### 1.5: Fakers
+
+Durante o processo de desenvolvimento precisamos manipular dados
+constantemente, então é uma boa ideia gerar dados aleatórios para
+não termos que sempre criá-los manualmente:
+
+{% highlight bash %}
+php artisan make:factory LivroFactory --model='Livro'
+{% endhighlight %}
+
+{% highlight php %}
+return [
+    'titulo' => $this->faker->title,
+    'isbn'   => $this->faker->ean13(),
+    'autor'  => $this->faker->name
+];
+{% endhighlight %}
+
+Em `database/seeders/DatabaseSeeder.php` vamos criar ao menos um registro
+de controle e chamar o factory para criação de 150 registros aleatórios.
+
+{% highlight php %}
+$livro = [
+    'titulo' => "Quincas Borba",
+    'autor'  => "Machado de Assis",
+    'isbn'       => "9780195106817"
+];
+\App\Models\Livro::create($livro);
+\App\Models\Livro::factory(150)->create();
+{% endhighlight %}
+
 
 ## 2. CRUD: Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição)
 
@@ -145,6 +267,7 @@ Porém, sou partidário da ideia de seguir convênções quando possível. Por i
 criando a estrututa básica para implementar um CRUD:
 
 {% highlight bash %}
+rm app/Models/Livro.php
 rm app/Http/Controllers/LivroController.php
 php artisan make:model LivroController -a
 {% endhighlight %}
