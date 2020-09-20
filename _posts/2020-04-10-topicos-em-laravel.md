@@ -225,12 +225,16 @@ No template vamos somente printar o livro:
 ### 1.5: Fakers
 
 Durante o processo de desenvolvimento precisamos manipular dados
-constantemente, então é uma boa ideia gerar dados aleatórios para
-não termos que sempre criá-los manualmente:
+constantemente, então é uma boa ideia gerar alguns dados aleatórios (faker)
+e outros controlados (seed) para não termos que sempre criá-los manualmente:
 
 {% highlight bash %}
 php artisan make:factory LivroFactory --model='Livro'
+php artisan make:seed LivroSeeder
 {% endhighlight %}
+
+Inicialmente, vamos definir um padrão para geração de
+dados aleatório `database/factories/LivroFactory.php`:
 
 {% highlight php %}
 return [
@@ -239,6 +243,10 @@ return [
     'autor'  => $this->faker->name
 ];
 {% endhighlight %}
+
+Vamos criar nosso livro de controler
+database/seeders/LivroSeeder.php
+
 
 Em `database/seeders/DatabaseSeeder.php` vamos criar ao menos um registro
 de controle e chamar o factory para criação de 150 registros aleatórios.
@@ -258,7 +266,7 @@ Agora, vamos zerar o banco e subir nossos dados fake:
 php artisan migrate:fresh --seed
 {% endhighlight %}
 
-### 1.6: Exercícios MVC
+### 1.6: Exercício MVC
 
 - Implementação de um model chamado `LivroFulano`, onde `Fulano` é um identificador
 seu. Implementar uma migration correspondente com os campos: titulo, autor e isbn.
