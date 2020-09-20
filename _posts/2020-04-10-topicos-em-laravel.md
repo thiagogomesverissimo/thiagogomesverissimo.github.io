@@ -14,8 +14,9 @@ oficinas de introdução ao framework numa perspectiva mais genérica.
 Assim, é possível encontrar certas omissões propositais ou práticas não comuns
 na comunidade, que são tratadas no contexto das oficinas.
 
-<ul id="toc"></ul>
 <br><br>
+<ul id="toc"></ul>
+
 
 ## 1. MVC - model view controller
 
