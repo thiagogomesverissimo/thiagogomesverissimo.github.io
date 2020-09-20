@@ -22,13 +22,6 @@ na comunidade, que são tratadas no contexto das oficinas.
 
 ### 1.1: Request e Response ou Pergunta e Resposta
 
-Criando um projeto chamado `biblioteca` para nossos exemplos:
-{% highlight bash %}
-composer create-project laravel/laravel biblioteca
-cd biblioteca
-php artisan serve
-{% endhighlight %}
-
 Criando uma rota para recebimento das requisições.
 {% highlight php %}
 Route::get('/livros', function () {
@@ -207,7 +200,7 @@ No template podemos iterar sobre todos livros recebidos do controller:
 @empty
     Não há livros cadastrados
 @endforelse
-{% endraw%}
+{% endraw %}
 {% endhighlight %}
 
 No método `show` vamos buscar o livro com o isbn recebido e entregá-lo
@@ -222,10 +215,11 @@ public function show($isbn){
 
 No template vamos somente printar o livro:
 {% highlight php %}
+{% raw %}
 <li>{{ $livro->titulo }}</li>
 <li>{{ $livro->autor }}</li>
 <li>{{ $livro->isbn }}</li>
-{% endraw%}
+{% endraw %}
 {% endhighlight %}
 
 ### 1.5: Fakers
@@ -264,6 +258,12 @@ Agora, vamos zerar o banco e subir nossos dados fake:
 php artisan migrate:fresh --seed
 {% endhighlight %}
 
+### 1.6: Exercícios MVC
+
+- Implementação de um model chamado `LivroFulano`, onde `Fulano` é um identificador
+seu. Implementar uma migration correspondente com os campos: titulo, autor e isbn.
+- Implementar faker correspondente
+- Implementar controller com os métodos index e show com respectivos templates e rotas
 
 ## 2. CRUD: Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição)
 
