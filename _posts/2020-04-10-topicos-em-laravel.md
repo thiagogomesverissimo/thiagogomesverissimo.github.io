@@ -15,6 +15,7 @@ Assim, é possível encontrar certas omissões propositais ou práticas não com
 na comunidade, que são tratadas no contexto das oficinas.
 
 <ul id="toc"></ul>
+<br><br>
 
 ## 1. MVC - model view controller
 
@@ -135,3 +136,14 @@ O template `resources/views/livros/show.blade.php` ficará assim:
 @section('content')
   {{ $livro }}
 @endsection
+
+## 2. CRUD: Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição)
+
+Frameworks como o laravel são flexíveis o suficente para ser customizados ao seu gosto.
+Porém, sou partidário da ideia de seguir convênções quando possível. Por isso começaremos
+criando a estrututa básica para implementar um CRUD:
+
+{% highlight bash %}
+rm app/Http/Controllers/LivroController.php
+php artisan make:model LivroController -a
+{% endhighlight %}
