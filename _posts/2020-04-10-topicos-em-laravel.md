@@ -275,12 +275,22 @@ seu. Implementar uma migration correspondente com os campos: titulo, autor e isb
 
 ## 2. CRUD: Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição)
 
-Frameworks como o laravel são flexíveis o suficente para ser customizados ao seu gosto.
+Neste ponto conhecemos um pouco do jargão e da estrutura usada pelo laravel para 
+implementar a arquitetura MVC.
+Frameworks como o laravel são flexíveis o suficente para serem customizados ao seu gosto.
 Porém, sou partidário da ideia de seguir convênções quando possível. Por isso começaremos
-criando a estrututa básica para implementar um CRUD:
+criando a estrututa básica para implementar um CRUD, erá modificado ao longo do
+texto.
+
+Apague o model, controller e migration (não delete views, seeders e factories):
 
 {% highlight bash %}
 rm app/Models/Livro.php
 rm app/Http/Controllers/LivroController.php
+rm database/migrations/00000_create_livros_table.php
+{% endhighlight %}
+
+{% highlight bash %}
+php artisan make:model Livro --all
 php artisan make:model LivroController -a
 {% endhighlight %}
