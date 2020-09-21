@@ -698,5 +698,10 @@ public function update(Request $request, Livro $livro)
 
 - Implementação do FormRequest `LivroFulanoRequest`, onde `Fulano` é um identificador
 seu.
+- Alterar `LivroFulanoController` para usar `LivroFulanoRequest` nos métodos store e update.
+
+\App\Models\User::factory(150)->create();
+
+php artisan make:model Emprestimo --migration
 
 
