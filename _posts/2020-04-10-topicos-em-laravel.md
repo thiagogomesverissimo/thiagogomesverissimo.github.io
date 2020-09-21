@@ -309,7 +309,7 @@ seu.
 - Implementar controller com os métodos index e show com respectivos templates e rotas
 - Implementar os templates (blades) correspondentes
 
-## 2. CRUD: Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição)
+## 2: CRUD: Create (Criação), Read (Consulta), Update (Atualização) e Delete (Destruição)
 
 ### 2.1: Limpando ambiente
 
@@ -449,9 +449,9 @@ Um implementação básica de cada template:
 @endsection  
 
 <!-- ###### partials/form.blade.php ###### -->
-Título: <input type="text" name="titulo" value="{{old('titulo', $livro->titulo)}}">
-Autor: <input type="text" name="autor" value="{{old('autor', $livro->autor)}}">
-ISBN: <input type="text" name="isbn" value="{{old('isbn', $livro->isbn)}}">
+Título: <input type="text" name="titulo" value="{{ $livro->titulo }}">
+Autor: <input type="text" name="autor" value="{{ $livro->autor }}">
+ISBN: <input type="text" name="isbn" value="{{ $livro->isbn }}">
 <button type="submit">Enviar</button>
 
 <!-- ###### create.blade.php ###### -->
@@ -490,13 +490,213 @@ apenas extender essa biblioteca:
 {% endraw %}
 {% endhighlight %}
 
+Dentre outras vantagens, ganhamos automaticamente o carregamento de frameworks
+como o bootstrap e fontawesome.
+
 ### 2.3: Exercício CRUD
 
 - Implementação de um CRUD completo para o model `LivroFulano`, onde `Fulano` é um identificador
 seu. 
 - Todas operações devem funcionar: criar, editar, ver, listar e apagar
 
-## 3. Validações
+## 3: Validação
 
+### 3.1: Mensagens flash
+
+Da maneira como implementamos o CRUD até então, qualquer valor que o usuário
+digitar no cadastro ou edição será diretamente enviado ao banco da dados.
+Vamos colocar algumas regras de validação no meio do caminho.
+Por padrão, em todo arquivo blade existe o array `$errors` que é sempre
+inicializado pelo laravel. Quando uma requisição não passar na validação, o laravel
+colocará as mensagens de erro nesse array automaticamente. Assim, basta que no
+nosso arquivo principal do blade, façamos uma iteração nesse array:
+
+{% highlight html %}
+{% raw %}
+@section('flash')
+    @if ($errors->any())
+    <div class="alert alert-danger">
+        <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+@endsection
+{% endraw %}
+{% endhighlight %}
+
+Além disso, podemos manualmente no nosso controller enviar uma mensagem `flash`
+para o sessão assim: `request()->session()->flash('alert-info','Livro cadastrado com sucesso')`.
+Como nosso template principal usa o boostrap, podemos estilizar nossas
+mensagens flash com os valores danger, warning, success e info:
+
+{% highlight html %}
+{% raw %}
+<div class="flash-message">
+  @foreach (['danger', 'warning', 'success', 'info'] as $msg)
+    @if(Session::has('alert-' . $msg))
+      <p class="alert alert-{{ $msg }}">{{ Session::get('alert-' . $msg) }}
+        <a href="#" class="close" data-dismiss="alert" aria-label="fechar">&times;</a>
+      </p>
+    @endif
+  @endforeach
+</div>
+{% endraw %}
+{% endhighlight %}
+
+### 3.2: Validação no Controller
+
+Quando estamos dentro de um método do controller, a forma mais rápida de validação é
+usando `$request->validate`, que validará os campos com as condições que 
+passaremos e caso falhe a validação, automaticamente o usuário é retornado 
+para página de origem com todos inputs que foram enviados na requisição, além da
+mensagens de erro:
+
+{% highlight php %}
+$request->validade([
+  'titulo' => 'required',
+  'autor' => 'required',
+  'isbn' => 'required|integer',
+]);
+{% endhighlight %}
+
+Podemos usar a função `old('titulo',$livro->titulo)` nos formulários, que 
+verifica que a inputs na sessão e em caso negativo usa o segundo parâmetro.
+Assim, podemos deixar o partials/form.blade.php mais elegante:
+
+{% highlight html %}
+{% raw %}
+Título: <input type="text" name="titulo" value="{{old('titulo', $livro->titulo)}}">
+Autor: <input type="text" name="autor" value="{{old('autor', $livro->autor)}}">
+ISBN: <input type="text" name="isbn" value="{{old('isbn', $livro->isbn)}}">
+{% endraw %}
+{% endhighlight %}
+
+### 3.3: Validação com a classe Validator
+
+O `$request->validate` faz tudo para nós. Mas se por algum motivo você precisar
+interceder na validação, no que é retornado e para a onde, pode-se usar
+diretamente `Illuminate\Support\Facades\Validator`:
+
+{% highlight php %}
+use Illuminate\Support\Facades\Validator;
+...
+$validator = Validator::make($request->all(),[
+  'titulo' => 'required'
+]);
+if($validator->fails()){
+  return redirect('/node/create')
+          ->withErrors($validator)
+          ->withInput();
+}
+{% endhighlight %}
+
+### 3.4: FormRequest
+
+Se olharmos bem para os métodos store e update veremos que eles
+são muito próximos. Se tivéssemos uns 20 campos, esses dois métodos
+cresceriam juntos, proporcionalmente. Ao invés de atribuirmos campo
+a campo a criação ou edição de um livro, vamos fazer uma atribuição 
+em massa, para isso, no model vamos proteger o id, isto é, numa atribuição
+em massa, o id não poderá ser alterado, em `app/Models/Livro.php`
+adicione a linha `protected $guarded = ['id'];`.
+
+A validação, que muitas vezes será idêntica no store e no update, vamos
+delegar para um FormRequest. Crie um FormRequest com o artisan:
+{% highlight bash %}
+php artisan make:request LivroRequest
+{% endhighlight %}
+
+Esse comando gerou o arquivo `app/Http/Requests/LivroRequest.php`. Como
+ainda não falamos de autenticação e autorização, retorne `true` no método
+`authorize()`. As validações podem ser implementada em `rules()`.
+Perceba que o isbn pode ser digitado com traços ou ponto, mas eu
+só quero validar a parte numérica do campo e ignorar o resto, 
+para isso usei o método `prepareForValidation`:
+
+{% highlight php %}
+public function rules(){
+    $rules = [
+        'titulo' => 'required',
+        'autor'  => 'required',
+        'isbn' => 'required|integer',
+    ];
+}
+protected function prepareForValidation()
+{
+    $this->merge([
+        'isnb' => preg_replace('/[^0-9]/', '', $this->isnb),
+    ]);
+}
+{% endhighlight %}
+
+Não queremos livros cadastrados com o mesmo isbn. Há uma validação
+chamada `unique` que pode ser invocada na criação de um livro como 
+`unique:TABELA:CAMPO`, mas na edição, temos que ignorar o próprio livro
+assim `unique:TABELA:CAMPO:ID_IGNORADO`. Dependendo do
+seu projeto, talvez seja melhor fazer um formRequest para criação e 
+outro para edição. Eu normalmente uso apenas um para ambos. Como abaixo,
+veja que as mensagens de erros podem ser customizadas com o método
+`messages()`:
+
+{% highlight php %}
+public function rules(){
+    $rules = [
+        'titulo' => 'required',
+        'autor'  => 'required',
+        'isnb' => ['required','integer'],
+    ];
+    if ($this->method() == 'PATCH' || $this->method() == 'PUT'){
+        array_push($rules['isnb'], 'unique:livros,isnb,' .$this->id);
+    }
+    else{
+        array_push($rules['isnb'], 'unique:livros');
+    }
+}
+protected function prepareForValidation()
+{
+    $this->merge([
+        'isnb' => preg_replace('/[^0-9]/', '', $this->isnb),
+    ]);
+}
+public function messages()
+{
+    return [
+        'cnpj.unique' => 'Este isnb está cadastrado para outro livro',
+    ];
+}
+{% endhighlight %}
+
+No formRequest existe um método chamado `validated()` que devolve um 
+array com os dados validados.
+Vamos invocar o LivroRequest no nosso controller e deixar os
+métodos store e update mais simplificados:
+
+{% highlight php %}
+use App\Http\Requests\LivroRequest;
+...
+public function store(LivroRequest $request)
+{
+    $validated = $request->validated();
+    $livro = Livro::create($validated);
+    request()->session()->flash('alert-info','Livro cadastrado com sucesso')
+    return redirect("/livros/{$livro->id}");
+}
+
+public function update(Request $request, Livro $livro)
+{
+    $validated = $request->validated();
+    $livro->update($validated);
+    request()->session()->flash('alert-info','Livro atualizado com sucesso')
+    return redirect("/livros/{$livro->id}");
+}
+{% endhighlight %}
+
+### 3.5: Exercício FormRequest
+
+- Implementação do FormRequest `LivroFulanoRequest`, onde `Fulano` é um identificador
+seu.
 
 
