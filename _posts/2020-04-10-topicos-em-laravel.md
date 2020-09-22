@@ -17,7 +17,6 @@ na comunidade, que são tratadas no contexto das oficinas.
 <br>
 <ul id="toc"></ul>
 
-
 ## 1: MVC - Model View Controller
 
 ### 1.1: Request e Response ou Pergunta e Resposta
@@ -699,6 +698,136 @@ public function update(Request $request, Livro $livro)
 - Implementação do FormRequest `LivroFulanoRequest`, onde `Fulano` é um identificador
 seu.
 - Alterar `LivroFulanoController` para usar `LivroFulanoRequest` nos métodos store e update.
+
+## 4: Autenticação e Relationships
+
+### 4.1: Login tradicional
+
+A forma mais fácil de fazer login no laravel é usando 
+`auth()->login($user)` ou `Auth::login($user)` em qualquer controler.
+Esse método recebe um objeto `$user` da classe `Illuminate\Foundation\Auth\User`.
+Por padrão, o model `User` criado automaticamente na instalação
+estende essa classe. A migration correspondente criada na hora da instalação
+possui alguns campos requeridos. Aqui faremos apenas o login e logout.
+
+Supondo que a única coisa que você precisa fazer no seu controller é logar
+o usuário e que você fez a conferência que o usuário é o próprio 
+(talvez seja um retorno de OAuth), você faria algo do tipo:
+{% highlight php %}
+$user = User::where('email',$email)->first()
+if (is_null($user)) $user = new User;
+$user->name  = $name;
+$user->email = $email;
+$user->save();
+auth()->login($user);
+return redirect('/');
+{% endhighlight %}
+
+Para login local, apesar de são ser obrigatório, pode ser útil usar 
+a trait `Illuminate\Foundation\Auth\AuthenticatesUsers` que está no
+pacote:
+
+{% highlight bash %}
+composer require laravel/ui
+{% endhighlight %}
+
+Usando a trait `AuthenticatesUsers` no seu controller você ganha os métodos:
+
+- showLoginForm(): requisição GET apontando para auth/login.blade.php 
+- login(): requisição POST que recebe `email` e `password` e chama `auth()->login($user)`
+
+Assim, basta criarmos as rotas correspondentes:
+{% highlight php %}
+Route::get('login', 'LoginController@showLoginForm')->name('login');
+Route::post('login', 'LoginController@login');
+{% endhighlight %}
+
+Seu LoginController ficará:
+{% highlight php %}
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+class LoginController extends Controller
+{
+    use AuthenticatesUsers;
+    protected $redirectTo = '/';
+}
+{% endhighlight %}
+
+Ainda no LoginController, se o campo que você for receber em `login()`, 
+não for o `email`, mas sim `codigo_usuario`, pode fazer a mudança em:
+{% highlight php %}
+public function username()
+{
+    return 'codigo_usuario';
+}
+{% endhighlight %}
+
+A forma mais rápida de criar um usuário para teste é pelo `php artisan tinker`:
+{% highlight php %}
+$user = new App\User;
+$user->email = 'teste2@teste.com'
+$user->name = 'Maria'
+$user->password = bcrypt('123')
+$user->codigo_usuario = '999222'
+$user->save()
+{% endhighlight %}
+
+For fim, um formulário para login:
+
+{% highlight html %}
+{% raw %}
+<form method="POST" action="/login">
+    @csrf
+    
+    <div class="form-group row">
+        <label for="codigo_usuario" class="col-sm-4 col-form-label text-md-right">codigo_usuario</label>
+
+        <div class="col-md-6">
+            <input type="text" name="codigo_usuario" value="{{ old('codigo_usuario') }}" required>
+        </div>
+    </div>
+
+    <div class="form-group row">
+        <label for="password" class="col-md-4 col-form-label text-md-right">Senha</label>
+
+        <div class="col-md-6">
+            <input type="password" name="password" required>
+        </div>
+    </div>
+
+    <div class="form-group row mb-0">
+        <div class="col-md-8 offset-md-4">
+            <button type="submit" class="btn btn-primary">Entrar</button>
+        </div>
+    </div>
+</form>
+{% endraw %}
+{% endhighlight %}
+
+### Implementação do logout
+
+Uma boa prática é implementar o logout usando uma requisição POST.
+Segue um rascunho do formulário com o botão para logout:
+{% highlight html %}
+{% raw %}
+<form action="/logout" method="POST" class="form-inline" 
+    style="display:inline-block" id="logout_form">
+    @csrf
+    <!-- O uso do link ao invés do botao é para poder formatar corretamente -->
+    <a onclick="document.getElementById('logout_form').submit(); return false;"
+        class="font-weight-bold text-white nounderline pr-2 pl-2" href>Sair</a>
+</form>
+{% endraw %}
+{% endhighlight %}
+
+O método no controller é bem simples:
+{% highlight php %}
+public function logout()
+{
+    auth()->logout();
+    return redirect('/');
+}
+{% endhighlight %}
+
 
 \App\Models\User::factory(150)->create();
 
