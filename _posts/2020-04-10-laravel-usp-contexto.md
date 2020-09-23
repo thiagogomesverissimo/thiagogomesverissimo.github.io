@@ -494,16 +494,24 @@ apenas extender essa biblioteca:
 {% endhighlight %}
 
 Dentre outras vantagens, ganhamos automaticamente o carregamento de frameworks
-como o bootstrap e fontawesome.
+como o bootstrap, fontawesome e jquery.mask, dentre outros.
 
-## assets
-{% highlight css %}
-{% raw %}
- <link rel="stylesheet" type="text/css" href="{{asset('/css/pareceristas.css')}}">
+Se quisermos carregar um arquivo js ou css, os colocamos na pasta public.
+Por exemplo, `public/js/livro.js`:
 
+{% highlight javascript %}
 jQuery(function ($) {
-    $(".cpf").mask('000.000.000-00');
+    //978-85-333-0398-0
+    $(".isbn").mask('000-00-000-0000-0');
 });
+{% endhighlight %}
+
+E no blade do laravel-usp-theme há uma seção chamada `javascripts_head` que podemos
+carregar no `form.blade.php`:
+{% highlight html %}
+{% raw %}
+@section('javascripts_head')
+<script type="text/javascript" src="{ { asset('js/livro.js') } }"></script>
 {% endraw %}
 {% endhighlight %}
 
@@ -896,6 +904,29 @@ o protocolo `OAuth` e com a biblioteca
 que possui a parametrização necessária para o OAuth da USP. Faça a
 configuração conforme a documentação.
 
+Na nossa implementação só permitiremos login dos usuários que existem na
+tabela user:
+{% highlight php %}
+public function handleProviderCallback()
+{
+    $userSenhaUnica = Socialite::driver('senhaunica')->user();
+    $user = User::where('codpes',$userSenhaUnica->codpes)->first();
+
+    if (is_null($user)) {
+        request()->session()->flash('alert-danger','Usuário sem acesso ao sistema');
+        return redirect('/');
+    }
+
+    // bind do dados retornados
+    $user->codpes = $userSenhaUnica->codpes;
+    $user->email = $userSenhaUnica->email;
+    $user->name = $userSenhaUnica->nompes;
+    $user->save();
+    auth()->login($user, true);
+    return redirect('/');
+}
+{% endhighlight %}
+
 ### 4.4: One (User) To Many (Livros)
 
 Primeiramente vamos implementar esse relação no nível do banco de dados.
@@ -1095,18 +1126,17 @@ public function getPrecoAttribute($value){
 
 ## 6: Buscas, paginação e autorização
 
-Validação USP - permitidos
-use Illuminate\Validation\Rule;
-['required', Rule::in($item::tipo_aquisicao)],
+### 6.1: Busca
 
- composer require uspdev/laravel-usp-validators
+Para criarmos um sistema de busca simples, vamos começar colocando o botão
+de busca no `index.blade.php`:
 
 {% highlight html %}
 {% raw %}
-<form method="get" action="/pareceristas">
+<form method="get" action="/livros">
 <div class="row">
     <div class=" col-sm input-group">
-    <input type="text" class="form-control" name="busca" value="{{ Request()->busca }}">
+    <input type="text" class="form-control" name="search" value="{{ request()->search }}">
 
     <span class="input-group-btn">
         <button type="submit" class="btn btn-success"> Buscar </button>
@@ -1115,23 +1145,58 @@ use Illuminate\Validation\Rule;
     </div>
 </div>
 </form>
-
-{{ $pareceristas->appends(request()->query())->links() }}
 {% endraw %}
 {% endhighlight %}
 
+No LivroController, basta verificarmos se foi enviado algum valor para o campo
+`search` , se sim, fazemos uma busca, e em caso negativo, retornamos todos livros.
+
 {% highlight php %}
 public function index(Request $request){
-if(isset($request->busca)) {
-    $pareceristas = Parecerista::where('numero_usp','LIKE',"%{$request->busca}%")->paginate(10);
+if(isset($request->search)) {
+    $livros = Livro::where('autor','LIKE',"%{$request->search}%")
+                    ->orWhere('titulo','LIKE',"%{$request->search}%")->get();
 } else {
-    $pareceristas = Parecerista::paginate(10);
+    $livros = Livro::all();
 }
-return view('pareceristas.index')->with('pareceristas',$pareceristas);
-
 {% endhighlight %}
 
-## 7: Emails, arquivos e filas
+### 6.2: Paginação
+
+Quando o sistema tem muitos registros, pode ser oneroso mostrar tudo numa única
+página. O melhor seria fazer a query em blocos, substituindo `all()` ou `get()` por 
+`paginate(15)` e no blade usamos a seguinte estrutura para navegação em blocos:
+
+{% highlight html %}
+{% raw %}
+{{ $livros->appends(request()->query())->links() }}
+{% endraw %}
+{% endhighlight %}
+
+A partir do laravel 8 o boostrap não é mais padrão, mas podemos configurá-lo
+como padrão em `AppServiceProvider.php`:
+
+{% highlight php %}
+use Illuminate\Pagination\Paginator;
+public function boot()
+{
+    Paginator::useBootstrap();
+}
+{% endhighlight %}
+
+### 6.3: Autorização
+
+Definimos níveis de permissões no laravel com um recurso chamado `Gate`.
+Na migration do `user`, vamos definir um campo boleano chamado admin, todo
+usuário que tiver esse campo como `true` sera admin do sistema.
+
+Validação USP - permitidos
+use Illuminate\Validation\Rule;
+['required', Rule::in($item::tipo_aquisicao)],
+
+ composer require uspdev/laravel-usp-validators
+
+## 7: Emails e upload de arquivos e filas
 
 Campo para upload do arquivo no formulário html:
 {% highlight html %}
@@ -1252,5 +1317,11 @@ public function export($format){
 }
 {% endraw %}
 {% endhighlight %}
+
+
+## Próximo tutoriais
+
+- Filas: https://laravel.com/docs/8.x/queues
+- Global e Local Scopes: https://laravel.com/docs/8.x/eloquent#local-scopes
 
 
