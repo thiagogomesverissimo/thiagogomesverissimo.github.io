@@ -5,23 +5,19 @@
     <a href="{{base_path}}/files/certificados/cursos/2020/Django-for-Everybody-Specialization-M47AXNJ938Q5.pdf"><i class="fa fa-file-pdf"></i></a>
     <a href="https://coursera.org/verify/specialization/M47AXNJ938Q5"><i class="fas fa-globe"></i></a>
     <br> University of Michigan/Coursera
-
-    <li> Using JavaScript, JQuery, and JSON in Django
+    <br> Cursos incluídos:
+    <br>
+    - Using JavaScript, JQuery, and JSON in Django
       <a href="{{base_path}}/files/certificados/cursos/2020/Using-JavaScript-JQuery-and-JSON-in-Django-TQGD5W3YKHAZ.pdf"><i class="fa fa-file-pdf"></i></a>
-    </li>
-
-    <li> Django Features and Libraries
-      <a href="{{base_path}}/files/certificados/cursos/2020/Django-Features and-Libraries
-  University-of-Michigan-L5RWB7VYKXWJ.pdf"><i class="fa fa-file-pdf"></i></a>
-    </li>
-
-    <li> Building Web Applications in Django
+    <br>
+    - Django Features and Libraries
+      <a href="{{base_path}}/files/certificados/cursos/2020/Django-Features and-Libraries-University-of-Michigan-L5RWB7VYKXWJ.pdf"><i class="fa fa-file-pdf"></i></a>
+    <br>
+    - Building Web Applications in Django
       <a href="{{base_path}}/files/certificados/cursos/2020/Building-Web-Applications-in-Django-MMH82VDDN66A.pdf"><i class="fa fa-file-pdf"></i></a>
-    </li>
-
-    <li> Web Application Technologies and Django
+    <br>
+    - Web Application Technologies and Django
       <a href="{{base_path}}/files/certificados/cursos/2020/Coursera-Web-Application-Technologies-and-Django-7GZE6C8LK9RB.pdf"><i class="fa fa-file-pdf"></i></a>
-    </li>
   </li>
 
   <li>
