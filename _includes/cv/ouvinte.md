@@ -1,6 +1,12 @@
 **2020**
 <ul>
 
+  <li> Using JavaScript, JQuery, and JSON in Django
+    <a href="{{base_path}}/files/certificados/cursos/2020/Using-JavaScript-JQuery-and-JSON-in-Django-TQGD5W3YKHAZ.pdf"><i class="fa fa-file-pdf"></i></a>
+    <br> University of Michigan/Coursera
+  </li>
+
+
   <li> Django Features and Libraries
     <a href="{{base_path}}/files/certificados/cursos/2020/Django-Features and-Libraries
 University-of-Michigan-L5RWB7VYKXWJ.pdf"><i class="fa fa-file-pdf"></i></a>
