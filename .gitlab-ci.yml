@@ -1,5 +1,6 @@
 #image: ruby:latest
 #image: registry.gitlab.com/pages/hugo/hugo_extended:latest
+image: debian
 
 cache:
   paths:
