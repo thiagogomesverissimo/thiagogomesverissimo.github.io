@@ -13,7 +13,7 @@ name                     : &name "Thiago Gomes Verissimo"
 description              : &description "meus rascunhos"
 url                      : "/"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "thiagogomesverissimo.github.io"
+repository               : "thiagogomesverissimo/thiagogomesverissimo.github.io"
 teaser                   : #"500x300.png" 
 breadcrumbs              : true # true, false (default)
 words_per_minute         : 160
