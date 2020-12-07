@@ -5,15 +5,8 @@ cache:
     - vendor/
 
 before_script:
+  - gem i bundler -v 1.17.3
   - bundle config set path 'vendor'
-
-test:
-  stage: test
-  script:
-    - bundle install
-    - bundle exec jekyll build -d public/
-  except:
-    - master
 
 pages:
   stage: deploy
@@ -27,6 +20,4 @@ pages:
     - master
 
 stages:
-    - test
-    - build
     - deploy

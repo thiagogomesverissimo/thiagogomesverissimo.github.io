@@ -1,0 +1,162 @@
+/* Meu CSS */
+.highlight code, .highlight pre {
+    padding: 2px;
+    margin: 2px;
+    padding-left: 1px;
+    margin-left: 0px;
+    width: 100%;
+    border-radius: 8px;
+    font-size: 1em;
+    line-height: 1.2em;
+    overflow-y: hidden;
+}
+
+pre::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+pre::-webkit-scrollbar-thumb {
+  background-color: #11171a;
+  border-radius: 10px;
+}
+
+div.highlighter-rouge, figure.highlight {
+  background-color: #3f3f3f;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+div.highlighter-rouge:before, figure.highlight:before {
+  display: none;
+}
+
+article p, p, article ul, section.page__content p, div.archive ul {
+  font-size: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 1.3em;
+}
+
+p.page__date {
+  padding: 0;
+  margin: 0;
+}
+
+.archive__item-excerpt {
+  display: none;
+}
+
+h2.archive__item-title {
+  margin-top: 30px;
+}
+
+.author__avatar img {
+    border-radius: 0%;
+    max-width: 120px;
+}
+
+div.archive ul {
+    font-size: 1.0em;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    line-height: 1em;
+}
+
+#toc ul li {
+    line-height: 1.1em;
+}
+
+/* links dos posts */
+
+h1.page__title a:link, a:link h2, a:link h3 {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* visited link */
+h1.page__title a:visited, a:visited h2, a:visited h3 {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* mouse over link */
+h1.page__title a:hover, h2 a:hover, h3 a:hover {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* selected link */
+h1.page__title a:active, h2 a:active, h3 a:active {
+  color: #494e52s;
+  text-decoration: none;
+}
+
+/* Links da home */
+
+h2.archive__item-title a:link {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* visited link */
+h2.archive__item-title a:visited {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* mouse over link */
+h2.archive__item-title a:hover {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* selected link */
+h2.archive__item-title a:active {
+  color: #494e52s;
+  text-decoration: none;
+}
+
+.page__content h2 {
+    padding-bottom: 0.2em;
+}
+
+h2,h3 {
+    margin: 0.7em 0 0.5em
+}
+
+#toc ul {
+  list-style-type: "→";
+}
+
+h2 a:link {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* visited link */
+h2 a:visited {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* mouse over link */
+h2 a:hover {
+  color: #494e52;
+  text-decoration: none;
+}
+
+/* selected link */
+h2 a:active {
+  color: #494e52s;
+  text-decoration: none;
+}
+
+
+.fa-file-pdf, .fa-youtube {
+    color: #3d414a;
+}
