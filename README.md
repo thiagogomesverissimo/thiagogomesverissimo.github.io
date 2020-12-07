@@ -2,7 +2,7 @@
 
 Debian:
 
-    gem i bundler -v 1.17.3
+    gem install bundler
 
 ## To run locally 
 
