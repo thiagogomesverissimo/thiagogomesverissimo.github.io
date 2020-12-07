@@ -2,9 +2,6 @@ image: ruby:latest
 #image: registry.gitlab.com/pages/hugo/hugo_extended:latest
 #image: debian
 
-tags:
-  - debian
-
 cache:
   paths:
     - vendor/
@@ -36,6 +33,8 @@ pages:
     - public
   only:
   - master
+  tags:
+  - debian
   
 stages:
   - test
