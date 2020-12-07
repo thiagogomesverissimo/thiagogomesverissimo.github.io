@@ -1,5 +1,9 @@
 image: ruby:latest
 
+cache:
+  paths:
+    - vendor/
+
 variables:
   JEKYLL_ENV: production
   LC_ALL: C.UTF-8
