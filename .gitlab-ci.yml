@@ -31,3 +31,9 @@ pages:
     - public
   only:
   - master
+  
+stages:
+    - test
+    - build
+    - deploy
+
