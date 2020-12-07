@@ -25,8 +25,9 @@ test:
     - test
   except:
   - master
-  tags:
-  - debian
+# Para funcionar em https://gitlab.uspdigital.usp.br
+#  tags:
+#  - debian
 
 pages:
   stage: deploy
@@ -37,8 +38,8 @@ pages:
     - public
   only:
   - master
-  tags:
-  - debian
+#  tags:
+#  - debian
   
 
 
