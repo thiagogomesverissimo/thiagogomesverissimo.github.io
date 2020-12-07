@@ -3,6 +3,10 @@ image: ruby:latest
 cache:
   paths:
     - vendor/
+    
+job:
+  tags:
+    - debian
 
 variables:
   JEKYLL_ENV: production
