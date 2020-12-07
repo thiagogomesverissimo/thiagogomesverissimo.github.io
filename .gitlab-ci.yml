@@ -1,6 +1,9 @@
-#image: ruby:latest
+image: ruby:latest
 #image: registry.gitlab.com/pages/hugo/hugo_extended:latest
-image: debian
+#image: debian
+
+tags:
+  - debian
 
 cache:
   paths:
