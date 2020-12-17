@@ -8,7 +8,7 @@ tags:
   - drupal
 ---
 
-Coleção de dicas para desenvover módulos para Drupal, nada que
+Coleção de dicas para desenvolver módulos para Drupal, nada que
 substitua a documentação oficial.
 
 <ul id="toc"></ul>
