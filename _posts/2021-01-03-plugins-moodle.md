@@ -1,5 +1,5 @@
 ---
-title: 'PLugins Moodle'
+title: 'Plugins Moodle'
 date: 2021-01-03
 permalink: /posts/plugins-moodle
 tags:
