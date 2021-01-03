@@ -11,16 +11,8 @@ Debian:
  - Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
  - Run `JEKYLL_ENV=development bundle exec jekyll serve` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
 
-
 Drafts:
 
     JEKYLL_ENV=development bundle exec jekyll serve --drafts
 
 Forked from: https://github.com/academicpages/academicpages.github.io
-
-My Pages/folders:
-
- - _drafts/
- - _posts/
- - _talks/
- - _pages/cv.md

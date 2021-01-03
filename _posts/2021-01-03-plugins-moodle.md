@@ -107,7 +107,7 @@ $CFG->customstringmanager = '\local_tudoupper\tudoupper_string_manager';
 No `version.php` podemos subir a versão do nosso plugin:
 {% highlight php %}
 $plugin->version = 2021010301;
-{% endhighlig
+{% endhighlight %}
 
 ## Composer
 
