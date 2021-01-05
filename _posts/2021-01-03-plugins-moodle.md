@@ -16,7 +16,7 @@ para o moodle.
 
 <ul id="toc"></ul>
 
-## Exemplo: PLugin de Administração
+## Exemplo: Plugin de Administração
 
 ### Estrutura mínima de um plugin
 
