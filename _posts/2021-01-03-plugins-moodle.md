@@ -16,7 +16,9 @@ para o moodle.
 
 <ul id="toc"></ul>
 
-## Criando o plugin
+## Exemplo: PLugin de Administração
+
+### Estrutura mínima de um plugin
 
 O moodle trabalha com tipos de plugins. Cada tipo de plugin deve ser colocado
 no diretório correspondente. Existe um tipo genérico chamado `local` onde criarei
@@ -44,7 +46,12 @@ $plugin->version = 2021010300; //  YYYYMMDDXX
 {% endhighlight %}
 
 O outro arquivo obrigatório é o do idioma, no qual devemos ao menos
-especificar o `pluginname`:
+especificar o `pluginname`. Neste momento não vou me preocupar com o idioma,
+então escreverei em português mesmo estando na pasta `en`. No mundo real,
+você criaria `local/tudoupper/lang/pt_br/local_tudoupper.php` 
+e `local/tudoupper/lang/en/local_tudoupper.php` e colocaria as strings
+correspondentes de cada língua.
+
 {% highlight shell %}
 mkdir -p local/tudoupper/lang/en
 touch local/tudoupper/lang/en/local_tudoupper.php
@@ -109,7 +116,7 @@ No `version.php` podemos subir a versão do nosso plugin:
 $plugin->version = 2021010301;
 {% endhighlight %}
 
-## Composer
+### Composer
 
 Posso estar enganado, mas não encontrei até o momento uma maneira de definir
 globalmente em um projeto moodle que usarei composer e que portanto as dependências
@@ -139,6 +146,211 @@ class tudoupper_string_manager extends \core_string_manager_standard {
     $string = parent::get_string($identifier, $component, $a , $lang );
     $obj = new Convert($string);
     return $obj->toCamel();
+  }
+}
+{% endhighlight %}
+
+### Api de configuração
+
+A [página](https://docs.moodle.org/dev/Admin_settings) contém bastante informações
+sobre a API de configuração.
+
+Vamos criar uma nova entrada em `lang/en/local_tudoupper.php`:
+{% highlight php %}
+<?php
+defined('MOODLE_INTERNAL') || die();
+$string['pluginname'] = 'Plugin que deixa tudo maiúsculo';
+$string['title'] = 'Configurações do plugin super massa tudoupper';
+{% endhighlight %}
+
+Adicionemos um novo arquivo chamado `settings.php` no nosso plugin
+tendo uma condição com `$hassiteconfig` que restringe esse acesso 
+apenas para administradores da plataforma. 
+Manipularemos um objetos do tipo `admin_settingpage` que cuidará 
+da camada de formulário e persistência no banco de dados das
+configurações do plugin. Depois adicionamos esse objeto na variável global 
+`$ADMIN` que se encarregará de disponibilizar as opções do nosso
+plugin na área de configurações da plataforma. 
+
+{% highlight php %}
+<?php
+defined('MOODLE_INTERNAL') || die();
+ 
+if ($hassiteconfig) {
+    $title = new lang_string('title', 'local_tudoupper');
+    $settings = new admin_settingpage('local_tudoupper', $title);
+    $ADMIN->add('localplugins', $settings);
+}
+{% endhighlight %}
+
+Suba a versão em `version.php` e agora em `Site Administration` -> 
+`Plugins` -> `Local Plugins` temos uma entrada para configuração do
+nosso plugin, ainda sem campo algum. 
+
+Vamos adicionar os seguintes campos, em parentese estão as classes moodle
+da api de formulário que fornece o markup necessário para cada tipo:
+
+- checkbox: ativar ou desativa o recurso desse plugin (admin_setting_configcheckbox)
+- select: para usar tudo em uppercase ou camelCase (admin_setting_configselect)
+- input text: prefixo (admin_setting_configtext)
+- input text: suffixo (admin_setting_configtext)
+
+Começamos complementando nossas strings em `lang/en/local_tudoupper.php`:
+{% highlight php %}
+<?php
+defined('MOODLE_INTERNAL') || die();
+
+$string['pluginname'] = 'Plugin que deixa tudo maiúsculo';
+$string['title'] = 'Configurações do plugin super massa tudoupper';
+
+$string['enabled'] = 'Habilitar tudoupper?';
+$string['enabled_description'] = 'Habilitar esse recurso na plataforma moodle';
+
+$string['type'] = 'Configura tipo';
+$string['type_description'] = 'Tipo que deseja para o plugin tudoupper';
+$string['type_upper'] = 'Tudo em Maiúscula';
+$string['type_camelcase'] = 'Tudo em CamelCase';
+
+$string['prefix'] = 'Configura prefixo';
+$string['prefix_description'] = 'Colocar um prefixo em todas strings';
+
+$string['suffix'] = 'Configura sufixo';
+$string['suffix_description'] = 'Colocar um sufixo em todas strings';
+
+{% endhighlight %}
+
+Inicialmente vamos adicionar somente o campo `$enabled`:
+
+{% highlight php %}
+<?php
+defined('MOODLE_INTERNAL') || die();
+ 
+if ($hassiteconfig) {
+    
+    # Inicializando objeto admin_settingpage
+    $title = new lang_string('title', 'local_tudoupper');
+    $settings = new admin_settingpage('local_tudoupper', $title);
+
+    # Campo para habilitar ou desabilitar recurso
+    $enabled = new lang_string('enabled', 'local_tudoupper');
+    $enabled_description = new lang_string('enabled_description', 'local_tudoupper');
+    $field_enabled = new admin_setting_configcheckbox('local_tudoupper/enabled',$enabled,$enabled_description,1);
+
+    # Adicionado campos na área de configuração
+    $settings->add($field_enabled);
+    $ADMIN->add('localplugins', $settings);
+}
+{% endhighlight %}
+
+Antes de adicionarmos os demais campos, vamos ler essa opção na nossa
+classe `tudoupper_string_manager` e habilitar ou não o recurso:
+
+{% highlight php %}
+<?php
+namespace local_tudoupper;
+
+defined('MOODLE_INTERNAL') || die();
+require_once($CFG->dirroot . '/local/tudoupper/vendor/autoload.php');
+
+use Jawira\CaseConverter\Convert;
+
+class tudoupper_string_manager extends \core_string_manager_standard {
+  public function get_string($identifier, $component = '', $a = null, $lang = null) {
+
+    $string = parent::get_string($identifier, $component, $a , $lang );
+
+    # só prosseguimos se o recurso estiver habilitado
+    $enabled = get_config('local_tudoupper','enabled');
+    if(!$enabled) return $string;
+    
+    $obj = new Convert($string);
+    return $obj->toCamel();
+  }
+}
+{% endhighlight %}
+
+Agora pela interface de configuração podemos desativar ou ativar esse recurso.
+
+Adicionemos os demais campos:
+
+{% highlight php %}
+<?php
+defined('MOODLE_INTERNAL') || die();
+ 
+if ($hassiteconfig) {
+    
+    # Inicializando objeto admin_settingpage
+    $title = new lang_string('title', 'local_tudoupper');
+    $settings = new admin_settingpage('local_tudoupper', $title);
+
+    # Campo para habilitar ou desabilitar recurso
+    $enabled = new lang_string('enabled', 'local_tudoupper');
+    $enabled_description = new lang_string('enabled_description', 'local_tudoupper');
+    $field_enabled = new admin_setting_configcheckbox('local_tudoupper/enabled',$enabled,$enabled_description,1);
+
+    # Campos tipo
+    $type = new lang_string('type', 'local_tudoupper');
+    $type_description = new lang_string('type_description', 'local_tudoupper');
+    $type_upper = new lang_string('type_upper', 'local_tudoupper');
+    $type_camelcase = new lang_string('type_camelcase', 'local_tudoupper');
+    $default = 'upper';
+    $options = ['upper' => $type_upper, 'camelcase' => $type_camelcase];
+    $field_type = new admin_setting_configselect('local_tudoupper/type',$type, $type_description, $default, $options);
+
+    # Campo prefixo
+    $prefix = new lang_string('prefix', 'local_tudoupper');
+    $prefix_description = new lang_string('prefix_description', 'local_tudoupper');
+    $default = '';
+    $field_prefix = new admin_setting_configtext('local_tudoupper/prefix',$prefix,$prefix_description,$default);
+
+    # Campo prefixo
+    $suffix = new lang_string('suffix', 'local_tudoupper');
+    $suffix_description = new lang_string('suffix_description', 'local_tudoupper');
+    $default = '';
+    $field_suffix = new admin_setting_configtext('local_tudoupper/suffix',$suffix,$suffix_description,$default);
+
+    # Adicionado campos na área de configuração
+    $settings->add($field_enabled);
+    $settings->add($field_type);
+    $settings->add($field_prefix);
+    $settings->add($field_suffix);
+    $ADMIN->add('localplugins', $settings);
+}
+{% endhighlight %}
+
+Por fim modificaremos a classe `tudoupper_string_manager` para usar
+esses novos campos:
+{% highlight php %}
+<?php
+namespace local_tudoupper;
+
+defined('MOODLE_INTERNAL') || die();
+require_once($CFG->dirroot . '/local/tudoupper/vendor/autoload.php');
+
+use Jawira\CaseConverter\Convert;
+
+class tudoupper_string_manager extends \core_string_manager_standard {
+  public function get_string($identifier, $component = '', $a = null, $lang = null) {
+
+    $string = parent::get_string($identifier, $component, $a , $lang );
+
+    # só prosseguimos se o recurso estiver habilitado
+    $enabled = get_config('local_tudoupper','enabled');
+    if(!$enabled) return $string;
+
+    # prefixo e sufixo das strings
+    $prefix = get_config('local_tudoupper','prefix');
+    $suffix = get_config('local_tudoupper','suffix');
+    $string =  $prefix . $string .  $suffix;
+
+    # tipo
+    $type = get_config('local_tudoupper','type');
+    if($type == 'upper') return strtoupper($string);
+    if($type == 'camelcase') {
+      $obj = new Convert($string);
+      return $obj->toCamel();
+    }
+    return $string;
   }
 }
 {% endhighlight %}
