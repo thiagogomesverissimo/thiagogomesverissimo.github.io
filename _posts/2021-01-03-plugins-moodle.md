@@ -20,6 +20,51 @@ para o moodle.
 
 ### Estrutura mínima de um plugin
 
+Instalação moodle
+
+{% highlight bash %}
+sudo apt install php php-gd php-curl php-xml php-mbstring php-intl php-mysql curl mariabdb-server
+{% endhighlight %}
+
+{% highlight bash %}
+composer create-project moodle/moodle moodle-for-plugin-dev
+{% endhighlight %}
+
+{% highlight bash %}
+cd moodle-for-plugin-dev
+php admin/cli/install.php \
+  --lang=pt_br \
+  --wwwroot='http://0.0.0.0:8000' \
+  --dataroot='/home/thiago/moodledata' \
+  --dbtype=mariadb \
+  --dbhost='localhost' \
+  --dbname=moodle \
+  --dbuser=master \
+  --dbpass=master \
+  --fullname=moodledev \
+  --shortname=moodledev \
+  --adminpass='Admin123*' \
+  --non-interactive \
+  --agree-license
+{% endhighlight %}
+
+{% highlight php %}
+@error_reporting(E_ALL | E_STRICT);   
+@ini_set('display_errors', '1');
+
+$CFG->debug = E_ALL;
+$CFG->debugdisplay = 1;
+$CFG->langstringcache = 0;
+$CFG->cachetemplates = 0;
+$CFG->cachejs = 0;
+$CFG->perfdebug = 15;
+$CFG->debugpageinfo = 1;
+{% endhighlight %}
+
+{% highlight shell %}
+php -S 0.0.0.0:8000
+{% endhighlight %}
+
 O moodle trabalha com tipos de plugins. Cada tipo de plugin deve ser colocado
 no diretório correspondente. Existe um tipo genérico chamado `local` onde criarei
 meu primeiro plugin. Chamo de genérico, pois quero fazer uma mudança que não está 
