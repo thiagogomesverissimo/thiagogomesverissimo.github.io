@@ -20,16 +20,18 @@ para o moodle.
 
 ### Estrutura mínima de um plugin
 
-Instalação moodle
+Dependências mínimas para instalação moodle em debian 10:
 
 {% highlight bash %}
 sudo apt install php php-gd php-curl php-xml php-mbstring php-intl php-mysql curl mariabdb-server
 {% endhighlight %}
 
+Baixando o moodle com composer:
 {% highlight bash %}
 composer create-project moodle/moodle moodle-for-plugin-dev
 {% endhighlight %}
 
+Instalação rápida:
 {% highlight bash %}
 cd moodle-for-plugin-dev
 php admin/cli/install.php \
@@ -48,6 +50,7 @@ php admin/cli/install.php \
   --agree-license
 {% endhighlight %}
 
+O que eu ativo no config.php:
 {% highlight php %}
 @error_reporting(E_ALL | E_STRICT);   
 @ini_set('display_errors', '1');
@@ -61,6 +64,7 @@ $CFG->perfdebug = 15;
 $CFG->debugpageinfo = 1;
 {% endhighlight %}
 
+Subindo server local:
 {% highlight shell %}
 php -S 0.0.0.0:8000
 {% endhighlight %}
