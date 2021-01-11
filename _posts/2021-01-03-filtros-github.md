@@ -3,7 +3,7 @@ title: 'Fitros Github'
 date: 2021-01-03
 permalink: /posts/fitros-github
 tags:
-  - moodle
+  - github
 ---
 
 Eu fico meio perdido em achar Issues e Pull Request no github,
