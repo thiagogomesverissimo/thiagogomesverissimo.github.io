@@ -26,7 +26,7 @@ involves:thiagogomesverissimo is:pr is:open
 
 Pull Requests abertas na organização `fflch`:
 {% highlight shell %}
-org:fflch is:issue is:open
+org:fflch is:pr is:open
 {% endhighlight %}
 
 Issues abertas na organização `fflch`:
