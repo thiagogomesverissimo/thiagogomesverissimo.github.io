@@ -171,10 +171,6 @@
     <a href="{{base_path}}/files/certificados/eventos/2011/conisli.pdf"><i class="fa fa-file-pdf"></i></a>
     <br> Fatec Osasco. 16h.
   </li>
-  <li> 9. GeInfo - Gestão de Informática da Universidade de São Paulo
-    <a href="{{base_path}}/files/certificados/eventos/2010/geinfo.pdf"><i class="fa fa-file-pdf"></i></a>
-    <br> Universidade de São Paulo. 20h.
-  </li>
 </ul>
 
 **2010**
@@ -182,6 +178,10 @@
   <li> Drupal, Mysql e Apache2
     <a href="{{base_path}}/files/certificados/cursos/2010/drupal.png"><i class="fa fa-file-pdf"></i></a>
     <br> Centro de Difusão de Tecnologia e Conhecimento - CDTC. 18h.
+  </li>
+  <li> 9. GeInfo - Gestão de Informática da Universidade de São Paulo
+    <a href="{{base_path}}/files/certificados/eventos/2010/geinfo.pdf"><i class="fa fa-file-pdf"></i></a>
+    <br> Universidade de São Paulo. 20h.
   </li>
 </ul>
 
