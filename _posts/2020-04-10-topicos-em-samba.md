@@ -8,10 +8,16 @@ tags:
   - samba
 ---
 
-Obrigar a *maria* a trocar senha no próximo login:
+Compilação de comandos que mais uso no samba
 
+Obrigar a *maria* a trocar senha no próximo login:
 {% highlight bash %}
-    pdbedit --pwd-can-change-time=0 maria
+pdbedit --pwd-can-change-time=0 maria
+{% endhighlight %}
+
+No windows, promover usuária maria do AD como admin local
+{% highlight bash %}
+net localgroup administradores NºUSP /add
 {% endhighlight %}
 
 Ver as configurações completas:
