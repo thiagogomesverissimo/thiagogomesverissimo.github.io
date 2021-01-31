@@ -15,17 +15,8 @@ mas a possibilidade de interceptamos e fazermos qualquer modificação com esse 
 
 Criando um módulo chamado ckeditor_generic com ckeditor_generic.info.yml:
 {% highlight yml %}
-name: CKEditor Button Generic
-type: module
-description: "CKEditor Button"
-package: CKEditor
-core: 8.x
-core_version_requirement: ^8 || ^9
-
-dependencies:
-  - drupal:ckeditor
+{% include ckeditor_generic/ckeditor_generic.info.yml %}
 {% endhighlight %}
-
 
 O plugin que implementa `CKEditorPluginBase` colocamos em src/Plugin/CKEditorPlugin/CkeditorGeneric.php:
 {% highlight php %}
