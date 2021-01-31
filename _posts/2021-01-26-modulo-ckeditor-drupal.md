@@ -15,59 +15,15 @@ mas a possibilidade de interceptamos e fazermos qualquer modificação com esse 
 
 Criando um módulo chamado ckeditor_generic com ckeditor_generic.info.yml:
 {% highlight yml %}
-{% include ckeditor_generic/ckeditor_generic.info.yml %}
+{% include snippets/ckeditor_generic/ckeditor_generic.info.yml %}
 {% endhighlight %}
 
 O plugin que implementa `CKEditorPluginBase` colocamos em src/Plugin/CKEditorPlugin/CkeditorGeneric.php:
+{% link _includes/snippets/ckeditor_generic/src/Plugin/CKEditorPlugin/CkeditorGeneric.php %}
 {% highlight php %}
-<?php
-
-namespace Drupal\ckeditor_generic\Plugin\CKEditorPlugin;
-
-use Drupal\ckeditor\CKEditorPluginBase;
-use Drupal\editor\Entity\Editor;
-
-
-/**
- * Defines the "ckeditor_generic" plugin.
- *
- * @CKEditorPlugin(
- *   id = "ckeditor_generic",
- *   label = @Translation("CKEditor Button")
- * )
- */
-class CkeditorGeneric extends CKEditorPluginBase {
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getFile() {
-    return drupal_get_path('module', 'ckeditor_generic') . '/js/plugin.js';
-  }
-
-  /**
-   * {@inheritdoc}
-   */
-  public function getConfig(Editor $editor) {
-    return array(
-      'dialog_title_insert' => $this->t('Insert a Text'),
-    );
-  }
-
-  /**
-   * Implements CKEditorPluginButtonsInterface::getButtons().
-   */
-  public function getButtons() {
-    return array(
-      'ckeditor_generic_button' => array(
-        'label' => $this->t('Ckediton Button'),
-        'image' => drupal_get_path('module', 'ckeditor_generic') . '/images/icone.png',
-      ),
-    );
-  }
-
-}
+{% include snippets/ckeditor_generic/src/Plugin/CKEditorPlugin/CkeditorGeneric.php %}
 {% endhighlight %}
+
 em /images/icone.png coloque uma imagem qualquer para o ícone do seu botão e
 crie `/js/plugin.js` por enquanto vazio.
 
