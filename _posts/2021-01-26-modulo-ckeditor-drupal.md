@@ -19,7 +19,6 @@ Criando um módulo chamado ckeditor_generic com ckeditor_generic.info.yml:
 {% endhighlight %}
 
 O plugin que implementa `CKEditorPluginBase` colocamos em src/Plugin/CKEditorPlugin/CkeditorGeneric.php:
-{% link _includes/snippets/ckeditor_generic/src/Plugin/CKEditorPlugin/CkeditorGeneric.php %}
 {% highlight php %}
 {% include snippets/ckeditor_generic/src/Plugin/CKEditorPlugin/CkeditorGeneric.php %}
 {% endhighlight %}
