@@ -1,5 +1,5 @@
 ---
-title: 'Fitros Github'
+title: 'Filtros Github'
 date: 2021-01-03
 permalink: /posts/fitros-github
 tags:

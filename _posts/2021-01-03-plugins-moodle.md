@@ -20,6 +20,33 @@ para o moodle.
 
 ### Estrutura mínima de um plugin
 
+Tipos de plugins: lib/components.json
+
+frankenstyle: nome do tipo _ nome do plugin
+
+Verificação de styles:
+https://moodle.org/plugins/local_codechecker
+https://moodle.org/plugins/local_moodlecheck
+
+
+Tipo de arquivos php no plugin:
+- request handlers: acessados pelo browser: devem ter require(__DIR__. '/../../config.php');
+- Libraries: não acessíveis pelo browser: devem iniciar assim defined('MOODLE_INTERNAL') || die(); - garabte que esse qrauivo será chamado por outro e não via request
+
+- podemos colocar bibliotecas em na pasta classes: assim não precisamos usar require_once() para chama-lás em outros arquivos
+ \mod_forum\some_class is stored in file mod/forum/classes/some_class.php nas classes NÂO precisa ter MOODLE_INTERNAL!
+
+csrf: sesskey()
+
+$action = new moodle_url('/admin/tool/do/something.php', ['delete' => $id, 'sesskey' => sesskey()]);
+echo html_writer::link($action, get_string('delete'));
+
+Onde processarmos o form:
+require_sesskey();
+
+required_param('courseid', PARAM_INT);
+
+
 Dependências mínimas para instalação moodle em debian 10:
 
 {% highlight bash %}
