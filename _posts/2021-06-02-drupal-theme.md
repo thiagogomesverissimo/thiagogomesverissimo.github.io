@@ -8,10 +8,9 @@ tags:
   - drupal
 ---
 
-<ul id="toc"></ul>
-
 Conversão não exaustiva de um site estático para um tema do Drupal.
 
+<ul id="toc"></ul>
 
 ## 0 - Site estático
 
