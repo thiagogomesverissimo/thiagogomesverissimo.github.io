@@ -1,6 +1,6 @@
 ---
 title: 'Criando um Tema para Drupal'
-date: 2021-06-21
+date: 2021-06-02
 permalink: /posts/drupal-theme
 categories:
   - tutorial
@@ -12,12 +12,12 @@ Conversão não exaustiva de um site estático para um tema do Drupal.
 
 <ul id="toc"></ul>
 
-## 0 - Site estático
+## Site estático
 
 Vou selecionar o site estático *learn-educational-free-responsive-web-template* disponível em https://github.com/learning-zone/website-templates
 Chamaremos nosso tema de educational.
 
-## 1 - Regiões e arquivo info
+## Regiões e arquivo info
 
 Vou definir as seguintes regiões: content, middle1, middle2, middle3, bottom e footer
 Tirar um print do estilo e chamar de screenshot.png
@@ -44,7 +44,7 @@ regions:
   footer: rodapé
 {% endhighlight %}
 
-## 2 - Estilos e Javascript
+## Estilos e Javascript
 
 educational.libraries.yml
 
@@ -62,14 +62,21 @@ global-styles-and-scripts:
 
 {% endhighlight %}
 
-## 3 - templates
+## templates
 
 Renomear index.html para templates/page.html.twig
 
-Blocos serão definidos dessa maneira: **{{ page.content }}** ou **{{ page.footer }}**
+Blocos serão definidos dessa maneira: {% raw %}{{ page.content }}{% endraw %} 
+ou {% raw %}{{ page.footer }}{% endraw %}
 
-## 4 - logo
+## logo
 
-## 5 - menu
+falta fazer
 
-## 6 - configurações do tema  
+## menu
+
+falta fazer
+
+## configurações do tema  
+
+falta fazer
