@@ -1,6 +1,6 @@
 ---
 title: 'Criando um Tema para Drupal'
-date: 2021-01-26
+date: 2021-06-21
 permalink: /posts/drupal-theme
 categories:
   - tutorial
