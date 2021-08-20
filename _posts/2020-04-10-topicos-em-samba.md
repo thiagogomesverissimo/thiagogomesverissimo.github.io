@@ -8,7 +8,60 @@ tags:
   - samba
 ---
 
-Compilação de comandos que mais uso no samba
+Criando um servidor samba como domain controller (DC):
+
+Dado o ip 192.168.7.202:
+
+- Em /etc/hostname: samba.proaluno.usp.br
+- Em /etc/hosts adicione a linha: 127.0.1.1 samba samba.proaluno.usp.br
+
+
+
+
+Instalação de pacotes:
+
+{% highlight bash %}
+apt -y install samba krb5-config krb5-user libnss-winbind libpam-winbind winbind samba smbclient ldb-tools samba-common
+{% endhighlight %} 
+
+Provisionando a base de dados samba-ad-dc com o usuário Administrator com senha Pr0Aluno123:
+
+{% highlight bash %}
+rm /etc/samba/smb.conf
+samba-tool domain provision --server-role=dc --dns-backend=SAMBA_INTERNAL --realm='PROALUNO.USP.BR' --domain='PROALUNO' --adminpass='Pr0Aluno123' --use-rfc2307
+cp /var/lib/samba/private/krb5.conf /etc/
+{% endhighlight %}
+
+Desabilitar smbd nmbd winbind:
+{% highlight bash %}
+systemctl stop smbd nmbd winbind
+systemctl disable smbd nmbd winbind
+{% endhighlight %} 
+
+Habilitar serviço samba-ad-dc:
+{% highlight bash %}
+systemctl unmask samba-ad-dc
+systemctl start samba-ad-dc
+systemctl enable samba-ad-dc 
+{% endhighlight %}   
+
+Desabilitando complexidade de senhas:
+{% highlight bash %}
+samba-tool user setexpiry Administrator --noexpiry 
+samba-tool domain passwordsettings set --complexity=off
+samba-tool domain passwordsettings set --history-length=0
+samba-tool domain passwordsettings set --min-pwd-age=0
+samba-tool domain passwordsettings set --max-pwd-age=0
+samba-tool domain passwordsettings set --min-pwd-length=0
+{% endhighlight %}  
+
+Criando um grupo chamado ALUNOGR com um usuário 666666:
+{% highlight bash %}
+samba-tool group add ALUNOGR
+samba-tool user create 666666
+samba-tool group addmembers ALUNOGR 666666
+samba-tool group listmembers ALUNOGR
+{% endhighlight %}  
 
 Obrigar a *maria* a trocar senha no próximo login:
 {% highlight bash %}
