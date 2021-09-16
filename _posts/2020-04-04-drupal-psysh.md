@@ -52,6 +52,29 @@ foreach ($nodes as $node) {
 }
 {% endhighlight %}
 
+
+## Corrigindo o formato do campo field_resumo para múltiplos tipos de conteúdos
+
+Carregando todos nodes do tipo *ficha* e alterando o campo *body->format* para
+*full_html*:
+{% highlight bash %}
+
+$tipos = [
+    'livros',
+    'materiais_diversificados',
+    'trabalhos_de_conclusao'
+];
+
+$nids = \Drupal::entityQuery('node')->condition('type',$tipos, 'IN')->execute();
+$nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
+
+foreach ($nodes as $node) {
+    $node = \Drupal::entityTypeManager()->getStorage('node')->load($node->nid->value);
+    $node->field_resumo->format = 'full_html';
+    $node->save();
+}
+{% endhighlight %}
+
 ## Substituindo string em um campo de todos nodes do mesmo tipo
 
 Dado um tipo de conteúdo chamado `verbete` no qual há um campo 
