@@ -59,11 +59,7 @@ Carregando todos nodes do tipo *ficha* e alterando o campo *body->format* para
 *full_html*:
 {% highlight bash %}
 
-$tipos = [
-    'livros',
-    'materiais_diversificados',
-    'trabalhos_de_conclusao'
-];
+$tipos = ['catalogos','livros',,'producoes_visuais','trabalhos_de_conclusao'];
 
 $nids = \Drupal::entityQuery('node')->condition('type',$tipos, 'IN')->execute();
 $nodes = \Drupal\node\Entity\Node::loadMultiple($nids);
@@ -74,6 +70,12 @@ foreach ($nodes as $node) {
     $node->save();
 }
 {% endhighlight %}
+
+Se o campo for multivalorado talvez tenha que fazer algo do tipo:
+
+$node->field_resumo[0]->format
+
+ou um loop no campo
 
 ## Substituindo string em um campo de todos nodes do mesmo tipo
 
