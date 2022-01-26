@@ -1,3 +1,20 @@
+**2021**
+
+<ul>
+
+  <li> Foundations for Big Data Analysis with SQL
+    <a href="{{base_path}}/files/certificados/cursos/2021/FoundationsforBigDataAnalysisWithSQL.pdf"><i class="fa fa-file-pdf"></i></a>
+    <a href="https://www.coursera.org/verify/CJRLWERENKFF"><i class="fas fa-globe"></i></a>
+    <br> Coursera
+  </li>
+
+  <li> Modeling Data Warehouses using Apache Hive
+    <a href="{{base_path}}/files/certificados/cursos/2021/Modeling.Data.Warehouses.using.Apache.Hive.pdf"><i class="fa fa-file-pdf"></i></a>
+    <a href="https://www.coursera.org/verify/88E3AGRX9J8A"><i class="fas fa-globe"></i></a>
+    <br> Coursera
+  </li>
+</ul>
+
 **2020**
 <ul>
 
