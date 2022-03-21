@@ -85,14 +85,20 @@ Ver configurações do usuário *maria*:
 pdbedit -Lv maria
 {% endhighlight %}
 
-Remover computador do domínio:
+Listar computadores do domínio:
 
+{% highlight bash %}
+pdbedit --list | grep "\$$"
+{% endhighlight %}
+
+
+Remover computador do domínio:
 {% highlight bash %}
 pdbedit -x -m NAME_OF_COMPUTER_TO_REMOVE
 {% endhighlight %}
 
-Mudar o home do usuario maria de /home/maria para
-\\dominio.com\maria e mudar ponto de montagem
+Mudar o home do usuario maria de */home/maria* para
+*\\dominio.com\maria* e mudar ponto de montagem
 para H:
 
 {% highlight bash %}
