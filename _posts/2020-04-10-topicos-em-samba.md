@@ -144,6 +144,11 @@ A senha de root não expira:
 pdbedit -c "[X ]" -u root
 {% endhighlight %}
 
+Listar usuários com username duplicados:
+{% highlight bash %}
+samba-tool user list | sort | uniq -cd
+{% endhighlight %}
+
 Script para obrigar todos os usuários do samba a trocarem
 suas senhas:
 {% highlight bash %}
