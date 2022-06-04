@@ -58,7 +58,7 @@ permalink: /planejamento/
         <tr>
             <td>Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)</td>
             <td>Tibishirano Statistical Learning (livro)</td>
-            <td>EDX: Big Data and Education</td>
+            <td><a href="https://moodle.academy/">Curso moodle</a></td>
             <td>EDX: Practical Learning Analytics</td>
             <td>Coursera Specialization: <b>Introductory C Programming </b> (duke university)</td>
         </tr>
