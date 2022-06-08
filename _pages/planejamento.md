@@ -59,7 +59,7 @@ permalink: /planejamento/
             <td>Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)</td>
             <td>Tibishirano Statistical Learning (livro)</td>
             <td><a href="https://moodle.academy/">Curso moodle</a></td>
-            <td>EDX: Practical Learning Analytics</td>
+            <td><a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a></td>
             <td>Coursera Specialization: <b>Introductory C Programming </b> (duke university)</td>
         </tr>
     </tbody>
@@ -88,7 +88,7 @@ permalink: /planejamento/
         </tr>
         <tr>
             <td>Coursera Specialization:<b> Web Applications for Everybody</b> (University of Michigan)</td>
-            <td>Coursera Specialization: <b>Data Structures and Algorithms </b> (University of California San Diego)</td>
+            <td><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></td>
             <td> Livro: Python Machine Learning (Randal)</td>
             <td>Livro Machine Learning for the web</td>
             <td>Curso liveware</td>
@@ -150,7 +150,7 @@ permalink: /planejamento/
             <td>Coursera Specialization: <b>The Pronunciation of American English</b></td>
             <td>Coursera Specialization: <b>Mathematics for Machine Learning (Aurélien)</b> (Imperial college london)</td>
             <td>Livro Hands-On Machine Learning</td>
-            <td>Curso Cisco</td>
+            <td>LIVRE</td>
             <td><b>Introduction to Big Data</b> (University of California San Diego)</td>
         </tr>
     </tbody>
@@ -204,11 +204,11 @@ permalink: /planejamento/
             <td>Livro Implementando Samba</td>
             <td>Livro Deep Learning With R</td>
             <td>Livro Introduction to Deep Learning (sandro)</td>
-            <td>Livre</td>
+            <td>Livro: Molar Christoph - Interpretable Machine Learning</td>
         </tr>
         <tr>
             <td>Coursera Specialization: <b>Essential English for University Success</b></td>
-            <td>Livre</td>
+            <td>Curso Drive: Drupal-8-Configuration-Management</td>
             <td>Livre</td>
             <td>Livre</td>
             <td>Livre</td>
