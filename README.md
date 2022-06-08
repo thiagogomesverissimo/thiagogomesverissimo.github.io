@@ -2,8 +2,8 @@
 
 Debian:
 
-    sudo apt-get install libxml2-dev libxslt-dev build-essential libxml2 libxml2-dev libxslt1-dev
-    gem install bundler
+    sudo apt-get install libxml2-dev libxslt-dev build-essential libxml2 libxml2-dev libxslt1-dev ruby-dev
+    sudo gem install bundler
 
 ## To run locally 
 
