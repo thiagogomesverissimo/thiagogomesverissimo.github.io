@@ -21,16 +21,28 @@ permalink: /planejamento/
             <td>Coursera Specialization: <b> Learn English: Intermediate Grammar </b></td>
             <td>Coursera: Analysis of Algorithms</td>
             <td><a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Linear Algebra (Strang)</a> </td>
-            <td>Coursera Specialization: <b> Statistics with Python</b> (University of Michigan) </td>
-            <td>Algorithms, Part I (Princeton University)</td>
+            <td><a href="https://www.youtube.com/watch?v=V9du3bdVOyE&list=PLWJgTBWLv8jxOLFnDQn_gkuJc0sg46lmO">meteor</a></td>
+            <td>Coursera: Algorithms, Part I (Princeton University)</td>
         </tr>
+
         <tr>
             <td><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng)</a></td>
             <td>Analysis of Algorithms (Livro)</td>
             <td>Linear Algebra (Livro)</td>
-            <td>Livro: Algorithms in Java (sedgewick)</td>
+            <td>Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)</td>
             <td>Livro: Algorithms in C (sedgewick)</td>
         </tr>
+
+        <tr>
+            <td>Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)</td>
+            <td></td>
+            <td></td>
+            <td>Curso liveware (Google Drive)</td>
+            <td>Livro: Algorithms in Java (sedgewick)</td>
+        </tr>
+
+
+        
     </tbody>
 </table>
 
@@ -60,8 +72,9 @@ permalink: /planejamento/
             <td>Tibishirano Statistical Learning (livro)</td>
             <td><a href="https://moodle.academy/">Curso moodle</a></td>
             <td><a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a></td>
-            <td>Coursera Specialization: <b>Introductory C Programming </b> (duke university)</td>
+            <td></td>
         </tr>
+
     </tbody>
 </table>
 
@@ -91,7 +104,7 @@ permalink: /planejamento/
             <td><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></td>
             <td> Livro: Python Machine Learning (Randal)</td>
             <td>Livro Machine Learning for the web</td>
-            <td>Curso liveware</td>
+            <td><a href="https://cs230.stanford.edu/lecture/">cs230: deep learning</a></td>
         </tr>
     </tbody>
 </table>
@@ -113,14 +126,14 @@ permalink: /planejamento/
             <td>Coursera Specialization: <b>Learn English: Writing Effectively with Complex Sentences</b></td>
             <td>Coursera Specialization: <b>Academic English: Writing</b></td>
             <td>Coursera Specialization: <b>GIS, Mapping, and Spatial Analysis</b> (University of Toronto)</td>
-            <td>Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)</td>
+            <td></td>
             <td>Algorithms, Part II (Princeton University)</td>
         </tr>
         <tr>
             <td>Coursera Specialization: <b>Learn English: Writing Effectively with Complex Sentences</b></td>
             <td>Coursera Specialization: <b>Academic English: Writing</b></td>
             <td>Livro Statistical Rethinking (Richard)</td>
-            <td>Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)</td>
+            <td></td>
             <td>Algorithms, Part II (Princeton University)</td>
         </tr>
     </tbody>
