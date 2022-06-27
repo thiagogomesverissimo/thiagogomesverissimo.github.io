@@ -18,7 +18,7 @@ permalink: /planejamento/
 
     <tbody>
         <tr>
-            <td>Coursera Specialization: <b> Learn English: Intermediate Grammar </b></td>
+            <td><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></td>
             <td>Coursera: Analysis of Algorithms</td>
             <td><a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Linear Algebra (Strang)</a> </td>
             <td><a href="https://www.youtube.com/watch?v=V9du3bdVOyE&list=PLWJgTBWLv8jxOLFnDQn_gkuJc0sg46lmO">meteor</a></td>
@@ -26,7 +26,7 @@ permalink: /planejamento/
         </tr>
 
         <tr>
-            <td><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng)</a></td>
+            <td><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></td>
             <td>Analysis of Algorithms (Livro)</td>
             <td>Linear Algebra (Livro)</td>
             <td>Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)</td>
@@ -35,7 +35,7 @@ permalink: /planejamento/
 
         <tr>
             <td>Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)</td>
-            <td></td>
+            <td>Coursera Specialization: <b> Learn English: Intermediate Grammar </b></td>
             <td></td>
             <td>Curso liveware (Google Drive)</td>
             <td>Livro: Algorithms in Java (sedgewick)</td>
