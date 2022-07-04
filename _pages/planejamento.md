@@ -58,9 +58,7 @@ permalink: /planejamento/
                 Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
             </td>
             <td>
-                Coursera Course: Speaking and Presenting: Poise <br><br>
-                Coursera Course: Speaking and Presenting: Pitches and Persuasion <br><br>
-                Coursera Course: Speaking and Presenting: Conversation Starters <br>
+                Coursera Specialization: <b> Good with Words: Speaking and Presenting</b> (University of Michigan)
             </td>
             <td>
                 Coursera Specialization: Learn English: Intermediate Grammar
