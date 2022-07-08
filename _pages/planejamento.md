@@ -37,7 +37,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                <a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a>
+                Livro: Deep Learning with Python
             </td>
             <td>
                 Livro Discrete Mathematics 
@@ -88,6 +88,7 @@ permalink: /planejamento/
   <li>Coursera Specialization: The Pronunciation of American English</li>
   <li>Coursera Specialization: <b>IELTS Preparation</b></li>
   <li>Coursera Specialization: <b>Essential English for University Success</b></li>
+  <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
 </ul>
 
 <br>
@@ -122,6 +123,8 @@ permalink: /planejamento/
 <h3>Outros</h3>
 
 <ul>
+  <li><a href="https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">Curso do Andrew NG oferecido de forma presencial </a> </li>
+  <li><a href="https://www.youtube.com/watch?v=d79mzijMAw0&list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM"> Curso de Applied Machine Learning - Andreas - mantenedor do sklearn</a>  </li>
   <li><a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Tibishirano Statistical Learning (vídeos e livro) </a></li>
   <li>EDX: Big Data and Education</li>
   <li>EDX: Practical Learning Analytics</li>
