@@ -40,7 +40,7 @@ permalink: /planejamento/
                 Livro: Deep Learning with Python
             </td>
             <td>
-                Livro Discrete Mathematics 
+                Livro: Invitation Discrete Mathematics 
             </td>
             <td>
                 Linear Algebra (Livro)
@@ -58,13 +58,13 @@ permalink: /planejamento/
                 Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
             </td>
             <td>
-                Coursera Specialization: <b> Good with Words: Speaking and Presenting</b> (University of Michigan)
+                Livro: How to prove it
             </td>
             <td>
                 Coursera Specialization: Learn English: Intermediate Grammar
             </td>
             <td>
-                Curso liveware (Google Drive)
+                Livro: Grafos (Azul)
             </td>
             <td>
                 Livro: Algorithms in Java (sedgewick)
@@ -89,6 +89,8 @@ permalink: /planejamento/
   <li>Coursera Specialization: <b>IELTS Preparation</b></li>
   <li>Coursera Specialization: <b>Essential English for University Success</b></li>
   <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
+  <li>Coursera Specialization: Good with Words: Writing and Editing</li>
+  <li>Coursera Specialization: <b> Good with Words: Speaking and Presenting</b> (University of Michigan)</li>
 </ul>
 
 <br>
@@ -134,6 +136,7 @@ permalink: /planejamento/
   <li><a href="https://cs230.stanford.edu/lecture/">cs230: deep learning</a></li>
   <li>Curso Certificação Cisco (Google Drive) </li>
   <li>Drupal-8-Configuration-Management (Google Drive)</li>
+  <li>Curso liveware (Google Drive)</li>
 </ul>
 
 <br>
