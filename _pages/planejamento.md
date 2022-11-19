@@ -27,10 +27,10 @@ permalink: /planejamento/
                 <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Linear Algebra (Strang)</a>
             </td>
             <td>
-                Cisco
+                Livro Cisco + curso cisco google drive
             </td>
             <td>
-                Moodles
+                Livros Moodles + Moodle Academy
             </td>
             <td>
                 Algorithms in Java (sedgewick)
@@ -82,6 +82,7 @@ permalink: /planejamento/
   <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
   <li>Coursera Specialization: Good with Words: Writing and Editing</li>
   <li>Coursera Specialization: <b> Good with Words: Speaking and Presenting</b> (University of Michigan)</li>
+  <li>Coursera Specialization: <b>Good with Words: Writing and Editing Specialization</b></li>
 </ul>
 
 <br>
