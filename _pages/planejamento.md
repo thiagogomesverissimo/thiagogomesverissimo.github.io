@@ -7,6 +7,7 @@ permalink: /planejamento/
 <table class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
+            <th>type</th>
             <th>seg</th>
             <th>ter</th>
             <th>qua</th>
@@ -16,60 +17,50 @@ permalink: /planejamento/
     </thead>
 
     <tbody>
+
         <tr>
             <td>
-                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
+                <b>Livros</b>
             </td>
             <td>
-                Coursera: <a href="https://www.coursera.org/learn/discrete-mathematics/home/welcome">Discrete Mathematics </a>
+                Linear Algebra + 
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Linear Algebra (Strang)</a>
             </td>
             <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Linear Algebra (Strang)</a> 
+                Cisco
             </td>
             <td>
-                <a href="https://www.youtube.com/watch?v=V9du3bdVOyE&list=PLWJgTBWLv8jxOLFnDQn_gkuJc0sg46lmO">meteor</a>
+                Moodles
             </td>
             <td>
-                Coursera: Algorithms, Part I  (Princeton University) <br><br>
-                Coursera: Algorithms, Part II  (Princeton University)
+                Algorithms in Java (sedgewick)
+            </td>
+            <td>
+                Machine Learning for the Web
             </td>
         </tr>
 
         <tr>
             <td>
-                Livro: Deep Learning with Python
+                <b>Especializações</b>
             </td>
             <td>
-                Livro: Invitation Discrete Mathematics 
-            </td>
-            <td>
-                Linear Algebra (Livro)
+                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
             <td>
                 Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)
             </td>
             <td>
-                Livro: Algorithms in C (sedgewick)
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
+                 Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
             </td>
             <td>
-                Livro: How to prove it
+                 Coursera: Algorithms
             </td>
             <td>
                 Coursera Specialization: Learn English: Intermediate Grammar
             </td>
-            <td>
-                Livro: Grafos (Azul)
-            </td>
-            <td>
-                Livro: Algorithms in Java (sedgewick)
-            </td>
         </tr>
+
     </tbody>
 </table>
 
@@ -104,7 +95,7 @@ permalink: /planejamento/
   <li>Coursera Specialization:<b> Web Applications for Everybody</b> (University of Michigan)</li>
   <li>Coursera Specialization: <b>GIS, Mapping, and Spatial Analysis</b> (University of Toronto)</li>
   <li>Coursera Specialization: <b>Mathematics for Machine Learning</b> (Imperial College London)</li>
-
+  <li> <a href="https://www.coursera.org/learn/discrete-mathematics/home/welcome">Discrete Mathematics </a> </li>
   <li>Coursera Specialization: <b>Database systems</b> (Universidad Nacional Autónoma de México)</li>
   <li>Coursera Specialization: <b>Introduction to Discrete Mathematics for Computer Science</b> (HSE University)</li>
   <li>Coursera Specialization: <b>Advanced Machine Learning</b> (HSE University)</li>
@@ -137,6 +128,7 @@ permalink: /planejamento/
   <li>Curso Certificação Cisco (Google Drive) </li>
   <li>Drupal-8-Configuration-Management (Google Drive)</li>
   <li>Curso liveware (Google Drive)</li>
+  <li><a href="https://www.youtube.com/watch?v=V9du3bdVOyE&list=PLWJgTBWLv8jxOLFnDQn_gkuJc0sg46lmO">meteor</a></li>
 </ul>
 
 <br>
