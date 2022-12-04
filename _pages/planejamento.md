@@ -20,65 +20,66 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                <b>Livros</b>
-            </td>
-            <td>
-                Linear Algebra + 
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Linear Algebra (Strang)</a>
-            </td>
-            <td>
-                Livro Cisco + curso cisco google drive
-            </td>
-            <td>
-                Livros Moodles + Moodle Academy
-            </td>
-            <td>
-                Algorithms in Java (sedgewick)
-            </td>
-            <td>
-                Machine Learning for the Web
-            </td>
-        </tr>
-
-        <tr>
-            <td>
                 <b>Especializações</b>
             </td>
-            <td>
-                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
-            </td>
+
             <td>
                 Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)
             </td>
             <td>
-                 Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
-            </td>
-            <td>
-                 Coursera: Algorithms
+                Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
             </td>
             <td>
                 Coursera Specialization: Learn English: Intermediate Grammar
+            </td>
+            <td>
+                (temp) Livros Moodle
+            </td>
+            <td>
+                (temp) Livro How to Prove it + Livro discrete Math (kenneth)
             </td>
         </tr>
 
         <tr>
             <td>
-            
+                <b>Cursos Avulsos</b>
+            </td>
+            <td>
+                Curso cisco (google drive)
+            </td>
+            <td>
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
+            </td>
+
+            <td>
+                Moodle Academy
+            </td>
+            <td>
+                Cousera Algorithms in Java (sedgewick)
+            </td>
+            <td>
+                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <b>Vídeos</b>
+            </td>
+            <td>
+                Livro Cisco Vermelho
+            </td>
+            <td>
+                Livro Linear Algebra
             </td>
             <td>
                 Livro Tibishirano
             </td>
             <td>
-
+                Livro Algorithms in Java
             </td>
             <td>
-  
-            </td>
-            <td>
-   
-            </td>
-            <td>
-
+                Machine Learning for the Web
             </td>
         </tr>
 
