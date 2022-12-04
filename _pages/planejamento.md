@@ -61,6 +61,27 @@ permalink: /planejamento/
             </td>
         </tr>
 
+        <tr>
+            <td>
+            
+            </td>
+            <td>
+                Livro Tibishirano
+            </td>
+            <td>
+
+            </td>
+            <td>
+  
+            </td>
+            <td>
+   
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
     </tbody>
 </table>
 
