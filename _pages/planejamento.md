@@ -24,25 +24,25 @@ permalink: /planejamento/
             </td>
 
             <td>
-                Coursera Specialization: <b>Full-Stack Web Development with React</b> (Hong Kong University of Science and Technology)
+                Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
             </td>
             <td>
-                Coursera Specialization: <b> Statistics with Python</b> (University of Michigan)
+                Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
             </td>
             <td>
-                Coursera Specialization: Learn English: Intermediate Grammar
+                Coursera Specialization: <br><b> Learn English: Intermediate Grammar</b>  <br> (University of California, Irvine)
             </td>
             <td>
-                (temp) Livros Moodle
+                Cousera Algorithms in Java (sedgewick)
             </td>
             <td>
-                (temp) Livro How to Prove it + Livro discrete Math (kenneth)
+                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
         </tr>
 
         <tr>
             <td>
-                <b>Cursos Avulsos</b>
+                <b>Avulsos</b>
             </td>
             <td>
                 Curso cisco (google drive)
@@ -55,16 +55,16 @@ permalink: /planejamento/
                 Moodle Academy
             </td>
             <td>
-                Cousera Algorithms in Java (sedgewick)
+                Livro Algorithms in Java
             </td>
             <td>
-                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
+                Livro Tibishirano
             </td>
         </tr>
 
         <tr>
             <td>
-                <b>Vídeos</b>
+                <b>Livros</b>
             </td>
             <td>
                 Livro Cisco Vermelho
@@ -73,13 +73,13 @@ permalink: /planejamento/
                 Livro Linear Algebra
             </td>
             <td>
-                Livro Tibishirano
+               Livros Moodle
             </td>
             <td>
-                Livro Algorithms in Java
+                Livro discrete Math (kenneth)
             </td>
             <td>
-                Machine Learning for the Web
+                Livro Machine Learning for the Web
             </td>
         </tr>
 
