@@ -7,7 +7,6 @@ permalink: /planejamento/
 <table class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
-            <th>type</th>
             <th>seg</th>
             <th>ter</th>
             <th>qua</th>
@@ -20,74 +19,141 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                <b>Especializações</b>
+                <b>Trilha Cientifíca</b>
             </td>
+            <td>
+                <b>Trilha Idioma</b>
+            </td>
+            <td>
+                <b>Trilha Técnica</b>
+            </td>
+            <td>
+                <b>Trilha MOOC</b>
+            </td>
+            <td>
+                <b>Trilha Cursos Avulsos</b>
+            </td>
+        </tr>
 
+        <tr>
             <td>
-                Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
-            </td>
-            <td>
-                Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
+                Leitura de Artigos (fazer resumo no repo articles-annotations)
             </td>
             <td>
                 Coursera Specialization: <br><b> Learn English: Intermediate Grammar</b>  <br> (University of California, Irvine)
             </td>
             <td>
-                Cousera Algorithms in Java (sedgewick)
+                Curso cisco (google drive) + Livro vermelho Cisco
             </td>
             <td>
-                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
+                Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
+            </td>
+            <td>
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a> + Livro
             </td>
         </tr>
 
         <tr>
             <td>
-                <b>Avulsos</b>
+                <a href="#conferenciac">Assistir Conferência Cientifíca</a>
             </td>
             <td>
-                Curso cisco (google drive)
+                <a href="https://www.youtube.com/playlist?list=PLaNNx1k0ao1u-x_nKdKNh7cKALzelzXjY">
+                    Engvid
+                </a>
             </td>
             <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
-            </td>
-
-            <td>
-                Moodle Academy
+                <a href="#conferenciat">Assistir Evento Técnico</a>
             </td>
             <td>
-                Livro Algorithms in Java
+                Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
             </td>
             <td>
-                Livro Tibishirano
+                UC Berkeley CS188 Intro to AI 2014 <br>
+                <a href="http://ai.berkeley.edu/home.html">http://ai.berkeley.edu/home.html</a><br>
+                <a href="https://www.youtube.com/watch?v=W1S-HSakPTM&list=PLFze15KrfxbHYP_YIxwgfVYDTo_bQgqRC">Vídeos Aulas</a>
             </td>
         </tr>
 
+
         <tr>
-            <td>
-                <b>Livros</b>
-            </td>
-            <td>
-                Livro Cisco Vermelho
-            </td>
-            <td>
-                Livro Linear Algebra
-            </td>
-            <td>
-               Livros Moodle
-            </td>
             <td>
                 Livro discrete Math (kenneth)
             </td>
             <td>
-                Livro Machine Learning for the Web
+                <a href="https://www.youtube.com/playlist?list=PLhNRdHEdUQewzYZ0X6gt3x9_CVen_HldI">
+                   English Listening
+                </a>
+            </td>
+            <td>
+                Livros Moodle + curso moodle no moodle academy
+            </td>
+            <td>
+                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a> <br><br>
+                <a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a>
+            </td>
+            <td>
+                Cousera Algorithms in Java (sedgewick) + Livro
             </td>
         </tr>
+        
+        
+        <tr>
+            <td>
+                Aulas da Yoshiko (grafinhos)
+            </td>
+            <td>
+                Encontrar curso de/em espanhol
+            </td>
+            <td>
+                Leitura do Livro django e ML
+            </td>
+            <td>
+                Cousera Introdução à computação (sedgewick) + Livro
+            </td>
+            <td>
+                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Tibishirano Statistical Learning (vídeos e livro) </a>
+            </td>
+        </tr>
+
+        
 
     </tbody>
 </table>
 
+<br>
+<h3>Seleção de Eventos Científicos</h3>
 
-<br><br>
+<ul id="conferenciac">
+    <li>Learning Analytics 2017: 
+        <a href="https://www.youtube.com/watch?v=OEeSxm_Kl0s&list=PLOF7tBP24lAc5No4hdcUPcRDu-uf2Cw2c">https://www.youtube.com/watch?v=OEeSxm_Kl0s&list=PLOF7tBP24lAc5No4hdcUPcRDu-uf2Cw2c</a>
+    </li>
+    <li>Learning Analytics 2018: <br>https://www.youtube.com/watch?v=zyCM0Cp94bw&list=PLOF7tBP24lAd6eRYKrKfk5oY9zMSl5WEX</li>
+    <li>Learning Analytics 2016: <br>https://www.youtube.com/watch?v=dwv0tjpFGgg&list=PLOF7tBP24lAf2uyB6SEZ3_foM51rULkSR</li>
+    <li>Learning Analytics Webinar: <br>https://www.youtube.com/watch?v=7oioOvTSMUc&list=PLOF7tBP24lAdN_-7TEQwfOJiwdzgXE3Ol</li>
+    <li>Khipu 2019: <br>https://www.youtube.com/watch?v=KOK1-kmMk1E&list=PL7_piSasXIU-lHScpZryqf51xHQK6ztiF</li>
+    <li>Machine Learning in Science: <br>https://www.youtube.com/watch?v=FuJgGeKMIJM&list=PL05umP7R6ij1_d3E1UQOlnaZBmEKqw5B7</li>
+    <li>Stanford IA: <br>https://www.youtube.com/playlist?list=PLYLBSCrrqNXyYT6o_J11kpYtB77fRYtY1</li>
+    <li>Palestra Learning Analytics Tim McKay: <br>https://www.youtube.com/watch?v=OkmvHAR2ea0&t=82s</li>
+    <li>Palestra Learning Analytics Trish Uhl: <br>https://www.youtube.com/watch?v=qYkQyOgviyA</li>
+</ul>
+
+<br>
+<h3>Seleção de Eventos Técnicos</h3>
+
+<ul id="conferenciat">
+    <li>Laracon 2019: https://www.youtube.com/playlist?list=PLMdXHJK-lGoDhWZ6YJW5B79CDoHWZwDN1</li>
+    <li>Laracon 2022 verão: https://www.youtube.com/watch?v=f4QShF42c6E</li>
+    <li>Laracon 2022 inverno: https://www.youtube.com/watch?v=0Rq-yHAwYjQ&t=1805s</li>
+    <li>DrupalCon Prague 2022: https://www.youtube.com/playlist?list=PLpeDXSh4nHjRK_6I7HVLCw8k_ZTopYv5i</li>
+    <li>DrupalCon Portland 2022: https://www.youtube.com/playlist?list=PLpeDXSh4nHjRye9v5rA62RG2Gg6AgwAds</li>
+    <li>Laravel Origins Documentary: https://www.youtube.com/watch?v=127ng7botO4</li>
+    <li>debconf 2021: https://www.youtube.com/playlist?list=PLYUtdmpYPTTIzXEXtw7_DWjpbzHOLLQb4</li>
+    <li>debconf 2022: https://www.youtube.com/playlist?list=PLYUtdmpYPTTL6_iJ3kpFtROmnacNg1R2S</li>
+</ul>
+
+<br>
+
 <h1>Lista de desejos</h1>
 
 <h3>English</h3>
@@ -101,7 +167,6 @@ permalink: /planejamento/
   <li>Coursera Specialization: The Pronunciation of American English</li>
   <li>Coursera Specialization: <b>IELTS Preparation</b></li>
   <li>Coursera Specialization: <b>Essential English for University Success</b></li>
-  <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
   <li>Coursera Specialization: Good with Words: Writing and Editing</li>
   <li>Coursera Specialization: <b> Good with Words: Speaking and Presenting</b> (University of Michigan)</li>
   <li>Coursera Specialization: <b>Good with Words: Writing and Editing Specialization</b></li>
@@ -141,7 +206,6 @@ permalink: /planejamento/
 <ul>
   <li><a href="https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">Curso do Andrew NG oferecido de forma presencial </a> </li>
   <li><a href="https://www.youtube.com/watch?v=d79mzijMAw0&list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM"> Curso de Applied Machine Learning - Andreas - mantenedor do sklearn</a>  </li>
-  <li><a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Tibishirano Statistical Learning (vídeos e livro) </a></li>
   <li>EDX: Big Data and Education</li>
   <li>EDX: Practical Learning Analytics</li>
   <li><a href="https://moodle.academy/">Curso moodle</a></li>
