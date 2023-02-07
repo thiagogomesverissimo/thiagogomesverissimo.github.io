@@ -78,7 +78,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Livro discrete Math (kenneth)
+                Livro discrete Math (kenneth) + Aulas da Yoshiko (grafinhos)
             </td>
             <td>
                 <a href="https://www.youtube.com/playlist?list=PLhNRdHEdUQewzYZ0X6gt3x9_CVen_HldI">
@@ -100,7 +100,7 @@ permalink: /planejamento/
         
         <tr>
             <td>
-                Aulas da Yoshiko (grafinhos)
+                Cursos EDX:  <br><br> Big Data and Education <br><br> Practical Learning Analytics
             </td>
             <td>
                 Encontrar curso de/em espanhol
@@ -206,13 +206,11 @@ permalink: /planejamento/
 <ul>
   <li><a href="https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">Curso do Andrew NG oferecido de forma presencial </a> </li>
   <li><a href="https://www.youtube.com/watch?v=d79mzijMAw0&list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM"> Curso de Applied Machine Learning - Andreas - mantenedor do sklearn</a>  </li>
-  <li>EDX: Big Data and Education</li>
-  <li>EDX: Practical Learning Analytics</li>
+
   <li><a href="https://moodle.academy/">Curso moodle</a></li>
   <li><a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1 - MIT</a></li>
   <li><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2 - MIT</a></li>
   <li><a href="https://cs230.stanford.edu/lecture/">cs230: deep learning</a></li>
-  <li>Curso Certificação Cisco (Google Drive) </li>
   <li>Drupal-8-Configuration-Management (Google Drive)</li>
   <li>Curso liveware (Google Drive)</li>
   <li><a href="https://www.youtube.com/watch?v=V9du3bdVOyE&list=PLWJgTBWLv8jxOLFnDQn_gkuJc0sg46lmO">meteor</a></li>
