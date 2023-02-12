@@ -22,7 +22,7 @@ permalink: /planejamento/
                 <b>Trilha Cientifíca</b>
             </td>
             <td>
-                <b>Trilha Idioma</b>
+                <b>Trilha Idioma/Clara</b>
             </td>
             <td>
                 <b>Trilha Técnica</b>
@@ -58,9 +58,7 @@ permalink: /planejamento/
                 <a href="#conferenciac">Assistir Conferência Cientifíca</a>
             </td>
             <td>
-                <a href="https://www.youtube.com/playlist?list=PLaNNx1k0ao1u-x_nKdKNh7cKALzelzXjY">
-                    Engvid
-                </a>
+                Curso: Computer Science: Programming with a Purpose
             </td>
             <td>
                 <a href="#conferenciat">Assistir Evento Técnico</a>
@@ -81,9 +79,7 @@ permalink: /planejamento/
                 Livro discrete Math (kenneth) + Aulas da Yoshiko (grafinhos)
             </td>
             <td>
-                <a href="https://www.youtube.com/playlist?list=PLhNRdHEdUQewzYZ0X6gt3x9_CVen_HldI">
-                   English Listening
-                </a>
+                Especialização: Web Design for Everybody
             </td>
             <td>
                 Livros Moodle + curso moodle no moodle academy
@@ -103,7 +99,7 @@ permalink: /planejamento/
                 Cursos EDX:  <br><br> Big Data and Education <br><br> Practical Learning Analytics
             </td>
             <td>
-                Encontrar curso de/em espanhol
+                The Modern World, Part One: Global History from 1760 to 1910
             </td>
             <td>
                 Leitura do Livro django e ML
