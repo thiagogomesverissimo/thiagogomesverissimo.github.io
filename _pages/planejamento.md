@@ -129,8 +129,6 @@ permalink: /planejamento/
             </td>
         </tr>
 
-        
-
     </tbody>
 </table>
 
@@ -187,15 +185,16 @@ permalink: /planejamento/
 <h3>Especializações Coursera</h3>
 
 <ul>
-  <li>Coursera Specialization: <b>Introductory C Programming </b> (duke university)</li>
-  <li>Coursera Specialization: <b>Data Structures and Algorithms </b> (University of California San Diego)</li>
-  <li>Coursera Specialization: <b>Parallel, Concurrent, and Distributed Programming in Java </b> (Rice University)</li>
-  <li>Coursera Specialization: <b>GIS, Mapping, and Spatial Analysis</b> (University of Toronto)</li>
-  <li>Coursera Specialization: <b>Mathematics for Machine Learning</b> (Imperial College London)</li>
-  <li> <a href="https://www.coursera.org/learn/discrete-mathematics/home/welcome">Discrete Mathematics </a> </li>
-  <li>Coursera Specialization: <b>Database systems</b> (Universidad Nacional Autónoma de México)</li>
-  <li>Coursera Specialization: <b>Introduction to Discrete Mathematics for Computer Science</b> (HSE University)</li>
-  <li>Coursera Specialization: <b>Advanced Machine Learning</b> (HSE University)</li>
+  <li>software engineering - Hong Kong University </li>
+  <li><b>Introductory C Programming </b> (duke university)</li>
+  <li><b>Data Structures and Algorithms </b> (University of California San Diego)</li>
+  <li><b>Parallel, Concurrent, and Distributed Programming in Java </b> (Rice University)</li>
+  <li><b>GIS, Mapping, and Spatial Analysis</b> (University of Toronto)</li>
+  <li><b>Mathematics for Machine Learning</b> (Imperial College London)</li>
+  <li><a href="https://www.coursera.org/learn/discrete-mathematics/home/welcome">Discrete Mathematics </a> </li>
+  <li><b>Database systems</b> (Universidad Nacional Autónoma de México)</li>
+  <li><b>Introduction to Discrete Mathematics for Computer Science</b> (HSE University)</li>
+  <li><b>Advanced Machine Learning</b> (HSE University)</li>
   <li>Introduction to Logic and Critical Thinking</li>
 </ul>
 
