@@ -37,7 +37,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Livro discrete Math (kenneth) + Aulas da Yoshiko (grafinhos)
+                Livro discrete Math (kenneth) + Livro How to Prove It  + Aulas da Yoshiko (grafinhos)
             </td>
             <td>
                 <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
@@ -119,7 +119,9 @@ permalink: /planejamento/
                 The Modern World, Part One: Global History from 1760 to 1910
             </td>
             <td>
-                Leitura do Livro django e ML
+                Livro 1: Aurelien Geron <br>
+                Livro 2: Chollet
+
             </td>
             <td>
                 <a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a>
@@ -228,6 +230,7 @@ permalink: /planejamento/
 <ul>
   <li>https://nerdstein.net/blog/custom-rest-resources-drupal-8</li>
   <li>https://andy-blum.com/blog/working-datetime-objects-drupal-8-9</li>
+  <li>Melhores cursos de moodle que encontrei: https://www.youtube.com/@moodletips/playlists</li>
 </ul>
 
             
