@@ -56,7 +56,7 @@ permalink: /planejamento/
                #
             </td>
             <td>
-
+               #
             </td>
         </tr>
 
@@ -80,7 +80,7 @@ permalink: /planejamento/
                 #
             </td>
             <td>
-
+                #
             </td>
         </tr>
 
@@ -101,7 +101,7 @@ permalink: /planejamento/
                 <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
             <td>
-
+              Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
             </td>
         </tr>
 
@@ -145,7 +145,7 @@ permalink: /planejamento/
                 Livro: Chollet
             </td>
             <td>
-
+                #
             </td>
         </tr>
 
@@ -243,7 +243,6 @@ permalink: /planejamento/
 - <a href="#tutorial">Tutoriais técnico na web</a>
 - Curso cisco (google drive) 
 - Livro vermelho Cisco
-- Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
 - <a href="#conferenciac">Assistir Conferência Cientifíca</a>
 - <a href="#conferenciat">Assistir Evento Técnico</a>
 - Curso: Computer Science: Programming with a Purpose
