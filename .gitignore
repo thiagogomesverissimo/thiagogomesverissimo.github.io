@@ -3,4 +3,5 @@ _site/
 *.swp
 .vscode/
 public/
-
+vendor/bundle
+.bundle

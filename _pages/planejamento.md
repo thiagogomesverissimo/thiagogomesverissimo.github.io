@@ -4,32 +4,6 @@ title: "Planejamento"
 permalink: /planejamento/
 ---
 
-Inserir:
-
-- Aulas da Yoshiko (grafinhos)
--  <a href="#tutorial">Tutoriais técnico na web</a>
--  Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
-- <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
--  Curso cisco (google drive) 
-- Livro vermelho Cisco
-- Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
-- <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
--  Livro Linear Algebra (Strang)
-- <a href="#conferenciac">Assistir Conferência Cientifíca</a>
-- <a href="#conferenciat">Assistir Evento Técnico</a>
-- Curso: Computer Science: Programming with a Purpose
-- Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
-- Especialização: Web Design for Everybody
-- Curso EDX: <br> Practical Learning Analytics
-- Livros Moodle + curso moodle no moodle academy
-- Cousera Algorithms in Java (sedgewick) + Livro
-- The Modern World, Part One: Global History from 1760 to 1910
-- Curso EDX:  <br>Big Data and Education
-- curso processamento de texto ime coursera
-- Livro 1: Aurelien Geron <br>
-- Livro 2: Chollet
-
-
 <table class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
@@ -52,13 +26,13 @@ Inserir:
                 Leitura de Artigos (Cornell Method)
             </td>
             <td>
-
+            #
             </td>
             <td>
                 Leitura de Artigos (Cornell Method)
             </td>
             <td>
-
+            #
             </td>
             <td>
                 Leitura de Artigos (Cornell Method)
@@ -76,10 +50,10 @@ Inserir:
                 #
             </td>
             <td>
-               
+               #
             </td>
             <td>
-               
+               #
             </td>
             <td>
 
@@ -96,14 +70,14 @@ Inserir:
             </td>
 
             <td>
-                
+                #
             </td>
 
             <td>
-               
+               #
             </td>
             <td>
-
+                #
             </td>
             <td>
 
@@ -115,21 +89,19 @@ Inserir:
                 16:00-17:00
             </td>
             <td>
-                
+                Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
             </td>
             <td>
-                
+                Curso EDX: Practical Learning Analytics
             </td>
             <td>
-                
+                #
             </td>
             <td>
-                
+                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
             <td>
-                UC Berkeley CS188 Intro to AI 2014 <br>
-                <a href="http://ai.berkeley.edu/home.html">http://ai.berkeley.edu/home.html</a><br>
-                <a href="https://www.youtube.com/watch?v=W1S-HSakPTM&list=PLFze15KrfxbHYP_YIxwgfVYDTo_bQgqRC">Vídeos Aulas</a>
+
             </td>
         </tr>
 
@@ -139,19 +111,19 @@ Inserir:
                 17:00-18:00
             </td>
             <td>
-                
+                #
             </td>
             <td>
-                
+                ISSUES WORK
             </td>
             <td>
-                
+                #
             </td>
             <td>
-                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
+              Livro: Aurelien Geron 
             </td>
             <td>
-                
+                Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
             </td>
         </tr>
         
@@ -161,20 +133,19 @@ Inserir:
                 18:00-19:00
             </td>
             <td>
-                
+                #
             </td>
             <td> 
-                
+                ISSUES WORK
+            </td>
+            <td>
+                #
+            </td>
+            <td>
+                Livro: Chollet
             </td>
             <td>
 
-
-            </td>
-            <td>
-                <a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a>
-            </td>
-            <td>
-                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Tibishirano Statistical Learning (vídeos e livro) </a>
             </td>
         </tr>
 
@@ -183,19 +154,19 @@ Inserir:
                 19:00-20:00
             </td>
             <td>
-
+            #
             </td>
             <td>
             #
             </td>
             <td>
-
+            #
             </td>
             <td>
-
+            #
             </td>
             <td>
-
+            #
             </td>
         </tr>
 
@@ -204,19 +175,19 @@ Inserir:
                 20:00-21:00
             </td>
             <td>
-
+                Cousera Algorithms in Java (sedgewick)
             </td>
             <td>
             #
             </td>
             <td>
-
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
             </td>
             <td>
-
+                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>
             </td>
             <td>
-
+            Aulas da Yoshiko (grafinhos)
             </td>
         </tr>
 
@@ -225,19 +196,19 @@ Inserir:
                 21:00-22:00
             </td>
             <td>
-
+                Livro: Algorithms in Java (sedgewick)
             </td>
             <td>
-
+                <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
             </td>
             <td>
-
+                Livro Linear Algebra (Strang)
             </td>
             <td>
-
+                Livro Tibishirano Statistical 
             </td>
             <td>
-
+            #
             </td>
         </tr>
 
@@ -264,6 +235,23 @@ Inserir:
 
     </tbody>
 </table>
+
+<br>
+
+<h3>Removidos da programação</h3>
+
+- <a href="#tutorial">Tutoriais técnico na web</a>
+- Curso cisco (google drive) 
+- Livro vermelho Cisco
+- Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
+- <a href="#conferenciac">Assistir Conferência Cientifíca</a>
+- <a href="#conferenciat">Assistir Evento Técnico</a>
+- Curso: Computer Science: Programming with a Purpose
+- Especialização: Web Design for Everybody
+- Livros Moodle + curso moodle no moodle academy
+- The Modern World, Part One: Global History from 1760 to 1910
+- Curso EDX:  <br>Big Data and Education
+- curso processamento de texto ime coursera
 
 <br>
 <h3>Seleção de Eventos Científicos</h3>
@@ -329,6 +317,7 @@ Inserir:
   <li><b>Introduction to Discrete Mathematics for Computer Science</b> (HSE University)</li>
   <li><b>Advanced Machine Learning</b> (HSE University)</li>
   <li>Introduction to Logic and Critical Thinking</li>
+  <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
 </ul>
 
 <br>
@@ -347,6 +336,11 @@ Inserir:
 <h3>Cursos Avulsos na web</h3>
 
 <ul>
+  <li>
+    UC Berkeley CS188 Intro to AI 2014 <br>
+    <a href="http://ai.berkeley.edu/home.html">http://ai.berkeley.edu/home.html</a><br>
+    <a href="https://www.youtube.com/watch?v=W1S-HSakPTM&list=PLFze15KrfxbHYP_YIxwgfVYDTo_bQgqRC">Vídeos Aulas</a>
+  </li>
   <li><a href="https://www.youtube.com/watch?v=jGwO_UgTS7I&list=PLoROMvodv4rMiGQp3WXShtMGgzqpfVfbU">Curso do Andrew NG oferecido de forma presencial </a> </li>
   <li><a href="https://www.youtube.com/watch?v=d79mzijMAw0&list=PL_pVmAaAnxIRnSw6wiCpSvshFyCREZmlM"> Curso de Applied Machine Learning - Andreas - mantenedor do sklearn</a>  </li>
 
