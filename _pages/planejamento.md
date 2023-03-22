@@ -4,9 +4,36 @@ title: "Planejamento"
 permalink: /planejamento/
 ---
 
+Inserir:
+
+- Aulas da Yoshiko (grafinhos)
+-  <a href="#tutorial">Tutoriais técnico na web</a>
+-  Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
+- <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
+-  Curso cisco (google drive) 
+- Livro vermelho Cisco
+- Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
+- <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
+-  Livro Linear Algebra (Strang)
+- <a href="#conferenciac">Assistir Conferência Cientifíca</a>
+- <a href="#conferenciat">Assistir Evento Técnico</a>
+- Curso: Computer Science: Programming with a Purpose
+- Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
+- Especialização: Web Design for Everybody
+- Curso EDX: <br> Practical Learning Analytics
+- Livros Moodle + curso moodle no moodle academy
+- Cousera Algorithms in Java (sedgewick) + Livro
+- The Modern World, Part One: Global History from 1760 to 1910
+- Curso EDX:  <br>Big Data and Education
+- curso processamento de texto ime coursera
+- Livro 1: Aurelien Geron <br>
+- Livro 2: Chollet
+
+
 <table class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
+            <th>time</th>
             <th>seg</th>
             <th>ter</th>
             <th>qua</th>
@@ -19,34 +46,40 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                <b>Trilha Cientifíca</b>
+                9:00-10:00
             </td>
             <td>
-                <b>Trilha Idioma/Clara</b>
+                Leitura de Artigos (Cornell Method)
             </td>
             <td>
-                <b>Trilha Técnica</b>
+
             </td>
             <td>
-                <b>Trilha MOOC</b>
+                Leitura de Artigos (Cornell Method)
             </td>
             <td>
-                <b>Trilha Cursos Avulsos</b>
+
+            </td>
+            <td>
+                Leitura de Artigos (Cornell Method)
             </td>
         </tr>
 
         <tr>
             <td>
-                Livro discrete Math (kenneth) + Livro How to Prove It  + Aulas da Yoshiko (grafinhos)
+                14:00-15:00
             </td>
             <td>
-                <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
+                Coursera Specialization: <b>TOEFL Preparation</b>
             </td>
             <td>
-                <a href="#tutorial">Tutoriais técnico na web</a>
+                #
             </td>
             <td>
-                Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
+               
+            </td>
+            <td>
+               
             </td>
             <td>
 
@@ -55,34 +88,43 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Leitura de Artigos (fazer resumo no repo articles-annotations)
+                15:00-16:00
+            </td>
+
+            <td>
+                Coursera Specialization: Learn English: <b>Intermediate Grammar</b>
+            </td>
+
+            <td>
+                
+            </td>
+
+            <td>
+               
             </td>
             <td>
-                Coursera Specialization: <br><b> Learn English: Intermediate Grammar</b>  <br> (University of California, Irvine)
+
             </td>
             <td>
-                Curso cisco (google drive) + Livro vermelho Cisco
-            </td>
-            <td>
-                Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
-            </td>
-            <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a> + Livro
+
             </td>
         </tr>
 
         <tr>
             <td>
-                <a href="#conferenciac">Assistir Conferência Cientifíca</a>
+                16:00-17:00
             </td>
             <td>
-                Curso: Computer Science: Programming with a Purpose
+                
             </td>
             <td>
-                <a href="#conferenciat">Assistir Evento Técnico</a>
+                
             </td>
             <td>
-                Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
+                
+            </td>
+            <td>
+                
             </td>
             <td>
                 UC Berkeley CS188 Intro to AI 2014 <br>
@@ -94,33 +136,38 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Curso EDX: <br> Practical Learning Analytics
+                17:00-18:00
             </td>
             <td>
-                Especialização: Web Design for Everybody
+                
             </td>
             <td>
-                Livros Moodle + curso moodle no moodle academy
+                
+            </td>
+            <td>
+                
             </td>
             <td>
                 <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
             <td>
-                Cousera Algorithms in Java (sedgewick) + Livro
+                
             </td>
         </tr>
         
         
         <tr>
             <td>
-                Curso EDX:  <br>Big Data and Education
+                18:00-19:00
             </td>
             <td>
-                The Modern World, Part One: Global History from 1760 to 1910
+                
+            </td>
+            <td> 
+                
             </td>
             <td>
-                Livro 1: Aurelien Geron <br>
-                Livro 2: Chollet
+
 
             </td>
             <td>
@@ -128,6 +175,90 @@ permalink: /planejamento/
             </td>
             <td>
                 <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Tibishirano Statistical Learning (vídeos e livro) </a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                19:00-20:00
+            </td>
+            <td>
+
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                20:00-21:00
+            </td>
+            <td>
+
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                21:00-22:00
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                22:00+
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+                Livro Discrete Math (kenneth)
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+                Livro How to Prove It
+            </td>
+            <td>
+            #
             </td>
         </tr>
 
