@@ -44,7 +44,7 @@ permalink: /planejamento/
                 14:00-15:00
             </td>
             <td>
-                Coursera Specialization: <b>TOEFL Preparation</b>
+                Coursera Specialization: <b>IELTS Preparation</b>
             </td>
             <td>
                 #
@@ -95,13 +95,13 @@ permalink: /planejamento/
                 Curso EDX: Practical Learning Analytics
             </td>
             <td>
-                #
+                Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
             </td>
             <td>
                 <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
             <td>
-              Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
+              #
             </td>
         </tr>
 
@@ -123,7 +123,7 @@ permalink: /planejamento/
               Livro: Aurelien Geron 
             </td>
             <td>
-                Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
+                Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
             </td>
         </tr>
         
@@ -294,7 +294,7 @@ permalink: /planejamento/
   <li>Coursera Specialization: Academic English: Writing</li>
   <li>Coursera Specialization: Learn English: Writing Effectively with Complex Sentences</li>
   <li>Coursera Specialization: The Pronunciation of American English</li>
-  <li>Coursera Specialization: <b>IELTS Preparation</b></li>
+  <li>Coursera Specialization: <b>TOEFL Preparation</b></li>
   <li>Coursera Specialization: <b>Essential English for University Success</b></li>
   <li>Coursera Specialization: Good with Words: Writing and Editing</li>
   <li>Coursera Specialization: <b> Good with Words: Speaking and Presenting</b> (University of Michigan)</li>
