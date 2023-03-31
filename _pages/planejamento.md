@@ -354,7 +354,8 @@ permalink: /planejamento/
 <ul>
   <li>https://nerdstein.net/blog/custom-rest-resources-drupal-8</li>
   <li>https://andy-blum.com/blog/working-datetime-objects-drupal-8-9</li>
+  <li>https://www.agiledrop.com/blog/how-create-custom-block-drupal-8-9-10</li>
   <li>Melhores cursos de moodle que encontrei: https://www.youtube.com/@moodletips/playlists</li>
+  <li> Minitest 1: https://www.youtube.com/watch?v=Y0RicQeHEL4&list=PLPgcVM1hYvqCgBpQvdei05EJcS-z_JNgq</li>
+  <li> MInitest 2: https://www.youtube.com/watch?v=b92zOs6Bfpk&list=PLPgcVM1hYvqDxwWyeZ-D-ca-8CCxXeTNV</li>
 </ul>
-
-            
