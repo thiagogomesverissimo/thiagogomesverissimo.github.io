@@ -289,9 +289,9 @@ permalink: /planejamento/
 
 <ul>
   
-  <li>Coursera Specialization: Learn English: Advanced Grammar and Punctuation</li>
-  <li>Coursera Specialization: Learn English: Advanced Academic Speaking and Listening</li>
-  <li>Coursera Specialization: Academic English: Writing</li>
+  <li>Coursera Specialization: Learn English: Advanced Grammar and Punctuation https://www.coursera.org/specializations/advanced-grammar-punctuation</li>
+  <li>Coursera Specialization: Learn English: Advanced Academic Speaking and Listening https://www.coursera.org/specializations/speaklistenenglish</li>
+  <li>Coursera Specialization: Academic English: Writing https://www.coursera.org/specializations/academic-english</li>
   <li>Coursera Specialization: Learn English: Writing Effectively with Complex Sentences</li>
   <li>Coursera Specialization: The Pronunciation of American English</li>
   <li>Coursera Specialization: <b>TOEFL Preparation</b></li>
@@ -335,6 +335,8 @@ permalink: /planejamento/
 <h3>Cursos Avulsos na web</h3>
 
 <ul>
+   <li> W4995 Applied Machine Learning Spring https://www.cs.columbia.edu/~amueller/comsw4995s20/schedule/ </li>
+  <li>Cursos CS50, CS50-P, CS50-W, CS50-AI no edx.org</li>
   <li>
     UC Berkeley CS188 Intro to AI 2014 <br>
     <a href="http://ai.berkeley.edu/home.html">http://ai.berkeley.edu/home.html</a><br>
