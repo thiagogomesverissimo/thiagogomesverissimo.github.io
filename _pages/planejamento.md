@@ -1,10 +1,10 @@
 ---
 layout: archive
-title: "Planejamento"
+title: ""
 permalink: /planejamento/
 ---
 
-<table class="table table-bordered table-hover table-condensed">
+<table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
             <th>time</th>
@@ -23,19 +23,19 @@ permalink: /planejamento/
                 9:00-10:00
             </td>
             <td>
-                Leitura de Artigos (Cornell Method)
+                Artigos (Cornell Method)
             </td>
             <td>
             #
             </td>
             <td>
-                Leitura de Artigos (Cornell Method)
+                Artigos (Cornell Method)
             </td>
             <td>
             #
             </td>
             <td>
-                Leitura de Artigos (Cornell Method)
+                Artigos (Cornell Method)
             </td>
         </tr>
 
@@ -44,19 +44,20 @@ permalink: /planejamento/
                 14:00-15:00
             </td>
             <td>
-                Coursera Specialization: <b>IELTS Preparation</b>
+                <b>Coursera Specialization:</b><br> 
+                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a>
             </td>
             <td>
-                #
+                IME
+            </td>
+            <td>
+               STI Meeting
             </td>
             <td>
                #
             </td>
             <td>
-               #
-            </td>
-            <td>
-               #
+               STI Meeting
             </td>
         </tr>
 
@@ -66,21 +67,24 @@ permalink: /planejamento/
             </td>
 
             <td>
-                Coursera Specialization: Learn English: <b>Intermediate Grammar</b>
+                <b>Coursera Specialization:</b><br> 
+                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Learn English: Intermediate Grammar</a>
             </td>
 
             <td>
-                #
+                IME
             </td>
 
             <td>
-               #
+               <b>Coursera Specialization:</b><br> 
+               Statistics with Python
             </td>
+            
             <td>
                 #
             </td>
             <td>
-                #
+                STI Meeting
             </td>
         </tr>
 
@@ -89,19 +93,24 @@ permalink: /planejamento/
                 16:00-17:00
             </td>
             <td>
-                Coursera Specialization: <br><b> Statistics with Python</b> <br>(University of Michigan)
+                <b>Coursera Course:</b><br> 
+                <a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a>
             </td>
             <td>
-                Curso EDX: Practical Learning Analytics
+                <b>EDX course</b>:<br> 
+                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a>
             </td>
             <td>
-                Coursera Specialization: <b>Applied Data Science with Python </b>(University of Michigan)
+                <b>Coursera Specialization:</b><br>
+                Applied Data Science with Python
             </td>
             <td>
+                <b>Coursera Course:</b><br>
                 <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
             </td>
             <td>
-              #
+              <b>Coursera Specialization:</b><br> 
+              Coursera Specialization: Full-Stack Web Development with React
             </td>
         </tr>
 
@@ -111,19 +120,21 @@ permalink: /planejamento/
                 17:00-18:00
             </td>
             <td>
-                #
+                EEFE
             </td>
             <td>
-                ISSUES WORK
+                <a href="https://github.com/search?q=org%3Afflch+is%3Aissue+is%3Aopen">Issues FFLCH</a>
             </td>
             <td>
-                #
+                EEFE
             </td>
             <td>
               Livro: Aurelien Geron 
             </td>
             <td>
-                Coursera Specialization: <br> <b>Full-Stack Web Development with React</b> <br> (Hong Kong University of Science and Technology)
+                <b>Coursera Course:</b><br> 
+                <a href="https://www.coursera.org/learn/introduction-to-academic-writing"> Introduction to Academic Writing </a>
+                
             </td>
         </tr>
         
@@ -133,13 +144,13 @@ permalink: /planejamento/
                 18:00-19:00
             </td>
             <td>
-                #
+                EEFE
             </td>
             <td> 
-                ISSUES WORK
+                <a href="https://github.com/search?q=involves%3Athiagogomesverissimo+is%3Aissue+is%3Aopen">My Issues</a>
             </td>
             <td>
-                #
+                EEFE
             </td>
             <td>
                 Livro: Chollet
@@ -154,19 +165,20 @@ permalink: /planejamento/
                 19:00-20:00
             </td>
             <td>
-            #
+                EEFE
             </td>
             <td>
-            #
+            D
             </td>
             <td>
-            #
+                EEFE
             </td>
             <td>
-            #
+                Bandejao
             </td>
             <td>
-            #
+                <b>Coursera Course:</b><br> 
+                <a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a>
             </td>
         </tr>
 
@@ -175,10 +187,11 @@ permalink: /planejamento/
                 20:00-21:00
             </td>
             <td>
-                Cousera Algorithms in Java (sedgewick)
+                <b>Coursera Course:</b><br>  
+                <a href="https://www.coursera.org/learn/algorithms-part1/home/week/1">Algorithms in Java (sedgewick) </a>
             </td>
             <td>
-            #
+            D
             </td>
             <td>
                 <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
@@ -196,19 +209,22 @@ permalink: /planejamento/
                 21:00-22:00
             </td>
             <td>
-                Livro: Algorithms in Java (sedgewick)
+                <b>Livro:</b><br> 
+                Algorithms in Java (sedgewick)
             </td>
             <td>
                 <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
             </td>
             <td>
-                Livro Linear Algebra (Strang)
+                <b>Livro:</b><br>
+                Linear Algebra (Strang)
             </td>
             <td>
-                Livro Tibishirano Statistical 
+                <b>Livro:</b><br>
+                Tibishirano Statistical 
             </td>
             <td>
-            #
+            Aulas da Yoshiko (grafinhos)
             </td>
         </tr>
 
@@ -220,13 +236,15 @@ permalink: /planejamento/
             #
             </td>
             <td>
-                Livro Discrete Math (kenneth)
+                <b>Livro:</b><br>
+                Discrete Math (kenneth)
             </td>
             <td>
             #
             </td>
             <td>
-                Livro How to Prove It
+                <b>Livro:</b><br>
+                How to Prove It
             </td>
             <td>
             #
@@ -361,3 +379,24 @@ permalink: /planejamento/
   <li> Minitest 1: https://www.youtube.com/watch?v=Y0RicQeHEL4&list=PLPgcVM1hYvqCgBpQvdei05EJcS-z_JNgq</li>
   <li> MInitest 2: https://www.youtube.com/watch?v=b92zOs6Bfpk&list=PLPgcVM1hYvqDxwWyeZ-D-ca-8CCxXeTNV</li>
 </ul>
+
+
+
+<script type="text/javascript" defer>
+/*
+    window.onload = function() {
+       
+        document.getElementById("planejamento").hidden=true;
+        
+        var password = prompt("Please enter the password.");
+        while (password !== "xixi")
+        {
+            document.getElementById("planejamento").hidden=true;
+            var password = prompt("Please enter the password.");
+        }
+        document.getElementById("planejamento").hidden=false;
+
+    }
+/*
+
+</script>
