@@ -35,7 +35,8 @@ permalink: /planejamento/
             #
             </td>
             <td>
-                Artigos (Cornell Method)
+                <b>Livro</b>:<br>
+                Livro Ielts
             </td>
         </tr>
 
@@ -156,7 +157,8 @@ permalink: /planejamento/
                 Livro: Chollet
             </td>
             <td>
-                #
+                <b>Coursera Course:</b><br> 
+                <a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a>
             </td>
         </tr>
 
@@ -177,8 +179,7 @@ permalink: /planejamento/
                 Bandejao
             </td>
             <td>
-                <b>Coursera Course:</b><br> 
-                <a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a>
+                Bandejao
             </td>
         </tr>
 
