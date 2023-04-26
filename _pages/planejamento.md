@@ -29,7 +29,8 @@ permalink: /planejamento/
             #
             </td>
             <td>
-                Artigos (Cornell Method)
+                <b>Livro</b><br>
+                American English File
             </td>
             <td>
             #
@@ -55,7 +56,8 @@ permalink: /planejamento/
                STI Meeting
             </td>
             <td>
-               #
+               <b>Livro:</b>
+               <br> Windows Group Policy - Jordan Krause
             </td>
             <td>
                STI Meeting
@@ -82,7 +84,10 @@ permalink: /planejamento/
             </td>
             
             <td>
-                #
+                <b>Livro:</b><br>
+                Active Directory
+                <b>Livro:</b><br>
+                Implementing Samba
             </td>
             <td>
                 STI Meeting
@@ -130,7 +135,8 @@ permalink: /planejamento/
                 EEFE
             </td>
             <td>
-              Livro: Aurelien Geron 
+              Aulas da Yoshiko (grafinhos)
+              
             </td>
             <td>
                 <b>Coursera Course:</b><br> 
@@ -154,7 +160,7 @@ permalink: /planejamento/
                 EEFE
             </td>
             <td>
-                Livro: Chollet
+                Aulas de Rede Cisco
             </td>
             <td>
                 <b>Coursera Course:</b><br> 
@@ -201,7 +207,8 @@ permalink: /planejamento/
                 <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>
             </td>
             <td>
-            Aulas da Yoshiko (grafinhos)
+              <b>Livro:</b><br> 
+              Chollet
             </td>
         </tr>
 
@@ -214,7 +221,7 @@ permalink: /planejamento/
                 Algorithms in Java (sedgewick)
             </td>
             <td>
-                <a href="https://www.engvid.com/english-lessons/"> Engvid </a>
+                <a href="https://www.engvid.com/english-lessons/"> Engvid </a> or Cambly
             </td>
             <td>
                 <b>Livro:</b><br>
@@ -225,7 +232,7 @@ permalink: /planejamento/
                 Tibishirano Statistical 
             </td>
             <td>
-            Aulas da Yoshiko (grafinhos)
+                <b>Livro:</b><br> Aurelien Geron 
             </td>
         </tr>
 
@@ -257,10 +264,9 @@ permalink: /planejamento/
 
 <br>
 
-<h3>Removidos da programação</h3>
+<h3>Lista prioritária</h3>
 
 - <a href="#tutorial">Tutoriais técnico na web</a>
-- Curso cisco (google drive) 
 - Livro vermelho Cisco
 - <a href="#conferenciac">Assistir Conferência Cientifíca</a>
 - <a href="#conferenciat">Assistir Evento Técnico</a>
