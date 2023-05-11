@@ -56,8 +56,7 @@ permalink: /planejamento/
                STI Meeting
             </td>
             <td>
-               <b>Livro:</b>
-               <br> Windows Group Policy - Jordan Krause
+                Inglês IME
             </td>
             <td>
                STI Meeting
@@ -85,9 +84,15 @@ permalink: /planejamento/
             
             <td>
                 <b>Livro:</b><br>
-                Active Directory
+                Mastering Active Directory
+                
+                <br><br>
                 <b>Livro:</b><br>
                 Implementing Samba
+
+                <br><br>
+                <b>Livro:</b>
+                <br> Windows Group Policy - Jordan Krause
             </td>
             <td>
                 STI Meeting
