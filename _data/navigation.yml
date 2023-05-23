@@ -4,8 +4,11 @@ main:
   - title: "Posts"
     url: /
 
-#  - title: "Apresentações"
-#    url: /talks/    
+  - title: "Talks"
+    url: /talks/    
+
+  - title: "Publications"
+    url: /publications/    
 
 #  - title: "Ensino"
 #    url: /teaching/    
@@ -16,8 +19,8 @@ main:
 #  - title: "Publicações"
 #    url: /publications/
     
-  - title: "Currículo"
-    url: /curriculo/
+  - title: "Resume"
+    url: /resume/
     
 #  - title: "Guide"
 #    url: /markdown/

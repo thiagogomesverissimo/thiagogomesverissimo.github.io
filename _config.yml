@@ -6,11 +6,11 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-locale                   : "pt-BR"
+locale                   : "en"
 title                    : "Thiago Gomes Veríssimo"
 title_separator          : "-"
 name                     : &name "Thiago Gomes Verissimo"
-description              : &description "meus rascunhos"
+description              : &description "My drafts"
 url                      : ""
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "thiagogomesverissimo/thiagogomesverissimo.github.io"

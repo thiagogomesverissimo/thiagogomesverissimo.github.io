@@ -1,3 +1,12 @@
+---
+layout: archive
+title: "Talks"
+permalink: /talks/
+author_profile: true
+redirect_from:
+  - /slides
+---
+
 **Template USP em projetos Laravel**
 <ul>
   <li> 24/05/2019: Hangout com grupo USPdev
@@ -39,6 +48,3 @@
     
   </li>
 </ul>
-
-
-
