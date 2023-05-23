@@ -4,6 +4,7 @@ title: ""
 permalink: /planejamento/
 ---
 
+
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
@@ -50,6 +51,10 @@ permalink: /planejamento/
                     <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
                 
                     <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
+
+                    <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
+
+                    <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
                 </ul>
             </td>
             <td>
@@ -93,9 +98,12 @@ permalink: /planejamento/
                 <ul>
                     <li><a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a></li>
                     <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
-                </ul>
-
-
+                    <li>
+                        <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
+                            Mathematics for Machine Learning
+                        </a>
+                    </li>
+                </ul>  
             </td>
             
             <td>
@@ -105,8 +113,6 @@ permalink: /planejamento/
                     <li> Livro:Windows Group Policy - Jordan Krause</li>
                 </ul>
                 
-                
-
             </td>
             <td>
                 STI Meeting
@@ -139,18 +145,34 @@ permalink: /planejamento/
                     <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a></li>
                 </ul>
             </td>
-            <td>
-                
-            </td>
+
             <td>
                 <ul>
                     <li><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></li>
                     <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
+                    <li><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">
+                        CS50's Introduction to Artificial Intelligence with Python
+                        </a>
+                    </li>
+                </ul>              
+            </td>
+
+            <td>
+                <ul>
+                    <li>Aulas de Rede Cisco</li>
+                    <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
+                    <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
+                    <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
+                    <li><a href="https://www.coursera.org/specializations/computer-communications#courses">Computer Communications</a></li>
                 </ul>
             </td>
+
             <td>
-              <b>Coursera Specialization:</b><br> 
-              Coursera Specialization: Full-Stack Web Development with React
+                <ul>
+                    <li>Aulas da Yoshiko (grafinhos)</li>
+                    <li><a href="https://canvas.dartmouth.edu/courses/39351/pages">Graph Theory Dartmouth</a></li>
+                    <li><a href="https://learning.edx.org/course/course-v1:UCSanDiegoX+ALGS202x+2T2017/home">Graph Algorithms</a></li>
+                </ul>
             </td>
         </tr>
 
@@ -168,12 +190,29 @@ permalink: /planejamento/
             <td>
                 EEFE
             </td>
+
             <td>
-              Aulas da Yoshiko (grafinhos)
-              
+                <a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a>
             </td>
+
             <td>
-                
+                <ul>
+                    <li>
+                        <a href="https://www.coursera.org/learn/what-is-a-proof/home/">
+                            Introduction to Discrete Mathematics for Computer Science
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.coursera.org/learn/combinatorics/home/">
+                            Combinatorics and Probability
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.coursera.org/learn/graphs/home/">
+                            Introduction to Graph Theory
+                        </a>
+                    </li>
+                </ul>
             </td>
         </tr>
         
@@ -192,16 +231,10 @@ permalink: /planejamento/
                 EEFE
             </td>
             <td>
-                <ul>
-                    <li>Aulas de Rede Cisco</li>
-                    <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
-                    <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
-                    <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
-                    <li><a href="https://www.coursera.org/specializations/computer-communications#courses">Computer Communications</a></li>
-                </ul>
+                #
             </td>
             <td>
-                
+                #
             </td>
         </tr>
 
@@ -231,21 +264,40 @@ permalink: /planejamento/
                 20:00-21:00
             </td>
             <td>
-                <b>Coursera Course:</b><br>  
-                <a href="https://www.coursera.org/learn/algorithms-part1/home/week/1">Algorithms in Java (sedgewick) </a>
+                <ul>
+                    <li>
+                        <a href="https://www.coursera.org/learn/algorithms-part1/home/">
+                            Algorithms, Part I
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.coursera.org/learn/algorithms-part2/">
+                            Algorithms, Part II
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.coursera.org/learn/analysis-of-algorithms/home">
+                            Analysis of Algorithms
+                        </a>
+                    </li>
+                </ul>
             </td>
             <td>
             D
             </td>
-            <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
-            </td>
+
             <td>
                 <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>
             </td>
+
             <td>
-              <b>Livro:</b><br> 
-              Chollet
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
+            </td>
+
+            <td>
+                #
             </td>
         </tr>
 
@@ -254,22 +306,30 @@ permalink: /planejamento/
                 21:00-22:00
             </td>
             <td>
-                <b>Livro:</b><br> 
-                Algorithms in Java (sedgewick)
+                <ul>
+                    <li>Livro: Algorithms in Java (sedgewick)</li>
+                    <li>Livro: An Introduction to the Analysis of Algorithms (sedgewick)</li>
+                </ul>
             </td>
             <td>
                 <a href="https://www.engvid.com/english-lessons/"> Engvid </a> or Cambly
             </td>
+
+            <td>
+                <ul>
+                    <li>Livro: Tibishirano</li>
+                    <li>Livro: Chollet</li>
+                    <li>Livro: Aurelien Geron </li>
+                </ul>
+            </td>
+
             <td>
                 <b>Livro:</b><br>
                 Linear Algebra (Strang)
             </td>
+
             <td>
-                <b>Livro:</b><br>
-                Tibishirano Statistical 
-            </td>
-            <td>
-                <b>Livro:</b><br> Aurelien Geron 
+                #
             </td>
         </tr>
 
@@ -301,17 +361,140 @@ permalink: /planejamento/
 
 <br>
 
-<h3>Lista prioritária</h3>
+<h3>cursos ou especializações na fila de espera</h3>
 
-- <a href="#tutorial">Tutoriais técnico na web</a>
-- Livro vermelho Cisco
-- <a href="#conferenciac">Assistir Conferência Cientifíca</a>
-- <a href="#conferenciat">Assistir Evento Técnico</a>
-- Curso: Computer Science: Programming with a Purpose
-- Especialização: Web Design for Everybody
+<ul>
+
+    <li>
+        <a href="https://www.coursera.org/specializations/software-engineering#courses">
+            Software Engineering
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/specializations/logic-critical-thinking-duke">
+            Introduction to Logic and Critical Thinking
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/specializations/web-design">
+            Web Design for Everybody: Basics of Web Development & Coding
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/specializations/pcdp">
+            Parallel, Concurrent, and Distributed Programming in Java
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://www.coursera.org/specializations/database-systems">
+            Database systems
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/specializations/c-programming">
+            Introductory C Programming
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://www.coursera.org/specializations/web-applications">
+            Web Applications for Everybody
+        </a>
+    </li>
+
+
+    <li>
+        <a href="https://www.coursera.org/specializations/gis-mapping-spatial-analysis">
+            GIS, Mapping, and Spatial Analysis
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/processamento-neural-linguagem-natural-em-portugues-i/home/">
+            Processamento Neural de Linguagem Natural em Português I
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/cs-programming-java/home/">
+            Computer Science: Programming with a Purpose
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/modern-world/home">
+            The Modern World, Part One: Global History from 1760 to 1910
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/historia-arte-prehistorico-renacimiento/home">
+            Historia del Arte: Del Arte Prehistórico al Renacimiento
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/activism-social-movements/home">
+            ART of the MOOC: Activism and Social Movements
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/music-theory/home/">
+            Getting Started With Music Theory
+        </a>
+    </li>
+
+
+
+    <li>
+        <a href="https://www.coursera.org/learn/what-is-a-proof/home">
+            Mathematical Thinking in Computer Science
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/lab-poo-parte-1/home/">
+            Laboratório de Programação Orientada a Objetos - Parte 1
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/intro-to-deep-learning">
+            Introduction to Deep Learning
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/arduino/home/">
+            Building Arduino robots and devices
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/big-data-introduction">
+            Introduction to Big Data
+        </a>
+    </li>
+
+    <li>
+        <a href="https://www.coursera.org/learn/algorithmic-toolbox/home">
+            Algorithmic Toolbox
+        </a>
+    </li>
+
+</ul>
+
+
 - Livros Moodle + curso moodle no moodle academy
-- The Modern World, Part One: Global History from 1760 to 1910
-- curso processamento de texto ime coursera
+
 
 <br>
 <h3>Seleção de Eventos Científicos</h3>
@@ -345,38 +528,6 @@ permalink: /planejamento/
 </ul>
 
 <br>
-
-<br>
-<h3>Especializações Coursera</h3>
-
-<ul>
-  <li>software engineering - Hong Kong University </li>
-  <li><b>Introductory C Programming </b> (duke university)</li>
-  <li><b>Data Structures and Algorithms </b> (University of California San Diego)</li>
-  <li><b>Parallel, Concurrent, and Distributed Programming in Java </b> (Rice University)</li>
-  <li><b>GIS, Mapping, and Spatial Analysis</b> (University of Toronto)</li>
-  <li><b>Mathematics for Machine Learning</b> (Imperial College London)</li>
-  <li><a href="https://www.coursera.org/learn/discrete-mathematics/home/welcome">Discrete Mathematics </a> </li>
-  <li><b>Database systems</b> (Universidad Nacional Autónoma de México)</li>
-  <li><b>Introduction to Discrete Mathematics for Computer Science</b> (HSE University)</li>
-  <li><b>Advanced Machine Learning</b> (HSE University)</li>
-  <li>Introduction to Logic and Critical Thinking</li>
-  
-</ul>
-
-<br>
-<h3>Cursos Avulsos do Coursera</h3>
-
-<ul>
-  <li><b>Laboratório de Programação Orientada a Objetos</b> - Parte 1 (Universidade de São Paulo)</li>
-  <li><b>Laboratório de Programação Orientada a Objetos</b> - Parte 2 (Universidade de São Paulo)</li>
-  <li><b>Introduction to Big Data</b> (University of California San Diego)</li>
-  <li><b>Building Arduino robots and devices</b> (Moscow Institute of Physics and Technology)</li>
-  <li>Analysis of Algorithms - prof. Sedgewick (Princeton University)</li>
-  <li>ART of the MOOC: Activism and Social Movements</li>
-</ul>
-
-<br>
 <h3>Cursos Avulsos na web</h3>
 
 <ul>
@@ -407,23 +558,3 @@ permalink: /planejamento/
   <li> MInitest 2: https://www.youtube.com/watch?v=b92zOs6Bfpk&list=PLPgcVM1hYvqDxwWyeZ-D-ca-8CCxXeTNV</li>
 </ul>
 
-
-
-<script type="text/javascript" defer>
-/*
-    window.onload = function() {
-       
-        document.getElementById("planejamento").hidden=true;
-        
-        var password = prompt("Please enter the password.");
-        while (password !== "xixi")
-        {
-            document.getElementById("planejamento").hidden=true;
-            var password = prompt("Please enter the password.");
-        }
-        document.getElementById("planejamento").hidden=false;
-
-    }
-/*
-
-</script>
