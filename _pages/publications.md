@@ -7,7 +7,6 @@ redirect_from:
   - /articles
 ---
 
-
 **2017**
 <ul>
  <li>

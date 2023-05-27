@@ -12,15 +12,9 @@ main:
 
 #  - title: "Ensino"
 #    url: /teaching/    
-    
-#  - title: "Portfólio"
-#    url: /portfolio/
 
-#  - title: "Publicações"
-#    url: /publications/
-    
+  - title: "Contributions"
+    url: /contributions/
+
   - title: "Resume"
     url: /resume/
-    
-#  - title: "Guide"
-#    url: /markdown/
