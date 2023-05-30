@@ -185,7 +185,10 @@ permalink: /planejamento/
                 EEFE
             </td>
             <td>
-                <a href="https://github.com/search?q=org%3Afflch+is%3Aissue+is%3Aopen">Issues FFLCH</a>
+                <ul>
+                    <li><a href="https://github.com/search?q=involves%3Athiagogomesverissimo+is%3Aissue+is%3Aopen">My Issues</a></li>
+                    <li><a href="https://github.com/search?q=org%3Afflch+is%3Aissue+is%3Aopen">Issues FFLCH</a></li>
+                </ul>
             </td>
             <td>
                 EEFE
@@ -225,7 +228,8 @@ permalink: /planejamento/
                 EEFE
             </td>
             <td> 
-                <a href="https://github.com/search?q=involves%3Athiagogomesverissimo+is%3Aissue+is%3Aopen">My Issues</a>
+                <a href="https://saladeaula.nic.br">Curso IPV6</a>
+                
             </td>
             <td>
                 EEFE
