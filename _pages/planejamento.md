@@ -121,11 +121,11 @@ permalink: /planejamento/
             <td>
                 <ul>
                     <li><a href="https://saladeaula.nic.br">Curso IPV6</a></li>
+                    <li>Aulas de Rede Cisco (udemy)</li>
                     <li>Livro: Mastering Active Directory</li>
                     <li>Livro: Implementing Samba </li>
                     <li>Livro:Windows Group Policy - Jordan Krause</li>
                     <li><a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a></li>
-                    <li>Aulas de Rede Cisco (udemy)</li>
                     <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
                     <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
                     <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
