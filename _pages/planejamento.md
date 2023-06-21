@@ -21,24 +21,30 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                9:00-10:00
+                Manhã Home
             </td>
             <td>
-                Artigos (Cornell Method)
-            </td>
-            <td>
-            #
-            </td>
-            <td>
-                <b>Livro</b><br>
-                American English File
+                Artigos
             </td>
             <td>
             #
             </td>
             <td>
-                <b>Livro</b>:<br>
-                Livro Ielts
+                <ul>
+                    <li>American English File</li>
+                </ul>
+                
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+                <ul>
+                    <li>Livro Ielts</li>
+                    <li>Livro Toelf</li>
+                </ul>
+                
+                
             </td>
         </tr>
 
@@ -64,7 +70,10 @@ permalink: /planejamento/
                STI Meeting
             </td>
             <td>
-                Inglês IME
+                <ul>
+                    <li><a href="https://github.com/search?q=involves%3Athiagogomesverissimo+is%3Aissue+is%3Aopen">My Issues</a></li>
+                    <li><a href="https://github.com/search?q=org%3Afflch+is%3Aissue+is%3Aopen">Issues FFLCH</a></li>
+                </ul>
             </td>
             <td>
                STI Meeting
@@ -73,7 +82,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                15:00-16:00
+                15:00-17:00
             </td>
 
             <td>
@@ -87,44 +96,7 @@ permalink: /planejamento/
                     <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
 
                     <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
-                </ul>
-            </td>
 
-            <td>
-                IME
-            </td>
-
-            <td>
-                <ul>
-                    <li><a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a></li>
-                    <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
-                    <li>
-                        <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
-                            Mathematics for Machine Learning
-                        </a>
-                    </li>
-                </ul>  
-            </td>
-            
-            <td>
-                <ul>
-                    <li>Livro: Mastering Active Directory</li>
-                    <li>Livro: Implementing Samba </li>
-                    <li> Livro:Windows Group Policy - Jordan Krause</li>
-                </ul>
-                
-            </td>
-            <td>
-                STI Meeting
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                16:00-17:00
-            </td>
-            <td>
-                <ul>
                     <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
               
                     <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
@@ -137,8 +109,8 @@ permalink: /planejamento/
                     <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
                     <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
                 </ul>
-
             </td>
+
             <td>
                 <ul>
                     <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a></li>
@@ -148,28 +120,61 @@ permalink: /planejamento/
 
             <td>
                 <ul>
-                    <li><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></li>
-                    <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
-                    <li><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">
-                        CS50's Introduction to Artificial Intelligence with Python
-                        </a>
-                    </li>
-                </ul>              
-            </td>
-
-            <td>
-                <ul>
-                    <li>Aulas de Rede Cisco</li>
+                    <li><a href="https://saladeaula.nic.br">Curso IPV6</a></li>
+                    <li>Livro: Mastering Active Directory</li>
+                    <li>Livro: Implementing Samba </li>
+                    <li>Livro:Windows Group Policy - Jordan Krause</li>
+                    <li><a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a></li>
+                    <li>Aulas de Rede Cisco (udemy)</li>
                     <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
                     <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
                     <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
                     <li><a href="https://www.coursera.org/specializations/computer-communications#courses">Computer Communications</a></li>
                 </ul>
             </td>
-
+            
             <td>
                 <ul>
+                    <li><a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a></li>
+                    <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
+                    <li>
+                        <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
+                            Mathematics for Machine Learning
+                        </a>
+                    </li>
+                    <li><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></li>
+                    <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
+                    <li><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">
+                        CS50's Introduction to Artificial Intelligence with Python
+                        </a>
+                    </li>
+                </ul>  
+
+                
+            </td>
+            <td>
+                <ul>
+                    <li>
+                        <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/video_galleries/video-lectures/">
+                            MIT - Introduction to Discrete Mathematics
+                        </a> + book
+                    </li>
                     <li>Aulas da Yoshiko (grafinhos)</li>
+                    <li>
+                        <a href="https://www.coursera.org/learn/what-is-a-proof/home/">
+                            Introduction to Discrete Mathematics for Computer Science
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.coursera.org/learn/combinatorics/home/">
+                            Combinatorics and Probability
+                    </a>
+                    </li>
+                    <li>
+                        <a href="https://www.coursera.org/learn/graphs/home/">
+                            Introduction to Graph Theory
+                        </a>
+                    </li>
                     <li><a href="https://canvas.dartmouth.edu/courses/39351/pages">Graph Theory Dartmouth</a></li>
                     <li><a href="https://learning.edx.org/course/course-v1:UCSanDiegoX+ALGS202x+2T2017/home">Graph Algorithms</a></li>
                 </ul>
@@ -179,112 +184,26 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                17:00-18:00
-            </td>
-            <td>
-                EEFE
-            </td>
-            <td>
-                <ul>
-                    <li><a href="https://github.com/search?q=involves%3Athiagogomesverissimo+is%3Aissue+is%3Aopen">My Issues</a></li>
-                    <li><a href="https://github.com/search?q=org%3Afflch+is%3Aissue+is%3Aopen">Issues FFLCH</a></li>
-                </ul>
-            </td>
-            <td>
-                EEFE
-            </td>
-
-            <td>
-                <a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a>
-            </td>
-
-            <td>
-                <ul>
-                    <li>
-                        <a href="https://www.coursera.org/learn/what-is-a-proof/home/">
-                            Introduction to Discrete Mathematics for Computer Science
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.coursera.org/learn/combinatorics/home/">
-                            Combinatorics and Probability
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.coursera.org/learn/graphs/home/">
-                            Introduction to Graph Theory
-                        </a>
-                    </li>
-                </ul>
-            </td>
-        </tr>
-        
-        
-        <tr>
-            <td>
-                18:00-19:00
-            </td>
-            <td>
-                EEFE
-            </td>
-            <td> 
-                <a href="https://saladeaula.nic.br">Curso IPV6</a>
-                
-            </td>
-            <td>
-                EEFE
-            </td>
-            <td>
-                #
-            </td>
-            <td>
-                #
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                19:00-20:00
-            </td>
-            <td>
-                EEFE
-            </td>
-            <td>
-            D
-            </td>
-            <td>
-                EEFE
-            </td>
-            <td>
-                #
-            </td>
-            <td>
-                #
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                20:00-21:00
+                20:00-22:00 <b>Book Video Courses</b>
             </td>
             <td>
                 <ul>
                     <li>
                         <a href="https://www.coursera.org/learn/algorithms-part1/home/">
                             Algorithms, Part I
-                        </a>
+                        </a> + Livro: Algorithms in Java (sedgewick)
                     </li>
 
                     <li>
                         <a href="https://www.coursera.org/learn/algorithms-part2/">
-                            Algorithms, Part II
-                        </a>
+                            Algorithms, Part II 
+                        </a> + Livro: Algorithms in Java (sedgewick)
                     </li>
 
                     <li>
                         <a href="https://www.coursera.org/learn/analysis-of-algorithms/home">
                             Analysis of Algorithms
-                        </a>
+                        </a> + Livro: An Introduction to the Analysis of Algorithms (sedgewick)
                     </li>
                 </ul>
             </td>
@@ -293,43 +212,17 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>
-            </td>
-
-            <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a>
-            </td>
-
-            <td>
-                #
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                21:00-22:00
-            </td>
-            <td>
                 <ul>
-                    <li>Livro: Algorithms in Java (sedgewick)</li>
-                    <li>Livro: An Introduction to the Analysis of Algorithms (sedgewick)</li>
-                </ul>
-            </td>
-            <td>
-                <a href="https://www.engvid.com/english-lessons/"> Engvid </a> or Cambly
-            </td>
-
-            <td>
-                <ul>
-                    <li>Livro: Tibishirano</li>
+                    <li>
+                        <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano
+                    </li>
                     <li>Livro: Chollet</li>
                     <li>Livro: Aurelien Geron </li>
                 </ul>
             </td>
 
             <td>
-                <b>Livro:</b><br>
-                Linear Algebra (Strang)
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a> + Linear Algebra (Strang)
             </td>
 
             <td>
@@ -339,21 +232,19 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                22:00+
+                Noite Home
             </td>
             <td>
-            #
+                cambly
             </td>
             <td>
-                <b>Livro:</b><br>
-                Discrete Math (kenneth)
+
             </td>
             <td>
-            #
+                cambly
             </td>
             <td>
-                <b>Livro:</b><br>
-                How to Prove It
+
             </td>
             <td>
             #
