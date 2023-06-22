@@ -81,6 +81,15 @@ redirect_from:
 </div>
 
 <br>
+**2008**
+
+<div>
+ Estabilidade da calibração do sistema PIXE/SP e intercomparação com uma XRF-ED
+  <a href="{{base_path}}/files/publications/2008/CBMET.docx"><i class="fa fa-file-pdf"></i></a>
+  <br><i>XV CBMET - Congresso Brasileiro de Meteorologia - São Paulo - 2008</i>
+</div>
+
+<br>
 **2007**
 
 <div>
@@ -88,3 +97,39 @@ redirect_from:
   <a href="{{base_path}}/files/publications/2007/siicusp2007.pdf"><i class="fa fa-file-pdf"></i></a>
   <br><i>Simpósio Internacional de Iniciação Científica e Tecnológica da USP - 2007 </i>
 </div>
+
+## Reviews
+
+**2023**
+<ul>
+ <li>
+    Iniciação Científica - Centro Universitário Sagrado Coração
+    <a href="{{base_path}}/files/reviews/2023/CertificadoIC-Unisagrado-2023.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+</ul>
+
+<br>
+
+## Academic Advising
+
+**2022**
+<ul>
+ <li>
+    Dropout Dashboard: uma Aplicação Web para Predição do Risco de Evasão em Cursos do Ensino Superior 
+    <br>Rafael da Silva Tomaz
+    <a href="{{base_path}}/files/advising/2022/Thiago.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+</ul>
+
+<br>
+
+## Academic Committees
+
+ **2022**
+<ul>
+ <li>
+    Trabalho de Conclusão de Curso - Escola de Comunicações e Artes da Universidade de São Paulo
+    <br>Isabele Rosa do Anjos
+    <a href="{{base_path}}/files/committees/2022/isa.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+</ul>

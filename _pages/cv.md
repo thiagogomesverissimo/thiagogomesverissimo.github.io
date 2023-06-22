@@ -15,8 +15,17 @@ redirect_from:
 ## Formação Acadêmica
 
 <ul>
+  <li> 2022: MBA - Especialista em Data Science e Analytics. 
+     <br>Avaliação da evasão universitária com técnicas de Aprendizagem de Máquina
+     <a href="{{base_path}}/files/publications/2022/tcc.pdf"><i class="fa fa-file-pdf"></i></a>
+  </li>
   <li> 2016: Mestre em Física, Universidade de São Paulo.
     <a href="http://www.teses.usp.br/teses/disponiveis/43/43134/tde-20072016-161023/publico/mestradoThiagoGomesVerissimo2016IFUSP.pdf"><i class="fa fa-file-pdf"></i></a>
+    <br> 
+    <a href="https://doi.org/10.11606/D.43.2016.tde-20072016-161023">
+      https://doi.org/10.11606/D.43.2016.tde-20072016-161023
+    </a>
+    
   </li>
   <li>
     2009: Graduação em Licenciatura em Física, Universidade de São Paulo.
@@ -24,6 +33,16 @@ redirect_from:
 </ul>
 
 ## Courses taken
+
+**2023**
+
+<ul>
+
+  <li> PHP Programming (Foundation)
+    <a href="{{base_path}}/files/certificados/cursos/2023/Thiago_648407.pdf"><i class="fa fa-file-pdf"></i></a>
+  </li>
+
+</ul>
 
 **2021**
 

@@ -40,3 +40,15 @@ Data de submissão do formulário em formato brasileiro:
 {{ created |date("d/m/Y") }}
 {% endraw %}
 {% endhighlight %}
+
+
+Mostrar a soma dos itens composite no webform
+
+{% highlight php %}
+{% raw %}
+ {% for item in data.somacomposite %}
+      {% set sum = item.somac + sum ?? 0 %}
+  {% if loop.last %}{{ sum }}{% endif %}
+ {% endfor %}
+{% endraw %}
+{% endhighlight %}

@@ -139,3 +139,70 @@ foreach ($nodes as $node) {
 }
 {% endhighlight %}
 
+## Manipulating nodes usign Api: 
+
+Nodes are fundamental entities that represent individual pieces of content such as articles, pages, blog posts, and more. The Drupal API provides a powerful set of functions and methods to manipulate nodes programmatically. 
+
+Attach a file to the node:
+{% highlight bash %}
+<?php 
+
+use \Drupal\node\Entity\Node;
+use \Drupal\file\Entity\File;
+
+$data = file_get_contents('/home/thiago/sabrina.pdf');
+$file = file_save_data($data, 'public://sabrina.pdf', FILE_EXISTS_REPLACE);
+
+$node = Node::create([
+    'type' => 'livros',
+    'title' => 'Teste com Sabrina',
+    'field_tombo' => 123,
+    'field_arquivo' => [
+        'target_id' => $file->id(),
+        'alt' => 'Pdf com o nome da sabrina',
+        'title' => 'Sabrina pdf'
+    ],
+]);
+
+$node->save();
+{% endhighlight %}
+
+Attach multiple files to the node:
+{% highlight bash %}
+<?php 
+
+use \Drupal\node\Entity\Node;
+use \Drupal\file\Entity\File;
+
+$data1 = file_get_contents('/home/thiago/sabrina1.pdf');
+$data2 = file_get_contents('/home/thiago/sabrina2.pdf');
+
+
+$file1 = file_save_data($data1, 'public://sabrina1.pdf', FILE_EXISTS_REPLACE);
+$file2 = file_save_data($data2, 'public://sabrina2.pdf', FILE_EXISTS_REPLACE);
+
+
+$node = Node::create([
+    'type' => 'livros',
+    'title' => 'Teste com Sabrina 2 arquivos',
+    'field_tombo' => 123,
+    
+    'field_arquivo' => [
+        [
+            'target_id' => $file1->id(),
+            'alt' => 'Pdf 1 com o nome da sabrina',
+            'title' => 'Sabrina 1 pdf'
+        ],
+        [
+            'target_id' => $file2->id(),
+            'alt' => 'Pdf 2 com o nome da sabrina',
+            'title' => 'Sabrina 2 pdf'
+        ],
+    ],
+    
+
+]);
+
+$node->save();
+{% endhighlight %}
+
