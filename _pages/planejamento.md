@@ -115,6 +115,12 @@ permalink: /planejamento/
                 <ul>
                     <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a></li>
                     <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a></li>
+
+                    <li>
+                        <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">
+                            Cálculo MIT
+                        </a>
+                    </li>
                 </ul>
             </td>
 
@@ -198,6 +204,12 @@ permalink: /planejamento/
                         <a href="https://www.coursera.org/learn/algorithms-part2/">
                             Algorithms, Part II 
                         </a> + Livro: Algorithms in Java (sedgewick)
+                    </li>
+         
+                    <li>
+                        <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
+                            Algorithms MIT
+                        </a>
                     </li>
 
                     <li>
