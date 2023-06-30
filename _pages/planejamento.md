@@ -142,6 +142,7 @@ permalink: /planejamento/
             <td>
                 <ul>
                     <li><a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a></li>
+                    <li><a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/video_galleries/lecture-videos/">Statistic MIT</a></li>
                     <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
                     <li>
                         <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
