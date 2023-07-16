@@ -4,6 +4,167 @@ title: ""
 permalink: /planejamento/
 ---
 
+<table id="planejamento" class="table table-bordered table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>time</th>
+            <th>seg</th>
+            <th>ter</th>
+            <th>qua</th>
+            <th>qui</th>
+            <th>sex</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <tr>
+            <td>
+                Manhã Home
+            </td>
+            <td>
+                Artigos
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+               
+            </td>
+            <td>
+            #
+            </td>
+            <td>
+                Livro Ielts
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                14:00-15:00
+            </td>
+            <td>
+                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a>
+            </td>
+            <td>
+                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a> <br>+<br>
+                American English File
+            </td>
+            <td>
+               <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
+            </td>
+            <td>
+                STI Laravel
+            </td>
+            <td>
+                STI Infra
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                15:00-16:00
+            </td>
+            <td>
+                <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
+                    MIT Algorithms
+                </a>
+            </td>
+            <td>
+                <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
+                    MIT Automatos
+                </a>
+            </td>
+            <td>
+               Aulas de Rede Cisco + ipv6
+            </td>
+            <td>
+                STI Moodle
+            </td>
+            <td>
+                STI infra
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                16:00-17:00
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+                <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/video_galleries/video-lectures/">
+                    MIT - Mathematics for Computer Science (Discrete Mathematics)
+                </a>
+            </td>
+
+            <td>
+                
+            </td>
+            
+            <td>
+                
+            </td>
+            <td>
+               Livro do Aurélien
+            </td>
+        </tr>
+
+
+        <tr>
+            <td>
+                20:00-22:00
+            </td>
+            <td>
+                <a href="https://www.coursera.org/learn/algorithms-part1/home/">
+                            Algorithms, Part I
+                </a> + Livro: Algorithms in Java (sedgewick)
+            </td>
+            <td>
+            D
+            </td>
+
+            <td>
+                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano
+            </td>
+
+            <td>
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a> + Linear Algebra (Strang)
+            </td>
+
+            <td>
+                Livro do Aurélien
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Noite Home
+            </td>
+            <td>
+                cambly
+            </td>
+            <td>
+
+            </td>
+            <td>
+                cambly
+            </td>
+            <td>
+
+            </td>
+            <td>
+            #
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+<h2>Fila</h2>
 
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
@@ -31,7 +192,7 @@ permalink: /planejamento/
             </td>
             <td>
                 <ul>
-                    <li>American English File</li>
+                    <li></li>
                 </ul>
                 
             </td>
@@ -87,7 +248,7 @@ permalink: /planejamento/
 
             <td>
                 <ul>
-                    <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a></li>
+                    <li></li>
 
                     <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
 
@@ -127,7 +288,7 @@ permalink: /planejamento/
             <td>
                 <ul>
                     <li><a href="https://saladeaula.nic.br">Curso IPV6</a></li>
-                    <li>Aulas de Rede Cisco (udemy)</li>
+                    <li> (udemy)</li>
                     <li>Livro: Mastering Active Directory</li>
                     <li>Livro: Implementing Samba </li>
                     <li>Livro:Windows Group Policy - Jordan Krause</li>
@@ -141,7 +302,7 @@ permalink: /planejamento/
             
             <td>
                 <ul>
-                    <li><a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a></li>
+                    <li></li>
                     <li><a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/video_galleries/lecture-videos/">Statistic MIT</a></li>
                     <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
                     <li>
@@ -162,9 +323,7 @@ permalink: /planejamento/
             <td>
                 <ul>
                     <li>
-                        <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/video_galleries/video-lectures/">
-                            MIT - Introduction to Discrete Mathematics
-                        </a> + book
+
                     </li>
                     <li>Aulas da Yoshiko (grafinhos)</li>
                     <li>
@@ -208,9 +367,7 @@ permalink: /planejamento/
                     </li>
          
                     <li>
-                        <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
-                            Algorithms MIT
-                        </a>
+                       
                     </li>
 
                     <li>
