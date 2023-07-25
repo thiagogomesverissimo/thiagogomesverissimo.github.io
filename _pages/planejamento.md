@@ -45,10 +45,13 @@ permalink: /planejamento/
             </td>
             <td>
                 <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a>
+                <br>+<br>
+                American English File
             </td>
             <td>
-                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a> <br>+<br>
-                American English File
+                <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/"> Cálculo 1</a>
+                <br>+<br>
+                <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/"> Cálculo 2 </a>
             </td>
             <td>
                <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
@@ -215,6 +218,8 @@ permalink: /planejamento/
             </td>
             <td>
                 <ul>
+                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a>
+
                     <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
                 
                     <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
