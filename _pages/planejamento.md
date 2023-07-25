@@ -116,10 +116,35 @@ permalink: /planejamento/
             </td>
         </tr>
 
+        <tr>
+            <td>
+                17:00-18:00
+            </td>
+            <td>
+
+            </td>
+            <td>
+                <a href="https://www.coursera.org/learn/cs-programming-java/home/">
+                    Computer Science: Programming with a Purpose
+                </a>
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+
+            <td>
+
+            </td>
+        </tr>
 
         <tr>
             <td>
-                20:00-22:00
+                19:00-22:00
             </td>
             <td>
                 <a href="https://www.coursera.org/learn/algorithms-part1/home/">
@@ -493,12 +518,6 @@ permalink: /planejamento/
     <li>
         <a href="https://www.coursera.org/learn/processamento-neural-linguagem-natural-em-portugues-i/home/">
             Processamento Neural de Linguagem Natural em Português I
-        </a>
-    </li>
-
-    <li>
-        <a href="https://www.coursera.org/learn/cs-programming-java/home/">
-            Computer Science: Programming with a Purpose
         </a>
     </li>
 
