@@ -148,16 +148,20 @@ permalink: /planejamento/
                 Noite Home
             </td>
             <td>
-                cambly
+                livro sipser <br>+<br>
+                livro cormen
             </td>
             <td>
-
+                livro kenneth<br>+<br>
+                livro lehman
             </td>
             <td>
-                cambly
+                livro how to prove it<br>+<br>
+                livro graph
             </td>
             <td>
-
+                livro cálculo<br>+<br>
+                livro estatística
             </td>
             <td>
             #
