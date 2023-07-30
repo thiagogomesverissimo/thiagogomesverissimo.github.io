@@ -89,7 +89,7 @@ permalink: /planejamento/
                 <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
             </td>
             <td>
-                Livro: Eisberg - Física Quântica
+                <a href="https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/video_galleries/lecture-videos/">22.01 - Introduction to Nuclear Engineering and Ionizing Radiation</a>
             </td>
         </tr>
 
