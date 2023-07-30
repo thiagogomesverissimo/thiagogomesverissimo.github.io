@@ -4,6 +4,10 @@ title: ""
 permalink: /planejamento/
 ---
 
+
+
+
+
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
@@ -20,176 +24,106 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Manhã Home
+                Class 1
             </td>
             <td>
-                Artigos
-            </td>
-            <td>
-            #
-            </td>
-            <td>
-               
-            </td>
-            <td>
-            #
-            </td>
-            <td>
-                Livro Ielts
-            </td>
-        </tr>
 
-        <tr>
-            <td>
-                14:00-15:00
-            </td>
-            <td>
-                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a>
-                <br>+<br>
-                American English File
-            </td>
-            <td>
-                <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/"> Cálculo 1</a>
-                <br>+<br>
-                <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/"> Cálculo 2 </a>
-            </td>
-            <td>
-               <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
-            </td>
-            <td>
-                STI Laravel
-            </td>
-            <td>
-                STI Infra
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                15:00-16:00
-            </td>
-            <td>
                 <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
-                    MIT Algorithms
+                    6.006 Algorithms
                 </a>
-            </td>
-            <td>
-                <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
-                    MIT Automatos
-                </a>
-            </td>
-            <td>
-               Aulas de Rede Cisco + ipv6
-            </td>
-            <td>
-                STI Moodle
-            </td>
-            <td>
-                STI infra
-            </td>
-        </tr>
+                <br><br> será seguido de <br>
+                (<a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">6.046J Analysis</a>)
 
-        <tr>
-            <td>
-                16:00-17:00
-            </td>
-
-            <td>
-
+                
             </td>
 
             <td>
                 <a href="https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/video_galleries/video-lectures/">
-                    MIT - Mathematics for Computer Science (Discrete Mathematics)
+                    6.042J Mathematics for Computer Science
                 </a>
             </td>
 
             <td>
+                <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/"> 18.01 Cálculo 1</a>
+                <br><br>será seguido de<br>
+                <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/"> 18.02 Cálculo 2 </a>
+            </td>
+
+            <td>
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 Linear Algebra</a>
                 
             </td>
-            
             <td>
-                
-            </td>
-            <td>
-               Livro do Aurélien
+                <a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/video_galleries/lecture-videos/">8.04 Quantum Physics 1</a>
             </td>
         </tr>
 
+
         <tr>
             <td>
-                17:00-18:00
+                Class 2
             </td>
             <td>
+                <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016">
+                    6.0001 Introduction CS
+                </a>
+                <br><br>será seguido de<br>
+                (<a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016">6.0002 Introduction CS - parte 2</a>)
+                
+            </td>
 
-            </td>
             <td>
-                <a href="https://www.coursera.org/learn/cs-programming-java/home/">
-                    Computer Science: Programming with a Purpose
+                <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
+                    18.404J - Theory of Computation
                 </a>
             </td>
 
             <td>
-
+                <a href="https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/"> 6.041 Probabilidade</a>
+                <br><br>será seguido de<br>
+                (<a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/">Estatística</a>)
             </td>
 
-            <td>
 
+            <td>
+                <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
             </td>
-
             <td>
-
+                Livro: Eisberg - Física Quântica
             </td>
         </tr>
 
+
+        
         <tr>
             <td>
-                19:00-22:00
-            </td>
-            <td>
-                <a href="https://www.coursera.org/learn/algorithms-part1/home/">
-                            Algorithms, Part I
-                </a> + Livro: Algorithms in Java (sedgewick)
-            </td>
-            <td>
-            D
+                Book Home
             </td>
 
             <td>
-                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano
+                Livro 1: Sipser <br><br>
+                Livro 2: Mathematics for Computer Science - Eric Lehman<br><br>
+                Livro 3: Discrete Maths - Kenneth Rosen
             </td>
 
             <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a> + Linear Algebra (Strang)
+                Livro 1: John Tsitsiklis. Introduction to Probability.<br><br>
+                Livro 2: Livro Cálculo - Simon<br><br>
+                Livro 3: Livro Calculus - Adams
+            </td>
+            <td>
+                Livro 1: Strang. Algebra Linear<br><br>
+                Livro 2: Livro Probabilidade e Estatística - Walpole, Mylers
             </td>
 
             <td>
-                Livro do Aurélien
+                Livro 1: How to prove it<br><br>
+                Livro 2: Graph - Douglas West
             </td>
-        </tr>
 
-        <tr>
             <td>
-                Noite Home
-            </td>
-            <td>
-                livro sipser <br>+<br>
-                livro cormen
-            </td>
-            <td>
-                livro kenneth<br>+<br>
-                livro lehman
-            </td>
-            <td>
-                livro how to prove it<br>+<br>
-                livro graph
-            </td>
-            <td>
-                livro cálculo<br>+<br>
-                livro estatística
-            </td>
-            <td>
-            #
+                Livro 1: Guttag, John. Introduction to Computation and Programming Using Python <br><br>
+                Livro 2: Livro Cormen
             </td>
         </tr>
 
@@ -463,6 +397,13 @@ permalink: /planejamento/
 <h3>cursos ou especializações na fila de espera</h3>
 
 <ul>
+    <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
+    <li>American English File</li>
+
+
+<li>Aulas de Rede Cisco + ipv6</li>
+
+    <li>><a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano</li>
 
     <li>
         <a href="https://www.coursera.org/specializations/software-engineering#courses">
