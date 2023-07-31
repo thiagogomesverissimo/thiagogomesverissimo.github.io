@@ -87,6 +87,9 @@ permalink: /planejamento/
 
             <td>
                 <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
+                <br><br> será seguido de <br>
+                (<a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/video_galleries/lecture-videos/">6.034 Artificial Intelligence</a>)
+
             </td>
             <td>
                 <a href="https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/video_galleries/lecture-videos/">22.01 - Introduction to Nuclear Engineering and Ionizing Radiation</a>
