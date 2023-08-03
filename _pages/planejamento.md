@@ -4,10 +4,6 @@ title: ""
 permalink: /planejamento/
 ---
 
-
-
-
-
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
@@ -55,6 +51,8 @@ permalink: /planejamento/
             </td>
             <td>
                 <a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/video_galleries/lecture-videos/">8.04 Quantum Physics 1</a>
+                <br><br> será seguido de <br>
+                <a href="https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/video_galleries/lecture-videos/">22.01 - Introduction to Nuclear Engineering and Ionizing Radiation</a>
             </td>
         </tr>
 
@@ -92,7 +90,9 @@ permalink: /planejamento/
 
             </td>
             <td>
-                <a href="https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/video_galleries/lecture-videos/">22.01 - Introduction to Nuclear Engineering and Ionizing Radiation</a>
+                <a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiOILaOC2hk6Pc3j">Physics II: Electricity and Magnetism </a>
+                <br><br>
+                <a href="https://www.youtube.com/playlist?list=PLUdYlQf0_sSsdOhQ_8jfrAGzbGbJ7MXGe">Physics III: Vibrations and Waves</a>
             </td>
         </tr>
 
