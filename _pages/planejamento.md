@@ -7,12 +7,13 @@ permalink: /planejamento/
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
-            <th>time</th>
-            <th>seg</th>
-            <th>ter</th>
-            <th>qua</th>
-            <th>qui</th>
-            <th>sex</th>
+            <th></th>
+            <th>Algorítmo</th>
+            <th>Teoria Computacional</th>
+            <th>Matemática</th>
+            <th>Estatísica e ML</th>
+            <th>Grafo</th>
+            <th>Física</th>
         </tr>
     </thead>
 
@@ -29,8 +30,7 @@ permalink: /planejamento/
                 </a>
                 <br><br> será seguido de <br>
                 (<a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">6.046J Analysis</a>)
-
-                
+  
             </td>
 
             <td>
@@ -46,9 +46,15 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 Linear Algebra</a>
-                
+                <a href="https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/"> 6.041 Probabilidade</a>
+                <br><br>será seguido de<br>
+                (<a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/">Estatística</a>)
             </td>
+
+            <td>
+                Aulas Yoshiko
+            </td>
+
             <td>
                 <a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/video_galleries/lecture-videos/">8.04 Quantum Physics 1</a>
                 <br><br> será seguido de <br>
@@ -77,11 +83,8 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/"> 6.041 Probabilidade</a>
-                <br><br>será seguido de<br>
-                (<a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/">Estatística</a>)
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 Linear Algebra</a>
             </td>
-
 
             <td>
                 <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
@@ -89,10 +92,17 @@ permalink: /planejamento/
                 (<a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/video_galleries/lecture-videos/">6.034 Artificial Intelligence</a>)
 
             </td>
+
             <td>
-                <a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiOILaOC2hk6Pc3j">Physics II: Electricity and Magnetism </a>
-                <br><br>
-                <a href="https://www.youtube.com/playlist?list=PLUdYlQf0_sSsdOhQ_8jfrAGzbGbJ7MXGe">Physics III: Vibrations and Waves</a>
+                <a href="https://canvas.dartmouth.edu/courses/39351/pages">Graph Theory Dartmouth</a>
+            </td>
+            <td>
+                <a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e">Physics I: Classical Mechanics </a>
+                <br><br> será seguido de <br>
+
+                (<a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiOILaOC2hk6Pc3j">Physics II: Electricity and Magnetism </a>)
+                <br><br> será seguido de <br>
+                (<a href="https://www.youtube.com/playlist?list=PLUdYlQf0_sSsdOhQ_8jfrAGzbGbJ7MXGe">Physics III: Vibrations and Waves</a>)
             </td>
         </tr>
 
@@ -100,34 +110,42 @@ permalink: /planejamento/
         
         <tr>
             <td>
-                Book Home
+                Books
             </td>
 
             <td>
-                Livro 1: Sipser <br><br>
-                Livro 2: Mathematics for Computer Science - Eric Lehman<br><br>
-                Livro 3: Discrete Maths - Kenneth Rosen
+                Livro 1: Guttag, John. Introduction to Computation and Programming Using Python<hr>
+                Livro 2: Livro Cormen
             </td>
 
             <td>
-                Livro 1: John Tsitsiklis. Introduction to Probability.<br><br>
-                Livro 2: Livro Cálculo - Simon<br><br>
+                Livro 1: Sipser <hr>
+                Livro 2: Mathematics for Computer Science - Eric Lehman<hr>
+                Livro 3: Discrete Maths - Kenneth Rosen<hr>
+                Livro 4: How to prove it<hr>
+            </td>
+
+            <td>
+                Livro 1: Strang. Algebra Linear<hr>
+                Livro 2: Livro Cálculo - Simon<hr>
                 Livro 3: Livro Calculus - Adams
             </td>
+
             <td>
-                Livro 1: Strang. Algebra Linear<br><br>
+                Livro 1: John Tsitsiklis. Introduction to Probability.<hr>
                 Livro 2: Livro Probabilidade e Estatística - Walpole, Mylers
             </td>
 
             <td>
-                Livro 1: How to prove it<br><br>
-                Livro 2: Graph - Douglas West
+                Livro: Graph - Douglas West
             </td>
 
             <td>
-                Livro 1: Guttag, John. Introduction to Computation and Programming Using Python <br><br>
-                Livro 2: Livro Cormen
+                Livro 1: Livro Eisberg<hr>
+                Livro 2: Livro Física - Douglas Giancoli
             </td>
+
+
         </tr>
 
     </tbody>
@@ -296,7 +314,7 @@ permalink: /planejamento/
                     <li>
 
                     </li>
-                    <li>Aulas da Yoshiko (grafinhos)</li>
+                    <li></li>
                     <li>
                         <a href="https://www.coursera.org/learn/what-is-a-proof/home/">
                             Introduction to Discrete Mathematics for Computer Science
@@ -312,7 +330,7 @@ permalink: /planejamento/
                             Introduction to Graph Theory
                         </a>
                     </li>
-                    <li><a href="https://canvas.dartmouth.edu/courses/39351/pages">Graph Theory Dartmouth</a></li>
+                    <li>></li>
                     <li><a href="https://learning.edx.org/course/course-v1:UCSanDiegoX+ALGS202x+2T2017/home">Graph Algorithms</a></li>
                 </ul>
             </td>
