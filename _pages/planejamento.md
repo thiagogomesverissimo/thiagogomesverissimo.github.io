@@ -179,6 +179,8 @@ permalink: /planejamento/
     </tbody>
 </table>
 
+Incluir? moodle e curso frontend?
+
 <h2>Fila</h2>
 
 <ul>
