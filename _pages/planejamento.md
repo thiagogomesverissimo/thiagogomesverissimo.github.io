@@ -106,7 +106,36 @@ permalink: /planejamento/
             </td>
         </tr>
 
+        <tr>
+            <td>
+                Stuff
+            </td>
 
+            <td>
+                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a>
+            </td>
+
+            <td>
+                <a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a>
+            </td>
+
+            <td>
+                Curso Cisco
+            </td>
+
+            <td>
+                <a href="https://saladeaula.nic.br">Curso IPV6</a>
+            </td>
+
+            <td>
+                curso LGPD
+            </td>
+
+            <td>
+                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a>
+            </td>
+
+        </tr>
         
         <tr>
             <td>
@@ -145,7 +174,6 @@ permalink: /planejamento/
                 Livro 2: Livro Física - Douglas Giancoli
             </td>
 
-
         </tr>
 
     </tbody>
@@ -153,269 +181,100 @@ permalink: /planejamento/
 
 <h2>Fila</h2>
 
-<table id="planejamento" class="table table-bordered table-hover table-condensed">
-    <thead>
-        <tr>
-            <th>time</th>
-            <th>seg</th>
-            <th>ter</th>
-            <th>qua</th>
-            <th>qui</th>
-            <th>sex</th>
-        </tr>
-    </thead>
-
-    <tbody>
-
-        <tr>
-            <td>
-                Manhã Home
-            </td>
-            <td>
-                Artigos
-            </td>
-            <td>
-            #
-            </td>
-            <td>
-                <ul>
-                    <li></li>
-                </ul>
+<ul>
                 
-            </td>
-            <td>
-            #
-            </td>
-            <td>
-                <ul>
-                    <li>Livro Ielts</li>
-                    <li>Livro Toelf</li>
-                </ul>
-                
-                
-            </td>
-        </tr>
 
-        <tr>
-            <td>
-                14:00-15:00
-            </td>
-            <td>
-                <ul>
-                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a>
+    <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
 
-                    <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
-                
-                    <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
+    <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
 
-                    <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
+    <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
 
-                    <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
-                </ul>
-            </td>
-            <td>
-                IME
-            </td>
-            <td>
-               STI Meeting
-            </td>
-            <td>
-                <ul>
-                    <li><a href="https://github.com/search?q=involves%3Athiagogomesverissimo+is%3Aissue+is%3Aopen">My Issues</a></li>
-                    <li><a href="https://github.com/search?q=org%3Afflch+is%3Aissue+is%3Aopen">Issues FFLCH</a></li>
-                </ul>
-            </td>
-            <td>
-               STI Meeting
-            </td>
-        </tr>
+    <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
 
-        <tr>
-            <td>
-                15:00-17:00
-            </td>
+    <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
 
-            <td>
-                <ul>
-                    <li></li>
+    <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
+    <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
+    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
+    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
+    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
 
-                    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
-              
-                    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
-              
-                    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
-       
-                    <li><a href="https://www.coursera.org/learn/introduction-to-academic-writing">Introduction to Academic Writing </a></li>
+    <li><a href="https://www.coursera.org/learn/introduction-to-academic-writing">Introduction to Academic Writing </a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
-                    <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
-                    <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
-                </ul>
-            </td>
-
-            <td>
-                <ul>
-                    <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a></li>
-                    <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a></li>
-
-                    <li>
-                        <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">
-                            Cálculo MIT
-                        </a>
-                    </li>
-                </ul>
-            </td>
-
-            <td>
-                <ul>
-                    <li><a href="https://saladeaula.nic.br">Curso IPV6</a></li>
-                    <li> (udemy)</li>
-                    <li>Livro: Mastering Active Directory</li>
-                    <li>Livro: Implementing Samba </li>
-                    <li>Livro:Windows Group Policy - Jordan Krause</li>
-                    <li><a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a></li>
-                    <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
-                    <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
-                    <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
-                    <li><a href="https://www.coursera.org/specializations/computer-communications#courses">Computer Communications</a></li>
-                </ul>
-            </td>
+    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
+    <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
+    <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
             
-            <td>
-                <ul>
-                    <li></li>
-                    <li><a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/video_galleries/lecture-videos/">Statistic MIT</a></li>
-                    <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
-                    <li>
-                        <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
-                            Mathematics for Machine Learning
-                        </a>
-                    </li>
-                    <li><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></li>
-                    <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
-                    <li><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">
-                        CS50's Introduction to Artificial Intelligence with Python
-                        </a>
-                    </li>
-                </ul>  
+    <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a></li>
 
-                
-            </td>
-            <td>
-                <ul>
-                    <li>
+    <li>Livro: Mastering Active Directory</li>
+    <li>Livro: Implementing Samba </li>
+    <li>Livro:Windows Group Policy - Jordan Krause</li>
+    <li><a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a></li>
+    <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
+    <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
+    <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
+    <li><a href="https://www.coursera.org/specializations/computer-communications#courses">Computer Communications</a></li>
 
-                    </li>
-                    <li></li>
-                    <li>
-                        <a href="https://www.coursera.org/learn/what-is-a-proof/home/">
-                            Introduction to Discrete Mathematics for Computer Science
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.coursera.org/learn/combinatorics/home/">
-                            Combinatorics and Probability
-                    </a>
-                    </li>
-                    <li>
-                        <a href="https://www.coursera.org/learn/graphs/home/">
-                            Introduction to Graph Theory
-                        </a>
-                    </li>
-                    <li>></li>
-                    <li><a href="https://learning.edx.org/course/course-v1:UCSanDiegoX+ALGS202x+2T2017/home">Graph Algorithms</a></li>
-                </ul>
-            </td>
-        </tr>
+    <li><a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/video_galleries/lecture-videos/">Statistic MIT</a></li>
+    <li><a href="https://www.coursera.org/specializations/data-science-python#courses">Applied Data Science with Python</a></li>
+    <li>
+        <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
+            Mathematics for Machine Learning
+        </a>
+    </li>
+    <li><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></li>
+    <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
+    <li><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">
+        CS50's Introduction to Artificial Intelligence with Python
+        </a>
+    </li>
 
+    <li>
+        <a href="https://www.coursera.org/learn/what-is-a-proof/home/">
+            Introduction to Discrete Mathematics for Computer Science
+        </a>
+    </li>
+    <li>
+        <a href="https://www.coursera.org/learn/combinatorics/home/">
+            Combinatorics and Probability
+    </a>
+    </li>
+    <li>
+        <a href="https://www.coursera.org/learn/graphs/home/">
+            Introduction to Graph Theory
+        </a>
+    </li>
 
-        <tr>
-            <td>
-                20:00-22:00 <b>Book Video Courses</b>
-            </td>
-            <td>
-                <ul>
-                    <li>
-                        <a href="https://www.coursera.org/learn/algorithms-part1/home/">
-                            Algorithms, Part I
-                        </a> + Livro: Algorithms in Java (sedgewick)
-                    </li>
+    <li><a href="https://learning.edx.org/course/course-v1:UCSanDiegoX+ALGS202x+2T2017/home">Graph Algorithms</a></li>
 
-                    <li>
-                        <a href="https://www.coursera.org/learn/algorithms-part2/">
-                            Algorithms, Part II 
-                        </a> + Livro: Algorithms in Java (sedgewick)
-                    </li>
-         
-                    <li>
-                       
-                    </li>
+    <li>
+        <a href="https://www.coursera.org/learn/algorithms-part1/home/">
+            Algorithms, Part I
+        </a> + Livro: Algorithms in Java (sedgewick)
+    </li>
 
-                    <li>
-                        <a href="https://www.coursera.org/learn/analysis-of-algorithms/home">
-                            Analysis of Algorithms
-                        </a> + Livro: An Introduction to the Analysis of Algorithms (sedgewick)
-                    </li>
-                </ul>
-            </td>
-            <td>
-            D
-            </td>
+    <li>
+        <a href="https://www.coursera.org/learn/algorithms-part2/">
+            Algorithms, Part II 
+        </a> + Livro: Algorithms in Java (sedgewick)
+    </li>
 
-            <td>
-                <ul>
-                    <li>
-                        <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano
-                    </li>
-                    <li>Livro: Chollet</li>
-                    <li>Livro: Aurelien Geron </li>
-                </ul>
-            </td>
-
-            <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">Aulas de Linear Algebra (Strang)</a> + Linear Algebra (Strang)
-            </td>
-
-            <td>
-                #
-            </td>
-        </tr>
-
-        <tr>
-            <td>
-                Noite Home
-            </td>
-            <td>
-                cambly
-            </td>
-            <td>
-
-            </td>
-            <td>
-                cambly
-            </td>
-            <td>
-
-            </td>
-            <td>
-            #
-            </td>
-        </tr>
-
-    </tbody>
-</table>
-
-<br>
-
-<h3>cursos ou especializações na fila de espera</h3>
+    <li>
+        <a href="https://www.coursera.org/learn/analysis-of-algorithms/home">
+            Analysis of Algorithms
+        </a> + Livro: An Introduction to the Analysis of Algorithms (sedgewick)
+    </li>
+        
+    <li>
+        <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano
+    </li>       
+</ul>
 
 <ul>
     <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
