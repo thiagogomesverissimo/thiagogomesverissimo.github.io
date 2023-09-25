@@ -112,28 +112,60 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/intermediate-grammar#courses">Intermediate Grammar</a>
+                <ul>
+                <li><a href="https://www.coursera.org/programs/specializations/intermediate-grammar#courses">Intermediate Grammar</a></li>
+                <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
+                <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
+                <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
+
+                <li><a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
+
+                <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
+
+                
+
+                <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
+                <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
+
+                <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
+
+                <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
+                <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
+                </ul>
             </td>
 
             <td>
-                <a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a>
+                <a href="https://www.coursera.org/learn/systematic-review/lecture/bzdVk/welcome-to-systematic-reviews-and-meta-analysis">
+                    Revisão sistemática
+                </a>
             </td>
 
             <td>
-                Curso Cisco
+                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a><hr>
+                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a>
+            </td>
+
+
+            <td>
+                <ul>
+                    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
+                    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
+                    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
+                    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
+                </ul>
+            </td>
+                
+
+            <td>
+                <a href="https://www.escolavirtual.gov.br/">curso LGPD</a>
             </td>
 
             <td>
+                Curso Cisco <br>
                 <a href="https://saladeaula.nic.br">Curso IPV6</a>
             </td>
 
-            <td>
-                curso LGPD
-            </td>
 
-            <td>
-                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a>
-            </td>
 
         </tr>
         
@@ -151,7 +183,6 @@ permalink: /planejamento/
                 Livro 1: Sipser <hr>
                 Livro 2: Mathematics for Computer Science - Eric Lehman<hr>
                 Livro 3: Discrete Maths - Kenneth Rosen<hr>
-                Livro 4: How to prove it<hr>
             </td>
 
             <td>
@@ -166,7 +197,8 @@ permalink: /planejamento/
             </td>
 
             <td>
-                Livro: Graph - Douglas West
+                Livro 1: Graph - Douglas West<hr>
+                Livro 2: How to prove it<hr>
             </td>
 
             <td>
@@ -186,33 +218,9 @@ Incluir? moodle e curso frontend?
 <ul>
                 
 
-    <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
 
-    <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
-
-    <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
-
-    <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
-
-    <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
-
-    <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
-
-    <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
-
-    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
-
-    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
-
-    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
-
-    <li><a href="https://www.coursera.org/learn/introduction-to-academic-writing">Introduction to Academic Writing </a></li>
-
-    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
-    <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
-    <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
             
-    <li><a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a></li>
+    <li></li>
 
     <li>Livro: Mastering Active Directory</li>
     <li>Livro: Implementing Samba </li>
@@ -281,9 +289,6 @@ Incluir? moodle e curso frontend?
 <ul>
     <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
     <li>American English File</li>
-
-
-<li>Aulas de Rede Cisco + ipv6</li>
 
     <li>><a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano</li>
 
@@ -405,6 +410,8 @@ Incluir? moodle e curso frontend?
             Algorithmic Toolbox
         </a>
     </li>
+
+    <li><a href="https://www.coursera.org/learn/introduction-to-academic-writing">Introduction to Academic Writing </a></li>
 
 </ul>
 
