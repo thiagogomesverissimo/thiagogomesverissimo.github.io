@@ -113,24 +113,27 @@ permalink: /planejamento/
 
             <td>
                 <ul>
-                <li><a href="https://www.coursera.org/programs/specializations/intermediate-grammar#courses">Intermediate Grammar</a></li>
-                <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
-                <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
-                <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
+                    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
+                    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
+                    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
+                    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
+                    <li><a href="https://www.coursera.org/programs/specializations/intermediate-grammar#courses">Intermediate Grammar</a></li>
+                    <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
+                    <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
+                    <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
 
-                <li><a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
+                    <li><a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
 
-                <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
+                    <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
 
-                
+                    
+                    <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
+                    <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
 
-                <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
-                <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
+                    <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
 
-                <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
-
-                <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
-                <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
+                    <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
+                    <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
                 </ul>
             </td>
 
@@ -147,22 +150,24 @@ permalink: /planejamento/
 
 
             <td>
-                <ul>
-                    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
-                    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
-                    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
-                    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
-                </ul>
+                <a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a>
+                <hr>
+                <a href="https://moodle.academy/">moodle.academy</a>
             </td>
                 
 
             <td>
-                <a href="https://www.escolavirtual.gov.br/">curso LGPD</a>
+                <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
+                <br>
+                <hr>
+                será seguido de:<br>
+                (<a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>)
             </td>
 
             <td>
-                Curso Cisco <br>
-                <a href="https://saladeaula.nic.br">Curso IPV6</a>
+                <a href="https://www.escolavirtual.gov.br/">curso LGPD</a><hr>
+                Curso Cisco <br><hr>
+                <a href="https://saladeaula.nic.br">Curso IPV6</a><hr>
             </td>
 
 
@@ -211,21 +216,13 @@ permalink: /planejamento/
     </tbody>
 </table>
 
-Incluir? moodle e curso frontend?
-
 <h2>Fila</h2>
 
 <ul>
-                
-
-
-            
-    <li></li>
 
     <li>Livro: Mastering Active Directory</li>
     <li>Livro: Implementing Samba </li>
     <li>Livro:Windows Group Policy - Jordan Krause</li>
-    <li><a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a></li>
     <li><a href="https://www.coursera.org/learn/aruba-networking-basics/home">Aruba Networking Basics</a></li>
     <li><a href="https://www.coursera.org/learn/aruba-network-security-basics/home/">Aruba Network Security Basics</a></li>
     <li><a href="https://www.coursera.org/learn/tcpip">Introduction to TCP/IP</a></li>
@@ -238,7 +235,6 @@ Incluir? moodle e curso frontend?
             Mathematics for Machine Learning
         </a>
     </li>
-    <li><a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a></li>
     <li><a href="https://www.coursera.org/learn/machine-learning/">Curso Machine Learning (Andrew Ng) (novo)</a></li>
     <li><a href="https://learning.edx.org/course/course-v1:HarvardX+CS50AI+1T2020/home">
         CS50's Introduction to Artificial Intelligence with Python
@@ -280,17 +276,9 @@ Incluir? moodle e curso frontend?
             Analysis of Algorithms
         </a> + Livro: An Introduction to the Analysis of Algorithms (sedgewick)
     </li>
-        
-    <li>
-        <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano
-    </li>       
-</ul>
-
-<ul>
+      
     <li><a href="https://www.coursera.org/programs/universidade-de-sao-paulo-br-on-coursera-mvxtw/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
     <li>American English File</li>
-
-    <li>><a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a> + Livro: Tibishirano</li>
 
     <li>
         <a href="https://www.coursera.org/specializations/software-engineering#courses">
@@ -373,8 +361,6 @@ Incluir? moodle e curso frontend?
         </a>
     </li>
 
-
-
     <li>
         <a href="https://www.coursera.org/learn/what-is-a-proof/home">
             Mathematical Thinking in Computer Science
@@ -414,10 +400,6 @@ Incluir? moodle e curso frontend?
     <li><a href="https://www.coursera.org/learn/introduction-to-academic-writing">Introduction to Academic Writing </a></li>
 
 </ul>
-
-
-- Livros Moodle + curso moodle no moodle academy
-
 
 <br>
 <h3>Seleção de Eventos Científicos</h3>
