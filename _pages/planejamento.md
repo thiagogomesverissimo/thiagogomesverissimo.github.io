@@ -26,10 +26,17 @@ permalink: /planejamento/
             <td>
 
                 <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
-                    6.006 Algorithms
+                    6.006 Algorithms - 2020
                 </a>
-                <br><br> será seguido de <br>
+                <hr>
+                <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video_galleries/lecture-videos/">
+                    6.006 Algorithms - 2011
+                </a>
+
+                <div hidden> 
+                    será seguido de <br>
                 (<a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">6.046J Analysis</a>)
+                </div>
   
             </td>
 
@@ -41,14 +48,18 @@ permalink: /planejamento/
 
             <td>
                 <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/"> 18.01 Cálculo 1</a>
-                <br><br>será seguido de<br>
-                <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/"> 18.02 Cálculo 2 </a>
+                <div hidden>
+                    será seguido de<br>
+                    <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/"> 18.02 Cálculo 2 </a>
+                </div>
             </td>
 
             <td>
                 <a href="https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/"> 6.041 Probabilidade</a>
-                <br><br>será seguido de<br>
-                (<a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/">Estatística</a>)
+                <div hidden>
+                    <br><br>será seguido de<br>
+                    (<a href="https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/">Estatística</a>)
+                </div>
             </td>
 
             <td>
@@ -57,8 +68,10 @@ permalink: /planejamento/
 
             <td>
                 <a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2013/video_galleries/lecture-videos/">8.04 Quantum Physics 1</a>
-                <br><br> será seguido de <br>
-                <a href="https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/video_galleries/lecture-videos/">22.01 - Introduction to Nuclear Engineering and Ionizing Radiation</a>
+                <div hidden>
+                    <br><br> será seguido de <br>
+                    <a href="https://ocw.mit.edu/courses/22-01-introduction-to-nuclear-engineering-and-ionizing-radiation-fall-2016/video_galleries/lecture-videos/">22.01 - Introduction to Nuclear Engineering and Ionizing Radiation</a>
+                </div>
             </td>
         </tr>
 
@@ -71,9 +84,10 @@ permalink: /planejamento/
                 <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016">
                     6.0001 Introduction CS
                 </a>
-                <br><br>será seguido de<br>
-                (<a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016">6.0002 Introduction CS - parte 2</a>)
-                
+                <div hidden>
+                    será seguido de<br>
+                    (<a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016">6.0002 Introduction CS - parte 2</a>)
+                </div>
             </td>
 
             <td>
@@ -88,9 +102,10 @@ permalink: /planejamento/
 
             <td>
                 <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
-                <br><br> será seguido de <br>
-                (<a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/video_galleries/lecture-videos/">6.034 Artificial Intelligence</a>)
-
+                <div hidden> 
+                    será seguido de <br>
+                    (<a href="https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/video_galleries/lecture-videos/">6.034 Artificial Intelligence</a>)
+                </div>
             </td>
 
             <td>
@@ -98,11 +113,13 @@ permalink: /planejamento/
             </td>
             <td>
                 <a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro203puVhQsmCj9qhlFQ-As8e">Physics I: Classical Mechanics </a>
-                <br><br> será seguido de <br>
+                <div hidden>
+                     será seguido de <br>
 
-                (<a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiOILaOC2hk6Pc3j">Physics II: Electricity and Magnetism </a>)
-                <br><br> será seguido de <br>
-                (<a href="https://www.youtube.com/playlist?list=PLUdYlQf0_sSsdOhQ_8jfrAGzbGbJ7MXGe">Physics III: Vibrations and Waves</a>)
+                    (<a href="https://www.youtube.com/playlist?list=PLyQSN7X0ro2314mKyUiOILaOC2hk6Pc3j">Physics II: Electricity and Magnetism </a>)
+                    <br><br> será seguido de <br>
+                    (<a href="https://www.youtube.com/playlist?list=PLUdYlQf0_sSsdOhQ_8jfrAGzbGbJ7MXGe">Physics III: Vibrations and Waves</a>)
+                </div>
             </td>
         </tr>
 
@@ -112,29 +129,33 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <ul>
-                    <li><a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a></li>
-                    <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
-                    <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
-                    <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
-                    <li><a href="https://www.coursera.org/programs/specializations/intermediate-grammar#courses">Intermediate Grammar</a></li>
-                    <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
-                    <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
-                    <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
+                <a href="https://www.coursera.org/learn/sciwrite/home/welcome">Writing in the Sciences</a>
+                <div hidden>
+                    <ul>
+                        <li></li>
 
-                    <li><a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
+                        <li><a href="https://www.coursera.org/specializations/academic-english#courses">Academic English: Writing</a></li>
+                        <li><a href="https://www.coursera.org/specializations/essential-english-for-university-success#courses">Essential English for University Success</a></li>
+                        <li><a href="https://www.coursera.org/learn/how-to-write-a-scientific-paper">How to Write a Scientific Paper </a></li>
+                        <li><a href="https://www.coursera.org/programs/specializations/intermediate-grammar#courses">Intermediate Grammar</a></li>
+                        <li><a href="https://www.coursera.org/specializations/advanced-grammar-punctuation#courses">Advanced Grammar and Punctuation</a></li>
+                        <li><a href="https://www.coursera.org/specializations/learn-english-writing-grammar-complex-sentences#courses">Writing Effectively with Complex Sentences</a></li>
+                        <li><a href="https://www.coursera.org/specializations/speaklistenenglish#courses">Advanced Academic Speaking and Listening</a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
+                        <li><a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS Preparation</a></li>
 
-                    
-                    <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
-                    <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
+                        <li><a href="https://www.coursera.org/specializations/american-english-pronunciation#courses">The Pronunciation of American English</a></li>
 
-                    <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
+                        
+                        <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
+                        <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
 
-                    <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
-                    <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
-                </ul>
+                        <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
+
+                        <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
+                        <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
+                    </ul>
+                </div>
             </td>
 
             <td>
@@ -158,10 +179,10 @@ permalink: /planejamento/
 
             <td>
                 <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
-                <br>
-                <hr>
-                será seguido de:<br>
-                (<a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>)
+
+                <div hidden>
+                    (<a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>)
+                </div>
             </td>
 
             <td>
@@ -170,48 +191,9 @@ permalink: /planejamento/
                 <a href="https://saladeaula.nic.br">Curso IPV6</a><hr>
             </td>
 
-
-
         </tr>
         
-        <tr>
-            <td>
-                Books
-            </td>
-
-            <td>
-                Livro 1: Guttag, John. Introduction to Computation and Programming Using Python<hr>
-                Livro 2: Livro Cormen
-            </td>
-
-            <td>
-                Livro 1: Sipser <hr>
-                Livro 2: Mathematics for Computer Science - Eric Lehman<hr>
-                Livro 3: Discrete Maths - Kenneth Rosen<hr>
-            </td>
-
-            <td>
-                Livro 1: Strang. Algebra Linear<hr>
-                Livro 2: Livro Cálculo - Simon<hr>
-                Livro 3: Livro Calculus - Adams
-            </td>
-
-            <td>
-                Livro 1: John Tsitsiklis. Introduction to Probability.<hr>
-                Livro 2: Livro Probabilidade e Estatística - Walpole, Mylers
-            </td>
-
-            <td>
-                Livro 1: Graph - Douglas West<hr>
-                Livro 2: How to prove it<hr>
-            </td>
-
-            <td>
-                Livro 1: Livro Eisberg<hr>
-                Livro 2: Livro Física - Douglas Giancoli
-            </td>
-
-        </tr>
+       
 
     </tbody>
 </table>
