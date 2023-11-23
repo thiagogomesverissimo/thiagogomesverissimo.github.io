@@ -125,7 +125,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Stuff
+                Stuff 1
             </td>
 
             <td>
@@ -150,8 +150,7 @@ permalink: /planejamento/
                         <li><a href="https://www.coursera.org/specializations/good-with-words-speaking-and-presenting#courses">Good with Words: Speaking and Presenting</a></li>
                         <li><a href="https://www.coursera.org/specializations/good-with-words#courses">Good with Words: Writing and Editing</a></li>
 
-                        <li><a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a></li>
-
+         
                         <li><a href="https://learning.edx.org/course/course-v1:ETSx+TOEFLx+2T2022/home">TOEFL Test Preparation: The Insider’s Guide</a></li>
                         <li><a href="https://learning.edx.org/course/course-v1:UQx+IELTSx+1T2022/home">IELTS Academic Test Preparation</a></li>
                     </ul>
@@ -165,35 +164,63 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a><hr>
                 <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Big Data and Education</a>
             </td>
 
 
             <td>
-                <a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a>
-                <hr>
-                <a href="https://moodle.academy/">moodle.academy</a>
+                <a href="https://www.coursera.org/specializations/web-design">Web Design for Everybody</a>
+                <div hidden>
+                    <a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a>
+                
+                    <a href="https://moodle.academy/">moodle.academy</a>
+                </div>
             </td>
                 
 
             <td>
                 <a href="https://www.coursera.org/learn/machine-learning-course/home/week/1">Curso Machine Learning (antigo) (Andrew Ng)</a>
-
-                <div hidden>
-                    (<a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>)
-                </div>
             </td>
 
             <td>
                 <a href="https://www.escolavirtual.gov.br/">curso LGPD</a><hr>
-                Curso Cisco <br><hr>
-                <a href="https://saladeaula.nic.br">Curso IPV6</a><hr>
             </td>
 
         </tr>
-        
-       
+
+        <tr>
+            <td>
+                Stuff 2
+            </td>
+
+            <td>
+                <a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS Preparation</a>
+            </td>
+
+            <td>
+                <a href="https://www.coursera.org/specializations/toefl-preparation#courses">TOEFL Preparation</a>
+            </td>
+
+            <td>
+                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a><hr>
+            </td>
+
+            <td>
+                <a href="https://www.coursera.org/specializations/full-stack-react#courses">Full-Stack Web Development with React</a>
+                <hr>
+                <div hidden><a href="https://moodle.academy/">moodle.academy</a></div>
+            </td>
+
+            <td>
+                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/"> Vídeos Tibishirano Statistical Learning</a>
+            </td>
+
+            <td>
+                Curso Cisco <br><hr>
+                <div hidden><a href="https://saladeaula.nic.br">Curso IPV6</a><hr></div>
+            </td>
+
+        </tr>
 
     </tbody>
 </table>
