@@ -7,7 +7,7 @@ redirect_from:
   - /articles
 ---
 
-**2013**
+**2023**
 <ul>
  <li>
    Transformação digital na Biblioteca Florestan Fernandes
@@ -134,7 +134,8 @@ redirect_from:
   <br><i>Simpósio Internacional de Iniciação Científica e Tecnológica da USP - 2007 </i>
 </div>
 
-## Reviews
+<hr>
+<h1 style="color:blue;">Reviews</h1>
 
 **2023**
 <ul>
@@ -146,7 +147,8 @@ redirect_from:
 
 <br>
 
-## Academic Advising
+<hr>
+<h1 style="color:blue;">Academic Advising</h1>
 
 **2022**
 <ul>
@@ -159,7 +161,7 @@ redirect_from:
 
 <br>
 
-## Academic Committees
+<h1 style="color:blue;">Academic Committees</h1>
 
  **2022**
 <ul>
