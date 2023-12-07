@@ -7,6 +7,42 @@ redirect_from:
   - /articles
 ---
 
+**2013**
+<ul>
+ <li>
+   Transformação digital na Biblioteca Florestan Fernandes
+   <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/5136">
+    II CONPUESP - Congresso dos Profissionais das Universidades Estaduais de São Paulo
+    </a>
+    <br>https://doi.org/10.20396/conpuesp.2.2023.5136
+    <a href="{{base_path}}/files/publications/2023/5136.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+  <li>
+   Gestão eficiente de impressões em ambientes acadêmicos 
+   <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/5079/">
+    II CONPUESP - Congresso dos Profissionais das Universidades Estaduais de São Paulo
+    </a>
+    <br>https://doi.org/10.20396/conpuesp.2.2023.5079
+    <a href="{{base_path}}/files/publications/2023/5079.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+  <li>
+   USPdev: grupo de trabalho colaborativo no desenvolvimento de sistemas 
+   <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/5054">
+    II CONPUESP - Congresso dos Profissionais das Universidades Estaduais de São Paulo
+    </a>
+    <br>https://doi.org/10.20396/conpuesp.2.2023.5054
+    <a href="{{base_path}}/files/publications/2023/5054.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+  <li>
+   Votação-rápida: otimizando votações em colegiados 
+   <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/4971">
+    II CONPUESP - Congresso dos Profissionais das Universidades Estaduais de São Paulo
+    </a>
+    <br>https://doi.org/10.20396/conpuesp.2.2023.4971
+    <a href="{{base_path}}/files/publications/2023/4971.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+</ul>
+
 **2017**
 <ul>
  <li>
@@ -47,7 +83,7 @@ redirect_from:
 **2011**
 <ul>
   <li>Source identification and apportionment of particulate matter in Accra, Ghana
-     <a href="{{base_path}}/files/talks/isee.pdf"><i class="fa fa-file-pdf"></i></a>
+     <a href="{{base_path}}/files/publications/2011/isee.pdf"><i class="fa fa-file-pdf"></i></a>
      <br><a href="https://doi.org/10.1289/isee.2011.00789"> https://doi.org/10.1289/isee.2011.00789</a>
      <br>Revista: <i> Environmental Health Perspectives - International Society for Environmental Epidemiology (ISEE) Annual Conference 2011 </i>
   </li>
