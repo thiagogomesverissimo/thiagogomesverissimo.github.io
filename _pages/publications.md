@@ -140,6 +140,10 @@ redirect_from:
 **2023**
 <ul>
  <li>
+    31 SIICUSP: Simpósio Internacional de Iniciação Científica e Tecnológica da Universidade de São Paulo
+    <a href="{{base_path}}/files/reviews/2023/siicusp2023.pdf"><i class="fa fa-file-pdf"></i></a>
+ </li>
+ <li>
     Iniciação Científica - Centro Universitário Sagrado Coração
     <a href="{{base_path}}/files/reviews/2023/CertificadoIC-Unisagrado-2023.pdf"><i class="fa fa-file-pdf"></i></a>
  </li>
