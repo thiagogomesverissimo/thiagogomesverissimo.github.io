@@ -9,14 +9,14 @@ redirect_from:
 
 **2023**
 <ul>
- <li>
+  <li>
    Transformação digital na Biblioteca Florestan Fernandes
    <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/5136">
     II CONPUESP - Congresso dos Profissionais das Universidades Estaduais de São Paulo
     </a>
     <br>https://doi.org/10.20396/conpuesp.2.2023.5136
     <a href="{{base_path}}/files/publications/2023/5136.pdf"><i class="fa fa-file-pdf"></i></a>
- </li>
+  </li>
   <li>
    Gestão eficiente de impressões em ambientes acadêmicos 
    <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/5079/">
@@ -24,7 +24,7 @@ redirect_from:
     </a>
     <br>https://doi.org/10.20396/conpuesp.2.2023.5079
     <a href="{{base_path}}/files/publications/2023/5079.pdf"><i class="fa fa-file-pdf"></i></a>
- </li>
+  </li>
   <li>
    USPdev: grupo de trabalho colaborativo no desenvolvimento de sistemas 
    <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/5054">
@@ -32,7 +32,7 @@ redirect_from:
     </a>
     <br>https://doi.org/10.20396/conpuesp.2.2023.5054
     <a href="{{base_path}}/files/publications/2023/5054.pdf"><i class="fa fa-file-pdf"></i></a>
- </li>
+  </li>
   <li>
    Votação-rápida: otimizando votações em colegiados 
    <br><a href="https://econtents.bc.unicamp.br/eventos/index.php/conpuesp/article/view/4971">

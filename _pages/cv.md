@@ -42,6 +42,13 @@ redirect_from:
     <a href="{{base_path}}/files/certificados/cursos/2023/Thiago_648407.pdf"><i class="fa fa-file-pdf"></i></a>
   </li>
 
+
+  <li> Congresso dos Profissionais das Universidades Estaduais de São Paulo - CONPUESP
+    <a href="{{base_path}}/files/certificados/eventos/2023/Certificado_II_CONPUESP_THIAGO_GOMES_VERISSIMO.pdf"><i class="fa fa-file-pdf"></i></a>
+  </li>
+
+  
+
 </ul>
 
 **2021**
