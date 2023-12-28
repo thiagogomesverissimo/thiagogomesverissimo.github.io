@@ -82,8 +82,22 @@ permalink: /planejamento/
             </td>
             <td>
                 <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016">
-                    6.0001 Introduction CS
+                    6.00 2016
                 </a>
+
+                <br> <br>
+                <a href="https://ocw.oouagoiwoye.edu.ng/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/resource-index/">
+                    6.00 2011
+                </a>
+
+                <br>
+                <a href="https://www.youtube.com/watch?v=bX3jvD7XFPs&list=PLB2BE3D6CA77BB8F7">
+                    youtube playlist (2011)
+                </a>
+                
+
+                
+
                 <div hidden>
                     será seguido de<br>
                     (<a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016">6.0002 Introduction CS - parte 2</a>)
