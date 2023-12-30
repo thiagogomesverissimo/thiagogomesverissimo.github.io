@@ -48,6 +48,10 @@ permalink: /planejamento/
 
             <td>
                 <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/"> 18.01 Cálculo 1</a>
+                <br><br>
+                
+                <a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>
+
                 <div hidden>
                     será seguido de<br>
                     <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/"> 18.02 Cálculo 2 </a>
@@ -94,9 +98,6 @@ permalink: /planejamento/
                 <a href="https://www.youtube.com/watch?v=bX3jvD7XFPs&list=PLB2BE3D6CA77BB8F7">
                     youtube playlist (2011)
                 </a>
-                
-
-                
 
                 <div hidden>
                     será seguido de<br>
