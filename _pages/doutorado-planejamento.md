@@ -4,7 +4,7 @@ title: "Planejamento Doutorado"
 permalink: /doutorado-planejamento
 ---
 
-Organização mínima até a qualificação que deve ocorrer em meados de Novembro de 2024.
+    Organização mínima até a qualificação que deve ocorrer em meados de Novembro de 2024.
 Separei as tarefas em 12 etapas de forma que eu possa fazer entregas quinzenalmente. 
 Podemos deixar as sextas-feiras ás 16h após reuniões do grupo de sistema para conversamos quinzenalemente.
 
