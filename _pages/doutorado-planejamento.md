@@ -12,33 +12,31 @@ O objetivo desse cronograma é elaborar uma questão de pesquisa que visa preenc
 
 - [x] 15 de março: conversa sobre este cronograma
 
-- [ ] 29 de março: Eliminação dos artigos de outras revisões sistemática baseado na leitura dos títulos e resumos
+- [ ] 12 de abril: Eliminação dos artigos de outras revisões sistemática baseado na leitura dos títulos e resumos
 
-- [ ] 12 de abril: Eliminação dos artigos restantes da etapa anterior a partir leitura das seções de análise e resultados, no intuito de selecionar os trabalhos alinhados com nossa proposta (por exemplo, exlcuir artigos com enfoque estritamente em psicologia e pedadogia)
+- [ ] 26 de abril: Eliminação dos artigos restantes da etapa anterior a partir leitura das seções de análise e resultados, no intuito de selecionar os trabalhos alinhados com nossa proposta (por exemplo, exlcuir artigos com enfoque estritamente em psicologia e pedadogia)
 
-- [ ] 26 de abril: Leitura completa dos artigos selecionados
+- [ ] 10 de maio:  Leitura completa dos artigos selecionados
 
-- [ ] 10 de maio: Síntese, tabulação e apresentação da revisão terciária
+- [ ] 24 de maio: Síntese, tabulação e apresentação da revisão terciária
 
-- [ ] 24 de maio: Definição de critérios de busca para revisão de trabalhos primários baseado no resultado da revisão terciária
+- [ ] 7 de junho: Definição de critérios de busca para revisão de trabalhos primários baseado no resultado da revisão terciária
 
-- [ ] 7 de junho: Apresentação do **pitch** com a revisão terciária
+- [ ] 21 de junho: Apresentação do **pitch** com a revisão terciária
 
-- [ ] 21 de junho: Eliminação dos artigos primários baseado na leitura dos títulos e resumos
+- [ ] 5 de julho: Eliminação dos artigos primários baseado na leitura dos títulos e resumos
 
-- [ ] 5 de julho: Eliminação dos artigos restantes da etapa anterior a partir leitura das seções de análise e resultados apenas, no intuito de selecionar os trabalhos alinhados com critérios de seleção
+- [ ] 19 de julho: Eliminação dos artigos restantes da etapa anterior a partir leitura das seções de análise e resultados apenas, no intuito de selecionar os trabalhos alinhados com critérios de seleção
 
-- [ ] 19 de julho: leitura completa dos artigos primários selecionados
+- [ ] 2 de agosto: leitura completa dos artigos primários selecionados
 
-- [ ] 2 de agosto: Síntese, tabulação e apresentação da revisão dos trabalhos primários
+- [ ] 16 de agosto: Síntese, tabulação e apresentação da revisão dos trabalhos primários
 
-- [ ] 16 de agosto: Elaboração da questão de pesquisa final para o doutorado, baseado na identificação de possíveis lacunas na área de pesquisa em **dashboard** acadêmicos
+- [ ] 30 de agosto: Elaboração da questão de pesquisa final para o doutorado, baseado na identificação de possíveis lacunas na área de pesquisa em **dashboard** acadêmicos
 
-- [ ] 30 de agosto: Escrever o **capítulo de introdução** para qualificação com a fundamentação teórica a partir da revisão da literatura e argumentação do por que da questão de pesquisa proposta
+- [ ] 13 de setembro: Escrever o **capítulo de introdução** para qualificação com a fundamentação teórica a partir da revisão da literatura e argumentação do por que da questão de pesquisa proposta
 
-- [ ] 13 de setembro: Escrever o capítulo de proposta de **metodologia** que será empregada no doutorado pós qualificação
-
-- [ ] 27 de setembro: livre
+- [ ] 27 de setembro: Escrever o capítulo de proposta de **metodologia** que será empregada no doutorado pós qualificação
 
 - [ ] 11 de outubro: livre
 
