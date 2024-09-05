@@ -93,7 +93,7 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://www.coursera.org/learn/introduction-to-machine-learning-supervised-learning/home/info">1-Coursera ML</a><br>
+                <a href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">1-Coursera ML</a><br>
                 <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">2-Vídeos Tibishirano</a>
             </td>
 
