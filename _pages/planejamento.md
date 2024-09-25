@@ -145,7 +145,7 @@ permalink: /planejamento/
             <td>
                 <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Smart</p>  
                 <a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS</a>
-                Livro Revisão Sistemática
+                <br>Livro Revisão Sistemática
             </td>
 
             <td>
