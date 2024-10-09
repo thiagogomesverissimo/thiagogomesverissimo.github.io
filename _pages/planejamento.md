@@ -77,12 +77,8 @@ permalink: /planejamento/
             </td>
 
             <td>
-                - <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
+                <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
                     18.404J-Automata
-                </a>
-                <br>
-                - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
-                    Mathematics for Machine Learning
                 </a>
                 
             </td>
@@ -110,8 +106,7 @@ permalink: /planejamento/
             </td>
 
             <td>
-                - American Accent Training <br>
-                - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
+                American Accent Training <br>
             </td>
 
             <td>
@@ -122,7 +117,10 @@ permalink: /planejamento/
             </td>
 
             <td>
-                Livros Moodle
+                - Livros Moodle <br>
+                - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
+                    Mathematics for Machine Learning
+                </a>
                 <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Swim</p>
             </td>
 
@@ -149,13 +147,14 @@ permalink: /planejamento/
 
             <td>
                 - Artigos<br>
-                - <a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS</a><br>
+                - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">IELTS</a><br>
                 - Livro Revisão Sistemática
             </td>
 
             <td>
+                <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
             </td>
-
+                
             <td>
                 <a href="https://www.edx.org/learn/django/the-university-of-michigan-web-application-technologies-and-django">
                     1. Web Application Technologies and Django</a><br>
