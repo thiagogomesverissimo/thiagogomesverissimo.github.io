@@ -77,9 +77,14 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
+                - <a href="https://ocw.mit.edu/courses/18-404j-theory-of-computation-fall-2020/">
                     18.404J-Automata
                 </a>
+                <br>
+                - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
+                    Mathematics for Machine Learning
+                </a>
+                
             </td>
 
             <td>
@@ -105,7 +110,8 @@ permalink: /planejamento/
             </td>
 
             <td>
-                American Accent Training
+                - American Accent Training <br>
+                - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
             </td>
 
             <td>
@@ -138,24 +144,33 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Smart</p>
-            Artigos
+            
             </td>
 
             <td>
-                <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Smart</p>  
-                <a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS</a>
-                <br>Livro Revisão Sistemática
-            </td>
-
-            <td>
+                - Artigos<br>
+                - <a href="https://www.coursera.org/programs/specializations/ielts-preparation#courses">IELTS</a><br>
+                - Livro Revisão Sistemática
             </td>
 
             <td>
             </td>
 
             <td>
-                <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
+                <a href="https://www.edx.org/learn/django/the-university-of-michigan-web-application-technologies-and-django">
+                    1. Web Application Technologies and Django</a><br>
+                <a href="https://www.edx.org/learn/django/the-university-of-michigan-building-web-applications-in-django">
+                    2. Building Web Applications in Django</a><br>
+                <a href="https://www.edx.org/learn/django/the-university-of-michigan-django-features-and-libraries">3. Django Features and Libraries</a><br>
+                <a href="https://www.edx.org/learn/django/the-university-of-michigan-using-javascript-and-json-in-django">4. Using JavaScript and JSON in Django</a>
+            </td>
+
+            <td>
+                - <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
+                <br>
+                - <a href="https://www.coursera.org/specializations/data-science-python">Data Science</a>
+
+                
             </td>
 
         </tr>
