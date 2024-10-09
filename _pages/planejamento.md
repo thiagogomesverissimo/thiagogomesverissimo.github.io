@@ -152,7 +152,11 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
+                -<a href="https://www.coursera.org/specializations/web-design">Web Design</a>
+                <br>
+                -<a href="https://www.coursera.org/learn/javascript-jquery-json/home/welcome">Javascript</a>
+
+                
             </td>
                 
             <td>
