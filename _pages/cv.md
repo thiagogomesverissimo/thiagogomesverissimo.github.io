@@ -10,9 +10,13 @@ redirect_from:
 
 {% include base_path %}
 
+I hold a bachelor's degree in Physics from the University of São Paulo (2009) and a master's degree in Physics from the University of São Paulo (2016). I completed an MBA in Data Science in 2022. I am currently a systems analyst at the University of São Paulo and a PhD student in the Graduate Program in Computer Science at the Institute of Mathematics and Statistics of the University of São Paulo.
+
+<hr>
+
 <ul id="toc"></ul>
 
-## Formação Acadêmica
+## Academic degrees earned
 
 <ul>
   <li> 2022: MBA - Especialista em Data Science e Analytics. 

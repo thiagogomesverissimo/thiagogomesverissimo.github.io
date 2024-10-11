@@ -118,6 +118,7 @@ permalink: /planejamento/
 
             <td>
                 - Livros Moodle <br>
+                - <a href="https://moodle.academy">Cursos Moodle</a><br>
                 - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
                     Mathematics for Machine Learning
                 </a>
@@ -148,7 +149,8 @@ permalink: /planejamento/
             <td>
                 - Artigos<br>
                 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">IELTS</a><br>
-                - Livro Revisão Sistemática
+                - Livro Revisão Sistemática <br>
+                - <a href="https://pkpschool.sfu.ca/"> Cursos PKP </a>
             </td>
 
             <td>
