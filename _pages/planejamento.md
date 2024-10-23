@@ -63,8 +63,7 @@ permalink: /planejamento/
                     PDFs
                 </a>
 
-                <br><br>Seguido de: <br>
-                <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
+                <s><a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
                     6.006-2020
                 </a><br>
                 <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video_galleries/lecture-videos/">
@@ -73,7 +72,7 @@ permalink: /planejamento/
                 <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">
                     6.046J-Analysis
                 </a> 
-
+                </s>
             </td>
 
             <td>
@@ -94,8 +93,8 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">1-Coursera ML</a><br>
-                <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">2-Vídeos Tibishirano</a>
+                1 - <a href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">Coursera ML</a><br>
+                2 - <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">Vídeos Tibishirano</a>
             </td>
 
         </tr>
@@ -106,32 +105,54 @@ permalink: /planejamento/
             </td>
 
             <td>
-                American Accent Training <br>
+                1 - American Accent Training <br>
+                2 - <a href="https://moodle.academy">Cursos Moodle</a><br>
+                3 - <a href="https://pkpschool.sfu.ca/"> Cursos PKP </a>
             </td>
 
             <td>
-                Livro: Simon<br>
-                <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a><br>
-                <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a><br>
+                
+                1 - <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a> e
                 <a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>
+
+                (<s><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></s>)
+
+                <br>
+
+                2 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">IELTS</a><br>
+                
             </td>
 
             <td>
-                - Livros Moodle <br>
-                - <a href="https://moodle.academy">Cursos Moodle</a><br>
-                - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
+
+                1 - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
                     Mathematics for Machine Learning
-                </a>
+                </a><br>
+                2 - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
+                <br>
+                3 - <a href="https://www.coursera.org/learn/javascript-jquery-json/home/welcome">Javascript</a>
+
                 <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Swim</p>
             </td>
 
             <td>
-                <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">1-Big Data and Education</a><br>
-                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">2-Practical Learning Analytics</a><br>
+                1 - <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">1-Big Data and Education</a><br>
+                2 - <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">2-Practical Learning Analytics</a><br>
+                3 - <a href="https://www.edx.org/learn/django/the-university-of-michigan-web-application-technologies-and-django">
+                A. Web Application Technologies and Django</a><br><br>
+                
+                <s><a href="https://www.edx.org/learn/django/the-university-of-michigan-building-web-applications-in-django">
+                   B. Building Web Applications in Django</a><br>
+                <a href="https://www.edx.org/learn/django/the-university-of-michigan-django-features-and-libraries">C. Django Features and Libraries</a><br>
+                <a href="https://www.edx.org/learn/django/the-university-of-michigan-using-javascript-and-json-in-django">D. Using JavaScript and JSON in Django</a></s>
             </td>
 
             <td>
-                Livro: ML Gerón
+                
+                1 - <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
+                <br>
+                2 - <a href="https://www.coursera.org/specializations/data-science-python">Data Science</a>
+
                 <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Swim</p>
             </td>
 
@@ -143,39 +164,25 @@ permalink: /planejamento/
             </td>
 
             <td>
-            
+                1 - Livros Moodle <br>
             </td>
 
             <td>
-                - Artigos<br>
-                - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">IELTS</a><br>
-                - Livro Revisão Sistemática <br>
-                - <a href="https://pkpschool.sfu.ca/"> Cursos PKP </a>
+                1 - Livro  Simon <br>
+                2 - Livro Ielts <br>
             </td>
 
             <td>
-                -<a href="https://www.coursera.org/specializations/web-design">Web Design</a>
-                <br>
-                -<a href="https://www.coursera.org/learn/javascript-jquery-json/home/welcome">Javascript</a>
-
+                1 - Livro Drupal  <br>
                 
             </td>
                 
             <td>
-                <a href="https://www.edx.org/learn/django/the-university-of-michigan-web-application-technologies-and-django">
-                    1. Web Application Technologies and Django</a><br>
-                <a href="https://www.edx.org/learn/django/the-university-of-michigan-building-web-applications-in-django">
-                    2. Building Web Applications in Django</a><br>
-                <a href="https://www.edx.org/learn/django/the-university-of-michigan-django-features-and-libraries">3. Django Features and Libraries</a><br>
-                <a href="https://www.edx.org/learn/django/the-university-of-michigan-using-javascript-and-json-in-django">4. Using JavaScript and JSON in Django</a>
+                1 - Livro Machine Learning web  <br>
             </td>
 
             <td>
-                - <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
-                <br>
-                - <a href="https://www.coursera.org/specializations/data-science-python">Data Science</a>
-
-                
+                1 - Livro de ML Gerón
             </td>
 
         </tr>
@@ -183,7 +190,7 @@ permalink: /planejamento/
     </tbody>
 </table>
 
-
+<br>
 <h3>Fit Dance</h3>
 
 - <a href="https://youtu.be/-4GubVYyfZU">Cavalinho</a>
