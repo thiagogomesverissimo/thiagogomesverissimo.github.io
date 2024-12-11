@@ -135,8 +135,13 @@ permalink: /planejamento/
                 </a><br>
 
                 2 - <a href="https://www.coursera.org/specializations/software-engineering">
-                    Cousera: Software Engineering
+                    Coursera: Software Engineering
                 </a><br>
+
+                3 - <a href="https://www.coursera.org/learn/sciwrite/">
+                    Coursera: Escrita Científica
+                </a><br>
+                
                 
 
             </td>
