@@ -105,21 +105,26 @@ permalink: /planejamento/
             </td>
 
             <td>
-                1 - American Accent Training <br>
-                2 - <a href="https://moodle.academy">Cursos Moodle</a><br>
-                3 - <a href="https://pkpschool.sfu.ca/"> Cursos PKP </a>
+                1 - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
+                <br>
+                2 - <a href="https://www.coursera.org/learn/javascript-jquery-json/home/welcome">Javascript</a>
+                <br>
+                3 - <a href="https://www.coursera.org/specializations/social-science">
+                    Cousera: Métodos de pesquisa
+                </a><br>
+
             </td>
 
             <td>
                 
                 1 - <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a> e
                 <a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>
-
-                (<s><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></s>)
-
                 <br>
-
-                2 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">IELTS</a><br>
+                <s><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></s>
+                <br>
+                2 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">Coursera IELTS</a><br>
+                3 - <a href="https://www.coursera.org/specializations/academic-english#courses">Coursera Academic English</a><br>
+                
                 
             </td>
 
@@ -128,23 +133,18 @@ permalink: /planejamento/
                 1 - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
                     Mathematics for Machine Learning
                 </a><br>
-                2 - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
-                <br>
-                3 - <a href="https://www.coursera.org/learn/javascript-jquery-json/home/welcome">Javascript</a>
 
-                <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Swim</p>
+                2 - <a href="https://www.coursera.org/specializations/software-engineering">
+                    Cousera: Software Engineering
+                </a><br>
+                
+
             </td>
 
             <td>
-                1 - <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">1-Big Data and Education</a><br>
-                2 - <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">2-Practical Learning Analytics</a><br>
-                3 - <a href="https://www.edx.org/learn/django/the-university-of-michigan-web-application-technologies-and-django">
-                A. Web Application Technologies and Django</a><br><br>
+                1 - <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">Big Data and Education</a><br>
+                2 - <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a><br>
                 
-                <s><a href="https://www.edx.org/learn/django/the-university-of-michigan-building-web-applications-in-django">
-                   B. Building Web Applications in Django</a><br>
-                <a href="https://www.edx.org/learn/django/the-university-of-michigan-django-features-and-libraries">C. Django Features and Libraries</a><br>
-                <a href="https://www.edx.org/learn/django/the-university-of-michigan-using-javascript-and-json-in-django">D. Using JavaScript and JSON in Django</a></s>
             </td>
 
             <td>
@@ -153,7 +153,6 @@ permalink: /planejamento/
                 <br>
                 2 - <a href="https://www.coursera.org/specializations/data-science-python">Data Science</a>
 
-                <p style="font-size:14px; color:#FF0000; font-weight:bold; font-style:italic;">Swim</p>
             </td>
 
         </tr>
@@ -165,6 +164,7 @@ permalink: /planejamento/
 
             <td>
                 1 - Livros Moodle <br>
+                2 - American Accent Training <br>
             </td>
 
             <td>
