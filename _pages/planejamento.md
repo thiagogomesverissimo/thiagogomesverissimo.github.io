@@ -209,6 +209,7 @@ permalink: /planejamento/
 - <a href="https://youtu.be/YzTeiDvtm-M">Parabéns</a>
 - <a href="https://youtu.be/Fws5yCLPC5U">Tá Ok</a>
 - <a href="https://youtu.be/gnscLD2M2TY">Língua doce</a>
+- <a href="https://www.youtube.com/watch?v=_4ZJlCIZo18">Joga pra Lua</a>
 
 <h3>Workout</h3>
 
