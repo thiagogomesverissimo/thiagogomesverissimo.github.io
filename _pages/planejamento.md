@@ -107,7 +107,7 @@ permalink: /planejamento/
             <td>
                 1 - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
                 <br>
-                2 - <a href="https://www.coursera.org/learn/javascript-jquery-json/home/welcome">Javascript</a>
+                2 - <a href="https://www.coursera.org/specializations/web-applications#courses">Web Application</a>
                 <br>
                 3 - <a href="https://www.coursera.org/specializations/social-science">
                     Cousera: Métodos de pesquisa
