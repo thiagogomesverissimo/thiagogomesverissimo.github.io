@@ -217,22 +217,53 @@ permalink: /planejamento/
                 Cardio
             </td>
             <td>
-                Força
+               <a href="https://youtu.be/FeR-4_Opt-g">20 min: Hiit</a> 
             </td>
             <td>
-                Fit 1
+                <a href="https://youtu.be/o8u_xfJnLq0">Pilates</a>
             </td>
             <td>
-                Fit 2
+                <a href="https://youtu.be/nbP7m0S0Ato">30 min: Hiit</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/o8u_xfJnLq0">Pilates</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/nbP7m0S0Ato">30 min: Hiit</a>
+            </td>
+            <td>
+               <a href="https://youtu.be/o8u_xfJnLq0">Pilates</a>
             </td>
         </tr>
 
         <tr>
             <td>
-               [20 min: Hiit](https://youtu.be/FeR-4_Opt-g) 
+                Força
             </td>
             <td>
-                [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
+                <a href="https://youtu.be/WxAkMuXERBE">30 min: Força Braços</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/UF7dfEEVDp8">40 min pernas</a>
+            </td>
+            <td>
+                 <a href="https://youtu.be/WxAkMuXERBE">30 min: Força Braços</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/UF7dfEEVDp8">40 min pernas</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/WxAkMuXERBE">30 min: Força Braços</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/UF7dfEEVDp8">40 min pernas</a>
+            </td>
+        </tr>
+
+        <tr>
+
+            <td>
+                Fit 1
             </td>
             <td>
                 <a href="https://youtu.be/-4GubVYyfZU">Cavalinho</a>
@@ -240,29 +271,11 @@ permalink: /planejamento/
             <td>
                 <a href="https://youtu.be/pKA5JOYEDwQ">Luz do luar</a>
             </td>
-        </tr>
-
-        <tr>
-            <td>
-                [Pilates](https://youtu.be/o8u_xfJnLq0)
-            </td>
-            <td>
-                [40 min pernas](https://youtu.be/UF7dfEEVDp8)
-            </td>
             <td>
                 <a href="https://youtu.be/VwGEitAHxNQ">Mil vezes</a>  
             </td>
             <td>
                 <a href="https://youtu.be/nR60om9vpeU">Ram tchum</a>  
-            </td>
-        </tr>  
-
-        <tr>
-            <td>
-                [30 min: Hiit](https://youtu.be/nbP7m0S0Ato)
-            </td>
-            <td>
-                 [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
             </td>
             <td>
                 <a href="https://www.youtube.com/watch?v=_4ZJlCIZo18">Joga pra Lua</a>
@@ -274,40 +287,20 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                [Pilates](https://youtu.be/o8u_xfJnLq0)
+                Fit 2
             </td>
-            <td>
-                [40 min pernas](https://youtu.be/UF7dfEEVDp8)
-            </td>
+
             <td>
                 <a href="https://youtu.be/Fws5yCLPC5U">Tá Ok</a>
             </td>
             <td>
                 <a href="https://youtu.be/YzTeiDvtm-M">Parabéns</a>
             </td>
-        </tr>  
-
-        <tr>
-            <td>
-                [30 min: Hiit](https://youtu.be/nbP7m0S0Ato)
-            </td>
-            <td>
-                [40 min pernas](https://youtu.be/UF7dfEEVDp8)
-            </td>
             <td>
                <a href="https://youtu.be/9L2Qwkp-45Y">Dançarina</a>
             </td>
             <td>
                  <a href="https://youtu.be/x8k5-lcZrbc">São amores</a>
-            </td>
-        </tr>  
-
-        <tr>
-            <td>
-               [Pilates](https://youtu.be/o8u_xfJnLq0)
-            </td>
-            <td>
-                [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
             </td>
             <td>
                <a href="https://youtu.be/E3rORac3U40">A queda</a>
