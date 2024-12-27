@@ -195,33 +195,129 @@ permalink: /planejamento/
     </tbody>
 </table>
 
-<br>
-<h3>Fit Dance</h3>
+<h2>Corpo</h2>
 
-- <a href="https://youtu.be/-4GubVYyfZU">Cavalinho</a>
-- <a href="https://youtu.be/pKA5JOYEDwQ">Luz do luar</a>
-- <a href="https://youtu.be/VwGEitAHxNQ">Mil vezes</a>
-- <a href="https://youtu.be/nR60om9vpeU">Ram tchum</a>
-- <a href="https://youtu.be/bNHJHGbmCzw">Galopa</a>
-- <a href="https://youtu.be/x8k5-lcZrbc">São amores</a>
-- <a href="https://youtu.be/E3rORac3U40">A queda</a>
-- <a href="https://youtu.be/9L2Qwkp-45Y">Dançarina</a>
-- <a href="https://youtu.be/YzTeiDvtm-M">Parabéns</a>
-- <a href="https://youtu.be/Fws5yCLPC5U">Tá Ok</a>
-- <a href="https://youtu.be/gnscLD2M2TY">Língua doce</a>
-- <a href="https://www.youtube.com/watch?v=_4ZJlCIZo18">Joga pra Lua</a>
+<table id="corpo" class="table table-bordered table-hover table-condensed">
+    <thead>
+        <tr>
+            <th>Time</th>
+            <th>Seg</th>
+            <th>Ter</th>
+            <th>Qua</th>
+            <th>Qui</th>
+            <th>Sex</th>
+            <th>Sáb</th>
+        </tr>
+    </thead>
 
-<h3>Workout</h3>
+    <tbody>
 
-- [20 min: Hiit](https://youtu.be/FeR-4_Opt-g)
-- [30 min: Hiit](https://youtu.be/nbP7m0S0Ato)
-- [15 min: Força Braços](https://youtu.be/d7j9p9JpLaE)
-- [15 mim: força Braços](https://youtu.be/PzSkNcvCjdw)
-- [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
-- [30 min: Força Braços](https://youtu.be/Y26H34rio_M)
-- [30 mim: pernas](https://youtu.be/eYVNXcu_3kQ)
-- [40 min pernas](https://youtu.be/UF7dfEEVDp8)
-- [40 min abnominal](https://youtu.be/PJb13b-CqP0)
-- [30 mim: pilates](https://youtu.be/Cr7XY4P2QqU?)
-- [10 mim: Alongamento em pé](https://youtu.be/_IKuSjzUGkg)
-- [10 min: Alongamento](https://youtu.be/4Ajg_KJwbHc?)
+        <tr>
+            <td>
+                Cardio
+            </td>
+            <td>
+                Força
+            </td>
+            <td>
+                Fit 1
+            </td>
+            <td>
+                Fit 2
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+               [20 min: Hiit](https://youtu.be/FeR-4_Opt-g) 
+            </td>
+            <td>
+                [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
+            </td>
+            <td>
+                <a href="https://youtu.be/-4GubVYyfZU">Cavalinho</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/pKA5JOYEDwQ">Luz do luar</a>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                [Pilates](https://youtu.be/o8u_xfJnLq0)
+            </td>
+            <td>
+                [40 min pernas](https://youtu.be/UF7dfEEVDp8)
+            </td>
+            <td>
+                <a href="https://youtu.be/VwGEitAHxNQ">Mil vezes</a>  
+            </td>
+            <td>
+                <a href="https://youtu.be/nR60om9vpeU">Ram tchum</a>  
+            </td>
+        </tr>  
+
+        <tr>
+            <td>
+                [30 min: Hiit](https://youtu.be/nbP7m0S0Ato)
+            </td>
+            <td>
+                 [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
+            </td>
+            <td>
+                <a href="https://www.youtube.com/watch?v=_4ZJlCIZo18">Joga pra Lua</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/gnscLD2M2TY">Língua doce</a>
+            </td>
+        </tr>  
+
+        <tr>
+            <td>
+                [Pilates](https://youtu.be/o8u_xfJnLq0)
+            </td>
+            <td>
+                [40 min pernas](https://youtu.be/UF7dfEEVDp8)
+            </td>
+            <td>
+                <a href="https://youtu.be/Fws5yCLPC5U">Tá Ok</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/YzTeiDvtm-M">Parabéns</a>
+            </td>
+        </tr>  
+
+        <tr>
+            <td>
+                [30 min: Hiit](https://youtu.be/nbP7m0S0Ato)
+            </td>
+            <td>
+                [40 min pernas](https://youtu.be/UF7dfEEVDp8)
+            </td>
+            <td>
+               <a href="https://youtu.be/9L2Qwkp-45Y">Dançarina</a>
+            </td>
+            <td>
+                 <a href="https://youtu.be/x8k5-lcZrbc">São amores</a>
+            </td>
+        </tr>  
+
+        <tr>
+            <td>
+               [Pilates](https://youtu.be/o8u_xfJnLq0)
+            </td>
+            <td>
+                [30 min: Força Braços](https://youtu.be/WxAkMuXERBE)
+            </td>
+            <td>
+               <a href="https://youtu.be/E3rORac3U40">A queda</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/bNHJHGbmCzw">Galopa</a>
+            </td>
+        </tr>       
+
+    </tbody>
+</table>
+
+
