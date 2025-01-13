@@ -20,34 +20,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Manhã
-            </td>
-            <td>
-                Livro: Algoritmos 
-            </td>
-
-            <td>
-                Livro: Sipser 
-            </td>
-
-            <td>
-                Livro: Strang
-            </td>
-
-            <td>
-                Livro: Eric Lehman
-            </td>
-
-            <td>
-                Livro: Tibishirano
-            </td>
-
-        </tr>
-
-
-        <tr>
-            <td>
-                Tarde 1
+                OCW
             </td>
             <td>
                 <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/video_galleries/lecture-videos/">
@@ -83,7 +56,12 @@ permalink: /planejamento/
             </td>
 
             <td>
-                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 LA</a>
+                1 - <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 LA</a><br>
+                2 - <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a> e
+                <a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>
+                <br>
+                <s><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></s>
+                <br>
             </td>
 
             <td>
@@ -101,7 +79,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Tarde 2
+                MOOC
             </td>
 
             <td>
@@ -116,20 +94,12 @@ permalink: /planejamento/
             </td>
 
             <td>
-                
-                1 - <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a> e
-                <a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>
-                <br>
-                <s><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></s>
-                <br>
-                2 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">Coursera IELTS</a><br>
-                3 - <a href="https://www.coursera.org/specializations/academic-english#courses">Coursera Academic English</a><br>
-                
-                
+                1 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">Coursera IELTS</a><br>
+                2 - <a href="https://www.coursera.org/specializations/toefl-preparationcourses">Coursera Toefl</a><br>
+                3 - <a href="https://www.coursera.org/specializations/academic-english#courses">Coursera Academic English</a><br>                
             </td>
 
             <td>
-
                 1 - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
                     Mathematics for Machine Learning
                 </a><br>
@@ -138,18 +108,12 @@ permalink: /planejamento/
                     Coursera: Software Engineering
                 </a><br>
 
-                3 - <a href="https://www.coursera.org/learn/sciwrite/">
-                    Coursera: Escrita Científica
-                </a><br>
-                
-                
-
             </td>
 
             <td>
                 1 - <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">Big Data and Education</a><br>
                 2 - <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a><br>
-                
+                3 - <a href="https://www.coursera.org/learn/sciwrite/">Coursera: Escrita Científica</a><br>
             </td>
 
             <td>
@@ -164,7 +128,7 @@ permalink: /planejamento/
 
         <tr>
             <td>
-                Noite
+                Work
             </td>
 
             <td>
@@ -173,25 +137,51 @@ permalink: /planejamento/
             </td>
 
             <td>
-                1 - Livro  Simon <br>
+                1 - Livro Deep Learning -  François <br>
                 2 - Livro Ielts <br>
             </td>
 
             <td>
-                1 - Livro Drupal  <br>
+                Livro Drupal  <br>
                 
             </td>
                 
             <td>
-                1 - Livro Machine Learning web  <br>
+                Livro Machine Learning web  <br>
             </td>
 
             <td>
-                1 - Livro de ML Gerón
+                Livro de ML Gerón
             </td>
 
         </tr>
 
+        <tr>
+            <td>
+                Home
+            </td>
+            <td>
+                Livro: Algoritmos 
+            </td>
+
+            <td>
+                Livro: Sipser 
+            </td>
+
+            <td>
+                1 - Livro: Strang <br>
+                2 - Livro: Calculo Simon
+            </td>
+
+            <td>
+                1 - Livro: Eric Lehman
+                2 - Livro: ?
+            </td>
+
+            <td>
+                Livro: Tibishirano
+            </td>
+        </tr>
     </tbody>
 </table>
 
