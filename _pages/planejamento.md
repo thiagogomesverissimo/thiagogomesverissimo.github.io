@@ -95,7 +95,7 @@ permalink: /planejamento/
 
             <td>
                 1 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">Coursera IELTS</a><br>
-                2 - <a href="https://www.coursera.org/specializations/toefl-preparationcourses">Coursera Toefl</a><br>
+                2 - <a href="https://www.coursera.org/specializations/toefl-preparation#courses">Coursera Toefl</a><br>
                 3 - <a href="https://www.coursera.org/specializations/academic-english#courses">Coursera Academic English</a><br>                
             </td>
 
