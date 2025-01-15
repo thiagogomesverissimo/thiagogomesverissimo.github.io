@@ -4,6 +4,30 @@ title: ""
 permalink: /planejamento/
 ---
 
+Força tarefa Atlanta: <br>
+
+- <a href="https://www.coursera.org/specializations/improve-english#courses">
+    Curso Georgia tech
+</a><br>
+
+- <a href="https://www.youtube.com/watch?v=rAR1QDAS7og&list=PLpVC00PAQQxGFC06mLqoPT4hHaA1Ykn2Z">
+    Drupal acquia
+</a><br>
+
+- <a href="https://www.youtube.com/watch?v=-DYSucV1_9w&list=PLtaXuX0nEZk9MKY_ClWcPkGtOEGyLTyCO">
+    Drupal OsTraining
+</a><br>
+
+- <a href="https://www.youtube.com/watch?v=FTIchVgL8TM&list=PLpVC00PAQQxFNDfiXn6LH1gOLllGS3hhl">
+    Drupal acquia module
+</a><br>
+
+- <a href="https://www.youtube.com/watch?v=BPrNGMH1bcQ&list=PLhA-DDDbk7VclKyM0AhZOYmSFuT78FI44&index=2">
+    Drupal 9 module
+</a><br>
+
+<br>
+
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
