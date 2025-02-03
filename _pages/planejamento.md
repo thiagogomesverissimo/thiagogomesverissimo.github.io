@@ -234,19 +234,19 @@ Força tarefa Atlanta: <br>
                <a href="https://youtu.be/FeR-4_Opt-g">Hiit 1</a> 
             </td>
             <td>
-                <a href="https://youtu.be/G2l5olld5ew">50 min: Braços</a>
+                <a href="https://youtu.be/qGZjamFot98">Hiit 2</a>
+            </td>
+            <td>
+                <a href="https://youtu.be/nbP7m0S0Ato">Hiit 3</a>
+            </td>
+            <td>
+               <a href="https://youtu.be/FeR-4_Opt-g">Hiit 1</a> 
             </td>
             <td>
                 <a href="https://youtu.be/qGZjamFot98">Hiit 2</a>
             </td>
             <td>
-                <a href="https://youtu.be/G2l5olld5ew">50 min: Braços</a>
-            </td>
-            <td>
-                <a href="https://youtu.be/FeR-4_Opt-g">Hiit 1</a> 
-            </td>
-            <td>
-                <a href="https://youtu.be/qGZjamFot98">Hiit 2</a>
+                <a href="https://youtu.be/nbP7m0S0Ato">Hiit 3</a>
             </td>
         </tr>
 
@@ -255,27 +255,26 @@ Força tarefa Atlanta: <br>
                 Força
             </td>
             <td>
-                <a href="https://youtu.be/WxAkMuXERBE">Força Braços 1</a>
+                <a href="https://youtu.be/WxAkMuXERBE">Força 1</a>
             </td>
             <td>
-                <a href="https://youtu.be/gTikkL0s-jM">Força Braços 2</a>
+                <a href="https://youtu.be/gTikkL0s-jM">Força 2</a>
             </td>
             <td>
-                 <a href="https://youtu.be/WxAkMuXERBE">Força Braços 1</a>
+                 <a href="https://youtu.be/gUpwkTsvAMs">Força 3</a>
             </td>
             <td>
-                <a href="https://youtu.be/gTikkL0s-jM">Força Braços 2</a>
+                <a href="https://youtu.be/WxAkMuXERBE">Força 1</a>
             </td>
             <td>
-                <a href="https://youtu.be/WxAkMuXERBE">Força Braços 1</a>
+                <a href="https://youtu.be/gTikkL0s-jM">Força 2</a>
             </td>
             <td>
-                <a href="https://youtu.be/gTikkL0s-jM">Força Braços 2</a>
+                 <a href="https://youtu.be/gUpwkTsvAMs">Força 3</a>
             </td>
         </tr>
 
         <tr>
-
             <td>
                 Fit 1
             </td>
