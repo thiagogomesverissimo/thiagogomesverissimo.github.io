@@ -234,22 +234,22 @@ Força tarefa Atlanta: <br>
                 Cardio
             </td>
             <td>
-               <a href="https://youtu.be/FeR-4_Opt-g">20 min: Hiit</a> 
+               <a href="https://youtu.be/FeR-4_Opt-g">Hiit 1</a> 
             </td>
             <td>
-                <a href="https://youtu.be/o8u_xfJnLq0">Pilates</a>
+                <a href="https://youtu.be/qGZjamFot98">Hiit 2</a>
             </td>
             <td>
-                <a href="https://youtu.be/nbP7m0S0Ato">30 min: Hiit</a>
+                <a href="https://youtu.be/nbP7m0S0Ato">Hiit 3</a>
             </td>
             <td>
-                <a href="https://youtu.be/o8u_xfJnLq0">Pilates</a>
+               <a href="https://youtu.be/FeR-4_Opt-g">Hiit 1</a> 
             </td>
             <td>
-                <a href="https://youtu.be/nbP7m0S0Ato">30 min: Hiit</a>
+                <a href="https://youtu.be/qGZjamFot98">Hiit 2</a>
             </td>
             <td>
-               <a href="https://youtu.be/o8u_xfJnLq0">Pilates</a>
+                <a href="https://youtu.be/nbP7m0S0Ato">Hiit 3</a>
             </td>
         </tr>
 
@@ -258,27 +258,26 @@ Força tarefa Atlanta: <br>
                 Força
             </td>
             <td>
-                <a href="https://youtu.be/WxAkMuXERBE">30 min: Força Braços</a>
+                <a href="https://youtu.be/WxAkMuXERBE">Força 1</a>
             </td>
             <td>
-                <a href="https://youtu.be/UF7dfEEVDp8">40 min pernas</a>
+                <a href="https://youtu.be/gTikkL0s-jM">Força 2</a>
             </td>
             <td>
-                 <a href="https://youtu.be/WxAkMuXERBE">30 min: Força Braços</a>
+                 <a href="https://youtu.be/gUpwkTsvAMs">Força 3</a>
             </td>
             <td>
-                <a href="https://youtu.be/UF7dfEEVDp8">40 min pernas</a>
+                <a href="https://youtu.be/WxAkMuXERBE">Força 1</a>
             </td>
             <td>
-                <a href="https://youtu.be/WxAkMuXERBE">30 min: Força Braços</a>
+                <a href="https://youtu.be/gTikkL0s-jM">Força 2</a>
             </td>
             <td>
-                <a href="https://youtu.be/UF7dfEEVDp8">40 min pernas</a>
+                 <a href="https://youtu.be/gUpwkTsvAMs">Força 3</a>
             </td>
         </tr>
 
         <tr>
-
             <td>
                 Fit 1
             </td>
