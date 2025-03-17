@@ -131,6 +131,9 @@ Força tarefa Atlanta: <br>
                 2 - <a href="https://www.coursera.org/specializations/software-engineering">
                     Coursera: Software Engineering
                 </a><br>
+                3 - <a href="https://www.coursera.org/learn/english-composition/home/">
+                    Coursera: English Composition
+                </a><br>
 
             </td>
 
