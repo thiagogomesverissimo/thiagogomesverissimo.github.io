@@ -4,30 +4,6 @@ title: ""
 permalink: /planejamento/
 ---
 
-Força tarefa Atlanta: <br>
-
-- <a href="https://www.coursera.org/specializations/improve-english#courses">
-    Curso Georgia tech
-</a><br>
-
-- <a href="https://www.youtube.com/watch?v=rAR1QDAS7og&list=PLpVC00PAQQxGFC06mLqoPT4hHaA1Ykn2Z">
-    Drupal acquia
-</a><br>
-
-- <a href="https://www.youtube.com/watch?v=-DYSucV1_9w&list=PLtaXuX0nEZk9MKY_ClWcPkGtOEGyLTyCO">
-    Drupal OsTraining
-</a><br>
-
-- <a href="https://www.youtube.com/watch?v=FTIchVgL8TM&list=PLpVC00PAQQxFNDfiXn6LH1gOLllGS3hhl">
-    Drupal acquia module
-</a><br>
-
-- <a href="https://www.youtube.com/watch?v=BPrNGMH1bcQ&list=PLhA-DDDbk7VclKyM0AhZOYmSFuT78FI44&index=2">
-    Drupal 9 module
-</a><br>
-
-<br>
-
 <table id="planejamento" class="table table-bordered table-hover table-condensed">
     <thead>
         <tr>
@@ -53,23 +29,7 @@ Força tarefa Atlanta: <br>
                 <a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/video_galleries/lecture-videos/">
                     6.0002-2016
                 </a><br>
-                <a href="https://www.youtube.com/watch?v=bX3jvD7XFPs&list=PLB2BE3D6CA77BB8F7">
-                    6.00-2011
-                </a> -
-                <a href="https://ocw.oouagoiwoye.edu.ng/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/resource-index/">
-                    PDFs
-                </a>
-
-                <s><a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">
-                    6.006-2020
-                </a><br>
-                <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video_galleries/lecture-videos/">
-                    6.006-2011
-                </a><br>
-                <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">
-                    6.046J-Analysis
-                </a> 
-                </s>
+               
             </td>
 
             <td>
@@ -80,12 +40,8 @@ Força tarefa Atlanta: <br>
             </td>
 
             <td>
-                1 - <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 LA</a><br>
-                2 - <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a> e
-                <a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>
-                <br>
-                <s><a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a></s>
-                <br>
+                <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/video_galleries/video-lectures/">18.06 LA</a>
+                
             </td>
 
             <td>
@@ -95,8 +51,7 @@ Força tarefa Atlanta: <br>
             </td>
 
             <td>
-                1 - <a href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">Coursera ML</a><br>
-                2 - <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">Vídeos Tibishirano</a>
+                <a href="https://www.coursera.org/specializations/machine-learnin-theory-and-hands-on-practice-with-pythong-cu">Coursera ML</a><br>
             </td>
 
         </tr>
@@ -107,48 +62,29 @@ Força tarefa Atlanta: <br>
             </td>
 
             <td>
-                1 - <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
-                <br>
-                2 - <a href="https://www.coursera.org/specializations/web-applications#courses">Web Application</a>
-                <br>
-                3 - <a href="https://www.coursera.org/specializations/social-science">
-                    Cousera: Métodos de pesquisa
-                </a><br>
-
-            </td>
-
-            <td>
-                1 - <a href="https://www.coursera.org/specializations/ielts-preparation#courses">Coursera IELTS</a><br>
-                2 - <a href="https://www.coursera.org/specializations/toefl-preparation#courses">Coursera Toefl</a><br>
-                3 - <a href="https://www.coursera.org/specializations/academic-english#courses">Coursera Academic English</a><br>                
-            </td>
-
-            <td>
-                1 - <a href="https://www.coursera.org/specializations/mathematics-machine-learning">
-                    Mathematics for Machine Learning
-                </a><br>
-
-                2 - <a href="https://www.coursera.org/specializations/software-engineering">
-                    Coursera: Software Engineering
-                </a><br>
-                3 - <a href="https://www.coursera.org/learn/english-composition/home/">
-                    Coursera: English Composition
-                </a><br>
-
-            </td>
-
-            <td>
-                1 - <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">Big Data and Education</a><br>
-                2 - <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a><br>
-                3 - <a href="https://www.coursera.org/learn/sciwrite/">Coursera: Escrita Científica</a><br>
+                <a href="https://www.coursera.org/specializations/social-science">Cousera: Métodos de pesquisa</a>
             </td>
 
             <td>
                 
-                1 - <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
-                <br>
-                2 - <a href="https://www.coursera.org/specializations/data-science-python">Data Science</a>
+                <a href="https://www.coursera.org/learn/english-composition/home/">
+                    Coursera: English Composition
+                </a>
+              
+            </td>
 
+            <td>
+                <a href="https://www.coursera.org/specializations/software-engineering">
+                    Coursera: Software Engineering
+                </a>
+            </td>
+
+            <td>
+                <a href="https://learning.edx.org/course/course-v1:PennX+BDE1x+1T2021/">Big Data and Education</a><br> 
+            </td>
+
+            <td>
+                <a href="https://learning.edx.org/course/course-v1:MichiganX+PLAx+3T2016/home">Practical Learning Analytics</a>
             </td>
 
         </tr>
@@ -159,22 +95,19 @@ Força tarefa Atlanta: <br>
             </td>
 
             <td>
-                1 - Livros Moodle <br>
-                2 - American Accent Training <br>
+                Livro Moodle Developer's Guide
             </td>
 
             <td>
-                1 - Livro Deep Learning -  François <br>
-                2 - Livro Ielts <br>
+                Livro Ielts
             </td>
 
             <td>
-                Livro Drupal  <br>
-                
+                Livro Drupal
             </td>
                 
             <td>
-                Livro Machine Learning web  <br>
+                Livro Machine Learning web
             </td>
 
             <td>
@@ -328,5 +261,27 @@ Força tarefa Atlanta: <br>
 
     </tbody>
 </table>
+
+<h2>Próximos cursos</h2>
+
+- <a href="https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2006/video_galleries/video-lectures/">Cálculo 1</a>(<a href="https://www.youtube.com/playlist?list=PL21BCE50ABFF029F1">Recitation</a>)
+- <a href="https://www.coursera.org/specializations/ielts-preparation#courses">Coursera IELTS</a><br>
+- <a href="https://www.coursera.org/specializations/statistics-with-python#courses">Statistics with Python</a>
+- <a href="https://www.coursera.org/specializations/mathematics-machine-learning">Mathematics for Machine Learning</a>
+- <a href="https://www.coursera.org/specializations/data-science-python">Data Science</a>
+- Trilha Algoritmos:  <a href="https://www.youtube.com/watch?v=bX3jvD7XFPs&list=PLB2BE3D6CA77BB8F7">6.00-2011</a>(
+<a href="https://ocw.oouagoiwoye.edu.ng/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/resource-index/">PDFs</a>), 
+<a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/video_galleries/lecture-videos/">6.006-2020</a>, <a href="https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-fall-2011/video_galleries/lecture-videos/">6.006-2011</a>, <a href="https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2015/">6.046J-Analysis</a>
+- <a href="https://ocw.mit.edu/courses/18-02-multivariable-calculus-fall-2007/video_galleries/video-lectures/">Cálculo 2</a>
+- <a href="https://www.dataschool.io/15-hours-of-expert-machine-learning-videos/">Vídeos Tibishirano</a>
+- <a href="https://www.coursera.org/specializations/toefl-preparation#courses">Coursera Toefl</a><br>
+- <a href="https://www.coursera.org/specializations/academic-english#courses">Coursera Academic English</a>  
+- <a href="https://www.coursera.org/specializations/web-design">Web Design</a>
+- <a href="https://www.coursera.org/specializations/web-applications#courses">Web Application</a>
+- <a href="https://www.youtube.com/watch?v=rAR1QDAS7og&list=PLpVC00PAQQxGFC06mLqoPT4hHaA1Ykn2Z">Drupal acquia</a>
+- <a href="https://www.youtube.com/watch?v=-DYSucV1_9w&list=PLtaXuX0nEZk9MKY_ClWcPkGtOEGyLTyCO">Drupal OsTraining</a>
+- <a href="https://www.youtube.com/watch?v=FTIchVgL8TM&list=PLpVC00PAQQxFNDfiXn6LH1gOLllGS3hhl">Drupal acquia module</a>
+- <a href="https://www.youtube.com/watch?v=BPrNGMH1bcQ&list=PLhA-DDDbk7VclKyM0AhZOYmSFuT78FI44&index=2">Drupal 9 module</a>
+- <a href="https://www.coursera.org/learn/sciwrite/">Coursera: Escrita Científica</a>
 
 
