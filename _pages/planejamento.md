@@ -129,17 +129,15 @@ permalink: /planejamento/
             </td>
 
             <td>
-                1 - Livro: Strang <br>
-                2 - Livro: Calculo Simon
+                Algebra Linear
             </td>
 
             <td>
-                1 - Livro: Eric Lehman
-                2 - Livro: ?
+                Livro: Eric Lehman
             </td>
 
             <td>
-                Livro: Tibishirano
+                Tibishirano
             </td>
         </tr>
     </tbody>
