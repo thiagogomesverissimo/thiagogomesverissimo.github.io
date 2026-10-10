@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ profile.nome }}</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome (Ícones) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Prism.js (Syntax Highlighting) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+
+        /* Menu Superior */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #495057;
+            font-size: 1.25rem;
+        }
+        .nav-link {
+            color: #6c757d;
+            font-size: 1rem;
+            margin-left: 15px;
+            font-weight: 500;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #212529;
+        }
+
+        /* Sidebar do Perfil */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-links a:hover {
+            color: #0d6efd;
+        }
+
+        /* Seções e Conteúdo */
+        .section-title {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #212529;
+            border-bottom: 2px solid #f1f3f5;
+            padding-bottom: 8px;
+        }
+        .item-card {
+            margin-bottom: 30px;
+        }
+        .item-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+        .item-date {
+            font-size: 0.85rem;
+            color: #adb5bd;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Estilização da Lista de Posts (Data + Link) */
+        .post-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+        }
+        .post-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            min-width: auto;
+            flex-shrink: 0;
+            font-weight: 400;
+            margin-right: 0;
+        }
+        .post-date::after {
+            content: ":";
+            margin-left: 0.15rem;
+        }
+        .post-link {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #212529;
+            text-decoration: none;
+            line-height: 1.35;
+        }
+        .post-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+
+        .title-with-actions {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.35rem;
+            min-width: 0;
+            flex-wrap: nowrap;
+        }
+        .title-with-actions > a,
+        .title-with-actions > span {
+            line-height: 1.4;
+        }
+        .title-with-actions .inline-icons {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            flex-shrink: 0;
+            margin-top: 0.05rem;
+        }
+
+        .list-compact li {
+            margin-bottom: 0.25rem !important;
+            align-items: flex-start !important;
+        }
+
+        /* Formatação de Imagens e Códigos dentro dos Markdowns */
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .markdown-body p {
+            margin-bottom: 0.25rem;
+        }
+        pre {
+            border-radius: 6px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 767px) {
+            .sidebar-col {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#top-navbar" data-bs-offset="100">
+
+    <!-- Menu Superior Fixo -->
+    <nav id="top-navbar" class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">{{ profile.nome }}</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav">
+                    {% for cat in categories %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#{{ cat.id }}">{{ cat.titulo }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-4">
+        <div class="row">
+            
+            <!-- Barra Lateral (Perfil) -->
+            <div class="col-md-3 sidebar-col">
+                <div class="sticky-top" style="top: 90px;">
+                    {% if profile.foto %}
+                    <img src="{{ profile.foto }}" alt="{{ profile.nome }}" class="profile-img">
+                    {% endif %}
+                    <div class="profile-name">{{ profile.nome }}</div>
+                    
+                    <ul class="sidebar-links">
+                        {% for link in profile.links %}
+                        <li>
+                            <a href="{{ link.url }}" target="_blank">
+                                <i class="{{ link.icone }}"></i> {{ link.rotulo }}
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Coluna Principal -->
+            <div class="col-md-9">
+                
+                <!-- Apresentação / Bio -->
+                {% if profile.bio %}
+                <div class="lead mb-4" style="font-size: 1.05rem; color: #495057;">
+                    {{ profile.bio }}
+                </div>
+                {% endif %}
+
+                <!-- Renderização das Seções -->
+                {% for cat in categories %}
+                <section id="{{ cat.id }}" class="mb-5">
+                    <h2 class="section-title">{{ cat.titulo }}</h2>
+                    
+                    {% if cat.id == 'courses-taken' %}
+                        <!-- Renderização dos Cursos Agrupados por Ano -->
+                        {% if cat.courses_grouped %}
+                            {% for group in cat.courses_grouped %}
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">{{ group.year }}</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    {% for course in group.courses %}
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                {% if course.url %}
+                                                <a href="{{ course.url }}" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    {{ course.title }}
+                                                </a>
+                                                {% else %}
+                                                <span class="text-dark">{{ course.title }}</span>
+                                                {% endif %}
+                                                {% if course.has_pdf or course.url %}
+                                                <span class="inline-icons">
+                                                    {% if course.has_pdf %}
+                                                    <a href="{{ course.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if course.url %}
+                                                    <a href="{{ course.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-muted fs-6">Nenhum curso registrado.</p>
+                        {% endif %}
+
+                    {% elif cat.id == 'publications' %}
+                        {% if cat.publications_grouped %}
+                            {% for group in cat.publications_grouped %}
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">{{ group.year }}</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    {% for publication in group.publications %}
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                {% if publication.url %}
+                                                <a href="{{ publication.url }}" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    {{ publication.title }}
+                                                </a>
+                                                {% else %}
+                                                <span class="text-dark">{{ publication.title }}</span>
+                                                {% endif %}
+                                                {% if publication.has_pdf or publication.url %}
+                                                <span class="inline-icons">
+                                                    {% if publication.has_pdf %}
+                                                    <a href="{{ publication.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if publication.url %}
+                                                    <a href="{{ publication.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-muted fs-6">Nenhuma publicação registrada.</p>
+                        {% endif %}
+
+                    {% elif cat.id == 'talks' %}
+                        {% if cat.talks_grouped %}
+                            {% for group in cat.talks_grouped %}
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">{{ group.year }}</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    {% for talk in group.talks %}
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                {% if talk.url %}
+                                                <a href="{{ talk.url }}" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    {{ talk.title }}
+                                                </a>
+                                                {% else %}
+                                                <span class="text-dark">{{ talk.title }}</span>
+                                                {% endif %}
+                                                {% if talk.has_pdf or talk.url %}
+                                                <span class="inline-icons">
+                                                    {% if talk.has_pdf %}
+                                                    <a href="{{ talk.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if talk.url %}
+                                                    <a href="{{ talk.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-muted fs-6">Nenhuma talk registrada.</p>
+                        {% endif %}
+
+                    {% elif cat.id == 'documents' %}
+                        <!-- Renderização dos Documentos Agrupados por Ano -->
+                        {% if cat.documents_grouped %}
+                            {% for group in cat.documents_grouped %}
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">{{ group.year }}</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    {% for doc in group.documents %}
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                {% if doc.url %}
+                                                <a href="{{ doc.url }}" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    {{ doc.title }}
+                                                </a>
+                                                {% else %}
+                                                <span class="text-dark">{{ doc.title }}</span>
+                                                {% endif %}
+                                                {% if doc.has_pdf or doc.url %}
+                                                <span class="inline-icons">
+                                                    {% if doc.has_pdf %}
+                                                    <a href="{{ doc.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                    {% if doc.url %}
+                                                    <a href="{{ doc.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    {% endif %}
+                                                </span>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            {% endfor %}
+                        {% else %}
+                            <p class="text-muted fs-6">Nenhum documento registrado.</p>
+                        {% endif %}
+
+                    {% elif cat.id == 'posts' %}
+                        <!-- Listagem de Posts (Data + Link) -->
+                        <div class="post-list">
+                            {% for item in cat.entries %}
+                            <div class="post-item">
+                                {% if item.date %}
+                                <span class="post-date">{{ item.date }}</span>
+                                {% endif %}
+                                <a href="{{ item.url }}" class="post-link">{{ item.title }}</a>
+                            </div>
+                            {% endfor %}
+                        </div>
+
+                    {% else %}
+                        <!-- Renderização Padrão para Outras Categorias -->
+                        {% for item in cat.entries %}
+                        <div class="item-card">
+                            {% if item.date %}
+                            <div class="item-date">{{ item.date }}</div>
+                            {% endif %}
+                            
+                            <h3 class="item-title">{{ item.title }}</h3>
+                            
+                            <div class="markdown-body">
+                                {{ item.content | safe }}
+                            </div>
+                        </div>
+                        {% endfor %}
+                    {% endif %}
+                </section>
+                {% endfor %}
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts Bootstrap e Prism.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

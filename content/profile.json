@@ -1,0 +1,77 @@
+{
+  "nome": "Thiago Gomes Veríssimo",
+  "foto": "assets/general/thiago.jpg",
+  "bio": "Bem-vindo ao meu site pessoal e portfólio. Aqui compartilho tutoriais, projetos acadêmicos, publicações, palestras e contribuições com software livre.",
+  "links": [
+    {
+      "rotulo": "Email",
+      "url": "mailto:verissimotgv@gmail.com",
+      "icone": "fas fa-envelope"
+    },
+    {
+      "rotulo": "Drupal",
+      "url": "https://www.drupal.org/u/thiagogomesverissimo",
+      "icone": "fab fa-drupal"
+    },
+    {
+      "rotulo": "Github",
+      "url": "https://github.com/thiagogomesverissimo",
+      "icone": "fab fa-github"
+    },
+    {
+      "rotulo": "Gitlab",
+      "url": "https://gitlab.com/thiagogomesverissimo",
+      "icone": "fab fa-gitlab"
+    },
+    {
+      "rotulo": "ORCID",
+      "url": "https://orcid.org/0000-0001-6117-3616",
+      "icone": "fab fa-orcid"
+    },
+    {
+      "rotulo": "Google Scholar",
+      "url": "https://scholar.google.com/citations?user=HWMEGlYAAAAJ",
+      "icone": "fas fa-graduation-cap"
+    },
+    {
+      "rotulo": "Lattes",
+      "url": "http://lattes.cnpq.br/7983798047288613",
+      "icone": "fas fa-id-card"
+    },
+    {
+      "rotulo": "ResearchGate",
+      "url": "https://www.researchgate.net/profile/Thiago-Gomes-Verissimo",
+      "icone": "fab fa-researchgate"
+    },
+    {
+      "rotulo": "ssh public key",
+      "url": "assets/general/id_rsa.pub",
+      "icone": "fas fa-terminal"
+    },
+    {
+      "rotulo": "gpg public key",
+      "url": "assets/general/AAA3BE9F.public.asc",
+      "icone": "fas fa-key"
+    },
+    {
+      "rotulo": "My R scripts",
+      "url": "https://thiagogomesverissimo.github.io/r-notebooks/",
+      "icone": "fab fa-r-project"
+    },
+    {
+      "rotulo": "My python scripts",
+      "url": "https://github.com/thiagogomesverissimo/notebooks",
+      "icone": "fab fa-python"
+    },
+    {
+      "rotulo": "My html/css/js scripts",
+      "url": "https://thiagogomesverissimo.github.io/sandbox-html-css-js/",
+      "icone": "fab fa-html5"
+    },
+    {
+      "rotulo": "My js/jquery scripts",
+      "url": "https://thiagogomesverissimo.github.io/jquery-snippets/",
+      "icone": "fab fa-js"
+    }
+  ]
+}

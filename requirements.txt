@@ -1,0 +1,7 @@
+diagrams
+pandas
+markdown
+matplotlib
+requests
+jinja2
+PyYAML
