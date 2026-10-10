@@ -149,7 +149,7 @@
         .title-with-actions .inline-icons {
             display: inline-flex;
             align-items: center;
-            gap: 0.25rem;
+            gap: 0.35rem;
             flex-shrink: 0;
             margin-top: 0.05rem;
         }
@@ -260,12 +260,21 @@
                                                 {% else %}
                                                 <span class="text-dark">{{ course.title }}</span>
                                                 {% endif %}
-                                                {% if course.has_pdf or course.url %}
+                                                
+                                                {% if course.pdfs or course.has_pdf or course.url %}
                                                 <span class="inline-icons">
-                                                    {% if course.has_pdf %}
-                                                    <a href="{{ course.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
-                                                        <i class="fas fa-file-pdf"></i>
-                                                    </a>
+                                                    {% if course.pdfs %}
+                                                        {% for pdf in course.pdfs %}
+                                                            {% set pdf_url = pdf.url if pdf.url is defined else pdf %}
+                                                            {% set pdf_label = pdf.label if pdf.label is defined else (loop.index if course.pdfs|length > 1 else '') %}
+                                                            <a href="{{ pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF {{ pdf_label }}">
+                                                                <i class="fas fa-file-pdf"></i>{% if pdf_label %}<small class="ms-1 fw-bold" style="font-size: 0.75rem;">{{ pdf_label }}</small>{% endif %}
+                                                            </a>
+                                                        {% endfor %}
+                                                    {% elif course.has_pdf %}
+                                                        <a href="{{ course.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                        </a>
                                                     {% endif %}
                                                     {% if course.url %}
                                                     <a href="{{ course.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
@@ -303,12 +312,21 @@
                                                 {% else %}
                                                 <span class="text-dark">{{ publication.title }}</span>
                                                 {% endif %}
-                                                {% if publication.has_pdf or publication.url %}
+                                                
+                                                {% if publication.pdfs or publication.has_pdf or publication.url %}
                                                 <span class="inline-icons">
-                                                    {% if publication.has_pdf %}
-                                                    <a href="{{ publication.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
-                                                        <i class="fas fa-file-pdf"></i>
-                                                    </a>
+                                                    {% if publication.pdfs %}
+                                                        {% for pdf in publication.pdfs %}
+                                                            {% set pdf_url = pdf.url if pdf.url is defined else pdf %}
+                                                            {% set pdf_label = pdf.label if pdf.label is defined else (loop.index if publication.pdfs|length > 1 else '') %}
+                                                            <a href="{{ pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF {{ pdf_label }}">
+                                                                <i class="fas fa-file-pdf"></i>{% if pdf_label %}<small class="ms-1 fw-bold" style="font-size: 0.75rem;">{{ pdf_label }}</small>{% endif %}
+                                                            </a>
+                                                        {% endfor %}
+                                                    {% elif publication.has_pdf %}
+                                                        <a href="{{ publication.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                        </a>
                                                     {% endif %}
                                                     {% if publication.url %}
                                                     <a href="{{ publication.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
@@ -346,12 +364,21 @@
                                                 {% else %}
                                                 <span class="text-dark">{{ talk.title }}</span>
                                                 {% endif %}
-                                                {% if talk.has_pdf or talk.url %}
+                                                
+                                                {% if talk.pdfs or talk.has_pdf or talk.url %}
                                                 <span class="inline-icons">
-                                                    {% if talk.has_pdf %}
-                                                    <a href="{{ talk.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
-                                                        <i class="fas fa-file-pdf"></i>
-                                                    </a>
+                                                    {% if talk.pdfs %}
+                                                        {% for pdf in talk.pdfs %}
+                                                            {% set pdf_url = pdf.url if pdf.url is defined else pdf %}
+                                                            {% set pdf_label = pdf.label if pdf.label is defined else (loop.index if talk.pdfs|length > 1 else '') %}
+                                                            <a href="{{ pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF {{ pdf_label }}">
+                                                                <i class="fas fa-file-pdf"></i>{% if pdf_label %}<small class="ms-1 fw-bold" style="font-size: 0.75rem;">{{ pdf_label }}</small>{% endif %}
+                                                            </a>
+                                                        {% endfor %}
+                                                    {% elif talk.has_pdf %}
+                                                        <a href="{{ talk.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                        </a>
                                                     {% endif %}
                                                     {% if talk.url %}
                                                     <a href="{{ talk.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
@@ -390,12 +417,21 @@
                                                 {% else %}
                                                 <span class="text-dark">{{ doc.title }}</span>
                                                 {% endif %}
-                                                {% if doc.has_pdf or doc.url %}
+                                                
+                                                {% if doc.pdfs or doc.has_pdf or doc.url %}
                                                 <span class="inline-icons">
-                                                    {% if doc.has_pdf %}
-                                                    <a href="{{ doc.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
-                                                        <i class="fas fa-file-pdf"></i>
-                                                    </a>
+                                                    {% if doc.pdfs %}
+                                                        {% for pdf in doc.pdfs %}
+                                                            {% set pdf_url = pdf.url if pdf.url is defined else pdf %}
+                                                            {% set pdf_label = pdf.label if pdf.label is defined else (loop.index if doc.pdfs|length > 1 else '') %}
+                                                            <a href="{{ pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF {{ pdf_label }}">
+                                                                <i class="fas fa-file-pdf"></i>{% if pdf_label %}<small class="ms-1 fw-bold" style="font-size: 0.75rem;">{{ pdf_label }}</small>{% endif %}
+                                                            </a>
+                                                        {% endfor %}
+                                                    {% elif doc.has_pdf %}
+                                                        <a href="{{ doc.pdf_url }}" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                            <i class="fas fa-file-pdf"></i>
+                                                        </a>
                                                     {% endif %}
                                                     {% if doc.url %}
                                                     <a href="{{ doc.url }}" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">

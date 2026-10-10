@@ -73,9 +73,50 @@ def parse_markdown_file(filepath):
         "slug": slug
     }
 
+def get_pdf_files(item_id, assets_dir):
+    """Procura por PDFs de um item: {id}.pdf e {id}-1.pdf, {id}-2.pdf, etc."""
+    pdfs = []
+    
+    # Verifica arquivo principal ({id}.pdf)
+    for ext in ['.pdf', '.PDF']:
+        main_file = assets_dir / f"{item_id}{ext}"
+        if main_file.exists():
+            pdfs.append({
+                "url": f"assets/{assets_dir.name}/{main_file.name}",
+                "label": "",
+                "main": True
+            })
+            break
+    
+    # Verifica arquivos adicionais ({id}-1.pdf, {id}-2.pdf, etc)
+    counter = 1
+    while True:
+        found = False
+        for ext in ['.pdf', '.PDF']:
+            addon_file = assets_dir / f"{item_id}-{counter}{ext}"
+            if addon_file.exists():
+                pdfs.append({
+                    "url": f"assets/{assets_dir.name}/{addon_file.name}",
+                    "label": f"{counter}",
+                    "main": False
+                })
+                found = True
+                break
+        if not found:
+            break
+        counter += 1
+    
+    # Ajusta os rótulos se houver múltiplos arquivos
+    if len(pdfs) > 1:
+        for idx, pdf in enumerate(pdfs, 1):
+            pdf["label"] = str(idx)
+    elif len(pdfs) == 1:
+        pdfs[0]["label"] = ""
+
+    return pdfs
+
 def load_courses():
-    """Lê content/courses.csv, agrupa por ano e verifica certificados em assets/courses/{id}.pdf."""
-    # Detecta a raiz do projeto (mesmo se o script for chamado de dentro de scripts/)
+    """Lê content/courses.csv, agrupa por ano e verifica certificados em assets/courses/."""
     script_dir = Path(__file__).resolve().parent
     project_root = script_dir.parent if script_dir.name == "scripts" else script_dir
 
@@ -97,40 +138,26 @@ def load_courses():
             title_text = row.get("title", "").strip()
             url = (row.get("url") or "").strip()
 
-            # Checa se existe o PDF (testa .pdf e .PDF)
-            pdf_file = assets_courses_dir / f"{course_id}.pdf"
-            if not pdf_file.exists():
-                pdf_file = assets_courses_dir / f"{course_id}.PDF"
-
-            has_pdf = pdf_file.exists()
+            pdf_files = get_pdf_files(course_id, assets_courses_dir)
+            has_pdf = len(pdf_files) > 0
             if has_pdf:
                 found_pdfs += 1
-
-            # Caminho relativo para o HTML em docs/
-            pdf_url = f"assets/courses/{pdf_file.name}" if has_pdf else ""
-
-            title_html = markdown.markdown(title_text, extensions=['extra', 'nl2br'])
 
             courses_by_year[year].append({
                 "id": course_id,
                 "title": title_text,
                 "url": url,
-                "title_html": title_html,
+                "title_html": markdown.markdown(title_text, extensions=['extra', 'nl2br']),
                 "has_pdf": has_pdf,
-                "pdf_url": pdf_url
+                "pdfs": pdf_files,
+                "pdf_files": pdf_files,
+                "pdf_url": pdf_files[0]["url"] if has_pdf else ""
             })
 
     sorted_years = sorted(courses_by_year.keys(), reverse=True)
-
-    result = []
-    for year in sorted_years:
-        result.append({
-            "year": year,
-            "courses": courses_by_year[year]
-        })
-
     print(f"🎓 Processados cursos de {len(sorted_years)} anos ({found_pdfs} PDF(s) de certificados encontrados).")
-    return result
+    
+    return [{"year": year, "courses": courses_by_year[year]} for year in sorted_years]
 
 def load_documents():
     """Lê content/documents.csv, agrupa por ano e monta links para PDF/URL dos documentos."""
@@ -154,30 +181,21 @@ def load_documents():
             title_text = row.get("title", "").strip()
             url = (row.get("url") or "").strip()
 
-            pdf_file = assets_documents_dir / f"{document_id}.pdf"
-            if not pdf_file.exists():
-                pdf_file = assets_documents_dir / f"{document_id}.PDF"
-
-            has_pdf = pdf_file.exists()
-            pdf_url = f"assets/documents/{pdf_file.name}" if has_pdf else ""
+            pdf_files = get_pdf_files(document_id, assets_documents_dir)
+            has_pdf = len(pdf_files) > 0
 
             documents_by_year[year].append({
                 "id": document_id,
                 "title": title_text,
                 "url": url,
                 "has_pdf": has_pdf,
-                "pdf_url": pdf_url,
+                "pdfs": pdf_files,
+                "pdf_files": pdf_files,
+                "pdf_url": pdf_files[0]["url"] if has_pdf else "",
                 "title_html": markdown.markdown(title_text, extensions=['extra', 'nl2br'])
             })
 
-    result = []
-    for year in sorted(documents_by_year.keys(), reverse=True):
-        result.append({
-            "year": year,
-            "documents": documents_by_year[year]
-        })
-
-    return result
+    return [{"year": year, "documents": documents_by_year[year]} for year in sorted(documents_by_year.keys(), reverse=True)]
 
 def load_publications():
     """Lê content/publications.csv, agrupa por ano e monta links para PDF/URL."""
@@ -201,31 +219,21 @@ def load_publications():
             title_text = row.get("title", "").strip()
             url = (row.get("url") or "").strip()
 
-            pdf_file = assets_publications_dir / f"{publication_id}.pdf"
-            if not pdf_file.exists():
-                pdf_file = assets_publications_dir / f"{publication_id}.PDF"
-
-            has_pdf = pdf_file.exists()
-            pdf_url = f"assets/publications/{pdf_file.name}" if has_pdf else ""
+            pdf_files = get_pdf_files(publication_id, assets_publications_dir)
+            has_pdf = len(pdf_files) > 0
 
             publications_by_year[year].append({
                 "id": publication_id,
                 "title": title_text,
                 "url": url,
                 "has_pdf": has_pdf,
-                "pdf_url": pdf_url,
+                "pdfs": pdf_files,
+                "pdf_files": pdf_files,
+                "pdf_url": pdf_files[0]["url"] if has_pdf else "",
                 "title_html": markdown.markdown(title_text, extensions=['extra', 'nl2br'])
             })
 
-    result = []
-    for year in sorted(publications_by_year.keys(), reverse=True):
-        result.append({
-            "year": year,
-            "publications": publications_by_year[year]
-        })
-
-    return result
-
+    return [{"year": year, "publications": publications_by_year[year]} for year in sorted(publications_by_year.keys(), reverse=True)]
 
 def load_talks():
     """Lê content/talks.csv, agrupa por ano e monta links para PDF/URL."""
@@ -249,31 +257,21 @@ def load_talks():
             title_text = row.get("title", "").strip()
             url = (row.get("url") or "").strip()
 
-            pdf_file = assets_talks_dir / f"{talk_id}.pdf"
-            if not pdf_file.exists():
-                pdf_file = assets_talks_dir / f"{talk_id}.PDF"
-
-            has_pdf = pdf_file.exists()
-            pdf_url = f"assets/talks/{pdf_file.name}" if has_pdf else ""
+            pdf_files = get_pdf_files(talk_id, assets_talks_dir)
+            has_pdf = len(pdf_files) > 0
 
             talks_by_year[year].append({
                 "id": talk_id,
                 "title": title_text,
                 "url": url,
                 "has_pdf": has_pdf,
-                "pdf_url": pdf_url,
+                "pdfs": pdf_files,
+                "pdf_files": pdf_files,
+                "pdf_url": pdf_files[0]["url"] if has_pdf else "",
                 "title_html": markdown.markdown(title_text, extensions=['extra', 'nl2br'])
             })
 
-    result = []
-    for year in sorted(talks_by_year.keys(), reverse=True):
-        result.append({
-            "year": year,
-            "talks": talks_by_year[year]
-        })
-
-    return result
-
+    return [{"year": year, "talks": talks_by_year[year]} for year in sorted(talks_by_year.keys(), reverse=True)]
 
 def copy_static_assets():
     destino = os.path.join(OUTPUT_DIR, "assets")
