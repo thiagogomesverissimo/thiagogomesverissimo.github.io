@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tópicos em Samba - Thiago Gomes Veríssimo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #495057;
+            font-size: 1.25rem;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-links a:hover {
+            color: #0d6efd;
+        }
+        .page-title {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+        .page-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        pre {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar com botão de Voltar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Thiago Gomes Veríssimo</a>
+            <a href="../index.html" class="btn btn-sm btn-outline-secondary">← Voltar para a Inicial</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            
+            <!-- Barra Lateral -->
+            <div class="col-md-3 mb-4">
+                <div class="sticky-top" style="top: 90px;">
+                    
+                    <img src="../assets/general/thiago.jpg" alt="Thiago Gomes Veríssimo" class="profile-img">
+                    
+                    <div class="profile-name">Thiago Gomes Veríssimo</div>
+                    
+                    <ul class="sidebar-links">
+                        
+                        <li>
+                            <a href="mailto:verissimotgv@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.drupal.org/u/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-drupal"></i> Drupal
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-github"></i> Github
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://gitlab.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-gitlab"></i> Gitlab
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://orcid.org/0000-0001-6117-3616" target="_blank">
+                                <i class="fab fa-orcid"></i> ORCID
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HWMEGlYAAAAJ" target="_blank">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://lattes.cnpq.br/7983798047288613" target="_blank">
+                                <i class="fas fa-id-card"></i> Lattes
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Thiago-Gomes-Verissimo" target="_blank">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/id_rsa.pub" target="_blank">
+                                <i class="fas fa-terminal"></i> ssh public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/AAA3BE9F.public.asc" target="_blank">
+                                <i class="fas fa-key"></i> gpg public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/r-notebooks/" target="_blank">
+                                <i class="fab fa-r-project"></i> My R scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo/notebooks" target="_blank">
+                                <i class="fab fa-python"></i> My python scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/sandbox-html-css-js/" target="_blank">
+                                <i class="fab fa-html5"></i> My html/css/js scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/jquery-snippets/" target="_blank">
+                                <i class="fab fa-js"></i> My js/jquery scripts
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Post / Página -->
+            <div class="col-md-9">
+                <article class="mb-5">
+                    
+                    <div class="page-date">2020-04-10</div>
+                    
+                    <h1 class="page-title">Tópicos em Samba</h1>
+                    <hr class="mb-4">
+                    <div class="markdown-body">
+                        <p>Criando um servidor samba como domain controller (DC):</p>
+<p>Dado o ip 192.168.8.48:</p>
+<ul>
+<li>Em /etc/hostname: dc1<br />
+hostname -f</li>
+</ul>
+<p>hostnamectl set-hostname dc1</p>
+<ul>
+<li>Em /etc/hosts adicione a linha: </li>
+</ul>
+<p>127.0.1.1       dc1<br />
+192.168.8.48 dc1.smbdomain.local.br dc1</p>
+<p>Instalação de pacotes:</p>
+<pre class="codehilite"><code class="language-bash">export DEBIAN_FRONTEND=noninteractive
+apt -y install samba krb5-config krb5-user libnss-winbind libpam-winbind winbind smbclient ldb-tools samba-common
+</code></pre>
+
+<p>Provisionando a base de dados samba-ad-dc com o usuário Administrator com senha Pr0Aluno123:</p>
+<pre class="codehilite"><code class="language-bash">rm /etc/samba/smb.conf
+samba-tool domain provision --server-role=dc --dns-backend=SAMBA_INTERNAL --realm='SMBDOMAIN.LOCAL.BR' --domain='SMBDOMAIN' --adminpass='SuperSenh@1' --use-rfc2307
+cp /var/lib/samba/private/krb5.conf /etc/
+</code></pre>
+
+<p>Desabilitar smbd nmbd winbind:</p>
+<pre class="codehilite"><code class="language-bash">systemctl stop smbd nmbd winbind
+systemctl disable smbd nmbd winbind
+</code></pre>
+
+<p>Habilitar serviço samba-ad-dc:</p>
+<pre class="codehilite"><code class="language-bash">systemctl unmask samba-ad-dc
+systemctl start samba-ad-dc
+systemctl enable samba-ad-dc 
+</code></pre>
+
+<p>Desabilitando complexidade de senhas:</p>
+<pre class="codehilite"><code class="language-bash">samba-tool user setexpiry Administrator --noexpiry 
+samba-tool domain passwordsettings set --complexity=off
+samba-tool domain passwordsettings set --history-length=0
+samba-tool domain passwordsettings set --min-pwd-age=0
+samba-tool domain passwordsettings set --max-pwd-age=0
+samba-tool domain passwordsettings set --min-pwd-length=0
+</code></pre>
+
+<p>Criando um grupo chamado STUDENTS com um usuário 5385361:</p>
+<pre class="codehilite"><code class="language-bash">samba-tool group add STUDENTS
+samba-tool user create 5385361
+samba-tool group addmembers STUDENTS 5385361
+samba-tool group listmembers STUDENTS
+</code></pre>
+
+<p>Obrigar a <em>maria</em> a trocar senha no próximo login:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit --pwd-can-change-time=0 maria
+</code></pre>
+
+<p>No windows, promover usuária maria do AD como admin local</p>
+<pre class="codehilite"><code class="language-bash">net localgroup administradores N°USP /add
+</code></pre>
+
+<p>Ver as configurações completas:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -Lv &gt; /tmp/saida.txt
+</code></pre>
+
+<p>Ver configurações do usuário <em>maria</em>:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -Lv maria
+</code></pre>
+
+<p>Listar computadores do domínio:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit --list | grep &quot;\$$&quot;
+</code></pre>
+
+<p>Remover computador do domínio:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -x -m NAME_OF_COMPUTER_TO_REMOVE
+</code></pre>
+
+<p>Mudar o home do usuario maria de <em>/home/maria</em> para<br />
+<em>\dominio.com\maria</em> e mudar ponto de montagem<br />
+para H:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -h &quot;\\\\dominio.com\\maria&quot; -D &quot;H:&quot; maria
+</code></pre>
+
+<p>Para que a senha do usuário expire a cada 30 dias e ele seja obrigado a<br />
+mudá-la:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -P &quot;maximum password age&quot; -C 2592000
+</code></pre>
+
+<p>Desabilitar expiração de senha para o usuário Administrator:</p>
+<pre class="codehilite"><code class="language-bash">samba-tool user setexpiry Administrator --noexpiry 
+</code></pre>
+
+<p>Desabilitar complexidade da senha:</p>
+<pre class="codehilite"><code class="language-bash">samba-tool domain passwordsettings set --complexity=off
+</code></pre>
+
+<p>O usuário só possa mudar a senha após 25 dias depois da última<br />
+troca:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -P &quot;minimum password age&quot; -C 2160000
+</code></pre>
+
+<p>Tamanho mínimo de senha de 8 caracteres:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -P &quot;min password length&quot; -C 8
+</code></pre>
+
+<p>Mantém um histórico de senhas usadas pelo usuário para que ele não possa<br />
+reutiliza-las.<br />
+Neste caso ele não poderá utilizar as últimas duas senhas.</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -P &quot;password history&quot; -C 2
+</code></pre>
+
+<p>A senha de root não expira:</p>
+<pre class="codehilite"><code class="language-bash">pdbedit -c &quot;[X ]&quot; -u root
+</code></pre>
+
+<p>Listar usuários com username duplicados:</p>
+<pre class="codehilite"><code class="language-bash">samba-tool user list | sort | uniq -cd
+</code></pre>
+
+<p>Script para obrigar todos os usuários do samba a trocarem<br />
+suas senhas:</p>
+<pre class="codehilite"><code class="language-bash">#!/bin/bash
+
+for USUARIO in $(pdbedit -L | grep -v \'$:\'| grep -v \'root:\' | cut -d:
+-f1)
+do
+   pdbedit --pwd-must-change-time=0 $USUARIO
+   pdbedit --pwd-can-change-time=0 $USUARIO
+
+done
+</code></pre>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

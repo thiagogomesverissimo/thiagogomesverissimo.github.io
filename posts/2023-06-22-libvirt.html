@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libvirt - Thiago Gomes Veríssimo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #495057;
+            font-size: 1.25rem;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-links a:hover {
+            color: #0d6efd;
+        }
+        .page-title {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+        .page-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        pre {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar com botão de Voltar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Thiago Gomes Veríssimo</a>
+            <a href="../index.html" class="btn btn-sm btn-outline-secondary">← Voltar para a Inicial</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            
+            <!-- Barra Lateral -->
+            <div class="col-md-3 mb-4">
+                <div class="sticky-top" style="top: 90px;">
+                    
+                    <img src="../assets/general/thiago.jpg" alt="Thiago Gomes Veríssimo" class="profile-img">
+                    
+                    <div class="profile-name">Thiago Gomes Veríssimo</div>
+                    
+                    <ul class="sidebar-links">
+                        
+                        <li>
+                            <a href="mailto:verissimotgv@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.drupal.org/u/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-drupal"></i> Drupal
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-github"></i> Github
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://gitlab.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-gitlab"></i> Gitlab
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://orcid.org/0000-0001-6117-3616" target="_blank">
+                                <i class="fab fa-orcid"></i> ORCID
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HWMEGlYAAAAJ" target="_blank">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://lattes.cnpq.br/7983798047288613" target="_blank">
+                                <i class="fas fa-id-card"></i> Lattes
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Thiago-Gomes-Verissimo" target="_blank">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/id_rsa.pub" target="_blank">
+                                <i class="fas fa-terminal"></i> ssh public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/AAA3BE9F.public.asc" target="_blank">
+                                <i class="fas fa-key"></i> gpg public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/r-notebooks/" target="_blank">
+                                <i class="fab fa-r-project"></i> My R scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo/notebooks" target="_blank">
+                                <i class="fab fa-python"></i> My python scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/sandbox-html-css-js/" target="_blank">
+                                <i class="fab fa-html5"></i> My html/css/js scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/jquery-snippets/" target="_blank">
+                                <i class="fab fa-js"></i> My js/jquery scripts
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Post / Página -->
+            <div class="col-md-9">
+                <article class="mb-5">
+                    
+                    <div class="page-date">2023-06-22</div>
+                    
+                    <h1 class="page-title">Libvirt</h1>
+                    <hr class="mb-4">
+                    <div class="markdown-body">
+                        <p>Virt-Manager is a powerful graphical tool that allows you to manage virtual machines on your Linux system</p>
+<p>Obtain the OVA file containing the VirtualBox virtual machine image that you want to convert. Make sure you know the file's location on your system. In our case is <em>ipv6.ova</em>.</p>
+<p>An OVA file is essentially an archive that contains the virtual machine disk image and its metadata. Extract the contents of the OVA file to a folder using tar archive extraction tool:</p>
+<pre class="codehilite"><code class="language-shell">tar -xvf ipv6.ova
+</code></pre>
+
+<p>The file CursoIPv6br-CORE4.6-20150318-disk1.vmdk was generated.</p>
+<p>The disk image inside the OVA is typically in VMDK format, which is not directly compatible with qcow2. Open a terminal or command prompt and navigate to the folder where you extracted the OVA contents. Run the following command to convert the VMDK file to qcow2:</p>
+<pre class="codehilite"><code class="language-shell">qemu-img convert CursoIPv6br-CORE4.6-20150318-disk1.vmdk ipv6.qcow2 -O qcow2
+</code></pre>
+
+<p>You have successfully converted a VirtualBox virtual machine image in OVA format to a QCOW2 image format compatible with the libvirt virtualization platform. You can use the QCOW2 image to create and run virtual machines in virt-manager, so:</p>
+<pre class="codehilite"><code class="language-shell">sudo mv ipv6.qcow2 /var/lib/libvirt/images
+sudo chown libvirt-qemu:libvirt-qemu /var/lib/libvirt/images/ipv6.qcow2
+</code></pre>
+
+<h2 id="windows-11">windows 11</h2>
+<p>We will guide you through the process of installing Windows 11 on Virt-Manager.</p>
+<p>Adionar backports no /etc/apt/sources.list</p>
+<pre class="codehilite"><code class="language-shell">deb http://deb.debian.org/debian bullseye-backports main
+</code></pre>
+
+<pre class="codehilite"><code class="language-shell">sudo apt install -t bullseye-backports swtpm-tools qemu-kvm bridge-utils virt-manager libosinfo-bin ovmf -y
+</code></pre>
+
+<p>Criar uma máquina virtual no virt-manager e apontar para iso do windows 11, marcar a opção "Personalisar a configuração antes da Instalação"</p>
+<p>Click on SATA Disk 1.<br />
+Under details click on Advanced options.<br />
+Choose the disk bus as VirtIO, and leave the hard disk type as qcow2.</p>
+<p>In the Add new virtual hardware window, click on Graphics, and choose Graphics type as VNC Server, and click on Finish.</p>
+<p>wget https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/archive-virtio/virtio-win-0.1.215-2/virtio-win-0.1.215.iso</p>
+<p>Click on Add hardware.<br />
+Select storage, click on Manage to attach the virtio driver that you have downloaded.<br />
+Choose the Device type as CDROM Device.<br />
+Click on Finish.</p>
+<p>No boot SATA CDROM1 e depois VIRTIO DISK 1</p>
+<p>Click on CPU, Choose the current allocations to 4.</p>
+<p>Under topology, Select manually set CPU topology.<br />
+Select socket as 1.<br />
+Core as 2.<br />
+Thread as 2.</p>
+<p>Add the TPM as below.</p>
+<p>Model – You will see two models, choose TIS,<br />
+Backend – select Backend as Emulated.<br />
+Version – 2.0</p>
+<p>Click on the Overview option during the VM installation and change the following settings.</p>
+<p>Chipset – i440FX<br />
+Firmware – UEFI x86_64:/usr/share/OVMF/OVMF_CODE.fd</p>
+<p>Iniciar Instalação - tecla para boot</p>
+<p>You won’t be able to find the hard disk that you have added,</p>
+<p>Click on Load driver. In the prompt, click on OK. We have to choose windows 11 driver here</p>
+<h2 id="exporting-virtual-machine-to-another-pc">Exporting virtual machine to another PC</h2>
+<p>Verifando nome da VM:</p>
+<pre class="codehilite"><code class="language-shell">sudo virsh list --all
+sudo virsh dumpxml win11-22H2 &gt; win11-22H2.xml
+</code></pre>
+
+<p>Verificando discos associados:</p>
+<pre class="codehilite"><code class="language-shell">sudo virsh domblklist win11-22H2
+</code></pre>
+
+<p>É uma boa ideia remover os discos dos CDROMS associados a VM.<br />
+Copiar o arquivo xml e o disco (qcow2) para a nova máquina:</p>
+<pre class="codehilite"><code class="language-shell">/var/lib/libvirt/images/win11-22H2.qcow2
+win11-22H2.xml
+</code></pre>
+
+<p>Na nova máquina colocar o arquivo xml e o disco (qcow2) nos respectivos destinos:</p>
+<pre class="codehilite"><code class="language-shell">sudo cp win11-22H2.xml /etc/libvirt/qemu
+sudo cp win11-22H2.qcow2 /var/lib/libvirt/images
+</code></pre>
+
+<p>Na nova máquina:</p>
+<pre class="codehilite"><code class="language-shell">cd /etc/libvirt/qemu
+virsh define win11-22H2.xml
+</code></pre>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

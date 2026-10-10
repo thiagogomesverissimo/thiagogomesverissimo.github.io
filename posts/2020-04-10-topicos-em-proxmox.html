@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tópicos em proxmox - Thiago Gomes Veríssimo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #495057;
+            font-size: 1.25rem;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-links a:hover {
+            color: #0d6efd;
+        }
+        .page-title {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+        .page-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        pre {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar com botão de Voltar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Thiago Gomes Veríssimo</a>
+            <a href="../index.html" class="btn btn-sm btn-outline-secondary">← Voltar para a Inicial</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            
+            <!-- Barra Lateral -->
+            <div class="col-md-3 mb-4">
+                <div class="sticky-top" style="top: 90px;">
+                    
+                    <img src="../assets/general/thiago.jpg" alt="Thiago Gomes Veríssimo" class="profile-img">
+                    
+                    <div class="profile-name">Thiago Gomes Veríssimo</div>
+                    
+                    <ul class="sidebar-links">
+                        
+                        <li>
+                            <a href="mailto:verissimotgv@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.drupal.org/u/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-drupal"></i> Drupal
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-github"></i> Github
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://gitlab.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-gitlab"></i> Gitlab
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://orcid.org/0000-0001-6117-3616" target="_blank">
+                                <i class="fab fa-orcid"></i> ORCID
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HWMEGlYAAAAJ" target="_blank">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://lattes.cnpq.br/7983798047288613" target="_blank">
+                                <i class="fas fa-id-card"></i> Lattes
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Thiago-Gomes-Verissimo" target="_blank">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/id_rsa.pub" target="_blank">
+                                <i class="fas fa-terminal"></i> ssh public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/AAA3BE9F.public.asc" target="_blank">
+                                <i class="fas fa-key"></i> gpg public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/r-notebooks/" target="_blank">
+                                <i class="fab fa-r-project"></i> My R scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo/notebooks" target="_blank">
+                                <i class="fab fa-python"></i> My python scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/sandbox-html-css-js/" target="_blank">
+                                <i class="fab fa-html5"></i> My html/css/js scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/jquery-snippets/" target="_blank">
+                                <i class="fab fa-js"></i> My js/jquery scripts
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Post / Página -->
+            <div class="col-md-9">
+                <article class="mb-5">
+                    
+                    <div class="page-date">2020-04-10</div>
+                    
+                    <h1 class="page-title">Tópicos em proxmox</h1>
+                    <hr class="mb-4">
+                    <div class="markdown-body">
+                        <p>Anotações sobre proxmox.</p>
+<ul id="toc"></ul>
+
+<h2 id="nested-virtualization-com-debian-e-virt-manager">Nested Virtualization com Debian e virt-manager</h2>
+<p>É muito útil ter um proxmox local para aplicar configurações<br />
+de testes antes de enviá-las para produção. <br />
+Eu normalmente subo o proxmox usando o virt-manager habilitando<br />
+a opção nested virtualization.</p>
+<pre class="codehilite"><code class="language-bash">    sudo apt install virt-manager
+</code></pre>
+
+<p>Para nested virtualization, há dois casos. Se seu processador for AMD:</p>
+<pre class="codehilite"><code class="language-bash">    sudo su
+    echo &quot;options kvm-amd nested=1&quot; &gt; /etc/modprobe.d/kvm-amd.conf
+    modprobe -r kvm_amd
+    modprobe kvm_amd
+</code></pre>
+
+<p>E se for intel:</p>
+<pre class="codehilite"><code class="language-bash">    sudo su
+    echo &quot;options kvm-intel nested=Y&quot; &gt; /etc/modprobe.d/kvm-intel.conf
+    modprobe -r kvm_intel
+    modprobe kvm_intel
+</code></pre>
+
+<p>Agora é só fazer o download da ISO do proxmox e iniciar a instalação do pelo<br />
+virt-manager:</p>
+<ul>
+<li>https://www.proxmox.com/en/downloads/category/iso-images-pve</li>
+</ul>
+<p>O diretório padrão do libvirt para salvar as VMs é<br />
+<code>/var/lib/libvirt/images/</code>, se quiser mudar, faça o procedimento abaixo:</p>
+<pre class="codehilite"><code class="language-bash">sudo su
+mkdir /home/storage_libvirt
+chown libvirt-qemu: /home/storage_libvirt/
+
+virsh pool-destroy default
+virsh pool-undefine default
+virsh pool-define-as --name default --type dir --target /home/storage_libvirt
+virsh pool-autostart default
+virsh pool-start default
+</code></pre>
+
+<p>Dicas gerais do proxmox:</p>
+<ul>
+<li>Baixando templates para containers: Datacenter-&gt;node-&gt;local(storage)-&gt;Content-&gt;Templates</li>
+<li>Subindo imagens ISO: Datacenter-&gt;node-&gt;local(storage)-&gt;Content-&gt;Upload</li>
+</ul>
+<h2 id="nat-com-debain-para-as-vms">NAT com Debain para as VMs</h2>
+<p>Existe inumeras formas de você criar um NAT, sendo uma das mais famosas, <br />
+com o uso do pfsense. Aqui farei de forma bem simples, usando um container<br />
+do proxmox com debian, que vou chamar de <code>gw</code>.</p>
+<p>Adicione uma segunda interface em no seu node: node-&gt;Network-&gt;Create-&gt;Linux Bridge. <br />
+Se você colocar no campo <em>Bridge Port</em> alguma placa física, essa interface terá <br />
+comunicação com sua rede local, fora do proxmox. Minha placa bridge ficou com o nome <br />
+<em>vmbr1</em>. </p>
+<p>O container <em>gw</em> já está com acesso a rede externa na interface eth0 em bridge com <em>vmbr0</em>,<br />
+assim, vou apenas fazer a configuração de <em>vmbr1</em>. Para tal, eu desliguei o container <br />
+(por algum motivo não consegui adicionar a interface com o container ligado). <br />
+Em <em>container-gw-&gt;Network-&gt;Add</em> criei uma interface chamada <em>eth1</em> e selecionei bridge para <em>vmbr1</em>.</p>
+<p>Criarei uma rede NAT  10.0.0.0/24. Depois de ligar o container tenha certeza <br />
+que o comando <em>ip a</em> mostre tanto a<br />
+eth0, interface com saida para web, quanto eth1.</p>
+<p>Em <em>/etc/network/interfaces</em> colocaremos a configuração da nova interface:</p>
+<pre class="codehilite"><code class="language-bash">auto eth1
+iface eth1 inet static
+        address  10.0.0.1
+        netmask  255.255.255.0
+        bridge_ports none
+        bridge_stp off
+        bridge_fd 0
+        post-up echo 1 &gt; /proc/sys/net/ipv4/ip_forward
+        post-up   iptables -t nat -A POSTROUTING -s '10.0.0.0/24' -o eth0 -j MASQUERADE
+        post-down iptables -t nat -D POSTROUTING -s '10.0.0.0/24' -o eth0 -j MASQUERADE
+</code></pre>
+
+<p>Agora suba a interface com <code>ifup eth1</code> e está feito.</p>
+<h2 id="dhcp">DHCP</h2>
+<h2 id="encaminhamento-de-portas">Encaminhamento de portas</h2>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

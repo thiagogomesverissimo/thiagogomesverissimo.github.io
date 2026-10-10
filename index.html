@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thiago Gomes Veríssimo</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome (Ícones) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <!-- Prism.js (Syntax Highlighting) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+
+        /* Menu Superior */
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #495057;
+            font-size: 1.25rem;
+        }
+        .nav-link {
+            color: #6c757d;
+            font-size: 1rem;
+            margin-left: 15px;
+            font-weight: 500;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #212529;
+        }
+
+        /* Sidebar do Perfil */
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-links a:hover {
+            color: #0d6efd;
+        }
+
+        /* Seções e Conteúdo */
+        .section-title {
+            font-weight: 700;
+            font-size: 1.6rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            color: #212529;
+            border-bottom: 2px solid #f1f3f5;
+            padding-bottom: 8px;
+        }
+        .item-card {
+            margin-bottom: 30px;
+        }
+        .item-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: #212529;
+            margin-bottom: 8px;
+        }
+        .item-date {
+            font-size: 0.85rem;
+            color: #adb5bd;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Estilização da Lista de Posts (Data + Link) */
+        .post-item {
+            display: flex;
+            align-items: baseline;
+            gap: 0.25rem;
+            margin-bottom: 0.2rem;
+            white-space: nowrap;
+        }
+        .post-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            min-width: auto;
+            flex-shrink: 0;
+            font-weight: 400;
+            margin-right: 0;
+        }
+        .post-date::after {
+            content: ":";
+            margin-left: 0.15rem;
+        }
+        .post-link {
+            font-size: 0.95rem;
+            font-weight: 400;
+            color: #212529;
+            text-decoration: none;
+            line-height: 1.35;
+        }
+        .post-link:hover {
+            color: #0d6efd;
+            text-decoration: underline;
+        }
+
+        .title-with-actions {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.35rem;
+            min-width: 0;
+            flex-wrap: nowrap;
+        }
+        .title-with-actions > a,
+        .title-with-actions > span {
+            line-height: 1.4;
+        }
+        .title-with-actions .inline-icons {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            flex-shrink: 0;
+            margin-top: 0.05rem;
+        }
+
+        .list-compact li {
+            margin-bottom: 0.25rem !important;
+            align-items: flex-start !important;
+        }
+
+        /* Formatação de Imagens e Códigos dentro dos Markdowns */
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        .markdown-body p {
+            margin-bottom: 0.25rem;
+        }
+        pre {
+            border-radius: 6px;
+        }
+
+        /* Responsividade */
+        @media (max-width: 767px) {
+            .sidebar-col {
+                margin-bottom: 40px;
+            }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#top-navbar" data-bs-offset="100">
+
+    <!-- Menu Superior Fixo -->
+    <nav id="top-navbar" class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#">Thiago Gomes Veríssimo</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarContent">
+                <ul class="navbar-nav">
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#posts">Posts</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#talks">Talks</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#publications">Publications</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#courses-taken">Courses Taken</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#documents">Documents</a>
+                    </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Principal -->
+    <div class="container mt-4">
+        <div class="row">
+            
+            <!-- Barra Lateral (Perfil) -->
+            <div class="col-md-3 sidebar-col">
+                <div class="sticky-top" style="top: 90px;">
+                    
+                    <img src="assets/general/thiago.jpg" alt="Thiago Gomes Veríssimo" class="profile-img">
+                    
+                    <div class="profile-name">Thiago Gomes Veríssimo</div>
+                    
+                    <ul class="sidebar-links">
+                        
+                        <li>
+                            <a href="mailto:verissimotgv@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.drupal.org/u/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-drupal"></i> Drupal
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-github"></i> Github
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://gitlab.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-gitlab"></i> Gitlab
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://orcid.org/0000-0001-6117-3616" target="_blank">
+                                <i class="fab fa-orcid"></i> ORCID
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HWMEGlYAAAAJ" target="_blank">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://lattes.cnpq.br/7983798047288613" target="_blank">
+                                <i class="fas fa-id-card"></i> Lattes
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Thiago-Gomes-Verissimo" target="_blank">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/id_rsa.pub" target="_blank">
+                                <i class="fas fa-terminal"></i> ssh public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/AAA3BE9F.public.asc" target="_blank">
+                                <i class="fas fa-key"></i> gpg public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/r-notebooks/" target="_blank">
+                                <i class="fab fa-r-project"></i> My R scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo/notebooks" target="_blank">
+                                <i class="fab fa-python"></i> My python scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/sandbox-html-css-js/" target="_blank">
+                                <i class="fab fa-html5"></i> My html/css/js scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/jquery-snippets/" target="_blank">
+                                <i class="fab fa-js"></i> My js/jquery scripts
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Coluna Principal -->
+            <div class="col-md-9">
+                
+                <!-- Apresentação / Bio -->
+                
+                <div class="lead mb-4" style="font-size: 1.05rem; color: #495057;">
+                    Bem-vindo ao meu site pessoal e portfólio. Aqui compartilho tutoriais, projetos acadêmicos, publicações, palestras e contribuições com software livre.
+                </div>
+                
+
+                <!-- Renderização das Seções -->
+                
+                <section id="posts" class="mb-5">
+                    <h2 class="section-title">Posts</h2>
+                    
+                    
+                        <!-- Listagem de Posts (Data + Link) -->
+                        <div class="post-list">
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2023-06-22</span>
+                                
+                                <a href="posts/2023-06-22-zotero.html" class="post-link">Zotero</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2023-06-22</span>
+                                
+                                <a href="posts/2023-06-22-vagrant.html" class="post-link">Vagrant</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2023-06-22</span>
+                                
+                                <a href="posts/2023-06-22-python.html" class="post-link">Python</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2023-06-22</span>
+                                
+                                <a href="posts/2023-06-22-libvirt.html" class="post-link">Libvirt</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2023-06-22</span>
+                                
+                                <a href="posts/2023-06-22-laravel.html" class="post-link">Laravel</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2021-06-02</span>
+                                
+                                <a href="posts/2021-06-02-drupal-theme.html" class="post-link">Criando um Tema para Drupal</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2021-01-03</span>
+                                
+                                <a href="posts/2021-01-03-plugins-moodle.html" class="post-link">Plugins Moodle</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2021-01-03</span>
+                                
+                                <a href="posts/2021-01-03-github-search-filters.html" class="post-link">Github search filters</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-12-16</span>
+                                
+                                <a href="posts/2020-12-16-webform-pdf-drupal.html" class="post-link">Webform Pdf Drupal</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-04-10</span>
+                                
+                                <a href="posts/2020-04-10-topicos-em-proxmox.html" class="post-link">Tópicos em proxmox</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-04-10</span>
+                                
+                                <a href="posts/2020-04-10-samba.html" class="post-link">Tópicos em Samba</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-04-08</span>
+                                
+                                <a href="posts/2020-04-08-redirecionar-portas-iptables.html" class="post-link">Redirecionando portas para outras máquinas com iptables</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-02-02</span>
+                                
+                                <a href="posts/2020-02-02-lvm.html" class="post-link">Genrenciando discos com lvm</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-02-02</span>
+                                
+                                <a href="posts/2020-02-02-luks.html" class="post-link">Discos seguros com Luks</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2020-02-02</span>
+                                
+                                <a href="posts/2020-02-02-colinha-de-comandos.html" class="post-link">Minha colinha de comandos gnu/linux</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2019-05-13</span>
+                                
+                                <a href="posts/2019-05-13-multiplos-emails.html" class="post-link">Múltiplos envios de e-mails a partir de uma template</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2019-12-30</span>
+                                
+                                <a href="posts/2019-03-10-gource-organization.html" class="post-link">Gerando animação com gource para todos repositórios de uma organização do github</a>
+                            </div>
+                            
+                            <div class="post-item">
+                                
+                                <span class="post-date">2019-01-17</span>
+                                
+                                <a href="posts/2019-01-17-cups-commands.html" class="post-link">Compilação de comandos cups</a>
+                            </div>
+                            
+                        </div>
+
+                    
+                </section>
+                
+                <section id="talks" class="mb-5">
+                    <h2 class="section-title">Talks</h2>
+                    
+                    
+                        
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2023</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">2023-04-28: A study on how to classify exercises and student behavior profiles in introductory programming courses: a Moodle plugin contribution</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/talks/7.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2021</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://youtu.be/i1FPly5zTOo" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    24/05/2019: Criando temas no Drupal
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://youtu.be/i1FPly5zTOo" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2019</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://www.youtube.com/watch?v=WWYW0R1w234&t=506s" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    24/05/2019: Hangout USPdev - Template USP em projetos Laravel
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://www.youtube.com/watch?v=WWYW0R1w234&t=506s" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2018</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://uspdigital.usp.br/apolo/apoObterAtividade?cod_oferecimentoatv=85660" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    20/08/2018 - Introdução ao git e Laravel
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://uspdigital.usp.br/apolo/apoObterAtividade?cod_oferecimentoatv=85660" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://www.youtube.com/watch?v=BnWZhfQcjS8" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    16/10/2018: Hangout USPdev - Senha Única USP (OAuth) no Drupal
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://www.youtube.com/watch?v=BnWZhfQcjS8" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2016</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">26/10/2016: IV Semana de Tecnologia - Fatec São Roque</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/talks/2.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2014</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">27/06/2014: DTI/STI USP de Ribeirão Preto - Senha Única USP (OAuth) no Drupal</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/talks/1.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                        
+
+                    
+                </section>
+                
+                <section id="publications" class="mb-5">
+                    <h2 class="section-title">Publications</h2>
+                    
+                    
+                        
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2023</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.20396/conpuesp.2.2023.5136" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Transformação digital na Biblioteca Florestan Fernandes - II CONPUESP
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/11.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.20396/conpuesp.2.2023.5136" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.20396/conpuesp.2.2023.5079" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Gestão eficiente de impressões em ambientes acadêmicos - II CONPUESP
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/12.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.20396/conpuesp.2.2023.5079" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.20396/conpuesp.2.2023.5054" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    USPdev: grupo de trabalho colaborativo no desenvolvimento de sistemas - II CONPUESP
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/13.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.20396/conpuesp.2.2023.5054" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.20396/conpuesp.2.2023.4971" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Votação-rápida: otimizando votações em colegiados - II CONPUESP
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/14.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.20396/conpuesp.2.2023.4971" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2017</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.1016/j.atmosenv.2016.10.049" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    An isotopic study of atmospheric lead in a megacity after phasing out of leaded gasoline
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.1016/j.atmosenv.2016.10.049" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2014</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.1021/es404185m" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Chemical characterization and source apportionment of household fine particulate matter in rural, peri-urban, and urban West Africa
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.1021/es404185m" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.1080/10962247.2013.854282" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Analysis of atmospheric aerosol (PM2.5) in Recife city, Brazil
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.1080/10962247.2013.854282" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2013</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.1088/1748-9326/8/4/044025" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Chemical composition and sources of particle pollution in affluent and poor neighborhoods of Accra, Ghana
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.1088/1748-9326/8/4/044025" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2011</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.1289/isee.2011.00789" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Source identification and apportionment of particulate matter in Accra, Ghana
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/6.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.1289/isee.2011.00789" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2010</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Preservação da Memória institucional no instituto de Psicologia da USP (2010-11-10) - XV Seminário Nacional de Bibliotecas Universitárias. São Paulo.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/4.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Analysis of Atmospheric Aerosol (PM2,5) in Rio de Janeiro City (2010-10-26) - American Association for Aerosol Research 29th Annual Conference. Portland, Oregon, USA.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/5.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2009</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Análise do Aerossol Atmosférico (MP2,5) na cidade do Rio de Janeiro - Simpósio Internacional de Iniciação Científica e Tecnológica da USP - 2009</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/3.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2008</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Estabilidade da calibração do sistema PIXE/SP e intercomparação com uma XRF-ED - XV CBMET - Congresso Brasileiro de Meteorologia - São Paulo - 2008</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/2.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2007</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Intercomparação do sistema PIXE em diferentes épocas e a comparação deste com a Fluorescência de Raio-X (EDX) - Simpósio Internacional de Iniciação Científica e Tecnológica da USP - 2007</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/publications/1.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                        
+
+                    
+                </section>
+                
+                <section id="courses-taken" class="mb-5">
+                    <h2 class="section-title">Courses Taken</h2>
+                    
+                    
+                        <!-- Renderização dos Cursos Agrupados por Ano -->
+                        
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2023</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">PHP Programming (Foundation)</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/34.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Congresso dos Profissionais das Universidades Estaduais de São Paulo - CONPUESP</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/35.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2022</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">MBA - Especialista em Data Science e Analytics</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/36.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2021</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Foundations for Big Data Analysis with SQL - Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/32.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Modeling Data Warehouses using Apache Hive - Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/33.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2020</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Django for Everybody Specialization - University of Michigan/Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/26.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Using JavaScript, JQuery, and JSON in Django - University of Michigan/Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/27.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Django Features and Libraries - University of Michigan/Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/28.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Building Web Applications in Django - University of Michigan/Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/29.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Web Application Technologies and Django - University of Michigan/Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/30.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Vehicular Emissions Inventory (VEIN) - IAG-USP.16h.</span>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2019</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Cybercartograhy: Potentials and Applications. - Departamento de Geografia da FFLCH - USP. 8h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/24.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Algoritmos em Java. - Instituto de Matemática e Estatística da Universidade de São Paulo. 20h.</span>
+                                                
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2018</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Desenvolvimento Orientado a objetos com PHP - 4Linux. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/22.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Desenvolvimento Enterprise com PHP - 4Linux. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/23.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2017</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Infraestrutura ágil com práticas DEVOPS usando Docker, Git, Jenkins, Puppet e Ansible - 4Linux. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/21.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2016</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">HTML5 & CSS3 Fundamentals - 4Linux. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/19.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Desenvolvimento Web com JavaScript e jQuery - 4Linux. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/20.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <a href="https://doi.org/10.11606/D.43.2016.tde-20072016-161023" target="_blank" rel="noopener" class="text-decoration-none text-dark">
+                                                    Mestre em Física - Universidade de São Paulo
+                                                </a>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/37.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                    <a href="https://doi.org/10.11606/D.43.2016.tde-20072016-161023" target="_blank" rel="noopener" class="text-primary text-decoration-none" title="Abrir link externo">
+                                                        <i class="fas fa-link"></i>
+                                                    </a>
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2015</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Workshop on Air Quality and Introduction to WRF-Chem Training - IAG-USP. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/15.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">I Workshop sobre Ciência de Dados do IAG/USP - IAG-USP. 4h40.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/16.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Linguagem NCL (NCAR Command Language) - Programa de Pós-graduação em Geografia Física. FFLCH-USP. 35h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/17.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">3WHPC - USP / Rice - STI-USP. 8h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/18.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2014</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Web Application Architectures - Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/12.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">PHP com PostgreSQL Básico - Centro de Informática de Ribeirão Preto-USP. 20h</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/13.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Drupal Avançado - Drupal de Elite - taller. 60h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/14.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2013</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">OpenLdap: Implementando Servidor de Autenticação - 4Linux. 40h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/7.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Computing for Data Analysis - Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/8.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Case-Based Introduction to Biostatistics - Coursera</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/9.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Logical Volume Manager - Centro de Difusão de Tecnologia e Conhecimento - CDTC. 3h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/10.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Iptables - Centro de Difusão de Tecnologia e Conhecimento - CDTC. 4h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/11.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2012</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">11-GeInfo - Gestão de Informática da Universidade de São Paulo - Universidade de São Paulo. 17h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/5.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Formação PostgreSQL - 4Linux. 80h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/6.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2011</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">10 - GeInfo - Gestão de Informática da Universidade de São Paulo - Universidade de São Paulo. 18h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/3.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">IX Congresso Internacional de Software Livre - CONISLI - Fatec Osasco. 16h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/4.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2010</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Drupal, Mysql e Apache2 - Centro de Difusão de Tecnologia e Conhecimento - CDTC. 18h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/1.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">9 - GeInfo - Gestão de Informática da Universidade de São Paulo - Universidade de São Paulo. 20h.</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/courses/2.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver Certificado PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                        
+
+                    
+                </section>
+                
+                <section id="documents" class="mb-5">
+                    <h2 class="section-title">Documents</h2>
+                    
+                    
+                        <!-- Renderização dos Documentos Agrupados por Ano -->
+                        
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2023</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Revisão - 31 SIICUSP: Simpósio Internacional de Iniciação Científica e Tecnológica da Universidade de São Paulo</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/documents/3.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Revisão - Iniciação Científica - Centro Universitário Sagrado Coração</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/documents/4.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                            <div class="mb-4">
+                                <h3 class="h5 fw-bold text-secondary border-bottom pb-1 mb-3">2022</h3>
+                                <ul class="list-unstyled ps-2 list-compact">
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Participação em Banca - Trabalho de Conclusão de Curso - ECA-USP - Isabele Rosa do Anjos</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/documents/1.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <li class="mb-3 d-flex align-items-baseline">
+                                        <span class="me-2 text-muted">•</span>
+                                        <div class="flex-grow-1">
+                                            <div class="d-inline-block markdown-body title-with-actions">
+                                                
+                                                <span class="text-dark">Orientação do TCC - Rafael da Silva Tomaz</span>
+                                                
+                                                
+                                                <span class="inline-icons">
+                                                    
+                                                    <a href="assets/documents/2.pdf" target="_blank" class="text-danger text-decoration-none" title="Ver PDF">
+                                                        <i class="fas fa-file-pdf"></i>
+                                                    </a>
+                                                    
+                                                    
+                                                </span>
+                                                
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                </ul>
+                            </div>
+                            
+                        
+
+                    
+                </section>
+                
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Scripts Bootstrap e Prism.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+</html>

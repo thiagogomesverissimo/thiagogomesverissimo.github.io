@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plugins Moodle - Thiago Gomes Veríssimo</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            color: #333;
+            background-color: #ffffff;
+            padding-top: 70px;
+        }
+        .navbar {
+            background-color: #ffffff;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .navbar-brand {
+            font-weight: 700;
+            color: #495057;
+            font-size: 1.25rem;
+        }
+        .profile-img {
+            width: 130px;
+            height: 130px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        .profile-name {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            color: #212529;
+        }
+        .sidebar-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar-links li {
+            margin-bottom: 8px;
+        }
+        .sidebar-links a {
+            color: #6c757d;
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .sidebar-links a:hover {
+            color: #0d6efd;
+        }
+        .page-title {
+            font-weight: 700;
+            font-size: 2rem;
+            color: #212529;
+            margin-bottom: 10px;
+        }
+        .page-date {
+            font-size: 0.9rem;
+            color: #6c757d;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .markdown-body img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 6px;
+            margin: 15px 0;
+        }
+        pre {
+            border-radius: 6px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar com botão de Voltar -->
+    <nav class="navbar navbar-expand-md navbar-light fixed-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Thiago Gomes Veríssimo</a>
+            <a href="../index.html" class="btn btn-sm btn-outline-secondary">← Voltar para a Inicial</a>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="row">
+            
+            <!-- Barra Lateral -->
+            <div class="col-md-3 mb-4">
+                <div class="sticky-top" style="top: 90px;">
+                    
+                    <img src="../assets/general/thiago.jpg" alt="Thiago Gomes Veríssimo" class="profile-img">
+                    
+                    <div class="profile-name">Thiago Gomes Veríssimo</div>
+                    
+                    <ul class="sidebar-links">
+                        
+                        <li>
+                            <a href="mailto:verissimotgv@gmail.com" target="_blank">
+                                <i class="fas fa-envelope"></i> Email
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.drupal.org/u/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-drupal"></i> Drupal
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-github"></i> Github
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://gitlab.com/thiagogomesverissimo" target="_blank">
+                                <i class="fab fa-gitlab"></i> Gitlab
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://orcid.org/0000-0001-6117-3616" target="_blank">
+                                <i class="fab fa-orcid"></i> ORCID
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=HWMEGlYAAAAJ" target="_blank">
+                                <i class="fas fa-graduation-cap"></i> Google Scholar
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="http://lattes.cnpq.br/7983798047288613" target="_blank">
+                                <i class="fas fa-id-card"></i> Lattes
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.researchgate.net/profile/Thiago-Gomes-Verissimo" target="_blank">
+                                <i class="fab fa-researchgate"></i> ResearchGate
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/id_rsa.pub" target="_blank">
+                                <i class="fas fa-terminal"></i> ssh public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="assets/general/AAA3BE9F.public.asc" target="_blank">
+                                <i class="fas fa-key"></i> gpg public key
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/r-notebooks/" target="_blank">
+                                <i class="fab fa-r-project"></i> My R scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://github.com/thiagogomesverissimo/notebooks" target="_blank">
+                                <i class="fab fa-python"></i> My python scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/sandbox-html-css-js/" target="_blank">
+                                <i class="fab fa-html5"></i> My html/css/js scripts
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href="https://thiagogomesverissimo.github.io/jquery-snippets/" target="_blank">
+                                <i class="fab fa-js"></i> My js/jquery scripts
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Conteúdo do Post / Página -->
+            <div class="col-md-9">
+                <article class="mb-5">
+                    
+                    <div class="page-date">2021-01-03</div>
+                    
+                    <h1 class="page-title">Plugins Moodle</h1>
+                    <hr class="mb-4">
+                    <div class="markdown-body">
+                        <p>O sucesso de um software depende muito do quão podemos modificá-lo para atender<br />
+nossas necessidades particulares. Do ponto de vista de desenvolvimento, eu sempre<br />
+olho para um framework através da sua estrutura de API e hooks. As classes do moodle, <br />
+na sua versão atual, 3.x, me lembra muito o Drupal 5.x ou 6.x e portanto não segue muito<br />
+a estrutura de frameworks modernos como symfony, laravel ou o próprio Drupal 9.x.<br />
+De qualquer modo, segue-se uma série de anotações referente ao desenvolvimento de plugins<br />
+para o moodle.</p>
+<ul id="toc"></ul>
+
+<h2 id="exemplo-plugin-de-administracao">Exemplo: Plugin de Administração</h2>
+<h3 id="estrutura-minima-de-um-plugin">Estrutura mínima de um plugin</h3>
+<p>Tipos de plugins: lib/components.json</p>
+<p>frankenstyle: nome do tipo _ nome do plugin</p>
+<p>Verificação de styles:<br />
+https://moodle.org/plugins/local_codechecker<br />
+https://moodle.org/plugins/local_moodlecheck</p>
+<p>Tipo de arquivos php no plugin:<br />
+- request handlers: acessados pelo browser: devem ter require(<strong>DIR</strong>. '/../../config.php');<br />
+- Libraries: não acessíveis pelo browser: devem iniciar assim defined('MOODLE_INTERNAL') || die(); - garabte que esse qrauivo será chamado por outro e não via request</p>
+<ul>
+<li>podemos colocar bibliotecas em na pasta classes: assim não precisamos usar require_once() para chama-lás em outros arquivos<br />
+ \mod_forum\some_class is stored in file mod/forum/classes/some_class.php nas classes NÂO precisa ter MOODLE_INTERNAL!</li>
+</ul>
+<p>csrf: sesskey()</p>
+<p>$action = new moodle_url('/admin/tool/do/something.php', ['delete' =&gt; $id, 'sesskey' =&gt; sesskey()]);<br />
+echo html_writer::link($action, get_string('delete'));</p>
+<p>Onde processarmos o form:<br />
+require_sesskey();</p>
+<p>required_param('courseid', PARAM_INT);</p>
+<p>Dependências mínimas para instalação moodle em debian 10:</p>
+<pre class="codehilite"><code class="language-bash">sudo apt install php php-gd php-curl php-xml php-mbstring php-intl php-mysql curl mariabdb-server
+</code></pre>
+
+<p>Baixando o moodle com composer:</p>
+<pre class="codehilite"><code class="language-bash">composer create-project moodle/moodle moodle-for-plugin-dev
+</code></pre>
+
+<p>Instalação rápida:</p>
+<pre class="codehilite"><code class="language-bash">cd moodle-for-plugin-dev
+php admin/cli/install.php \
+  --lang=pt_br \
+  --wwwroot='http://0.0.0.0:8000' \
+  --dataroot='/home/thiago/moodledata' \
+  --dbtype=mariadb \
+  --dbhost='localhost' \
+  --dbname=moodle \
+  --dbuser=master \
+  --dbpass=master \
+  --fullname=moodledev \
+  --shortname=moodledev \
+  --adminpass='Admin123*' \
+  --non-interactive \
+  --agree-license
+</code></pre>
+
+<p>O que eu ativo no config.php:</p>
+<pre class="codehilite"><code class="language-php">@error_reporting(E_ALL | E_STRICT);   
+@ini_set('display_errors', '1');
+
+$CFG-&gt;debug = E_ALL;
+$CFG-&gt;debugdisplay = 1;
+$CFG-&gt;langstringcache = 0;
+$CFG-&gt;cachetemplates = 0;
+$CFG-&gt;cachejs = 0;
+$CFG-&gt;perfdebug = 15;
+$CFG-&gt;debugpageinfo = 1;
+</code></pre>
+
+<p>Subindo server local:</p>
+<pre class="codehilite"><code class="language-shell">php -S 0.0.0.0:8000
+</code></pre>
+
+<p>O moodle trabalha com tipos de plugins. Cada tipo de plugin deve ser colocado<br />
+no diretório correspondente. Existe um tipo genérico chamado <code>local</code> onde criarei<br />
+meu primeiro plugin. Chamo de genérico, pois quero fazer uma mudança que não está <br />
+relacionada a estrutura de um curso, mas sim relacionada a parte administrativa<br />
+da instância. <br />
+Nosso plugin interceptará a renderização de strings na camada de template <br />
+deixando tudo em maiúscula, o chamaremos de <code>tudoupper</code>.<br />
+Crie o diretório do plugin:</p>
+<pre class="codehilite"><code class="language-shell">mkdir -p local/tudoupper
+</code></pre>
+
+<p>Importante: todos arquivos do plugin devem conter: <code>defined('MOODLE_INTERNAL') || die();</code>.</p>
+<p>Os arquivos mínimos para o moodle reconhecer nosso plugin são:</p>
+<p><a href="https://docs.moodle.org/dev/version.php">version.php</a> com metadados do plugin:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+$plugin-&gt;component = 'local_tudoupper'; // Nome do plugin
+$plugin-&gt;version = 2021010300; //  YYYYMMDDXX
+</code></pre>
+
+<p>O outro arquivo obrigatório é o do idioma, no qual devemos ao menos<br />
+especificar o <code>pluginname</code>. Neste momento não vou me preocupar com o idioma,<br />
+então escreverei em português mesmo estando na pasta <code>en</code>. No mundo real,<br />
+você criaria <code>local/tudoupper/lang/pt_br/local_tudoupper.php</code> <br />
+e <code>local/tudoupper/lang/en/local_tudoupper.php</code> e colocaria as strings<br />
+correspondentes de cada língua.</p>
+<pre class="codehilite"><code class="language-shell">mkdir -p local/tudoupper/lang/en
+touch local/tudoupper/lang/en/local_tudoupper.php
+</code></pre>
+
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+$string['pluginname'] = 'Plugin que deixa tudo maiúsculo';
+</code></pre>
+
+<p>Neste momento, ao acessar o moodle como <code>site administrator</code> o sistema<br />
+reconhecerá e habilitará nosso plugin. </p>
+<h3 id="string-api">String API</h3>
+<p>Grande parte das classes que no geral vamos querer alterar em um plugin<br />
+do tipo <code>local</code> estão em <code>lib/classes</code>. Queremos interceptar a classe que<br />
+renderiza string para o template, assim vamos na busca de uma interface<br />
+que trare de string:</p>
+<pre class="codehilite"><code class="language-shell">find ./lib/classes -iname &quot;*string*&quot;
+{% endhighlight %}
+
+Identificamos a interface `./lib/classes/string_manager.php` que é 
+implementada pela classe `./lib/classes/string_manager_standard.php`. 
+Há um método chamado `get_string` com a descrição: Get String 
+returns a requested string.
+
+No nosso plugin criaremos um diretórios chamado `classes`:
+```shell
+mkdir -p local/tudoupper/classes
+touch local/tudoupper/classes/tudoupper_string_manager.php
+</code></pre>
+
+<p>Em tudoupper_string_manager.php vamos extender core_string_manager_standard<br />
+e sobrescrever o método get_string() copiando sua assinatura assim como<br />
+definida na interface:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+namespace local_tudoupper;
+defined('MOODLE_INTERNAL') || die();
+class tudoupper_string_manager extends \core_string_manager_standard {
+  public function get_string($identifier, $component = '', $a = null, $lang = null) {
+    $string = parent::get_string($identifier, $component, $a , $lang );
+    return strtoupper($string);
+  }
+}
+</code></pre>
+
+<p>Conforme a <a href="https://docs.moodle.org/dev/String_API">documentação</a> informamos<br />
+ao moodle no <code>config.php</code> para usar nossa classe ao invés da <code>core_string_manager_standard</code>:</p>
+<pre class="codehilite"><code class="language-php">$CFG-&gt;customstringmanager = '\local_tudoupper\tudoupper_string_manager';
+</code></pre>
+
+<p>No <code>version.php</code> podemos subir a versão do nosso plugin:</p>
+<pre class="codehilite"><code class="language-php">$plugin-&gt;version = 2021010301;
+</code></pre>
+
+<h3 id="composer">Composer</h3>
+<p>Posso estar enganado, mas não encontrei até o momento uma maneira de definir<br />
+globalmente em um projeto moodle que usarei composer e que portanto as dependências<br />
+dos meus plugins devem ser baixadas. Não é a melhor prática, mas vamos inicializar<br />
+nosso plugin como um projeto composer distribuindo o diretório <br />
+<code>vendor</code> junto se necessário. Vou instalar uma biblioteca chamada <code>jawira/case-converter</code>:</p>
+<pre class="codehilite"><code class="language-shell">cd local/tudoupper/
+composer init
+composer require jawira/case-converter
+</code></pre>
+
+<p>Agora vamos modificar tudoupper_string_manager para usar essa biblioteca:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+namespace local_tudoupper;
+
+defined('MOODLE_INTERNAL') || die();
+require_once($CFG-&gt;dirroot . '/local/tudoupper/vendor/autoload.php');
+
+use Jawira\CaseConverter\Convert;
+
+class tudoupper_string_manager extends \core_string_manager_standard {
+  public function get_string($identifier, $component = '', $a = null, $lang = null) {
+    $string = parent::get_string($identifier, $component, $a , $lang );
+    $obj = new Convert($string);
+    return $obj-&gt;toCamel();
+  }
+}
+</code></pre>
+
+<h3 id="api-de-configuracao">Api de configuração</h3>
+<p>A <a href="https://docs.moodle.org/dev/Admin_settings">página</a> contém bastante informações<br />
+sobre a API de configuração.</p>
+<p>Vamos criar uma nova entrada em <code>lang/en/local_tudoupper.php</code>:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+$string['pluginname'] = 'Plugin que deixa tudo maiúsculo';
+$string['title'] = 'Configurações do plugin super massa tudoupper';
+</code></pre>
+
+<p>Adicionemos um novo arquivo chamado <code>settings.php</code> no nosso plugin<br />
+tendo uma condição com <code>$hassiteconfig</code> que restringe esse acesso <br />
+apenas para administradores da plataforma. <br />
+Manipularemos um objetos do tipo <code>admin_settingpage</code> que cuidará <br />
+da camada de formulário e persistência no banco de dados das<br />
+configurações do plugin. Depois adicionamos esse objeto na variável global <br />
+<code>$ADMIN</code> que se encarregará de disponibilizar as opções do nosso<br />
+plugin na área de configurações da plataforma. </p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+
+if ($hassiteconfig) {
+    $title = new lang_string('title', 'local_tudoupper');
+    $settings = new admin_settingpage('local_tudoupper', $title);
+    $ADMIN-&gt;add('localplugins', $settings);
+}
+</code></pre>
+
+<p>Suba a versão em <code>version.php</code> e agora em <code>Site Administration</code> -&gt; <br />
+<code>Plugins</code> -&gt; <code>Local Plugins</code> temos uma entrada para configuração do<br />
+nosso plugin, ainda sem campo algum. </p>
+<p>Vamos adicionar os seguintes campos, em parentese estão as classes moodle<br />
+da api de formulário que fornece o markup necessário para cada tipo:</p>
+<ul>
+<li>checkbox: ativar ou desativa o recurso desse plugin (admin_setting_configcheckbox)</li>
+<li>select: para usar tudo em uppercase ou camelCase (admin_setting_configselect)</li>
+<li>input text: prefixo (admin_setting_configtext)</li>
+<li>input text: suffixo (admin_setting_configtext)</li>
+</ul>
+<p>Começamos complementando nossas strings em <code>lang/en/local_tudoupper.php</code>:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+
+$string['pluginname'] = 'Plugin que deixa tudo maiúsculo';
+$string['title'] = 'Configurações do plugin super massa tudoupper';
+
+$string['enabled'] = 'Habilitar tudoupper?';
+$string['enabled_description'] = 'Habilitar esse recurso na plataforma moodle';
+
+$string['type'] = 'Configura tipo';
+$string['type_description'] = 'Tipo que deseja para o plugin tudoupper';
+$string['type_upper'] = 'Tudo em Maiúscula';
+$string['type_camelcase'] = 'Tudo em CamelCase';
+
+$string['prefix'] = 'Configura prefixo';
+$string['prefix_description'] = 'Colocar um prefixo em todas strings';
+
+$string['suffix'] = 'Configura sufixo';
+$string['suffix_description'] = 'Colocar um sufixo em todas strings';
+</code></pre>
+
+<p>Inicialmente vamos adicionar somente o campo <code>$enabled</code>:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+
+if ($hassiteconfig) {
+
+    # Inicializando objeto admin_settingpage
+    $title = new lang_string('title', 'local_tudoupper');
+    $settings = new admin_settingpage('local_tudoupper', $title);
+
+    # Campo para habilitar ou desabilitar recurso
+    $enabled = new lang_string('enabled', 'local_tudoupper');
+    $enabled_description = new lang_string('enabled_description', 'local_tudoupper');
+    $field_enabled = new admin_setting_configcheckbox('local_tudoupper/enabled',$enabled,$enabled_description,1);
+
+    # Adicionado campos na área de configuração
+    $settings-&gt;add($field_enabled);
+    $ADMIN-&gt;add('localplugins', $settings);
+}
+</code></pre>
+
+<p>Antes de adicionarmos os demais campos, vamos ler essa opção na nossa<br />
+classe <code>tudoupper_string_manager</code> e habilitar ou não o recurso:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+namespace local_tudoupper;
+
+defined('MOODLE_INTERNAL') || die();
+require_once($CFG-&gt;dirroot . '/local/tudoupper/vendor/autoload.php');
+
+use Jawira\CaseConverter\Convert;
+
+class tudoupper_string_manager extends \core_string_manager_standard {
+  public function get_string($identifier, $component = '', $a = null, $lang = null) {
+
+    $string = parent::get_string($identifier, $component, $a , $lang );
+
+    # só prosseguimos se o recurso estiver habilitado
+    $enabled = get_config('local_tudoupper','enabled');
+    if(!$enabled) return $string;
+
+    $obj = new Convert($string);
+    return $obj-&gt;toCamel();
+  }
+}
+</code></pre>
+
+<p>Agora pela interface de configuração podemos desativar ou ativar esse recurso.</p>
+<p>Adicionemos os demais campos:</p>
+<pre class="codehilite"><code class="language-php">&lt;?php
+defined('MOODLE_INTERNAL') || die();
+
+if ($hassiteconfig) {
+
+    # Inicializando objeto admin_settingpage
+    $title = new lang_string('title', 'local_tudoupper');
+    $settings = new admin_settingpage('local_tudoupper', $title);
+
+    # Campo para habilitar ou desabilitar recurso
+    $enabled = new lang_string('enabled', 'local_tudoupper');
+    $enabled_description = new lang_string('enabled_description', 'local_tudoupper');
+    $field_enabled = new admin_setting_configcheckbox('local_tudoupper/enabled',$enabled,$enabled_description,1);
+
+    # Campos tipo
+    $type = new lang_string('type', 'local_tudoupper');
+    $type_description = new lang_string('type_description', 'local_tudoupper');
+    $type_upper = new lang_string('type_upper', 'local_tudoupper');
+    $type_camelcase = new lang_string('type_camelcase', 'local_tudoupper');
+    $default = 'upper';
+    $options = ['upper' =&gt; $type_upper, 'camelcase' =&gt; $type_camelcase];
+    $field_type = new admin_setting_configselect('local_tudoupper/type',$type, $type_description, $default, $options);
+
+    # Campo prefixo
+    $prefix = new lang_string('prefix', 'local_tudoupper');
+    $prefix_description = new lang_string('prefix_description', 'local_tudoupper');
+    $default = '';
+    $field_prefix = new admin_setting_configtext('local_tudoupper/prefix',$prefix,$prefix_description,$default);
+
+    # Campo prefixo
+    $suffix = new lang_string('suffix', 'local_tudoupper');
+    $suffix_description = new lang_string('suffix_description', 'local_tudoupper');
+    $default = '';
+    $field_suffix = new admin_setting_configtext('local_tudoupper/suffix',$suffix,$suffix_description,$default);
+
+    # Adicionado campos na área de configuração
+    $settings-&gt;add($field_enabled);
+    $settings-&gt;add($field_type);
+    $settings-&gt;add($field_prefix);
+    $settings-&gt;add($field_suffix);
+    $ADMIN-&gt;add('localplugins', $settings);
+}
+{% endhighlight %}
+
+Por fim modificaremos a classe `tudoupper_string_manager` para usar
+esses novos campos:
+```php
+&lt;?php
+namespace local_tudoupper;
+
+defined('MOODLE_INTERNAL') || die();
+require_once($CFG-&gt;dirroot . '/local/tudoupper/vendor/autoload.php');
+
+use Jawira\CaseConverter\Convert;
+
+class tudoupper_string_manager extends \core_string_manager_standard {
+  public function get_string($identifier, $component = '', $a = null, $lang = null) {
+
+    $string = parent::get_string($identifier, $component, $a , $lang );
+
+    # só prosseguimos se o recurso estiver habilitado
+    $enabled = get_config('local_tudoupper','enabled');
+    if(!$enabled) return $string;
+
+    # prefixo e sufixo das strings
+    $prefix = get_config('local_tudoupper','prefix');
+    $suffix = get_config('local_tudoupper','suffix');
+    $string =  $prefix . $string .  $suffix;
+
+    # tipo
+    $type = get_config('local_tudoupper','type');
+    if($type == 'upper') return strtoupper($string);
+    if($type == 'camelcase') {
+      $obj = new Convert($string);
+      return $obj-&gt;toCamel();
+    }
+    return $string;
+  }
+}
+</code></pre>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>
