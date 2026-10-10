@@ -3,7 +3,7 @@ name: Build and Deploy HTML
 on:
   push:
     branches:
-      - main  # Triggered whenever you push to the main branch
+      - master  # Triggered whenever you push to the master branch
 
 permissions:
   contents: write
