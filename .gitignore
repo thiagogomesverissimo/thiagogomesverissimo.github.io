@@ -38,6 +38,8 @@ venv
 *.fls
 
 # outros
-*.swp*
-
 docs
+
+# Python
+__pycache__/
+*.pyc
