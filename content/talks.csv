@@ -1,11 +1,18 @@
 id,year,title,url
-1,2014,"27/06/2014: DTI/STI USP de Ribeirão Preto - Senha Única USP (OAuth) no Drupal",
-2,2016,"26/10/2016: IV Semana de Tecnologia - Fatec São Roque",
-3,2018,"20/08/2018 - Introdução ao git e Laravel","https://uspdigital.usp.br/apolo/apoObterAtividade?cod_oferecimentoatv=85660"
-4,2018,"16/10/2018: Hangout USPdev - Senha Única USP (OAuth) no Drupal","https://www.youtube.com/watch?v=BnWZhfQcjS8"
-5,2019,"24/05/2019: Hangout USPdev - Template USP em projetos Laravel","https://www.youtube.com/watch?v=WWYW0R1w234&t=506s"
-6,2021,"24/05/2019: Criando temas no Drupal","https://youtu.be/i1FPly5zTOo"
+1,2014,27/06/2014: DTI/STI USP de Ribeirão Preto - Senha Única USP (OAuth) no Drupal,
+2,2016,26/10/2016: IV Semana de Tecnologia - Fatec São Roque,
+3,2018,20/08/2018 - Introdução ao git e Laravel,https://uspdigital.usp.br/apolo/apoObterAtividade?cod_oferecimentoatv=85660
+4,2018,16/10/2018: Hangout USPdev - Senha Única USP (OAuth) no Drupal,https://www.youtube.com/watch?v=BnWZhfQcjS8
+5,2019,24/05/2019: Hangout USPdev - Template USP em projetos Laravel,https://www.youtube.com/watch?v=WWYW0R1w234&t=506s
+6,2021,24/05/2019: Criando temas no Drupal,https://youtu.be/i1FPly5zTOo
 8,2026,Conpuesp - Integração entre o sistema Apolo e o Moodle: Uma abordagem baseada em software livre para gestão de cursos de extensão,
-9,2026,Conpuesp - Gestão de intercâmbio acadêmico: O sistema de intercâmbio da FFLCH
-10,2024,Enhancing Moodle with External Data Integration: A Case Study at the University of São Paulo - Learning Analytics in Practice (LAP 2024),"https://youtu.be/ZQQcP1p8mno?list=PLOF7tBP24lAfsmuqwwQiN6xFZg2d2HZtv&t=784"
-11,2022,Treinamento: Introdução ao Nunaliit,"https://youtu.be/F9wuRkd5-gg"
+9,2026,Conpuesp - Gestão de intercâmbio acadêmico: O sistema de intercâmbio da FFLCH,None
+10,2024,Enhancing Moodle with External Data Integration: A Case Study at the University of São Paulo - Learning Analytics in Practice (LAP 2024),https://youtu.be/ZQQcP1p8mno?list=PLOF7tBP24lAfsmuqwwQiN6xFZg2d2HZtv&t=784
+11,2022,Treinamento: Introdução ao Nunaliit,https://youtu.be/F9wuRkd5-gg
+12,2006,16/11/2006: 2ª Reunião de Iniciação Científica do IFUSP - Amostragem do aerossol atmosférico de São Paulo na transição de um final de semana,
+13,2007,02/10/2007: IIIª Reunião de Iniciação Científica do IFUSP - Intercomparação do sistema PIXE em diferentes períodos e a comparação deste com a fluorescência de raio-X,
+14,2007,26/11/2007: 15º SIICUSP - Intercomparação do sistema PIXE em diferentes épocas e a comparação deste com a Fluorescência de Raio-X (EDX),
+15,2008,24/08/2008: XV Congresso Brasileiro de Meteorologia (CBMET) - Estabilidade da calibração do sistema PIXE/SP e intercomparação com uma XRF-ED,
+16,2008,10/10/2008: IV Reunião de Iniciação Científica do IFUSP - Estabilidade da calibração do sistema PIXE/IFUSP e intercomparação com uma XRF-ED/IAG-USP,
+17,2009,"06/10/2009: V Reunião de Iniciação Científica do IFUSP - Análise do Aerossol Atmosférico (MP2,5) na Cidade do Rio de Janeiro",
+18,2009,"09/11/2009: 17º SIICUSP - Análise do Aerossol Atmosférico (MP2,5) na Cidade do Rio de Janeiro",
